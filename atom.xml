@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-05-03T07:53:07.741Z</updated>
+  <updated>2019-05-03T16:57:47.473Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="snowFlakeXue.github.io/2019/05/03/hello-world/"/>
-    <id>snowFlakeXue.github.io/2019/05/03/hello-world/</id>
-    <published>2019-05-03T07:53:07.741Z</published>
-    <updated>2019-05-03T07:53:07.741Z</updated>
+    <title></title>
+    <link href="snowFlakeXue.github.io/2019/05/04/hello%20blog/"/>
+    <id>snowFlakeXue.github.io/2019/05/04/hello blog/</id>
+    <published>2019-05-03T16:53:34.340Z</published>
+    <updated>2019-05-03T16:57:47.473Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,9 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+          &lt;hr&gt;
+&lt;p&gt;title: Hello blog&lt;br&gt;author: liuxue&lt;/p&gt;
+&lt;h2 id=&quot;categories-日常&quot;&gt;&lt;a href=&quot;#categories-日常&quot; class=&quot;headerlink&quot; title=&quot;categories:
         
       
     
