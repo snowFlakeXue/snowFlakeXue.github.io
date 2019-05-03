@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>snowFlakeXue</title>
+  <icon>https://www.gravatar.com/avatar/4543c26cc38d80588b9c8a253b44cc58</icon>
+  <subtitle>Work hard for what you desire.</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="snowFlakeXue.github.io/"/>
+  <updated>2019-05-03T07:53:07.741Z</updated>
+  <id>snowFlakeXue.github.io/</id>
+  
+  <author>
+    <name>Liu Xue</name>
+    <email>liuxue82@outlook.com</email>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="snowFlakeXue.github.io/2019/05/03/hello-world/"/>
+    <id>snowFlakeXue.github.io/2019/05/03/hello-world/</id>
+    <published>2019-05-03T07:53:07.741Z</published>
+    <updated>2019-05-03T07:53:07.741Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
