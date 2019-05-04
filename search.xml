@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>%2F2019%2F05%2F04%2Fhello%20blog%2F</url>
-    <content type="text"><![CDATA[title: Hello blogauthor: liuxue categories: 日常]]></content>
+    <title><![CDATA[myBlog]]></title>
+    <url>%2F2019%2F05%2F04%2FmyBlog%2F</url>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
   </entry>
 </search>
