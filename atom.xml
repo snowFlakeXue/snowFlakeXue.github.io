@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-05-04T11:32:13.013Z</updated>
+  <updated>2019-05-04T15:12:40.070Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>day1</title>
+    <link href="snowFlakeXue.github.io/2019/05/04/day1/"/>
+    <id>snowFlakeXue.github.io/2019/05/04/day1/</id>
+    <published>2019-05-04T14:50:12.000Z</published>
+    <updated>2019-05-04T15:12:40.070Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;CPU和内存是由很多的晶体管组成，他俩合称IC（集成电路）&lt;/li&gt;
+&lt;li&gt;CPU由寄存器，运算器，控制器和时钟组成&lt;/li&gt;
+&lt;li&gt;程序运行过程：首先由程序员用高级语言写出程序，然后把程序编译成机器语言（即exe文件），然后将这个exe文件在内存上存一个副本，然后再在CPU上解析运行&lt;/li&gt;
+&lt;li&gt;将CPU的解析和运行过程放大来讲，是时钟先发出时钟信号，cpu开始工作啦，他先让寄存器去抓内存上的数据，然后运算器进行运算，然后控制器通过运算结果来控制整个计算机，其实也就是控制输入输出什么的&lt;/li&gt;&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="睡前小读" scheme="snowFlakeXue.github.io/categories/%E7%9D%A1%E5%89%8D%E5%B0%8F%E8%AF%BB/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>js数据类型与变量</title>
