@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-05-04T07:54:24.116Z</updated>
+  <updated>2019-05-04T08:18:19.678Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -17,15 +17,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>js</title>
+    <title>js数据类型与变量</title>
     <link href="snowFlakeXue.github.io/2019/05/04/js%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%8F%98%E9%87%8F/"/>
     <id>snowFlakeXue.github.io/2019/05/04/js数据类型与变量/</id>
     <published>2019-05-04T07:54:24.000Z</published>
-    <updated>2019-05-04T07:54:24.116Z</updated>
+    <updated>2019-05-04T08:18:19.678Z</updated>
     
     <summary type="html">
     
+      
+      
+        
+        
+          &lt;h2 id=&quot;标识符&quot;&gt;&lt;a href=&quot;#标识符&quot; class=&quot;headerlink&quot; title=&quot;标识符&quot;&gt;&lt;/a&gt;&lt;font
+        
+      
+    
     </summary>
+    
+      <category term="javascript学习" scheme="snowFlakeXue.github.io/categories/javascript%E5%AD%A6%E4%B9%A0/"/>
     
     
   </entry>

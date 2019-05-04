@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[js]]></title>
+    <title><![CDATA[js数据类型与变量]]></title>
     <url>%2F2019%2F05%2F04%2Fjs%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%8F%98%E9%87%8F%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[标识符 标识符只能由数字，字母，$符和下划线表示 首字符必须是字母或$符或下划线，切记不能是数字 在所使用的的作用域内，每个变量的标识符是唯一的 可在变量标识符中使用Unicode的字母和数字，官网链接 可使用转义序列 区分大小写 不得使用js关键字，ECMA 262规范的保留字，浏览器中典型的保留字，具体如下图js关键字ECMA 262规范的保留字浏览器中典型的保留字 尽量使用有意义的，提高可维护性 一些小规范： ①项目的集合名称应用复数 ②对象名首字母大写 ③函数和变量以小写字母开始并使用驼峰法]]></content>
+      <categories>
+        <category>javascript学习</category>
+      </categories>
   </entry>
   <entry>
     <title><![CDATA[myBlog]]></title>
