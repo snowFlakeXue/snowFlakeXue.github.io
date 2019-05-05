@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-05-05T12:21:43.225Z</updated>
+  <updated>2019-05-05T15:04:50.168Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>day2</title>
+    <link href="snowFlakeXue.github.io/2019/05/05/day2/"/>
+    <id>snowFlakeXue.github.io/2019/05/05/day2/</id>
+    <published>2019-05-05T14:52:26.000Z</published>
+    <updated>2019-05-05T15:04:50.168Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;程序运行时，程序计数器指向一个地址值，然后顺序结构的话，每进行一条指令，程序计数器上的值加一&lt;/li&gt;
+&lt;li&gt;其实cpu处理程序很有意思，像是比较累加寄存器和通用寄存器中的值，他实际上会进行减法运算，通过正负零来判断谁大谁小&lt;/li&gt;
+&lt;li&gt;运算结果存放在标志寄存器，无论结果是什么都会存放进去，同时标志寄存器还负责存放溢出和奇偶判断&lt;/li&gt;&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="睡前小读" scheme="snowFlakeXue.github.io/categories/%E7%9D%A1%E5%89%8D%E5%B0%8F%E8%AF%BB/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>运算符和语句</title>
