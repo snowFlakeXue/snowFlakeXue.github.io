@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-05-04T15:12:40.070Z</updated>
+  <updated>2019-05-05T12:18:49.157Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>运算符和语句</title>
+    <link href="snowFlakeXue.github.io/2019/05/05/%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E8%AF%AD%E5%8F%A5/"/>
+    <id>snowFlakeXue.github.io/2019/05/05/运算符和语句/</id>
+    <published>2019-05-05T02:08:41.000Z</published>
+    <updated>2019-05-05T12:18:49.157Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;js语句的格式&quot;&gt;&lt;a href=&quot;#js语句的格式&quot; class=&quot;headerlink&quot; title=&quot;js语句的格式&quot;&gt;&lt;/a&gt;&lt;font
+        
+      
+    
+    </summary>
+    
+      <category term="javascript" scheme="snowFlakeXue.github.io/categories/javascript/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>day1</title>
