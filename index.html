@@ -404,7 +404,7 @@
                 
               
 
-              <time title="创建时间：2019-05-05 10:08:41 / 修改时间：20:18:49" itemprop="dateCreated datePublished" datetime="2019-05-05T10:08:41+08:00">2019-05-05</time>
+              <time title="创建时间：2019-05-05 10:08:41 / 修改时间：20:21:43" itemprop="dateCreated datePublished" datetime="2019-05-05T10:08:41+08:00">2019-05-05</time>
             
 
             
@@ -463,42 +463,20 @@
 
       
         
-          
-            <h2 id="js语句的格式"><a href="#js语句的格式" class="headerlink" title="js语句的格式"></a><font color="red">js语句的格式</font></h2><ol>
+          <h2 id="js语句的格式"><a href="#js语句的格式" class="headerlink" title="js语句的格式"></a><font color="red">js语句的格式</font></h2><ol>
 <li>要养成每条语句后都写分号的习惯</li>
 <li>在js代码中，空白没意义，为了让代码更直观更易于维护，可尝试养成在等号前后，加号等前后写空格的习惯<h2 id="赋值语句"><a href="#赋值语句" class="headerlink" title="赋值语句"></a><font color="red">赋值语句</font></h2></li>
 <li>由左边变量，赋值变量和右边被赋给的值组成</li>
-<li>右边的表达式可以是直接量值<br><code>var vm = 35;</code><br>一个变量和直接量再加上运算符的组合<br><code>var value = vm + 27;</code><br>函数的调用<br><code>var nvalue = escape();</code><br>一行可以包含多个赋值语句<br><code>var a = b = c = 23;</code><h2 id="二元运算符"><a href="#二元运算符" class="headerlink" title="二元运算符"></a><font color="red">二元运算符</font></h2></li>
-<li>二元运算符有加(+)减(-)乘(*)除(/)取余(%)<font color="yellow">注意在js中除法保存的是浮点数而不是截取的整数</font></li>
-<li>这里重点说一下加法运算符，在字符串那里要特别注意，当两个运算数中有字符串时会优先将+解析为连接运算符<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var vm = &quot;3.99&quot; + 2.7;</span><br><span class="line">document.write(vm);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>结果：<code>3.992.7</code></p>
-<p>而对于其他的二元运算符，只要两个操作数中的字符串内只有数字就可以计算<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var vm = &quot;3&quot; * 2;</span><br><span class="line">document.write(vm);</span><br></pre></td></tr></table></figure></p>
-<p>结果：<code>6</code></p>
-<p>为了在用加号时规避这种错误，最好采用parseInt或者parseFloat函数显式地转化一下字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var vm = parseInt(&apos;3&apos;) + 3;</span><br><span class="line">document.write(vm);</span><br></pre></td></tr></table></figure></p>
-<p>结果：<code>6</code></p>
-<h2 id="一元运算符"><a href="#一元运算符" class="headerlink" title="一元运算符"></a><font color="red">一元运算符</font></h2><ol>
-<li>一元运算符有负值运算符，自增运算符，自减运算符<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var vm = 2;</span><br><span class="line">var value = -vm;</span><br><span class="line">document.write(value);</span><br><span class="line">var nvalue = ++value;</span><br><span class="line">document.write(nvalue);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>结果：<code>-2-1</code></p>
-<ol start="2">
-<li>注意自增自减都有前置后置之分，前置是先自己变值在赋值，后置是先赋值在自己变值<h2 id="逻辑运算符，三元运算符，各种语句需要注意的"><a href="#逻辑运算符，三元运算符，各种语句需要注意的" class="headerlink" title="逻辑运算符，三元运算符，各种语句需要注意的"></a><font color="red">逻辑运算符，三元运算符，各种语句需要注意的</font></h2>因为有了c++基础就不多说什么事if循环啊啥的，记一点容易犯错的</li>
-<li>注意短值运算，就是与的话当第一个表达式返回0，就不往下看了，这个直接就是假；是或的话当第一个表达式返回1，直接就是真，考虑到cpu等内存占用，应该把重要的依据放在前面</li>
-<li>注意===和==区别，前面的是等同，现在已经广泛应用，因为当时字符串和数值比较，会先隐式地把字符串转化为数值型，用等同则返回false,用等于则返回true</li>
-<li><p>switch语句，注意写break,default;当多种情况是同一入口时，最好用如下形式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">case a:</span><br><span class="line">case b:</span><br><span class="line">case c:</span><br><span class="line">document.write(&quot;hhhhh&quot;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>注意if语句的条件里千万不能写等于号，最次也得写个==</p>
-</li>
-<li>当想至少进行一次循环时，选do···while而不用while</li>
-<li>注意一下for循环中的for in型，在后面会用到比如遍历数组啥的，以后再说，先简单举个栗子<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">object(&quot;a&quot;:b,&quot;c&quot;:d)</span><br><span class="line">for(x in object)&#123;</span><br><span class="line">    txt += object[x] ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>结果：<code>cd</code></p>
-
+<li>右边的表达式可以是直接量值<br><code>var vm = 35;</code><br>一个变量和直接量再加上运算符的组合<br><code>var value = vm + 27;</code><br>函数的调用<br><code>var nvalue = escape();</code><br>一行可以包含多个赋值语句<br><code>var a = b = c = 23;</code></li></ol>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/05/运算符和语句/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
