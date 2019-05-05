@@ -107,7 +107,7 @@
 <meta property="og:site_name" content="snowFlakeXue">
 <meta property="og:description" content="程序运行时，程序计数器指向一个地址值，然后顺序结构的话，每进行一条指令，程序计数器上的值加一 其实cpu处理程序很有意思，像是比较累加寄存器和通用寄存器中的值，他实际上会进行减法运算，通过正负零来判断谁大谁小 运算结果存放在标志寄存器，无论结果是什么都会存放进去，同时标志寄存器还负责存放溢出和奇偶判断">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-05T15:04:50.168Z">
+<meta property="og:updated_time" content="2019-05-05T15:08:38.373Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="day2">
 <meta name="twitter:description" content="程序运行时，程序计数器指向一个地址值，然后顺序结构的话，每进行一条指令，程序计数器上的值加一 其实cpu处理程序很有意思，像是比较累加寄存器和通用寄存器中的值，他实际上会进行减法运算，通过正负零来判断谁大谁小 运算结果存放在标志寄存器，无论结果是什么都会存放进去，同时标志寄存器还负责存放溢出和奇偶判断">
@@ -407,7 +407,7 @@
                 
               
 
-              <time title="创建时间：2019-05-05 22:52:26 / 修改时间：23:04:50" itemprop="dateCreated datePublished" datetime="2019-05-05T22:52:26+08:00">2019-05-05</time>
+              <time title="创建时间：2019-05-05 22:52:26 / 修改时间：23:08:38" itemprop="dateCreated datePublished" datetime="2019-05-05T22:52:26+08:00">2019-05-05</time>
             
 
             
@@ -483,7 +483,7 @@
 <li>其实cpu处理程序很有意思，像是比较累加寄存器和通用寄存器中的值，他实际上会进行减法运算，通过正负零来判断谁大谁小</li>
 <li>运算结果存放在标志寄存器，无论结果是什么都会存放进去，同时标志寄存器还负责存放溢出和奇偶判断<a id="more"></a></li>
 <li>分支结构是用的跳转指令，即运行时程序计数器不是单纯的一条指令加一</li>
-<li>函数调用，实际上是先把调用处以下的指令先存放在栈，然后进行call到函数体进行，处理完函数体后，再回到调用处，把栈上存放的指令读入到程序计数器上，再接着往下</li>
+<li>函数调用，实际上是先把调用处以下的指令先存放在栈，然后进行<font color="red">call</font>到函数体进行，处理完函数体后，再<font color="red">return</font>回到调用处，把栈上存放的指令读入到程序计数器上，再接着往下</li>
 <li>说到划分内存，实际上要用到基址寄存器和变址寄存器，我们所说的实际地址值就是基址寄存器的值加上变址寄存器的值，而变址寄存器实际上就是我们所熟悉的数组的索引</li>
 <li>正，0，负实际上存在32位的标志寄存器上的前三位</li>
 </ol>
