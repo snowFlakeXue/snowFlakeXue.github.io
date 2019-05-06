@@ -113,7 +113,7 @@
 <meta property="og:image" content="/2019/05/06/js对象/5.jpg">
 <meta property="og:image" content="/2019/05/06/js对象/4.jpg">
 <meta property="og:image" content="/2019/05/06/js对象/6.jpg">
-<meta property="og:updated_time" content="2019-05-06T11:41:44.665Z">
+<meta property="og:updated_time" content="2019-05-06T11:56:05.142Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js对象">
 <meta name="twitter:description" content="四种对象 javascript内置对象 浏览器对象模型中的对象(BOM) 文档对象模型中的对象 用户自定义的对象">
@@ -414,7 +414,7 @@
                 
               
 
-              <time title="创建时间：2019-05-06 09:57:10 / 修改时间：19:41:44" itemprop="dateCreated datePublished" datetime="2019-05-06T09:57:10+08:00">2019-05-06</time>
+              <time title="创建时间：2019-05-06 09:57:10 / 修改时间：19:56:05" itemprop="dateCreated datePublished" datetime="2019-05-06T09:57:10+08:00">2019-05-06</time>
             
 
             
@@ -586,8 +586,8 @@
 <li>splice()[修改原来数组]实现对数组中元素的添加,删除，修改（每种前两个参数都是固定的，第一个是开始操作的索引，第二个是删除的数量），返回的是删除后组成的数组，即documentarr返回的是修改后的，documentarr.splice返回的删除的组成的数组<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//添加元素，注意不能写成document.write(arr.splice(0,0,&quot;people&quot;))因为返回的是删除的数组</span><br><span class="line">var arr = new Array(&quot;apple&quot;,&quot;banana&quot;,&quot;pear&quot;,&quot;pen&quot;);</span><br><span class="line">arr.splice(0,0,&quot;people&quot;)</span><br><span class="line">document.write(arr);</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>结果：<code>people,apple,banana,pear,pen</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr = new Array(&quot;apple&quot;,&quot;banana&quot;,&quot;pear&quot;,&quot;pen&quot;);</span><br><span class="line">arr.splice(0,1)</span><br><span class="line">document.write(arr);</span><br></pre></td></tr></table></figure></p>
-<p>结果：<code>banana,pear,pen</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr = new Array(&quot;apple&quot;,&quot;banana&quot;,&quot;pear&quot;,&quot;pen&quot;);</span><br><span class="line">arr.splice(0,1,&quot;people&quot;)</span><br><span class="line">document.write(arr);</span><br></pre></td></tr></table></figure></p>
+<p>结果：<code>people,apple,banana,pear,pen</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//删除元素</span><br><span class="line">var arr = new Array(&quot;apple&quot;,&quot;banana&quot;,&quot;pear&quot;,&quot;pen&quot;);</span><br><span class="line">arr.splice(0,1)</span><br><span class="line">document.write(arr);</span><br></pre></td></tr></table></figure></p>
+<p>结果：<code>banana,pear,pen</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//替换元素</span><br><span class="line">var arr = new Array(&quot;apple&quot;,&quot;banana&quot;,&quot;pear&quot;,&quot;pen&quot;);</span><br><span class="line">arr.splice(0,1,&quot;people&quot;)</span><br><span class="line">document.write(arr);</span><br></pre></td></tr></table></figure></p>
 <p>结果：<code>people,banana,pear,pen</code></p>
 <ol start="5">
 <li>slice()[不改变原来数组]，即documentarr返回的是原来的数组，documentarr.slice返回的是修改后的数组，作用是返回截取的元素，两个参数，第一个参数是其实的索引(包括)，第二个参数是结束的索引(不包括)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr = new Array(&quot;apple&quot;,&quot;banana&quot;,&quot;pear&quot;,&quot;pen&quot;);</span><br><span class="line">document.write(arr.splice(0,3));</span><br></pre></td></tr></table></figure>
