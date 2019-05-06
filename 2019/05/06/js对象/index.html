@@ -100,17 +100,24 @@
 
 
 
-  <meta name="description" content="js语句的格式 要养成每条语句后都写分号的习惯 在js代码中，空白没意义，为了让代码更直观更易于维护，可尝试养成在等号前后，加号等前后写空格的习惯赋值语句 由左边变量，赋值变量和右边被赋给的值组成 右边的表达式可以是直接量值var vm = 35;一个变量和直接量再加上运算符的组合var value = vm + 27;函数的调用var nvalue = escape();一行可以包含多个赋值语句">
+  <meta name="description" content="四种对象 javascript内置对象 浏览器对象模型中的对象(BOM) 文档对象模型中的对象 用户自定义的对象">
 <meta property="og:type" content="article">
-<meta property="og:title" content="运算符和语句">
-<meta property="og:url" content="snowFlakeXue.github.io/2019/05/05/运算符和语句/index.html">
+<meta property="og:title" content="js对象">
+<meta property="og:url" content="snowFlakeXue.github.io/2019/05/06/js对象/index.html">
 <meta property="og:site_name" content="snowFlakeXue">
-<meta property="og:description" content="js语句的格式 要养成每条语句后都写分号的习惯 在js代码中，空白没意义，为了让代码更直观更易于维护，可尝试养成在等号前后，加号等前后写空格的习惯赋值语句 由左边变量，赋值变量和右边被赋给的值组成 右边的表达式可以是直接量值var vm = 35;一个变量和直接量再加上运算符的组合var value = vm + 27;函数的调用var nvalue = escape();一行可以包含多个赋值语句">
+<meta property="og:description" content="四种对象 javascript内置对象 浏览器对象模型中的对象(BOM) 文档对象模型中的对象 用户自定义的对象">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-05T12:21:43.225Z">
+<meta property="og:image" content="/2019/05/06/js对象/1.jpg">
+<meta property="og:image" content="/2019/05/06/js对象/2.jpg">
+<meta property="og:image" content="/2019/05/06/js对象/3.jpg">
+<meta property="og:image" content="/2019/05/06/js对象/5.jpg">
+<meta property="og:image" content="/2019/05/06/js对象/4.jpg">
+<meta property="og:image" content="/2019/05/06/js对象/6.jpg">
+<meta property="og:updated_time" content="2019-05-06T11:41:44.665Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="运算符和语句">
-<meta name="twitter:description" content="js语句的格式 要养成每条语句后都写分号的习惯 在js代码中，空白没意义，为了让代码更直观更易于维护，可尝试养成在等号前后，加号等前后写空格的习惯赋值语句 由左边变量，赋值变量和右边被赋给的值组成 右边的表达式可以是直接量值var vm = 35;一个变量和直接量再加上运算符的组合var value = vm + 27;函数的调用var nvalue = escape();一行可以包含多个赋值语句">
+<meta name="twitter:title" content="js对象">
+<meta name="twitter:description" content="四种对象 javascript内置对象 浏览器对象模型中的对象(BOM) 文档对象模型中的对象 用户自定义的对象">
+<meta name="twitter:image" content="/2019/05/06/js对象/1.jpg">
 
 
 
@@ -120,7 +127,7 @@
 
   
   
-  <link rel="canonical" href="snowFlakeXue.github.io/2019/05/05/运算符和语句/">
+  <link rel="canonical" href="snowFlakeXue.github.io/2019/05/06/js对象/">
 
 
 
@@ -130,7 +137,7 @@
   };
 </script>
 
-  <title>运算符和语句 | snowFlakeXue</title>
+  <title>js对象 | snowFlakeXue</title>
   
 
 
@@ -364,7 +371,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/05/运算符和语句/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/06/js对象/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Xue">
@@ -381,7 +388,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">运算符和语句
+          <h1 class="post-title" itemprop="name headline">js对象
 
               
             
@@ -407,7 +414,7 @@
                 
               
 
-              <time title="创建时间：2019-05-05 10:08:41 / 修改时间：20:21:43" itemprop="dateCreated datePublished" datetime="2019-05-05T10:08:41+08:00">2019-05-05</time>
+              <time title="创建时间：2019-05-06 09:57:10 / 修改时间：19:41:44" itemprop="dateCreated datePublished" datetime="2019-05-06T09:57:10+08:00">2019-05-06</time>
             
 
             
@@ -429,7 +436,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/javascript学习/" itemprop="url" rel="index"><span itemprop="name">javascript学习</span></a></span>
 
                 
                 
@@ -448,8 +455,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/05/05/运算符和语句/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/05/运算符和语句/" itemprop="commentCount"></span>
+                <a href="/2019/05/06/js对象/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/06/js对象/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -478,40 +485,145 @@
       
 
       
-        <h2 id="js语句的格式"><a href="#js语句的格式" class="headerlink" title="js语句的格式"></a><font color="red">js语句的格式</font></h2><ol>
-<li>要养成每条语句后都写分号的习惯</li>
-<li>在js代码中，空白没意义，为了让代码更直观更易于维护，可尝试养成在等号前后，加号等前后写空格的习惯<h2 id="赋值语句"><a href="#赋值语句" class="headerlink" title="赋值语句"></a><font color="red">赋值语句</font></h2></li>
-<li>由左边变量，赋值变量和右边被赋给的值组成</li>
-<li>右边的表达式可以是直接量值<br><code>var vm = 35;</code><br>一个变量和直接量再加上运算符的组合<br><code>var value = vm + 27;</code><br>函数的调用<br><code>var nvalue = escape();</code><br>一行可以包含多个赋值语句<br><code>var a = b = c = 23;</code><a id="more"></a>
-<h2 id="二元运算符"><a href="#二元运算符" class="headerlink" title="二元运算符"></a><font color="red">二元运算符</font></h2></li>
-<li>二元运算符有加(+)减(-)乘(*)除(/)取余(%)<font color="red">注意在js中除法保存的是浮点数而不是截取的整数</font></li>
-<li>这里重点说一下加法运算符，在字符串那里要特别注意，当两个运算数中有字符串时会优先将+解析为连接运算符<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var vm = &quot;3.99&quot; + 2.7;</span><br><span class="line">document.write(vm);</span><br></pre></td></tr></table></figure>
+        <h2 id="四种对象"><a href="#四种对象" class="headerlink" title="四种对象"></a><font color="red">四种对象</font></h2><ol>
+<li>javascript内置对象</li>
+<li>浏览器对象模型中的对象(BOM)</li>
+<li>文档对象模型中的对象</li>
+<li>用户自定义的对象</li>
+</ol>
+<hr>
+<a id="more"></a>
+<h1 id="下面总结的都是第一种，javascript的内置对象"><a href="#下面总结的都是第一种，javascript的内置对象" class="headerlink" title="下面总结的都是第一种，javascript的内置对象"></a>下面总结的都是第一种，javascript的内置对象</h1><p>js对象中都有自己的属性和方法，也可以通过new来新建一个对象，有的对象要注意对象和函数的区分，比如Number对象和Number()和Number对象的实例化</p>
+<h2 id="Boolean对象"><a href="#Boolean对象" class="headerlink" title="Boolean对象"></a><font color="red">Boolean对象</font></h2><ol>
+<li>必须注意创建Boolean对象实例的方法必须是与new结合的构造函数<br><code>var boo = new Boolean(true);</code></li>
+<li>在Boolean对象被实例化后，可通过Object的方法toValue来访问它所封装的基本值<br><code>if(boo.toValue())···;</code></li>
+</ol>
+<p>也可直接访问<br><code>if(boo)</code></p>
+<h2 id="Number对象"><a href="#Number对象" class="headerlink" title="Number对象"></a><font color="red">Number对象</font></h2><ol>
+<li>要注意在js中他对数值得辨识度并不高，它不论是整数还是指数还是浮点数，一律处理成64位的浮点型，也就是说在js中只有浮点型</li>
+<li>Number对象的实例化，可以用new也可以直接用Number(),但是用Number的话是number型，不是对象</li>
+<li>Number对象的属性，注意是对象不是对象的实例化</li>
+</ol>
+<p>①MAX_VALUE 指js可接受的最大值</p>
+<p>②MIN_VALUE 指js可接受的最小值</p>
+<p>③NEGATIVE_INFINITY 指js中定义的负无穷值</p>
+<p>④POSITIVE_INFINITY 指js中定义的正无穷值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">document.write(Number.MAX_VALUE);</span><br><span class="line">document.write(Number.MIN_VALUE);</span><br><span class="line">document.write(Number.NEGATIVE_INFINITY);</span><br><span class="line">document.write(Number.POSITIVE_INFINITY);</span><br><span class="line">/*若写成以下形式会报错,因为只能是Number对象的</span><br><span class="line">var num = new Number(4)</span><br><span class="line">document.write(num.MAX_VALUE);</span><br><span class="line"> */</span><br></pre></td></tr></table></figure></p>
+<p>结果：<code>1.7976931348623157e+3085e-324-InfinityInfinity</code></p>
+<ol start="4">
+<li>Number对象的方法</li>
+</ol>
+<p>①toString() 有一个形参，是一个2到36的整数，默认为10，是将对象的实例化按进制输出<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var num = new Number(&quot;100&quot;);</span><br><span class="line">document.write(num.toString(2));</span><br><span class="line">//若是用Number()实例化的，也不慌，会将他转换成对象在用这个函数，在转回变量</span><br></pre></td></tr></table></figure></p>
+<p>②toLocalString() 无形参，作用是转化为本地格式的字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var num = new Number(1876653);</span><br><span class="line">document.write(num.toLocaleString());</span><br></pre></td></tr></table></figure></p>
+<p>结果：<code>1,876,653</code></p>
+<p>③toFixed() 有一个形参代表要有的小数位数，范围是0到20，包括0,20，不写默认为0,注意这个会四舍五入，要是不够会用零补上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var num = new Number(187.6653);</span><br><span class="line">document.write(num.toFixed());</span><br></pre></td></tr></table></figure></p>
+<p>结果：<code>188</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var num = new Number(23.56);</span><br><span class="line">document.write(num.toFixed(10));</span><br></pre></td></tr></table></figure></p>
+<p>结果：<code>23.5600000000</code></p>
+<p>④toPrecision() 有一个参数,代表有效数位，会四舍五入，参数取值范围是1到21包括1,21；若不写参数，就会调用toString()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var num = new Number(23.56);</span><br><span class="line">document.write(num.toPrecision(3));</span><br></pre></td></tr></table></figure></p>
+<p>结果：<code>23.6</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var num = new Number(23.56);</span><br><span class="line">document.write(num.toPrecision());</span><br></pre></td></tr></table></figure></p>
+<p>结果：<code>23.56</code></p>
+<p>⑤<br>toExponential() 将数值表示成指数型，有一个形参，代表保留小数位,若省略参数将显示尽可能多的小数位<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var num = new Number(23.56356789);</span><br><span class="line">document.write(num.toExponential(3));</span><br></pre></td></tr></table></figure></p>
+<p>结果：<code>2.356e+1</code></p>
+<h2 id="String对象"><a href="#String对象" class="headerlink" title="String对象"></a><font color="red">String对象</font></h2><ol>
+<li>String对象属性：length,代表字符串字符数，注意这里不像c++要在最后再加一</li>
+<li>String对象有些格式化html方法，如anchor()[设置html锚点]；link()[生成链接]；big()[放大字体]；blink()[生成闪动字体]；bold()[加粗字体]；italics()[设置斜体]；sub()[设置下角标]；sup()[设置上角标]；small()[缩小字体]；strike()[加一条删除线];</li>
+</ol>
+<p>值得注意的是，这种html格式化方法并不是所有浏览器都兼容，比如blink()他在ie就不兼容，所以我们要尽可能的避免使用这种html格式化方法，但是anchor()和link()除外，这两个还是可以用用的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var str = &quot;Hello world!&quot;</span><br><span class="line">str.anchor(&quot;myAnchor&quot;);</span><br><span class="line">//参数为锚点名</span><br><span class="line">alert(str.anchor(&quot;myAnchor&quot;));</span><br></pre></td></tr></table></figure>
+<p>结果：<img src="/2019/05/06/js对象/1.jpg" alt="avatar"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str=&quot;baidu&quot;;</span><br><span class="line">document.write(str.link(&quot;http://www.baidu.com&quot;));</span><br></pre></td></tr></table></figure></p>
+<p>结果：<img src="/2019/05/06/js对象/2.jpg" alt="avatar"></p>
+<ol start="3">
+<li>charAt()返回索引处字符，参数则为索引<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str=&quot;baidu&quot;;</span><br><span class="line">document.write(str.charAt(2));</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>结果：<code>3.992.7</code></p>
-<p>而对于其他的二元运算符，只要两个操作数中的字符串内只有数字就可以计算<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var vm = &quot;3&quot; * 2;</span><br><span class="line">document.write(vm);</span><br></pre></td></tr></table></figure></p>
-<p>结果：<code>6</code></p>
-<p>为了在用加号时规避这种错误，最好采用parseInt或者parseFloat函数显式地转化一下字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var vm = parseInt(&apos;3&apos;) + 3;</span><br><span class="line">document.write(vm);</span><br></pre></td></tr></table></figure></p>
-<p>结果：<code>6</code></p>
-<h2 id="一元运算符"><a href="#一元运算符" class="headerlink" title="一元运算符"></a><font color="red">一元运算符</font></h2><ol>
-<li>一元运算符有负值运算符，自增运算符，自减运算符<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var vm = 2;</span><br><span class="line">var value = -vm;</span><br><span class="line">document.write(value);</span><br><span class="line">var nvalue = ++value;</span><br><span class="line">document.write(nvalue);</span><br></pre></td></tr></table></figure>
+<p>结果：<code>i</code></p>
+<ol start="4">
+<li>charCodeAt()返回指定位置的字符的unicode编码<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str=&quot;baidu&quot;;</span><br><span class="line">document.write(str.charCodeAt(3));</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>结果：<code>-2-1</code></p>
-<ol start="2">
-<li>注意自增自减都有前置后置之分，前置是先自己变值在赋值，后置是先赋值在自己变值<h2 id="逻辑运算符，三元运算符，各种语句需要注意的"><a href="#逻辑运算符，三元运算符，各种语句需要注意的" class="headerlink" title="逻辑运算符，三元运算符，各种语句需要注意的"></a><font color="red">逻辑运算符，三元运算符，各种语句需要注意的</font></h2>因为有了c++基础就不多说什么事if循环啊啥的，记一点容易犯错的</li>
-<li>注意短值运算，就是与的话当第一个表达式返回0，就不往下看了，这个直接就是假；是或的话当第一个表达式返回1，直接就是真，考虑到cpu等内存占用，应该把重要的依据放在前面</li>
-<li>注意===和==区别，前面的是等同，现在已经广泛应用，因为当时字符串和数值比较，会先隐式地把字符串转化为数值型，用等同则返回false,用等于则返回true</li>
-<li><p>switch语句，注意写break,default;当多种情况是同一入口时，最好用如下形式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">case a:</span><br><span class="line">case b:</span><br><span class="line">case c:</span><br><span class="line">document.write(&quot;hhhhh&quot;);</span><br></pre></td></tr></table></figure>
+<p>结果：<code>100</code></p>
+<ol start="5">
+<li><p>js中有三种截取字符串片段的方法，我首推slice(start,end)，其次subString(start,stop),不能推荐subStr，因为es6没有规范他，就不用他,而slice()和subString()唯一不同就是前者接受负数后者不接受</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str=&quot;Hello happy world!&quot;</span><br><span class="line">document.write(str.slice(4,7))</span><br><span class="line">// 只包括不包括结尾即其实是截取了str[4]到str[6],若无第二个参数表示后面的都要，若这两个参数为负则用负数加长度</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>注意if语句的条件里千万不能写等于号，最次也得写个==</p>
-</li>
-<li>当想至少进行一次循环时，选do···while而不用while</li>
-<li>注意一下for循环中的for in型，在后面会用到比如遍历数组啥的，以后再说，先简单举个栗子<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">object(&quot;a&quot;:b,&quot;c&quot;:d)</span><br><span class="line">for(x in object)&#123;</span><br><span class="line">    txt += object[x] ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>indexOf()和lastIndexOf() 返回子串最开始出现的索引和最后一次出现的索引，注意该函数对大小写十分敏感，若不存在返回-1</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var str = &quot;Hello world&quot;;</span><br><span class="line">document.write(str.indexOf(&apos;w&apos;));</span><br><span class="line">document.write(str.indexOf(&apos;W&apos;));</span><br><span class="line">document.write(str.lastIndexOf(&apos;l&apos;));</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>结果：<code>cd</code></p>
+<p>结果：<code>6-19</code></p>
+<ol start="7">
+<li>split() 有两个参数，第一个参数是分割标志(写成字符串)，第二个参数可选，限定个数，这个其实就是拆分字符串,整成一个数组；需要说的是，splirt()也可直接用在变量后</li>
+</ol>
+<p><code>document.&quot;sdh\nfbdkv\ffd&quot;.split(&quot;\&quot;,1)</code></p>
+<p>结果:<code>sdh</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str = &quot;Hello world&quot;;</span><br><span class="line">document.write(str.split(&quot; &quot;,1));</span><br></pre></td></tr></table></figure></p>
+<p>结果：<code>Hello</code></p>
+<ol start="8">
+<li>toUpperCase()和toLowerCase()将字符串都变成大写和小写<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var str = &quot;hjfkdflk&quot;;</span><br><span class="line">document.write(str.toUpperCase());</span><br><span class="line">var str1 = &quot;DKFENDFLOR&quot;;</span><br><span class="line">document.write(str1.toLowerCase());</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>结果：<code>HJFKDFLKdkfendflor</code></p>
+<ol start="9">
+<li>formCharCode()这是一个<font color="purple">静态方法</font>所谓静态方法就是只能是对象调用不能对象的实例化调用，这个方法是将unicode编码实例化成一个字符串</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.write(String.fromCharCode(72,69,76,76,79));</span><br></pre></td></tr></table></figure>
+<p>结果:<code>HELLO</code></p>
+<h2 id="Date对象"><a href="#Date对象" class="headerlink" title="Date对象"></a><font color="red">Date对象</font></h2><p>实例化：var time = new Date();</p>
+<p>Date对象方法</p>
+<p><img src="/2019/05/06/js对象/3.jpg" alt="avatar"></p>
+<p>当所用的是例如网上商店下订单这种孤立的行为，使用用户本地的就行，若是像评论博客这种国际化的全体的行为，就设UTC</p>
+<p>Date()直接返回用户电脑的时间<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.write(Date());</span><br></pre></td></tr></table></figure></p>
+<p>结果：<code>Mon May 06 2019 15:49:35 GMT+0800 (中国标准时间)</code></p>
+<h2 id="Math对象"><a href="#Math对象" class="headerlink" title="Math对象"></a><font color="red">Math对象</font></h2><ol>
+<li>Math对象的属性<br><img src="/2019/05/06/js对象/5.jpg" alt="avatar"></li>
+<li>Math对象的方法，注意这些都是静态方法，不需实例化<br><img src="/2019/05/06/js对象/4.jpg" alt="avatar"><h2 id="javascript数组"><a href="#javascript数组" class="headerlink" title="javascript数组"></a><font color="red">javascript数组</font></h2></li>
+<li>在js中数组也是对象</li>
+<li>数组对象的属性，length</li>
+<li>数组对象的实例化方式可new可不new,定义数组后就可以用索引了，比如a[i]</li>
+</ol>
+<p>①<code>var arr = [&quot;apple&quot;,&quot;banana&quot;] ;</code></p>
+<p>②<code>var arr = new Array(3,4,5,6,2)</code></p>
+<p>③<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = new Array(3);</span><br><span class="line">arr[0]=(1,3);</span><br><span class="line">arr[1]=(3,5);</span><br><span class="line">arr[2]=(5,4);</span><br><span class="line">//二维及以上数组定义方法，再创数组对象</span><br></pre></td></tr></table></figure></p>
+<ol start="4">
+<li>splice()[修改原来数组]实现对数组中元素的添加,删除，修改（每种前两个参数都是固定的，第一个是开始操作的索引，第二个是删除的数量），返回的是删除后组成的数组，即documentarr返回的是修改后的，documentarr.splice返回的删除的组成的数组<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//添加元素，注意不能写成document.write(arr.splice(0,0,&quot;people&quot;))因为返回的是删除的数组</span><br><span class="line">var arr = new Array(&quot;apple&quot;,&quot;banana&quot;,&quot;pear&quot;,&quot;pen&quot;);</span><br><span class="line">arr.splice(0,0,&quot;people&quot;)</span><br><span class="line">document.write(arr);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>结果：<code>people,apple,banana,pear,pen</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr = new Array(&quot;apple&quot;,&quot;banana&quot;,&quot;pear&quot;,&quot;pen&quot;);</span><br><span class="line">arr.splice(0,1)</span><br><span class="line">document.write(arr);</span><br></pre></td></tr></table></figure></p>
+<p>结果：<code>banana,pear,pen</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr = new Array(&quot;apple&quot;,&quot;banana&quot;,&quot;pear&quot;,&quot;pen&quot;);</span><br><span class="line">arr.splice(0,1,&quot;people&quot;)</span><br><span class="line">document.write(arr);</span><br></pre></td></tr></table></figure></p>
+<p>结果：<code>people,banana,pear,pen</code></p>
+<ol start="5">
+<li>slice()[不改变原来数组]，即documentarr返回的是原来的数组，documentarr.slice返回的是修改后的数组，作用是返回截取的元素，两个参数，第一个参数是其实的索引(包括)，第二个参数是结束的索引(不包括)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr = new Array(&quot;apple&quot;,&quot;banana&quot;,&quot;pear&quot;,&quot;pen&quot;);</span><br><span class="line">document.write(arr.splice(0,3));</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>结果：<code>apple,banana,pear</code></p>
+<ol start="5">
+<li>concat()[不改变原来数组]即documentarr返回的是原来的数组，documentarr.concat返回的是修改后的数组，作用是连接数组<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = new Array(&quot;apple&quot;,&quot;banana&quot;,&quot;pear&quot;,&quot;pen&quot;);</span><br><span class="line">var arr2 = new Array(&quot;story&quot;);</span><br><span class="line">var arr3 = new Array(&quot;fish&quot;)</span><br><span class="line">var arr4 = [3,4,5];</span><br><span class="line">document.write(arr1.concat(arr2));//连接两个数组</span><br><span class="line">document.write(&apos;&lt;br /&gt;&apos;);</span><br><span class="line">document.write(arr1.concat(arr2,arr3));//连接三个数组</span><br><span class="line">document.write(&apos;&lt;br /&gt;&apos;);</span><br><span class="line">document.write(arr4.concat(6,7));//连接参数</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apple,banana,pear,pen,story</span><br><span class="line">apple,banana,pear,pen,story,fish</span><br><span class="line">3,4,5,6,7</span><br></pre></td></tr></table></figure></p>
+<ol start="6">
+<li>join() 将数组中对象用自己定义的分隔符输出<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = new Array(&quot;apple&quot;,&quot;banana&quot;,&quot;pear&quot;,&quot;pen&quot;);</span><br><span class="line">document.write(arr1.join(&apos;|&apos;));</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>结果：<code>apple|banana|pear|pen</code></p>
+<ol start="7">
+<li>reverse() 颠倒数组顺序<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = new Array(&quot;apple&quot;,&quot;banana&quot;,&quot;pear&quot;,&quot;pen&quot;);</span><br><span class="line">document.write(arr1.reverse());</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>结果：<code>pen,pear,banana,apple</code></p>
+<ol start="8">
+<li>push()和pop() 组合使用实现先进后出栈<br><img src="/2019/05/06/js对象/6.jpg" alt="avatar"></li>
+</ol>
+<p>push()实现在数组的最后面依次加元素,返回新长度；pop()实现删去数组最后一个元素，返回被删除的元素；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = new Array(&quot;apple&quot;,&quot;banana&quot;,&quot;pear&quot;,&quot;pen&quot;);</span><br><span class="line">document.write(arr1.push(&quot;people&quot;,&quot;girl&quot;));</span><br><span class="line">// 可有多个参数</span><br><span class="line">document.write(&quot;&lt;br /&gt;&quot;);</span><br><span class="line">document.write(arr1);</span><br><span class="line">document.write(&quot;&lt;br /&gt;&quot;);</span><br><span class="line">document.write(arr1.pop());</span><br><span class="line">document.write(&quot;&lt;br /&gt;&quot;);</span><br><span class="line">document.write(arr1);</span><br></pre></td></tr></table></figure></p>
+<p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">apple,banana,pear,pen,people,girl</span><br><span class="line">girl</span><br><span class="line">apple,banana,pear,pen,people</span><br></pre></td></tr></table></figure></p>
+<ol start="9">
+<li>unshift()[ie不支持]和shift() 前者可以有多个参数，作用是加在数组最前面，第一个参数为a[0]以此类推，返回的是新长度，后者是删除最前面的元素，返回被删除的元素即原数组的首元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = new Array(&quot;apple&quot;,&quot;banana&quot;,&quot;pear&quot;,&quot;pen&quot;);</span><br><span class="line">document.write(arr1.unshift(&quot;people&quot;,&quot;girl&quot;));</span><br><span class="line">// 可有多个参数</span><br><span class="line">document.write(&quot;&lt;br /&gt;&quot;);</span><br><span class="line">document.write(arr1);</span><br><span class="line">document.write(&quot;&lt;br /&gt;&quot;);</span><br><span class="line">document.write(arr1.shift());</span><br><span class="line">document.write(&quot;&lt;br /&gt;&quot;);</span><br><span class="line">document.write(arr1);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">people,girl,apple,banana,pear,pen</span><br><span class="line">people</span><br><span class="line">girl,apple,banana,pear,pen</span><br></pre></td></tr></table></figure></p>
+<ol start="10">
+<li>遍历数组<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = new Array(&quot;apple&quot;,&quot;banana&quot;,&quot;pear&quot;,&quot;pen&quot;);</span><br><span class="line">for(var x in arr1)&#123;</span><br><span class="line">    document.write(arr1[x]);</span><br><span class="line">    document.write(&quot;&lt;br /&gt;&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">apple</span><br><span class="line">banana</span><br><span class="line">pear</span><br><span class="line">pen</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -552,8 +664,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/04/day1/" rel="next" title="day1">
-                <i class="fa fa-chevron-left"></i> day1
+              <a href="/2019/05/05/day2/" rel="next" title="day2">
+                <i class="fa fa-chevron-left"></i> day2
               </a>
             
           </div>
@@ -561,10 +673,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/05/day2/" rel="prev" title="day2">
-                day2 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -737,7 +845,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#js语句的格式"><span class="nav-number">1.</span> <span class="nav-text">js语句的格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#赋值语句"><span class="nav-number">2.</span> <span class="nav-text">赋值语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二元运算符"><span class="nav-number">3.</span> <span class="nav-text">二元运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一元运算符"><span class="nav-number">4.</span> <span class="nav-text">一元运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑运算符，三元运算符，各种语句需要注意的"><span class="nav-number">5.</span> <span class="nav-text">逻辑运算符，三元运算符，各种语句需要注意的</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#四种对象"><span class="nav-number">1.</span> <span class="nav-text">四种对象</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#下面总结的都是第一种，javascript的内置对象"><span class="nav-number"></span> <span class="nav-text">下面总结的都是第一种，javascript的内置对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Boolean对象"><span class="nav-number">1.</span> <span class="nav-text">Boolean对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Number对象"><span class="nav-number">2.</span> <span class="nav-text">Number对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String对象"><span class="nav-number">3.</span> <span class="nav-text">String对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Date对象"><span class="nav-number">4.</span> <span class="nav-text">Date对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Math对象"><span class="nav-number">5.</span> <span class="nav-text">Math对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript数组"><span class="nav-number">6.</span> <span class="nav-text">javascript数组</span></a></li></ol></li></div>
             
 
           </div>

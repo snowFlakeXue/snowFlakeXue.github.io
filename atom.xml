@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-05-05T15:08:38.373Z</updated>
+  <updated>2019-05-06T11:41:44.665Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>js对象</title>
+    <link href="snowFlakeXue.github.io/2019/05/06/js%E5%AF%B9%E8%B1%A1/"/>
+    <id>snowFlakeXue.github.io/2019/05/06/js对象/</id>
+    <published>2019-05-06T01:57:10.000Z</published>
+    <updated>2019-05-06T11:41:44.665Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;四种对象&quot;&gt;&lt;a href=&quot;#四种对象&quot; class=&quot;headerlink&quot; title=&quot;四种对象&quot;&gt;&lt;/a&gt;&lt;font color=&quot;red&quot;&gt;四种对象&lt;/font&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;javascript内置对象&lt;/li&gt;
+&lt;li&gt;浏览器对象模型中的对象(BOM)&lt;/li&gt;
+&lt;li&gt;文档对象模型中的对象&lt;/li&gt;
+&lt;li&gt;用户自定义的对象&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="javascript学习" scheme="snowFlakeXue.github.io/categories/javascript%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>day2</title>
     <link href="snowFlakeXue.github.io/2019/05/05/day2/"/>
     <id>snowFlakeXue.github.io/2019/05/05/day2/</id>
     <published>2019-05-05T14:52:26.000Z</published>
-    <updated>2019-05-05T15:08:38.373Z</updated>
+    <updated>2019-05-06T03:09:37.223Z</updated>
     
     <summary type="html">
     
