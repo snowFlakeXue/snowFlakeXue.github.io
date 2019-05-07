@@ -108,7 +108,7 @@
 <meta property="og:description" content="在js中函数也是对象，因此可以把它赋给一个变量，一个数组元素，甚至作为参数传给另一个函数调用函数的定义 声明式的静态方式(所有浏览器都支持）  function 函数名(形参列表){函数体}//注意没有var否则报错,且function必须小写 ①这种方式最常用，他只需定义一次，在程序的完整过程中，他一直被存在内存中，只在页面打开时解析一次，不论是什么调用它，返回的都是函数体处理完的结果 ②要设定">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="/2019/05/07/函数/1.jpg">
-<meta property="og:updated_time" content="2019-05-07T08:21:38.466Z">
+<meta property="og:updated_time" content="2019-05-07T08:24:57.970Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="函数">
 <meta name="twitter:description" content="在js中函数也是对象，因此可以把它赋给一个变量，一个数组元素，甚至作为参数传给另一个函数调用函数的定义 声明式的静态方式(所有浏览器都支持）  function 函数名(形参列表){函数体}//注意没有var否则报错,且function必须小写 ①这种方式最常用，他只需定义一次，在程序的完整过程中，他一直被存在内存中，只在页面打开时解析一次，不论是什么调用它，返回的都是函数体处理完的结果 ②要设定">
@@ -409,7 +409,7 @@
                 
               
 
-              <time title="创建时间：2019-05-07 13:52:38 / 修改时间：16:21:38" itemprop="dateCreated datePublished" datetime="2019-05-07T13:52:38+08:00">2019-05-07</time>
+              <time title="创建时间：2019-05-07 13:52:38 / 修改时间：16:24:57" itemprop="dateCreated datePublished" datetime="2019-05-07T13:52:38+08:00">2019-05-07</time>
             
 
             
@@ -486,7 +486,7 @@
 <p><code>function 函数名(形参列表){函数体}//注意没有var否则报错,且function必须小写</code></p>
 <p>①这种方式最常用，他只需定义一次，在程序的完整过程中，他一直被存在内存中，只在页面打开时解析一次，不论是什么调用它，返回的都是函数体处理完的结果</p>
 <p>②要设定返回值，他可以有0个到多个return,一般多个return 都用在需要判断条件时，即满足这个条件就不往下执行函数体内容</p>
-<p>③参数方面注意传参形式，一种是传值，一种是传地址，简单点说就是传值不改变实参，传地址改变实参<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function change(str1,arr) &#123;</span><br><span class="line">    str1 = &quot;hello javascript!&quot;;</span><br><span class="line">    arr[arr.length] = &quot;three&quot;;</span><br><span class="line">&#125;</span><br><span class="line">var str = &quot;hello world!&quot;;</span><br><span class="line">var arr1 = [&quot;one&quot;,&quot;two&quot;];</span><br><span class="line">change(str,arr1);</span><br><span class="line">document.write(arr1);//传地址，改变</span><br><span class="line">document.write(&quot;&lt;br /&gt;&quot;);</span><br><span class="line">document.write(str);//传值，不变</span><br></pre></td></tr></table></figure></p>
+<p>③参数方面注意传参形式，一种是传值，一种是传地址，简单点说就是传值不改变实参，传地址改变实参<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function change(str1,arr) &#123;</span><br><span class="line">    str1 = &quot;hello javascript!&quot;;</span><br><span class="line">    arr[arr.length] = &quot;three&quot;;</span><br><span class="line">&#125;</span><br><span class="line">var str = &quot;hello world!&quot;;</span><br><span class="line">var arr1 = [&quot;one&quot;,&quot;two&quot;];</span><br><span class="line">change(str,arr1);</span><br><span class="line">document.write(arr1);//传地址，改变</span><br><span class="line">document.write(&quot;&lt;br /&gt;&quot;);</span><br><span class="line">document.write(str);//传值，不变</span><br></pre></td></tr></table></figure></p>
 <p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">one,two,three</span><br><span class="line">hello world!</span><br></pre></td></tr></table></figure></p>
 <ol start="2">
 <li>匿名函数(没有函数名，又叫动态函数，较新的浏览器支持)<br><code>var hd = new Function(&quot;参数1&quot;，&quot;参数2&quot;，&quot;函数结构体&quot;)//F必须大写，必须是new</code></li>
@@ -553,10 +553,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/07/1/" rel="prev" title>
-                 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -631,7 +627,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

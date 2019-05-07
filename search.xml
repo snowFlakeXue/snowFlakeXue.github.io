@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>%2F2019%2F05%2F07%2F1%2F</url>
-    <content type="text"><![CDATA[function func(){ for(var i=0;i]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>%2F2019%2F05%2F07%2F1%2F</url>
-    <content type="text"><![CDATA[Document]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[函数]]></title>
     <url>%2F2019%2F05%2F07%2F%E5%87%BD%E6%95%B0%2F</url>
     <content type="text"><![CDATA[在js中函数也是对象，因此可以把它赋给一个变量，一个数组元素，甚至作为参数传给另一个函数调用函数的定义 声明式的静态方式(所有浏览器都支持） function 函数名(形参列表){函数体}//注意没有var否则报错,且function必须小写 ①这种方式最常用，他只需定义一次，在程序的完整过程中，他一直被存在内存中，只在页面打开时解析一次，不论是什么调用它，返回的都是函数体处理完的结果 ②要设定返回值，他可以有0个到多个return,一般多个return 都用在需要判断条件时，即满足这个条件就不往下执行函数体内容 ③参数方面注意传参形式，一种是传值，一种是传地址，简单点说就是传值不改变实参，传地址改变实参12345678910function change(str1,arr) &#123; str1 = &quot;hello javascript!&quot;; arr[arr.length] = &quot;three&quot;;&#125;var str = &quot;hello world!&quot;;var arr1 = [&quot;one&quot;,&quot;two&quot;];change(str,arr1);document.write(arr1);//传地址，改变document.write(&quot;&lt;br /&gt;&quot;);document.write(str);//传值，不变 结果：12one,two,threehello world! 匿名函数(没有函数名，又叫动态函数，较新的浏览器支持)var hd = new Function(&quot;参数1&quot;，&quot;参数2&quot;，&quot;函数结构体&quot;)//F必须大写，必须是new 匿名函数是用一次定义一次，直接赋给变量 这种方式不常用，但是在只有运行时才能确定函数成立条件时，创建动态函数就很有必要123456789var func = prompt(&quot;请输入函数体&quot;);var x = parseInt(prompt(&quot;请输入x&quot;));var y = parseInt(prompt(&quot;请输入y&quot;));//注意promt返回的是字符串若不转换结果就是23var op = new Function(&quot;x&quot;,&quot;y&quot;,func);var result = op(x,y);document.write(&quot;function is &quot;+func+&quot;&lt;br /&gt;&quot;);document.write(&quot;x is&quot;+x+&quot;&lt;br /&gt;&quot;);document.write(&quot;y is&quot;+y+&quot;&lt;br /&gt;&quot;);document.write(&quot;result is&quot;+result); 结果：1234function is return x+yx is2y is3result is5 函数直接量（即赋给变量或作为另一函数的参数，新的浏览器支持7）①var func = (参数列表){函数体}//兼具了匿名函数和声明函数 ②var func = 函数名(参数列表){函数体} ③1234function fan(x,y,z)&#123; document.write((z(x,y)));&#125;fan(1,2,function(x,y)&#123;return x+y&#125;);//函数作为参数 结果：3 回调函数回调函数可以理解成，将回调函数作为参数放在一个新函数里，然后执行过程就是先执行新函数再反过来执行回调函数123456789//定义回调函数function fun1(value)&#123; document.write(value);&#125;//定义新函数并把回调函数作为参数function fun2(fun,value)&#123; fun(value);&#125;fun2(fun1,&quot;hi js!&quot;) 结果：hi js! 函数对象123456789function func()&#123; //arguments.length返回参数个数 for(var i=0;i&lt;arguments.length;i++)&#123; document.write(arguments[i]); //arguments[i]输出对应参数，arguments和length是作为对象的函数的属性 &#125;&#125;func(1,2,3); 结果：123]]></content>

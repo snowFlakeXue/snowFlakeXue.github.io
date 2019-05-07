@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-05-07T08:19:20.068Z</updated>
+  <updated>2019-05-07T08:24:57.970Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -17,70 +17,21 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="snowFlakeXue.github.io/2019/05/07/1/"/>
-    <id>snowFlakeXue.github.io/2019/05/07/1/</id>
-    <published>2019-05-07T06:06:45.882Z</published>
-    <updated>2019-05-07T08:19:20.068Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          function func(){
-    for(var
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="snowFlakeXue.github.io/2019/05/07/1/"/>
-    <id>snowFlakeXue.github.io/2019/05/07/1/</id>
-    <published>2019-05-07T06:06:40.422Z</published>
-    <updated>2019-05-07T06:07:12.656Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;&lt;meta name=&quot;generator&quot; content=&quot;Hexo 3.8.0&quot;&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot;
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>函数</title>
     <link href="snowFlakeXue.github.io/2019/05/07/%E5%87%BD%E6%95%B0/"/>
     <id>snowFlakeXue.github.io/2019/05/07/函数/</id>
     <published>2019-05-07T05:52:38.000Z</published>
-    <updated>2019-05-07T08:21:38.466Z</updated>
+    <updated>2019-05-07T08:24:57.970Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;在js中函数也是对象，因此可以把它赋给一个变量，一个数组元素，甚至作为参数传给另一个函数调用&quot;&gt;&lt;a href=&quot;#在js中函数也是对象，因此可以把它赋给一个变量，一个数组元素，甚至作为参数传给另一个函数调用&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h2 id=&quot;在js中函数也是对象，因此可以把它赋给一个变量，一个数组元素，甚至作为参数传给另一个函数调用&quot;&gt;&lt;a href=&quot;#在js中函数也是对象，因此可以把它赋给一个变量，一个数组元素，甚至作为参数传给另一个函数调用&quot; class=&quot;headerlink&quot; title=&quot;在js中函数也是对象，因此可以把它赋给一个变量，一个数组元素，甚至作为参数传给另一个函数调用&quot;&gt;&lt;/a&gt;在js中函数也是对象，因此可以把它赋给一个变量，一个数组元素，甚至作为参数传给另一个函数调用&lt;/h2&gt;&lt;h2 id=&quot;函数的定义&quot;&gt;&lt;a href=&quot;#函数的定义&quot; class=&quot;headerlink&quot; title=&quot;函数的定义&quot;&gt;&lt;/a&gt;&lt;font color=&quot;red&quot;&gt;函数的定义&lt;/font&gt;&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;声明式的静态方式(所有浏览器都支持）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;function 函数名(形参列表){函数体}//注意没有var否则报错,且function必须小写&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;①这种方式最常用，他只需定义一次，在程序的完整过程中，他一直被存在内存中，只在页面打开时解析一次，不论是什么调用它，返回的都是函数体处理完的结果&lt;/p&gt;
+&lt;p&gt;②要设定返回值，他可以有0个到多个return,一般多个return 都用在需要判断条件时，即满足这个条件就不往下执行函数体内容&lt;/p&gt;
+&lt;p&gt;③参数方面注意传参形式，一种是传值，一种是传地址，简单点说就是传值不改变实参，传地址改变实参&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
