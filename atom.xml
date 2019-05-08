@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-05-07T08:24:57.970Z</updated>
+  <updated>2019-05-08T06:25:24.932Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="snowFlakeXue.github.io/2019/05/08/1/"/>
+    <id>snowFlakeXue.github.io/2019/05/08/1/</id>
+    <published>2019-05-08T03:21:54.427Z</published>
+    <updated>2019-05-08T06:25:24.932Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;&lt;meta name=&quot;generator&quot; content=&quot;Hexo 3.8.0&quot;&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>HTML_DOM</title>
+    <link href="snowFlakeXue.github.io/2019/05/08/HTML-DOM/"/>
+    <id>snowFlakeXue.github.io/2019/05/08/HTML-DOM/</id>
+    <published>2019-05-08T02:51:59.000Z</published>
+    <updated>2019-05-08T06:30:21.387Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;什么是DOM：DOM是文档对象模型，他分xhtml-html-核心dom三种，所以html-dom就是可以对html文本中任何元素进行修改删除等操作&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="javascript学习" scheme="snowFlakeXue.github.io/categories/javascript%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>函数</title>
