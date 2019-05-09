@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-05-09T00:13:31.544Z</updated>
+  <updated>2019-05-09T13:16:32.559Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>BOM</title>
+    <link href="snowFlakeXue.github.io/2019/05/09/BOM/"/>
+    <id>snowFlakeXue.github.io/2019/05/09/BOM/</id>
+    <published>2019-05-09T05:39:31.000Z</published>
+    <updated>2019-05-09T13:16:32.559Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;BOM-浏览器对象模型，是实现与浏览器交流的&quot;&gt;&lt;a href=&quot;#BOM-浏览器对象模型，是实现与浏览器交流的&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="javascript学习" scheme="snowFlakeXue.github.io/categories/javascript%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>HTML_DOM</title>
