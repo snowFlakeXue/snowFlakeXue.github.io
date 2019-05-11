@@ -15,7 +15,7 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -110,13 +110,13 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="snowFlakeXue" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="snowFlakeXue" type="application/atom+xml"/>
 
 
 
   
   
-  <link rel="canonical" href="snowFlakeXue.github.io/">
+  <link rel="canonical" href="snowFlakeXue.github.io/"/>
 
 
 
@@ -227,7 +227,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
 
   </li>
         
@@ -244,7 +244,7 @@
 
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
 
   </li>
         
@@ -261,7 +261,7 @@
 
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
 
   </li>
         
@@ -278,7 +278,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
 
   </li>
 
@@ -289,7 +289,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
         </li>
       
     </ul>
@@ -309,7 +309,9 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -359,16 +361,195 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/09/BOM/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/10/1/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+      <meta itemprop="name" content="Liu Xue"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue">
+      <meta itemprop="name" content="snowFlakeXue"/>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/10/1/" class="post-title-link" itemprop="url">未命名</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-10 10:46:09 / 修改时间：11:10:42" itemprop="dateCreated datePublished" datetime="2019-05-10T10:46:09+08:00">2019-05-10</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+    
+      
+      
+
+      
+        
+          
+            <!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+    <p>数字的总和是:</p>
+    </div>
+     
+    <script>
+    new Vue({
+        el: '#app',
+        data: {
+            numbers: [1,2,3,4],
+        },
+        computed: {
+            add(){
+            
+            return this.numbers.reduce((sum,val) => sum + val);
+             
+             }
+        }
+
+    });
+ 
+    </script>
+</body>
+</html>
+          
+        
+      
+    </div>
+
+    
+    <div>
+           
+</div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/09/BOM/"/>
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liu Xue"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="snowFlakeXue"/>
     </span>
 
     
@@ -404,12 +585,24 @@
                 
               
 
-              <time title="创建时间：2019-05-09 13:39:31 / 修改时间：21:18:52" itemprop="dateCreated datePublished" datetime="2019-05-09T13:39:31+08:00">2019-05-09</time>
+              <time title="创建时间：2019-05-09 13:39:31" itemprop="dateCreated datePublished" datetime="2019-05-09T13:39:31+08:00">2019-05-09</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-11 08:45:38" itemprop="dateModified" datetime="2019-05-11T08:45:38+08:00">2019-05-11</time>
               
             
           </span>
@@ -464,11 +657,11 @@
       
         
           <h2 id="BOM-浏览器对象模型，是实现与浏览器交流的"><a href="#BOM-浏览器对象模型，是实现与浏览器交流的" class="headerlink" title="BOM:浏览器对象模型，是实现与浏览器交流的"></a>BOM:浏览器对象模型，是实现与浏览器交流的</h2><h2 id="window"><a href="#window" class="headerlink" title="window"></a><font color="red">window</font></h2><ol>
-<li>window.document<a href="document就是表示这个文档，我理解成跟this差不多">可省略window</a></li>
-<li>window.innerHeight[浏览器内部高度，除去菜单栏，工具栏啥的]window.innerWidth<a href="Internet Explorer、Chrome、Firefox、Opera 以及 Safari支持">浏览器内部宽度</a></li>
+<li>window.document（可省略window）(document就是表示这个文档，我理解成跟this差不多)</li>
+<li>window.innerHeight（浏览器内部高度，除去菜单栏，工具栏啥的）window.innerWidth（浏览器内部宽度）(Internet Explorer、Chrome、Firefox、Opera 以及 Safari支持)</li>
 </ol>
 <p>document.body.clientHeight/document.body.clientWidth(Internet Explorer 8、7、6、5支持)</p>
-<p>window.outerHeight[浏览器完整高度]window.outerWidth[浏览器完整宽度]<br></p>
+<p>window.outerHeight（浏览器完整高度)window.outerWidth(浏览器完整宽度)<br></p>
           <!--noindex-->
           
             <div class="post-button text-center">
@@ -535,16 +728,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/08/HTML-DOM/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/08/HTML-DOM/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+      <meta itemprop="name" content="Liu Xue"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue">
+      <meta itemprop="name" content="snowFlakeXue"/>
     </span>
 
     
@@ -718,16 +911,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/07/函数/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/07/函数/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+      <meta itemprop="name" content="Liu Xue"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue">
+      <meta itemprop="name" content="snowFlakeXue"/>
     </span>
 
     
@@ -895,16 +1088,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/06/day3/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/06/day3/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+      <meta itemprop="name" content="Liu Xue"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue">
+      <meta itemprop="name" content="snowFlakeXue"/>
     </span>
 
     
@@ -1064,16 +1257,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/06/js对象/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/06/js对象/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+      <meta itemprop="name" content="Liu Xue"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue">
+      <meta itemprop="name" content="snowFlakeXue"/>
     </span>
 
     
@@ -1241,16 +1434,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/05/day2/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/05/day2/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+      <meta itemprop="name" content="Liu Xue"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue">
+      <meta itemprop="name" content="snowFlakeXue"/>
     </span>
 
     
@@ -1427,16 +1620,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/05/运算符和语句/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/05/运算符和语句/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+      <meta itemprop="name" content="Liu Xue"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue">
+      <meta itemprop="name" content="snowFlakeXue"/>
     </span>
 
     
@@ -1602,16 +1795,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/04/day1/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/04/day1/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+      <meta itemprop="name" content="Liu Xue"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue">
+      <meta itemprop="name" content="snowFlakeXue"/>
     </span>
 
     
@@ -1777,16 +1970,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/04/js数据类型与变量/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/04/js数据类型与变量/"/>
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+      <meta itemprop="name" content="Liu Xue"/>
+      <meta itemprop="description" content=""/>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue">
+      <meta itemprop="name" content="snowFlakeXue"/>
     </span>
 
     
@@ -1940,180 +2133,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/04/myBlog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/04/myBlog/" class="post-title-link" itemprop="url">myBlog</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-04 13:23:10 / 修改时间：13:59:38" itemprop="dateCreated datePublished" datetime="2019-05-04T13:23:10+08:00">2019-05-04</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/日常/" itemprop="url" rel="index"><span itemprop="name">日常</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-    
-      
-      
-
-      
-        
-          <h2 id="嘻嘻嘻。"><a href="#嘻嘻嘻。" class="headerlink" title="嘻嘻嘻。"></a>嘻嘻嘻。</h2><p><img src="/2019/05/04/myBlog/hhh.jpg" alt="avatar"><br></p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/05/04/myBlog/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    <div>
-           
-</div>
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
 
 
           </div>
@@ -2142,7 +2168,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg" alt="Liu Xue">
+              <img class="site-author-image" itemprop="image"
+                src="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"
+                alt="Liu Xue"/>
             
               <p class="site-author-name" itemprop="name">Liu Xue</p>
               <div class="site-description motion-element" itemprop="description"></div>
@@ -2155,7 +2183,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
