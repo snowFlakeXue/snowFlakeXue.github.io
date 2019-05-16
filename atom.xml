@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-05-16T02:19:03.998Z</updated>
+  <updated>2019-05-16T02:21:05.955Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -21,18 +21,12 @@
     <link href="snowFlakeXue.github.io/2019/05/16/v-for/"/>
     <id>snowFlakeXue.github.io/2019/05/16/v-for/</id>
     <published>2019-05-16T01:48:16.000Z</published>
-    <updated>2019-05-16T02:19:03.998Z</updated>
+    <updated>2019-05-16T02:21:05.955Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;ol&gt;
-&lt;li&gt;一个简单排序,注意这里面sort方法容易掉的坑，不仅是vue所有的js都有这个bug，因此这种解决方式很常用&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
-        
-      
+      &lt;ol&gt;
+&lt;li&gt;一个简单排序,注意这里面sort方法容易掉的坑，不仅是vue所有的js都有这个bug，因此这种解决方式很常用&lt;/li&gt;&lt;/ol&gt;
     
     </summary>
     
