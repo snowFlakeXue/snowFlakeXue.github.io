@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-05-16T11:13:00.305Z</updated>
+  <updated>2019-05-16T10:34:41.356Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -17,11 +17,99 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>其他指令</title>
+    <link href="snowFlakeXue.github.io/2019/05/16/%E5%85%B6%E4%BB%96%E6%8C%87%E4%BB%A4/"/>
+    <id>snowFlakeXue.github.io/2019/05/16/其他指令/</id>
+    <published>2019-05-16T08:26:07.000Z</published>
+    <updated>2019-05-16T10:34:41.356Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;v-pre v-cloak v-once&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vbind</title>
+    <link href="snowFlakeXue.github.io/2019/05/16/vbind/"/>
+    <id>snowFlakeXue.github.io/2019/05/16/vbind/</id>
+    <published>2019-05-16T07:44:39.000Z</published>
+    <updated>2019-05-16T10:32:37.665Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;v-bind用于绑定属性，样式，很重要&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vmodel</title>
+    <link href="snowFlakeXue.github.io/2019/05/16/vmodel/"/>
+    <id>snowFlakeXue.github.io/2019/05/16/vmodel/</id>
+    <published>2019-05-16T03:07:15.000Z</published>
+    <updated>2019-05-16T10:33:32.944Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;v-model是实现双向绑定的方法，是vue的核心&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>von</title>
+    <link href="snowFlakeXue.github.io/2019/05/16/von/"/>
+    <id>snowFlakeXue.github.io/2019/05/16/von/</id>
+    <published>2019-05-16T03:07:05.000Z</published>
+    <updated>2019-05-16T10:34:05.089Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;v-on是事件绑定，他的缩写是&lt;code&gt;@&lt;/code&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vhtml</title>
+    <link href="snowFlakeXue.github.io/2019/05/16/vhtml/"/>
+    <id>snowFlakeXue.github.io/2019/05/16/vhtml/</id>
+    <published>2019-05-16T02:44:37.000Z</published>
+    <updated>2019-05-16T10:33:17.152Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;注意这种方法在你无法保证绝对安全时不要使用，否则会造成SSR攻击&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>vtext</title>
     <link href="snowFlakeXue.github.io/2019/05/16/vtext/"/>
     <id>snowFlakeXue.github.io/2019/05/16/vtext/</id>
     <published>2019-05-16T02:38:46.000Z</published>
-    <updated>2019-05-16T11:13:00.305Z</updated>
+    <updated>2019-05-16T11:17:32.681Z</updated>
     
     <summary type="html">
     
@@ -29,9 +117,28 @@
       
         
         
-          &lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
+          &lt;p&gt;这种写法的作用和花括号法一样，但在网速慢加载不出来时不会输出花括号降低用户体验&lt;br&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
         
       
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vfor</title>
+    <link href="snowFlakeXue.github.io/2019/05/16/vfor/"/>
+    <id>snowFlakeXue.github.io/2019/05/16/vfor/</id>
+    <published>2019-05-16T01:48:16.000Z</published>
+    <updated>2019-05-16T10:32:57.572Z</updated>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;一个简单排序,注意这里面sort方法容易掉的坑，不仅是vue所有的js都有这个bug，因此这种解决方式很常用&lt;/li&gt;&lt;/ol&gt;
     
     </summary>
     
