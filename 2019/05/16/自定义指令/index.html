@@ -100,17 +100,20 @@
 
 
 
-  <meta name="description" content="这种写法的作用和花括号法一样，但在网速慢加载不出来时不会输出花括号降低用户体验1234567891011&amp;lt;div id=&quot;app&quot;&amp;gt;        &amp;lt;span v-text=&quot;h2&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;script&amp;gt;        new Vue(&amp;#123;            el:&apos;#app&apos;,            d">
+  <meta name="description" content="先举个小栗子要注意的是，vue提供的Vue-directive来自定义值令方法时要把这段代码写在vue实例化之前否则会报错，同时指令命名不能用驼峰法否则也会报错，V大写！ 代码里一些不熟悉的将在下面详细的讲讲 1234567891011121314151617181920212223&amp;lt;body&amp;gt;    &amp;lt;div id=&quot;app&quot;&amp;gt;        &amp;lt;div v-chan">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vtext">
-<meta property="og:url" content="snowFlakeXue.github.io/2019/05/16/vtext/index.html">
+<meta property="og:title" content="自定义指令">
+<meta property="og:url" content="snowFlakeXue.github.io/2019/05/16/自定义指令/index.html">
 <meta property="og:site_name" content="snowFlakeXue">
-<meta property="og:description" content="这种写法的作用和花括号法一样，但在网速慢加载不出来时不会输出花括号降低用户体验1234567891011&amp;lt;div id=&quot;app&quot;&amp;gt;        &amp;lt;span v-text=&quot;h2&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;script&amp;gt;        new Vue(&amp;#123;            el:&apos;#app&apos;,            d">
+<meta property="og:description" content="先举个小栗子要注意的是，vue提供的Vue-directive来自定义值令方法时要把这段代码写在vue实例化之前否则会报错，同时指令命名不能用驼峰法否则也会报错，V大写！ 代码里一些不熟悉的将在下面详细的讲讲 1234567891011121314151617181920212223&amp;lt;body&amp;gt;    &amp;lt;div id=&quot;app&quot;&amp;gt;        &amp;lt;div v-chan">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-16T11:17:32.681Z">
+<meta property="og:image" content="/2019/05/16/自定义指令/1.jpg">
+<meta property="og:image" content="/2019/05/16/自定义指令/2.jpg">
+<meta property="og:updated_time" content="2019-05-16T15:16:27.253Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vtext">
-<meta name="twitter:description" content="这种写法的作用和花括号法一样，但在网速慢加载不出来时不会输出花括号降低用户体验1234567891011&amp;lt;div id=&quot;app&quot;&amp;gt;        &amp;lt;span v-text=&quot;h2&quot;&amp;gt;&amp;lt;/span&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;script&amp;gt;        new Vue(&amp;#123;            el:&apos;#app&apos;,            d">
+<meta name="twitter:title" content="自定义指令">
+<meta name="twitter:description" content="先举个小栗子要注意的是，vue提供的Vue-directive来自定义值令方法时要把这段代码写在vue实例化之前否则会报错，同时指令命名不能用驼峰法否则也会报错，V大写！ 代码里一些不熟悉的将在下面详细的讲讲 1234567891011121314151617181920212223&amp;lt;body&amp;gt;    &amp;lt;div id=&quot;app&quot;&amp;gt;        &amp;lt;div v-chan">
+<meta name="twitter:image" content="/2019/05/16/自定义指令/1.jpg">
 
 
 
@@ -120,7 +123,7 @@
 
   
   
-  <link rel="canonical" href="snowFlakeXue.github.io/2019/05/16/vtext/">
+  <link rel="canonical" href="snowFlakeXue.github.io/2019/05/16/自定义指令/">
 
 
 
@@ -130,7 +133,7 @@
   };
 </script>
 
-  <title>vtext | snowFlakeXue</title>
+  <title>自定义指令 | snowFlakeXue</title>
   
 
 
@@ -364,7 +367,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/16/vtext/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/16/自定义指令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Xue">
@@ -381,7 +384,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">vtext
+          <h1 class="post-title" itemprop="name headline">自定义指令
 
               
             
@@ -407,7 +410,7 @@
                 
               
 
-              <time title="创建时间：2019-05-16 10:38:46 / 修改时间：19:17:32" itemprop="dateCreated datePublished" datetime="2019-05-16T10:38:46+08:00">2019-05-16</time>
+              <time title="创建时间：2019-05-16 20:00:49 / 修改时间：23:16:27" itemprop="dateCreated datePublished" datetime="2019-05-16T20:00:49+08:00">2019-05-16</time>
             
 
             
@@ -448,8 +451,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/05/16/vtext/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/16/vtext/" itemprop="commentCount"></span>
+                <a href="/2019/05/16/自定义指令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/16/自定义指令/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -478,8 +481,32 @@
       
 
       
-        <p>这种写法的作用和花括号法一样，但在网速慢加载不出来时不会输出花括号降低用户体验<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-text</span>=<span class="string">"h2"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">            el:<span class="string">'#app'</span>,</span></span><br><span class="line"><span class="undefined">            data:&#123;</span></span><br><span class="line"><span class="javascript">                h2:<span class="string">'hello world'</span></span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">        &#125;)</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p>结果：<code>hello world</code></p>
+        <h3 id="先举个小栗子"><a href="#先举个小栗子" class="headerlink" title="先举个小栗子"></a>先举个小栗子</h3><p>要注意的是，vue提供的Vue-directive来自定义值令方法时要把这段代码写在vue实例化之前否则会报错，同时指令命名不能用驼峰法否则也会报错，V大写！</p>
+<p>代码里一些不熟悉的将在下面详细的讲讲</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-change_color</span>=<span class="string">"color"</span>&gt;</span>&#123;&#123;num&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"add"</span>&gt;</span>add<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    Vue.directive(<span class="string">'change_color'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">el,binding,vnode</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">        el.style=<span class="string">'color:'</span>+binding.value;</span></span><br><span class="line"><span class="undefined">     &#125;);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">       el:<span class="string">'#app'</span>,</span></span><br><span class="line"><span class="undefined">       data: &#123;</span></span><br><span class="line"><span class="undefined">           num: 1,</span></span><br><span class="line"><span class="javascript">           color:<span class="string">'red'</span></span></span><br><span class="line"><span class="undefined">           &#125;,</span></span><br><span class="line"><span class="undefined">       methods:&#123;</span></span><br><span class="line"><span class="javascript">        add:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">               <span class="keyword">this</span>.num++;</span></span><br><span class="line"><span class="undefined">           &#125;</span></span><br><span class="line"><span class="undefined">       &#125;</span></span><br><span class="line"><span class="undefined">    &#125;);</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="钩子函数（也叫生命周期）"><a href="#钩子函数（也叫生命周期）" class="headerlink" title="钩子函数（也叫生命周期）"></a>钩子函数（也叫生命周期）</h3><ol>
+<li><p>bind:只调用一次，指令第一次绑定到元素时调用。在这里可以进行一次性的初始化设置。</p>
+</li>
+<li><p>inserted:被绑定元素插入父节点时调用 (仅保证父节点存在，但不一定已被插入文档中)。</p>
+</li>
+<li><p>update:被绑定于元素所在的模板更新时调用，而无论绑定值是否变化。通过比较更新前后的绑定值，可以忽略不必要的模板更新</p>
+</li>
+<li><p>conponentUpdated:被绑定元素所在模板完成一次更新周期时调用。</p>
+</li>
+<li><p>unbind:只调用一次，指令与元素解绑时调用</p>
+</li>
+</ol>
+<h3 id="钩子函数的参数"><a href="#钩子函数的参数" class="headerlink" title="钩子函数的参数"></a>钩子函数的参数</h3><p>el: 指令所绑定的元素，可以用来直接操作DOM。</p>
+<p>binding: 一个对象，包含指令的很多信息。</p>
+<p>binding的属性：(只包括了常用的，剩下的去官网找)</p>
+<p>name：指令名，不包括 v- 前缀。</p>
+<p>expression：字符串形式的指令表达式</p>
+<p>value：指令的绑定值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//注意引号</span></span><br><span class="line">    Vue.directive(<span class="string">'change_color'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">el,binding,vnode</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(binding.value);</span><br><span class="line">        <span class="built_in">console</span>.log(binding.name);</span><br><span class="line">        <span class="built_in">console</span>.log(binding.expression);</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/16/自定义指令/1.jpg" alt="avatar"></p>
+<p>vnode: Vue编译生成的虚拟节点。</p>
+<h3 id="上面小栗子的改写"><a href="#上面小栗子的改写" class="headerlink" title="上面小栗子的改写"></a>上面小栗子的改写</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-change_color</span>=<span class="string">"color"</span>&gt;</span>&#123;&#123;num&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"add"</span>&gt;</span>add<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    /*注意这个销毁应在app外，点销毁之后app就不运行了点add也不加一了</span><br><span class="line"></span><br><span class="line">    注意下面这个app是js中vue的app*/</span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"app.$destroy()"</span>&gt;</span>销毁<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    Vue.directive(<span class="string">'change_color'</span>,&#123;</span></span><br><span class="line"><span class="javascript">        bind:<span class="function"><span class="keyword">function</span>(<span class="params">el,binding,vnode</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="string">'1-bind'</span>);</span></span><br><span class="line"><span class="javascript">            el.style=<span class="string">'color:'</span>+binding.value;</span></span><br><span class="line"><span class="undefined">        &#125;,</span></span><br><span class="line"><span class="javascript">        inserted:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="string">'2-inserted'</span>);</span></span><br><span class="line"><span class="undefined">        &#125;,</span></span><br><span class="line"><span class="javascript">        update:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="string">'3-update'</span>);</span></span><br><span class="line"><span class="undefined">        &#125;,</span></span><br><span class="line"><span class="javascript">        componentUpdated:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="string">'4-componentUpdated'</span>);</span></span><br><span class="line"><span class="undefined">        &#125;,</span></span><br><span class="line"><span class="javascript">        unbind:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="string">'5-unbind'</span>);</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    );</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">       el:<span class="string">'#app'</span>,</span></span><br><span class="line"><span class="undefined">       data: &#123;</span></span><br><span class="line"><span class="undefined">           num: 1,</span></span><br><span class="line"><span class="javascript">           color:<span class="string">'red'</span></span></span><br><span class="line"><span class="undefined">           &#125;,</span></span><br><span class="line"><span class="undefined">       methods:&#123;</span></span><br><span class="line"><span class="javascript">       add:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">               <span class="keyword">this</span>.num++;</span></span><br><span class="line"><span class="undefined">           &#125;</span></span><br><span class="line"><span class="undefined">       &#125;</span></span><br><span class="line"><span class="undefined">    &#125;);</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2019/05/16/自定义指令/2.jpg" alt="avatar"></p>
 
       
     </div>
@@ -520,8 +547,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/16/vfor/" rel="next" title="vfor">
-                <i class="fa fa-chevron-left"></i> vfor
+              <a href="/2019/05/16/其他指令/" rel="next" title="其他指令">
+                <i class="fa fa-chevron-left"></i> 其他指令
               </a>
             
           </div>
@@ -529,10 +556,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/16/vhtml/" rel="prev" title="vhtml">
-                vhtml <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -580,8 +603,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -687,6 +719,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#先举个小栗子"><span class="nav-number">1.</span> <span class="nav-text">先举个小栗子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#钩子函数（也叫生命周期）"><span class="nav-number">2.</span> <span class="nav-text">钩子函数（也叫生命周期）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#钩子函数的参数"><span class="nav-number">3.</span> <span class="nav-text">钩子函数的参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#上面小栗子的改写"><span class="nav-number">4.</span> <span class="nav-text">上面小栗子的改写</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-05-16T10:34:41.356Z</updated>
+  <updated>2019-05-16T15:16:27.253Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自定义指令</title>
+    <link href="snowFlakeXue.github.io/2019/05/16/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/"/>
+    <id>snowFlakeXue.github.io/2019/05/16/自定义指令/</id>
+    <published>2019-05-16T12:00:49.000Z</published>
+    <updated>2019-05-16T15:16:27.253Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;先举个小栗子&quot;&gt;&lt;a href=&quot;#先举个小栗子&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>其他指令</title>
