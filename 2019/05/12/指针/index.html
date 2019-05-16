@@ -100,21 +100,19 @@
 
 
 
-  <meta name="description" content="标识符 标识符只能由数字，字母，$符和下划线表示 首字符必须是字母或$符或下划线，切记不能是数字 在所使用的的作用域内，每个变量的标识符是唯一的 可在变量标识符中使用Unicode的字母和数字，官网链接 可使用转义序列 区分大小写 不得使用js关键字，ECMA 262规范的保留字，浏览器中典型的保留字，具体如下图">
+  <meta name="description" content="什么是指针：指针是储存地址的变量，他也有自己的地址，他通过自己储存的地址指向内存单元    指针的声明：数据类型 *指针变量名；1int *p;   注意：因为当不赋初值时，系统将随意给他个地址，很容易出错，所以一般用NULL给他赋个初值  取地址： &amp;amp;变量名（&amp;amp;为地址运算符） 使用指针储存地址： 数据类型 *指针变量名 = 取地址12int a = 3;int *p = &amp;am">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js数据类型与变量">
-<meta property="og:url" content="snowFlakeXue.github.io/2019/05/04/js数据类型与变量/index.html">
+<meta property="og:title" content="指针">
+<meta property="og:url" content="snowFlakeXue.github.io/2019/05/12/指针/index.html">
 <meta property="og:site_name" content="snowFlakeXue">
-<meta property="og:description" content="标识符 标识符只能由数字，字母，$符和下划线表示 首字符必须是字母或$符或下划线，切记不能是数字 在所使用的的作用域内，每个变量的标识符是唯一的 可在变量标识符中使用Unicode的字母和数字，官网链接 可使用转义序列 区分大小写 不得使用js关键字，ECMA 262规范的保留字，浏览器中典型的保留字，具体如下图">
+<meta property="og:description" content="什么是指针：指针是储存地址的变量，他也有自己的地址，他通过自己储存的地址指向内存单元    指针的声明：数据类型 *指针变量名；1int *p;   注意：因为当不赋初值时，系统将随意给他个地址，很容易出错，所以一般用NULL给他赋个初值  取地址： &amp;amp;变量名（&amp;amp;为地址运算符） 使用指针储存地址： 数据类型 *指针变量名 = 取地址12int a = 3;int *p = &amp;am">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="/2019/05/04/js数据类型与变量/guan.jpg">
-<meta property="og:image" content="/2019/05/04/js数据类型与变量/ecmabao.jpg">
-<meta property="og:image" content="/2019/05/04/js数据类型与变量/liubao.jpg">
-<meta property="og:updated_time" content="2019-05-04T11:32:13.013Z">
+<meta property="og:image" content="/2019/05/12/指针/1.jpg">
+<meta property="og:updated_time" content="2019-05-12T00:36:00.215Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js数据类型与变量">
-<meta name="twitter:description" content="标识符 标识符只能由数字，字母，$符和下划线表示 首字符必须是字母或$符或下划线，切记不能是数字 在所使用的的作用域内，每个变量的标识符是唯一的 可在变量标识符中使用Unicode的字母和数字，官网链接 可使用转义序列 区分大小写 不得使用js关键字，ECMA 262规范的保留字，浏览器中典型的保留字，具体如下图">
-<meta name="twitter:image" content="/2019/05/04/js数据类型与变量/guan.jpg">
+<meta name="twitter:title" content="指针">
+<meta name="twitter:description" content="什么是指针：指针是储存地址的变量，他也有自己的地址，他通过自己储存的地址指向内存单元    指针的声明：数据类型 *指针变量名；1int *p;   注意：因为当不赋初值时，系统将随意给他个地址，很容易出错，所以一般用NULL给他赋个初值  取地址： &amp;amp;变量名（&amp;amp;为地址运算符） 使用指针储存地址： 数据类型 *指针变量名 = 取地址12int a = 3;int *p = &amp;am">
+<meta name="twitter:image" content="/2019/05/12/指针/1.jpg">
 
 
 
@@ -124,7 +122,7 @@
 
   
   
-  <link rel="canonical" href="snowFlakeXue.github.io/2019/05/04/js数据类型与变量/">
+  <link rel="canonical" href="snowFlakeXue.github.io/2019/05/12/指针/">
 
 
 
@@ -134,7 +132,7 @@
   };
 </script>
 
-  <title>js数据类型与变量 | snowFlakeXue</title>
+  <title>指针 | snowFlakeXue</title>
   
 
 
@@ -368,7 +366,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/04/js数据类型与变量/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/12/指针/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Xue">
@@ -385,7 +383,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">js数据类型与变量
+          <h1 class="post-title" itemprop="name headline">指针
 
               
             
@@ -411,7 +409,7 @@
                 
               
 
-              <time title="创建时间：2019-05-04 15:54:24 / 修改时间：19:32:13" itemprop="dateCreated datePublished" datetime="2019-05-04T15:54:24+08:00">2019-05-04</time>
+              <time title="创建时间：2019-05-12 07:07:08 / 修改时间：08:36:00" itemprop="dateCreated datePublished" datetime="2019-05-12T07:07:08+08:00">2019-05-12</time>
             
 
             
@@ -433,7 +431,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/javascript学习/" itemprop="url" rel="index"><span itemprop="name">javascript学习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a></span>
 
                 
                 
@@ -452,8 +450,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/05/04/js数据类型与变量/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/04/js数据类型与变量/" itemprop="commentCount"></span>
+                <a href="/2019/05/12/指针/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/12/指针/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -482,65 +480,34 @@
       
 
       
-        <h2 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a><font color="red">标识符</font></h2><ol>
-<li>标识符只能由数字，字母，$符和下划线表示</li>
-<li>首字符必须是字母或$符或下划线，切记不能是数字</li>
-<li>在所使用的的作用域内，每个变量的标识符是唯一的</li>
-<li>可在变量标识符中使用Unicode的字母和数字，<a href="http://www.unicode.org/" target="_blank" rel="noopener">官网链接</a></li>
-<li>可使用转义序列</li>
-<li>区分大小写</li>
-<li><p>不得使用js关键字，ECMA 262规范的保留字，浏览器中典型的保留字，具体如下图</p>
-<a id="more"></a>
-<h3 id="js关键字"><a href="#js关键字" class="headerlink" title="js关键字"></a>js关键字</h3><p><img src="/2019/05/04/js数据类型与变量/guan.jpg" alt="js关键字"></p>
-<h3 id="ECMA-262规范的保留字"><a href="#ECMA-262规范的保留字" class="headerlink" title="ECMA 262规范的保留字"></a>ECMA 262规范的保留字</h3><p><img src="/2019/05/04/js数据类型与变量/ecmabao.jpg" alt="ECMA 262规范的保留字"></p>
-<h3 id="浏览器中典型的保留字"><a href="#浏览器中典型的保留字" class="headerlink" title="浏览器中典型的保留字"></a>浏览器中典型的保留字</h3><p><img src="/2019/05/04/js数据类型与变量/liubao.jpg" alt="浏览器中典型的保留字"></p>
-</li>
-<li><p>尽量使用有意义的，提高可维护性</p>
-</li>
-<li>一些小规范：①项目的集合名称应用复数<br>②对象名首字母大写<br>③函数和变量以小写字母开始并使用驼峰法,也可每个单词间用下划线<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a><font color="red">作用域</font></h2></li>
-<li>局部变量：在一个函数内定义，初始化，函数结束时变量不存在</li>
-<li>全局变量：在所有地方都可访问，包括引入的js库</li>
-<li>要养成写var的习惯，因为当你想要定义一个局部变量但没有写var就会被当做全局变量，也就是说全局变量可不写var但最好也要写<h2 id="字符串型"><a href="#字符串型" class="headerlink" title="字符串型"></a><font color="red">字符串型</font></h2></li>
-<li>单引号和双引号作用一样，不做区别；但是当需要嵌套时不能同型套同型，只能是单引号套双引号或双引号套单引号</li>
-<li>字符串中可包括转义序列，例如 <code>\n</code> <code>\\</code> <code>\&#39;</code> <code>\&quot;</code> </li>
-<li>可使用escape函数和unescape函数进行编码和解码，但需要注意的是这两个函数不能处理非ASCII码字符，这是可使用encodeURI和decodeURI函数，下面是使用escape函数和unescape函数的示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">document.write(escape(&quot;sbadkf65488$%^&quot;));</span><br><span class="line">document.write(unescape(&quot;sbadkf65488%24%25%5E&quot;));</span><br></pre></td></tr></table></figure>
+        <ol>
+<li>什么是指针：指针是储存地址的变量，他也有自己的地址，他通过自己储存的地址指向内存单元</li>
+</ol>
+<p><img src="/2019/05/12/指针/1.jpg" alt="avatar"></p>
+<ol start="2">
+<li>指针的声明：数据类型 *指针变量名；<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int *p;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>结果：<code>sbadkf65488%24%25%5Esbadkf65488$%^</code></p>
+<p>注意：因为当不赋初值时，系统将随意给他个地址，很容易出错，所以一般用NULL给他赋个初值</p>
+<ol start="3">
+<li>取地址： &amp;变量名（&amp;为地址运算符）</li>
+<li>使用指针储存地址： 数据类型 *指针变量名 = 取地址<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int a = 3;</span><br><span class="line">int *p = &amp;a;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>特别注意的是指针的数据类型应和所指向的变量的数据类型相同</p>
+<p>一种数据类型的指针变量可指向任意一个跟他同数据类型的变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int a = 10;</span><br><span class="line">int *p = &amp;a;</span><br><span class="line">int b =2;</span><br><span class="line">p = &amp;b;</span><br></pre></td></tr></table></figure></p>
 <ol start="4">
-<li>空字符串是一种特殊情形，一般用来初始化</li>
-<li>字符串连接:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var year=2019;</span><br><span class="line">document.write(&quot;今年是&quot;+year+&quot;年&quot;);</span><br></pre></td></tr></table></figure>
+<li><p>使用*访问指向的数据 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int * a = 1;</span><br><span class="line">cout&lt;&lt;*a;//1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>指向不同变量类型的指针长度相同，具体长度取决于编译器，32位编译器就是4个字节，64位编译器就是16个字节</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">double a = 3.45;</span><br><span class="line">double b = &amp;a;</span><br><span class="line">cout&lt;&lt;sizeof(b);//4或8</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>动态内存分配：解决未知长度内存空间的问题，虽然也定义了长度但在delete时会将不用的销毁，若不用delete就会造成内存泄漏(即内存被占用却没发挥作用，而其他元素可使用元素减少，造成程序运行效率降低)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int a = new int;//要指明类型，这是给一个元素分配内存</span><br><span class="line">delete a;//对应的delete</span><br><span class="line">int b = new int[10];//这是给多个元素分配内存的形式</span><br><span class="line">delete []b;//对应的delete</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>结果：<code>今年是2019年</code></p>
-<ol start="6">
-<li>toString函数，将其他类型转换为字符串类型<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">document.write(boo.toString());</span><br><span class="line">//显示数据类型</span><br><span class="line">document.write(typeof boo.toString());</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="布尔型"><a href="#布尔型" class="headerlink" title="布尔型"></a><font color="red">布尔型</font></h2><ol>
-<li>只有true和false两种，不能用引号包起来</li>
-<li>Boolean函数,将其他类型转化为布尔型。需要注意的是没有toBoolean函数了，是Boolean函数！！！！还有强调一下有管字符串转成布尔型，当是空字符串时返回false，当是一个及以上空格时返回true,具体实践如下<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var s=Boolean(&quot;&quot;);</span><br><span class="line">document.write(s);</span><br><span class="line">var r=Boolean(&quot;  &quot;);</span><br><span class="line">document.write(r);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>结果：<code>falsetrue</code></p>
-<h2 id="数值型"><a href="#数值型" class="headerlink" title="数值型"></a><font color="red">数值型</font></h2><ol>
-<li>js中数字是浮点型，需要注意的是，js的计算能力不是很强，所以在数字方面一般不是很精确</li>
-<li>可取数范围是-2e31到2e31;js中规定正无穷用Infinity表示，负无穷用-Infinity表示；当某函数出现溢出时则会返回一个Infinity（正无穷）</li>
-<li>parseFloat()和parseInt(),这两个函数都可用于在字符串中提取出数字，但需要注意的是只能提取出第一个字符就是数字的字符串否则报错，其次，parseInt()只取整数部分，注意事项截取而不是四舍五入;这两个函数还可将八进制或十六进制数转化为十进制，只需在后面加一个参数默认为10，具体例子如下<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var str1=parseInt(&quot;0x5F&quot;,16);</span><br><span class="line">document.write(str1);</span><br><span class="line">var str2=parseFloat(&quot;171.8cm&quot;);</span><br><span class="line">document.write(str2);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>结果：<code>95171.8</code></p>
-<ol start="4">
-<li>isFinite函数，用来判断无穷大，当值是无穷大或NaN时返回false,否则返回true</li>
-<li>Number函数，将其他数据类型转换为数值型,注意字符串类型，只有在字符串内全部是数字时才有用，否则返回NaN<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str2=Number(&quot;171.8cm&quot;);</span><br><span class="line">document.write(str2);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>结果：<code>NaN</code></p>
-<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a><font color="red">常量</font></h2><p>const 变量名 = 值；</p>
-<p>只定义一次</p>
-<h2 id="null与undefined"><a href="#null与undefined" class="headerlink" title="null与undefined"></a><font color="red">null与undefined</font></h2><p>javaScript权威指南： null 和 undefined 都表示“值的空缺”，你可以认为undefined是表示系统级的、出乎意料的或类似错误的值的空缺，而null是表示程序级的、正常的或在意料之中的值的空缺</p>
-<p>javaScript高级程序设计： 在使用var声明变量但未对其加以初始化时，这个变量的值就是undefined。   null值则是表示空对象指针</p>
-<p>其实，null就给他理解成一个空对象，暂时赋给一个变量，而undefined就是当访问为初始化的变量时返回undefined</p>
+<p>举一个为字符串分配内存的例子<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">string name;</span><br><span class="line">cin&gt;&gt;name;//注意要调用string库调用cstring库报错</span><br><span class="line">char *n = new char[name.length()+1];//注意不是strlen(),这个用于char,至于+1则是考虑到c++中对最后一个终止字符的风格</span><br><span class="line">delete []n;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -581,8 +548,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/04/myBlog/" rel="next" title="myBlog">
-                <i class="fa fa-chevron-left"></i> myBlog
+              <a href="/2019/05/09/BOM/" rel="next" title="BOM">
+                <i class="fa fa-chevron-left"></i> BOM
               </a>
             
           </div>
@@ -591,8 +558,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/05/04/day1/" rel="prev" title="day1">
-                day1 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/05/16/v-for/" rel="prev" title="v-for">
+                v-for <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -641,17 +608,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -759,23 +717,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#标识符"><span class="nav-number">1.</span> <span class="nav-text">标识符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#js关键字"><span class="nav-number">1.1.</span> <span class="nav-text">js关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ECMA-262规范的保留字"><span class="nav-number">1.2.</span> <span class="nav-text">ECMA 262规范的保留字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器中典型的保留字"><span class="nav-number">1.3.</span> <span class="nav-text">浏览器中典型的保留字</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用域"><span class="nav-number">2.</span> <span class="nav-text">作用域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串型"><span class="nav-number">3.</span> <span class="nav-text">字符串型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布尔型"><span class="nav-number">4.</span> <span class="nav-text">布尔型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数值型"><span class="nav-number">5.</span> <span class="nav-text">数值型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常量"><span class="nav-number">6.</span> <span class="nav-text">常量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null与undefined"><span class="nav-number">7.</span> <span class="nav-text">null与undefined</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       

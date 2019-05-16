@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>%2F2019%2F05%2F10%2F1%2F</url>
-    <content type="text"><![CDATA[Document 数字的总和是: new Vue({ el: '#app', data: { numbers: [1,2,3,4], }, computed: { add(){ return this.numbers.reduce((sum,val) => sum + val); } } });]]></content>
+    <title><![CDATA[v-for]]></title>
+    <url>%2F2019%2F05%2F16%2Fv-for%2F</url>
+    <content type="text"><![CDATA[一个简单排序,注意这里面sort方法容易掉的坑，不仅是vue所有的js都有这个bug，因此这种解决方式很常用123456789101112131415161718192021222324252627282930313233343536373839&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt; &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt; &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt; &lt;title&gt;Document&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;div id=&quot;app&quot;&gt; &lt;ul&gt; &lt;li v-for=&quot;item in sortItems&quot;&gt;&#123;&#123;item&#125;&#125;&lt;/li&gt; //注意这里的sortItems别写成items了！ &lt;/ul&gt;&lt;/div&gt;&lt;script&gt; new Vue(&#123; el:&quot;#app&quot;, data:&#123; items:[1,4,3,78,45] &#125;, computed:&#123; sortItems://注意在vue中为了保护data这里必须重新命名不能用items function()&#123; return this.items.sort(sortNum) //若不再定义一个sortNum,将出现收字符排序完了再排下一个，如1,23,4,5,67 &#125; &#125; &#125;); //注意这个函数写的位置，应写在vue后 function sortNum(a,b)&#123; return a-b; &#125;&lt;/script&gt; &lt;/body&gt;&lt;/html&gt; 结果： 对象数组排序1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt; &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt; &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt; &lt;title&gt;Document&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;div id=&quot;app&quot;&gt; &lt;ul&gt; &lt;li v-for=&quot;(student,index) in sortStudents&quot;&gt;&#123;&#123;index+1&#125;&#125;:&#123;&#123;student.name&#125;&#125;-&#123;&#123;student.age&#125;&#125;&lt;/li&gt; &lt;!-- 注意这里的索引的用法 --&gt; &lt;/ul&gt;&lt;/div&gt;&lt;script&gt; new Vue(&#123; el:&quot;#app&quot;, data:&#123; students: [ &#123;name:&apos;linguoqiang&apos;,age:21&#125;, &#123;name:&apos;liuxue&apos;,age:21&#125;, &#123;name:&apos;chenhong&apos;,age:20&#125;, &#123;name:&apos;chenqianqian&apos;,age:19&#125;, &#123;name:&apos;guomengyu&apos;,age:18&#125;, ] &#125;, computed:&#123; sortStudents: //千万注意不要画蛇添足在这里加花括号，否则会出错 function()&#123; return sortByKey(this.students,&apos;age&apos;) &#125; &#125; &#125;); //对象数组排序方法，在网上搜直接拿过来用就好 function sortByKey(array,key)&#123; return array.sort(function(a,b)&#123; var x=a[key]; var y=b[key]; return ((x&lt;y)?-1:((x&gt;y)?1:0)); &#125;);&#125; &lt;/script&gt; &lt;/body&gt;&lt;/html&gt; 结果：]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[指针]]></title>
+    <url>%2F2019%2F05%2F12%2F%E6%8C%87%E9%92%88%2F</url>
+    <content type="text"><![CDATA[什么是指针：指针是储存地址的变量，他也有自己的地址，他通过自己储存的地址指向内存单元 指针的声明：数据类型 *指针变量名；1int *p; 注意：因为当不赋初值时，系统将随意给他个地址，很容易出错，所以一般用NULL给他赋个初值 取地址： &amp;变量名（&amp;为地址运算符） 使用指针储存地址： 数据类型 *指针变量名 = 取地址12int a = 3;int *p = &amp;a; 特别注意的是指针的数据类型应和所指向的变量的数据类型相同 一种数据类型的指针变量可指向任意一个跟他同数据类型的变量1234int a = 10;int *p = &amp;a;int b =2;p = &amp;b; 使用*访问指向的数据 12int * a = 1;cout&lt;&lt;*a;//1 指向不同变量类型的指针长度相同，具体长度取决于编译器，32位编译器就是4个字节，64位编译器就是16个字节 123double a = 3.45;double b = &amp;a;cout&lt;&lt;sizeof(b);//4或8 动态内存分配：解决未知长度内存空间的问题，虽然也定义了长度但在delete时会将不用的销毁，若不用delete就会造成内存泄漏(即内存被占用却没发挥作用，而其他元素可使用元素减少，造成程序运行效率降低) 1234int a = new int;//要指明类型，这是给一个元素分配内存delete a;//对应的deleteint b = new int[10];//这是给多个元素分配内存的形式delete []b;//对应的delete 举一个为字符串分配内存的例子1234string name;cin&gt;&gt;name;//注意要调用string库调用cstring库报错char *n = new char[name.length()+1];//注意不是strlen(),这个用于char,至于+1则是考虑到c++中对最后一个终止字符的风格delete []n;]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
   </entry>
   <entry>
     <title><![CDATA[BOM]]></title>
