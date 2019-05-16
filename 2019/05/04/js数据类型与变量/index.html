@@ -110,7 +110,7 @@
 <meta property="og:image" content="/2019/05/04/js数据类型与变量/guan.jpg">
 <meta property="og:image" content="/2019/05/04/js数据类型与变量/ecmabao.jpg">
 <meta property="og:image" content="/2019/05/04/js数据类型与变量/liubao.jpg">
-<meta property="og:updated_time" content="2019-05-04T11:32:13.013Z">
+<meta property="og:updated_time" content="2019-05-16T10:38:20.953Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js数据类型与变量">
 <meta name="twitter:description" content="标识符 标识符只能由数字，字母，$符和下划线表示 首字符必须是字母或$符或下划线，切记不能是数字 在所使用的的作用域内，每个变量的标识符是唯一的 可在变量标识符中使用Unicode的字母和数字，官网链接 可使用转义序列 区分大小写 不得使用js关键字，ECMA 262规范的保留字，浏览器中典型的保留字，具体如下图">
@@ -411,12 +411,24 @@
                 
               
 
-              <time title="创建时间：2019-05-04 15:54:24 / 修改时间：19:32:13" itemprop="dateCreated datePublished" datetime="2019-05-04T15:54:24+08:00">2019-05-04</time>
+              <time title="创建时间：2019-05-04 15:54:24" itemprop="dateCreated datePublished" datetime="2019-05-04T15:54:24+08:00">2019-05-04</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-16 18:38:20" itemprop="dateModified" datetime="2019-05-16T18:38:20+08:00">2019-05-16</time>
               
             
           </span>
@@ -503,36 +515,36 @@
 <li>要养成写var的习惯，因为当你想要定义一个局部变量但没有写var就会被当做全局变量，也就是说全局变量可不写var但最好也要写<h2 id="字符串型"><a href="#字符串型" class="headerlink" title="字符串型"></a><font color="red">字符串型</font></h2></li>
 <li>单引号和双引号作用一样，不做区别；但是当需要嵌套时不能同型套同型，只能是单引号套双引号或双引号套单引号</li>
 <li>字符串中可包括转义序列，例如 <code>\n</code> <code>\\</code> <code>\&#39;</code> <code>\&quot;</code> </li>
-<li>可使用escape函数和unescape函数进行编码和解码，但需要注意的是这两个函数不能处理非ASCII码字符，这是可使用encodeURI和decodeURI函数，下面是使用escape函数和unescape函数的示例<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">document.write(escape(&quot;sbadkf65488$%^&quot;));</span><br><span class="line">document.write(unescape(&quot;sbadkf65488%24%25%5E&quot;));</span><br></pre></td></tr></table></figure>
+<li>可使用escape函数和unescape函数进行编码和解码，但需要注意的是这两个函数不能处理非ASCII码字符，这是可使用encodeURI和decodeURI函数，下面是使用escape函数和unescape函数的示例<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.write(<span class="built_in">escape</span>(<span class="string">"sbadkf65488$%^"</span>));</span><br><span class="line"><span class="built_in">document</span>.write(<span class="built_in">unescape</span>(<span class="string">"sbadkf65488%24%25%5E"</span>));</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>结果：<code>sbadkf65488%24%25%5Esbadkf65488$%^</code></p>
 <ol start="4">
 <li>空字符串是一种特殊情形，一般用来初始化</li>
-<li>字符串连接:<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var year=2019;</span><br><span class="line">document.write(&quot;今年是&quot;+year+&quot;年&quot;);</span><br></pre></td></tr></table></figure>
+<li>字符串连接:<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> year=<span class="number">2019</span>;</span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"今年是"</span>+year+<span class="string">"年"</span>);</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>结果：<code>今年是2019年</code></p>
 <ol start="6">
-<li>toString函数，将其他类型转换为字符串类型<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">document.write(boo.toString());</span><br><span class="line">//显示数据类型</span><br><span class="line">document.write(typeof boo.toString());</span><br></pre></td></tr></table></figure>
+<li>toString函数，将其他类型转换为字符串类型<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.write(boo.toString());</span><br><span class="line"><span class="comment">//显示数据类型</span></span><br><span class="line"><span class="built_in">document</span>.write(<span class="keyword">typeof</span> boo.toString());</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h2 id="布尔型"><a href="#布尔型" class="headerlink" title="布尔型"></a><font color="red">布尔型</font></h2><ol>
 <li>只有true和false两种，不能用引号包起来</li>
-<li>Boolean函数,将其他类型转化为布尔型。需要注意的是没有toBoolean函数了，是Boolean函数！！！！还有强调一下有管字符串转成布尔型，当是空字符串时返回false，当是一个及以上空格时返回true,具体实践如下<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var s=Boolean(&quot;&quot;);</span><br><span class="line">document.write(s);</span><br><span class="line">var r=Boolean(&quot;  &quot;);</span><br><span class="line">document.write(r);</span><br></pre></td></tr></table></figure>
+<li>Boolean函数,将其他类型转化为布尔型。需要注意的是没有toBoolean函数了，是Boolean函数！！！！还有强调一下有管字符串转成布尔型，当是空字符串时返回false，当是一个及以上空格时返回true,具体实践如下<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s=<span class="built_in">Boolean</span>(<span class="string">""</span>);</span><br><span class="line"><span class="built_in">document</span>.write(s);</span><br><span class="line"><span class="keyword">var</span> r=<span class="built_in">Boolean</span>(<span class="string">"  "</span>);</span><br><span class="line"><span class="built_in">document</span>.write(r);</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>结果：<code>falsetrue</code></p>
 <h2 id="数值型"><a href="#数值型" class="headerlink" title="数值型"></a><font color="red">数值型</font></h2><ol>
 <li>js中数字是浮点型，需要注意的是，js的计算能力不是很强，所以在数字方面一般不是很精确</li>
 <li>可取数范围是-2e31到2e31;js中规定正无穷用Infinity表示，负无穷用-Infinity表示；当某函数出现溢出时则会返回一个Infinity（正无穷）</li>
-<li>parseFloat()和parseInt(),这两个函数都可用于在字符串中提取出数字，但需要注意的是只能提取出第一个字符就是数字的字符串否则报错，其次，parseInt()只取整数部分，注意事项截取而不是四舍五入;这两个函数还可将八进制或十六进制数转化为十进制，只需在后面加一个参数默认为10，具体例子如下<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var str1=parseInt(&quot;0x5F&quot;,16);</span><br><span class="line">document.write(str1);</span><br><span class="line">var str2=parseFloat(&quot;171.8cm&quot;);</span><br><span class="line">document.write(str2);</span><br></pre></td></tr></table></figure>
+<li>parseFloat()和parseInt(),这两个函数都可用于在字符串中提取出数字，但需要注意的是只能提取出第一个字符就是数字的字符串否则报错，其次，parseInt()只取整数部分，注意事项截取而不是四舍五入;这两个函数还可将八进制或十六进制数转化为十进制，只需在后面加一个参数默认为10，具体例子如下<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str1=<span class="built_in">parseInt</span>(<span class="string">"0x5F"</span>,<span class="number">16</span>);</span><br><span class="line"><span class="built_in">document</span>.write(str1);</span><br><span class="line"><span class="keyword">var</span> str2=<span class="built_in">parseFloat</span>(<span class="string">"171.8cm"</span>);</span><br><span class="line"><span class="built_in">document</span>.write(str2);</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>结果：<code>95171.8</code></p>
 <ol start="4">
 <li>isFinite函数，用来判断无穷大，当值是无穷大或NaN时返回false,否则返回true</li>
-<li>Number函数，将其他数据类型转换为数值型,注意字符串类型，只有在字符串内全部是数字时才有用，否则返回NaN<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var str2=Number(&quot;171.8cm&quot;);</span><br><span class="line">document.write(str2);</span><br></pre></td></tr></table></figure>
+<li>Number函数，将其他数据类型转换为数值型,注意字符串类型，只有在字符串内全部是数字时才有用，否则返回NaN<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str2=<span class="built_in">Number</span>(<span class="string">"171.8cm"</span>);</span><br><span class="line"><span class="built_in">document</span>.write(str2);</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>结果：<code>NaN</code></p>
