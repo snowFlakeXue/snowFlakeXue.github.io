@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-05-16T15:16:27.253Z</updated>
+  <updated>2019-05-17T14:53:39.835Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>day4</title>
+    <link href="snowFlakeXue.github.io/2019/05/17/day4/"/>
+    <id>snowFlakeXue.github.io/2019/05/17/day4/</id>
+    <published>2019-05-17T14:38:44.000Z</published>
+    <updated>2019-05-17T14:53:39.835Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;将二进制转换为小数，同样是各位乘以位权&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;/2019/05/17/day4/1.jpg&quot; alt=&quot;avatar&quot;&gt;&lt;/p&gt;
+&lt;ol
+        
+      
+    
+    </summary>
+    
+      <category term="睡前小读" scheme="snowFlakeXue.github.io/categories/%E7%9D%A1%E5%89%8D%E5%B0%8F%E8%AF%BB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Vue.extend</title>
+    <link href="snowFlakeXue.github.io/2019/05/17/Vue-extend/"/>
+    <id>snowFlakeXue.github.io/2019/05/17/Vue-extend/</id>
+    <published>2019-05-17T02:49:20.000Z</published>
+    <updated>2019-05-17T03:05:29.746Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;因为还没学组件所以下面的将是一个简单的扩展实例构造器的小栗子，一般情况下扩展实例构造器是要和组件一起使用的&quot;&gt;&lt;a href=&quot;#因为还没学组件所以下面的将是一个简单的扩展实例构造器的小栗子，一般情况下扩展实例构造器是要和组件一起使用的&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>自定义指令</title>
@@ -399,24 +451,6 @@
     </summary>
     
       <category term="javascript学习" scheme="snowFlakeXue.github.io/categories/javascript%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>myBlog</title>
-    <link href="snowFlakeXue.github.io/2019/05/04/myBlog/"/>
-    <id>snowFlakeXue.github.io/2019/05/04/myBlog/</id>
-    <published>2019-05-04T05:23:10.000Z</published>
-    <updated>2019-05-04T05:59:38.235Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;嘻嘻嘻。&quot;&gt;&lt;a href=&quot;#嘻嘻嘻。&quot; class=&quot;headerlink&quot; title=&quot;嘻嘻嘻。&quot;&gt;&lt;/a&gt;嘻嘻嘻。&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/2019/05/04/myBlog/hhh.jpg&quot; alt=&quot;avatar&quot;&gt;&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="日常" scheme="snowFlakeXue.github.io/categories/%E6%97%A5%E5%B8%B8/"/>
     
     
   </entry>

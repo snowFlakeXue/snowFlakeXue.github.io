@@ -100,17 +100,20 @@
 
 
 
-  <meta name="description" content="1.为什么程序底层要用二进制数：因为cpu和内存其实是IC的一种,而IC它两端有引角，引角只能输入5或0伏电压，这与二进制只有0和1对应，因此，每个引脚对应二进制的一位  计算机处理信息的基本单位一般是8位，因此二进制的位数一般都是8的倍数，而8位就是1个字节所以，计算机处理信息的基本单位是字节 位权：oo的xx次方，二进制oo就是2，十进制oo就是10，以此类推">
+  <meta name="description" content="将二进制转换为小数，同样是各位乘以位权    计算机运算出错原因：   因此不是所有的十进制小数都可以用二进制表示，而计算机底层使用的都是二进制数，由此看来当计算一些不能直接化成二进制小数的将会像10/3一样，无限循环而不准确 为了避免这种出错可以把小数化成一定倍数好计算">
 <meta property="og:type" content="article">
-<meta property="og:title" content="day3">
-<meta property="og:url" content="snowFlakeXue.github.io/2019/05/06/day3/index.html">
+<meta property="og:title" content="day4">
+<meta property="og:url" content="snowFlakeXue.github.io/2019/05/17/day4/index.html">
 <meta property="og:site_name" content="snowFlakeXue">
-<meta property="og:description" content="1.为什么程序底层要用二进制数：因为cpu和内存其实是IC的一种,而IC它两端有引角，引角只能输入5或0伏电压，这与二进制只有0和1对应，因此，每个引脚对应二进制的一位  计算机处理信息的基本单位一般是8位，因此二进制的位数一般都是8的倍数，而8位就是1个字节所以，计算机处理信息的基本单位是字节 位权：oo的xx次方，二进制oo就是2，十进制oo就是10，以此类推">
+<meta property="og:description" content="将二进制转换为小数，同样是各位乘以位权    计算机运算出错原因：   因此不是所有的十进制小数都可以用二进制表示，而计算机底层使用的都是二进制数，由此看来当计算一些不能直接化成二进制小数的将会像10/3一样，无限循环而不准确 为了避免这种出错可以把小数化成一定倍数好计算">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-06T15:20:26.915Z">
+<meta property="og:image" content="/2019/05/17/day4/1.jpg">
+<meta property="og:image" content="/2019/05/17/day4/2.jpg">
+<meta property="og:updated_time" content="2019-05-17T14:53:39.835Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="day3">
-<meta name="twitter:description" content="1.为什么程序底层要用二进制数：因为cpu和内存其实是IC的一种,而IC它两端有引角，引角只能输入5或0伏电压，这与二进制只有0和1对应，因此，每个引脚对应二进制的一位  计算机处理信息的基本单位一般是8位，因此二进制的位数一般都是8的倍数，而8位就是1个字节所以，计算机处理信息的基本单位是字节 位权：oo的xx次方，二进制oo就是2，十进制oo就是10，以此类推">
+<meta name="twitter:title" content="day4">
+<meta name="twitter:description" content="将二进制转换为小数，同样是各位乘以位权    计算机运算出错原因：   因此不是所有的十进制小数都可以用二进制表示，而计算机底层使用的都是二进制数，由此看来当计算一些不能直接化成二进制小数的将会像10/3一样，无限循环而不准确 为了避免这种出错可以把小数化成一定倍数好计算">
+<meta name="twitter:image" content="/2019/05/17/day4/1.jpg">
 
 
 
@@ -120,7 +123,7 @@
 
   
   
-  <link rel="canonical" href="snowFlakeXue.github.io/2019/05/06/day3/">
+  <link rel="canonical" href="snowFlakeXue.github.io/2019/05/17/day4/">
 
 
 
@@ -130,7 +133,7 @@
   };
 </script>
 
-  <title>day3 | snowFlakeXue</title>
+  <title>day4 | snowFlakeXue</title>
   
 
 
@@ -364,7 +367,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/06/day3/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/17/day4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Xue">
@@ -381,7 +384,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">day3
+          <h1 class="post-title" itemprop="name headline">day4
 
               
             
@@ -407,7 +410,7 @@
                 
               
 
-              <time title="创建时间：2019-05-06 23:12:39 / 修改时间：23:20:26" itemprop="dateCreated datePublished" datetime="2019-05-06T23:12:39+08:00">2019-05-06</time>
+              <time title="创建时间：2019-05-17 22:38:44 / 修改时间：22:53:39" itemprop="dateCreated datePublished" datetime="2019-05-17T22:38:44+08:00">2019-05-17</time>
             
 
             
@@ -448,8 +451,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/05/06/day3/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/06/day3/" itemprop="commentCount"></span>
+                <a href="/2019/05/17/day4/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/17/day4/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -478,11 +481,16 @@
       
 
       
-        <p>1.为什么程序底层要用二进制数：因为cpu和内存其实是IC的一种,而IC它两端有引角，引角只能输入5或0伏电压，这与二进制只有0和1对应，因此，每个引脚对应二进制的一位</p>
-<ol start="2">
-<li>计算机处理信息的基本单位一般是8位，因此二进制的位数一般都是8的倍数，而8位就是1个字节所以，计算机处理信息的基本单位是字节</li>
-<li>位权：oo的xx次方，二进制oo就是2，十进制oo就是10，以此类推</li>
+        <ol>
+<li>将二进制转换为小数，同样是各位乘以位权</li>
 </ol>
+<p><img src="/2019/05/17/day4/1.jpg" alt="avatar"></p>
+<ol start="2">
+<li>计算机运算出错原因：</li>
+</ol>
+<p><img src="/2019/05/17/day4/2.jpg" alt="avatar"></p>
+<p>因此不是所有的十进制小数都可以用二进制表示，而计算机底层使用的都是二进制数，由此看来当计算一些不能直接化成二进制小数的将会像10/3一样，无限循环而不准确</p>
+<p>为了避免这种出错可以把小数化成一定倍数好计算</p>
 
       
     </div>
@@ -523,8 +531,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/06/js对象/" rel="next" title="js对象">
-                <i class="fa fa-chevron-left"></i> js对象
+              <a href="/2019/05/17/Vue-extend/" rel="next" title="Vue.extend">
+                <i class="fa fa-chevron-left"></i> Vue.extend
               </a>
             
           </div>
@@ -532,10 +540,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/07/函数/" rel="prev" title="函数">
-                函数 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
