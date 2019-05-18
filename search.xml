@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Vue.set]]></title>
+    <url>%2F2019%2F05%2F18%2FVue-set%2F</url>
+    <content type="text"><![CDATA[先举个调用构造器外数据的小栗子 123456789101112131415161718192021&lt;body&gt; &lt;div id="app"&gt;&#123;&#123;count&#125;&#125;&lt;/div&gt; &lt;button onclick="add()"&gt;add&lt;/button&gt; &lt;!-- 因为按钮在vue实例外，所以采用原声js方法onclick --&gt; &lt;script&gt; var outData = &#123; count: 1, goods: 'car' &#125; //注意这个数据放在vue构造器外 function add()&#123; // Vue.set(outData,'count',2) 且该方法只能让他变成2 //app.count++ outData.count++ &#125; var app = new Vue(&#123; el: '#app', data:outData//构造器外数据 &#125;) &lt;/script&gt;&lt;/body&gt; 由上述代码可见，想要调用构造器外数据由三种方法可行，那么为什么vue.set还有他存在的意义而且在开发中还很常用呢？看下面栗子 123456789101112131415161718192021222324&lt;body&gt; &lt;div id="app" &gt; &#123;&#123;count&#125;&#125; &lt;ul&gt; &lt;li v-for="item in arr"&gt;&#123;&#123;item&#125;&#125;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;button onclick="add()"&gt;add&lt;/button&gt; &lt;script&gt; var outData = &#123; count: 1, arr: ["aaa","bbb","ccc"] &#125; function add()&#123; // outData.count++, //outData.arr[1]="b" Vue.set(outData.arr,1,'b')//注意中间1的写法 &#125; var app = new Vue(&#123; el: '#app', data:outData &#125;) &lt;/script&gt;&lt;/body&gt; 解析：当不用Vue.set时，如果不设置改变count值，因为js本身限制，vue也就检测不到数组的改变包括数组长度或数组内元素变化，这个时候vue.set的存在就显得很必要，不用设置count变化,vue也能检测到数组变化，因此在上面代码的注释都取消，不用vue.set也行，但显然当我们不想引入count时，vue.set是最好的选择]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[day4]]></title>
     <url>%2F2019%2F05%2F17%2Fday4%2F</url>
     <content type="text"><![CDATA[将二进制转换为小数，同样是各位乘以位权 计算机运算出错原因： 因此不是所有的十进制小数都可以用二进制表示，而计算机底层使用的都是二进制数，由此看来当计算一些不能直接化成二进制小数的将会像10/3一样，无限循环而不准确 为了避免这种出错可以把小数化成一定倍数好计算]]></content>

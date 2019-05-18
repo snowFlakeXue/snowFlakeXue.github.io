@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-05-17T14:53:39.835Z</updated>
+  <updated>2019-05-18T01:34:48.335Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue.set</title>
+    <link href="snowFlakeXue.github.io/2019/05/18/Vue-set/"/>
+    <id>snowFlakeXue.github.io/2019/05/18/Vue-set/</id>
+    <published>2019-05-18T00:10:58.000Z</published>
+    <updated>2019-05-18T01:34:48.335Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;先举个调用构造器外数据的小栗子&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>day4</title>
@@ -426,31 +451,6 @@
     </summary>
     
       <category term="睡前小读" scheme="snowFlakeXue.github.io/categories/%E7%9D%A1%E5%89%8D%E5%B0%8F%E8%AF%BB/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>js数据类型与变量</title>
-    <link href="snowFlakeXue.github.io/2019/05/04/js%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%8F%98%E9%87%8F/"/>
-    <id>snowFlakeXue.github.io/2019/05/04/js数据类型与变量/</id>
-    <published>2019-05-04T07:54:24.000Z</published>
-    <updated>2019-05-16T10:38:20.953Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;标识符&quot;&gt;&lt;a href=&quot;#标识符&quot; class=&quot;headerlink&quot; title=&quot;标识符&quot;&gt;&lt;/a&gt;&lt;font color=&quot;red&quot;&gt;标识符&lt;/font&gt;&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;标识符只能由数字，字母，$符和下划线表示&lt;/li&gt;
-&lt;li&gt;首字符必须是字母或$符或下划线，切记不能是数字&lt;/li&gt;
-&lt;li&gt;在所使用的的作用域内，每个变量的标识符是唯一的&lt;/li&gt;
-&lt;li&gt;可在变量标识符中使用Unicode的字母和数字，&lt;a href=&quot;http://www.unicode.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;官网链接&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;可使用转义序列&lt;/li&gt;
-&lt;li&gt;区分大小写&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;不得使用js关键字，ECMA 262规范的保留字，浏览器中典型的保留字，具体如下图&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="javascript学习" scheme="snowFlakeXue.github.io/categories/javascript%E5%AD%A6%E4%B9%A0/"/>
     
     
   </entry>
