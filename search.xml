@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>%2F2019%2F05%2F19%2F1%2F</url>
+    <content type="text"><![CDATA[Document 增加 销毁 var app=new Vue({ el:'#app', data:{ count:1 }, methods:{ add:function(){ this.count++; } }, beforeCreate:function(){ console.log('1-beforeCreat') }, created:function(){ console.log('2- created') }, beforeMount:function(){ console.log('3-beforeMount') }, mounted:function(){ console.log('4-mounted') }, beforeUpdate:function(){ console.log('5-beforeUpdate') }, updated:function(){ console.log('6-updated') }, beforeDestroy:function(){ console.log('7-beforeDestroy') }, destroyed:function(){ console.log('8-destroyed') } })]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[生命周期]]></title>
+    <url>%2F2019%2F05%2F19%2F%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%2F</url>
+    <content type="text"><![CDATA[生命周期又叫钩子函数，就是在某个节点进行某个操作，这里讲的是构造器里的生命周期，总共有十个，有两个需结合组件学习(activated,deactivated)，所以先学八个 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647&lt;body&gt; &lt;div id="app"&gt; &lt;p&gt;&#123;&#123;count&#125;&#125;&lt;/p&gt; &lt;button @click="add"&gt;增加&lt;/button&gt; &lt;/div&gt; &lt;!-- 注意是onclick不是@click --&gt; &lt;button onclick="app.$destroy()"&gt;销毁&lt;/button&gt; &lt;script&gt; var app=new Vue(&#123; el:'#app', data:&#123; count:1 &#125;, methods:&#123; add:function()&#123; this.count++; &#125; &#125;, //注意要写在构造器里 beforeCreate:function()&#123; console.log('1-beforeCreat') &#125;, created:function()&#123; console.log('2- created') &#125;, beforeMount:function()&#123; console.log('3-beforeMount') &#125;, mounted:function()&#123; console.log('4-mounted') &#125;, beforeUpdate:function()&#123; console.log('5-beforeUpdate') &#125;, updated:function()&#123; console.log('6-updated') &#125;, beforeDestroy:function()&#123; console.log('7-beforeDestroy') &#125;, destroyed:function()&#123; console.log('8-destroyed') &#125; &#125;) &lt;/script&gt;&lt;/body&gt; 结果：]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Vue.set]]></title>
     <url>%2F2019%2F05%2F18%2FVue-set%2F</url>
     <content type="text"><![CDATA[先举个调用构造器外数据的小栗子 123456789101112131415161718192021&lt;body&gt; &lt;div id="app"&gt;&#123;&#123;count&#125;&#125;&lt;/div&gt; &lt;button onclick="add()"&gt;add&lt;/button&gt; &lt;!-- 因为按钮在vue实例外，所以采用原声js方法onclick --&gt; &lt;script&gt; var outData = &#123; count: 1, goods: 'car' &#125; //注意这个数据放在vue构造器外 function add()&#123; // Vue.set(outData,'count',2) 且该方法只能让他变成2 //app.count++ outData.count++ &#125; var app = new Vue(&#123; el: '#app', data:outData//构造器外数据 &#125;) &lt;/script&gt;&lt;/body&gt; 由上述代码可见，想要调用构造器外数据由三种方法可行，那么为什么vue.set还有他存在的意义而且在开发中还很常用呢？看下面栗子 123456789101112131415161718192021222324&lt;body&gt; &lt;div id="app" &gt; &#123;&#123;count&#125;&#125; &lt;ul&gt; &lt;li v-for="item in arr"&gt;&#123;&#123;item&#125;&#125;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;button onclick="add()"&gt;add&lt;/button&gt; &lt;script&gt; var outData = &#123; count: 1, arr: ["aaa","bbb","ccc"] &#125; function add()&#123; // outData.count++, //outData.arr[1]="b" Vue.set(outData.arr,1,'b')//注意中间1的写法 &#125; var app = new Vue(&#123; el: '#app', data:outData &#125;) &lt;/script&gt;&lt;/body&gt; 解析：当不用Vue.set时，如果不设置改变count值，因为js本身限制，vue也就检测不到数组的改变包括数组长度或数组内元素变化，这个时候vue.set的存在就显得很必要，不用设置count变化,vue也能检测到数组变化，因此在上面代码的注释都取消，不用vue.set也行，但显然当我们不想引入count时，vue.set是最好的选择]]></content>

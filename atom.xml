@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-05-18T01:34:48.335Z</updated>
+  <updated>2019-05-19T13:10:39.006Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="snowFlakeXue.github.io/2019/05/19/1/"/>
+    <id>snowFlakeXue.github.io/2019/05/19/1/</id>
+    <published>2019-05-19T12:55:26.318Z</published>
+    <updated>2019-05-19T13:10:39.006Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;&lt;meta name=&quot;generator&quot; content=&quot;Hexo 3.8.0&quot;&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>生命周期</title>
+    <link href="snowFlakeXue.github.io/2019/05/19/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
+    <id>snowFlakeXue.github.io/2019/05/19/生命周期/</id>
+    <published>2019-05-19T12:43:24.000Z</published>
+    <updated>2019-05-19T13:13:55.025Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;生命周期又叫钩子函数，就是在某个节点进行某个操作，这里讲的是构造器里的生命周期，总共有十个，有两个需结合组件学习-activated-deactivated-，所以先学八个&quot;&gt;&lt;a href=&quot;#生命周期又叫钩子函数，就是在某个节点进行某个操作，这里讲的是构造器里的生命周期，总共有十个，有两个需结合组件学习-activated-deactivated-，所以先学八个&quot; class=&quot;headerlink&quot; title=&quot;生命周期又叫钩子函数，就是在某个节点进行某个操作，这里讲的是构造器里的生命周期，总共有十个，有两个需结合组件学习(activated,deactivated)，所以先学八个&quot;&gt;&lt;/a&gt;生命周期又叫钩子函数，就是在某个节点进行某个操作，这里讲的是构造器里的生命周期，总共有十个，有两个需结合组件学习(activated,deactivated)，所以先学八个&lt;/h3&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Vue.set</title>
@@ -403,50 +447,6 @@
 &lt;li&gt;程序运行时，程序计数器指向一个地址值，然后顺序结构的话，每进行一条指令，程序计数器上的值加一&lt;/li&gt;
 &lt;li&gt;其实cpu处理程序很有意思，像是比较累加寄存器和通用寄存器中的值，他实际上会进行减法运算，通过正负零来判断谁大谁小&lt;/li&gt;
 &lt;li&gt;运算结果存放在标志寄存器，无论结果是什么都会存放进去，同时标志寄存器还负责存放溢出和奇偶判断&lt;/li&gt;&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="睡前小读" scheme="snowFlakeXue.github.io/categories/%E7%9D%A1%E5%89%8D%E5%B0%8F%E8%AF%BB/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>运算符和语句</title>
-    <link href="snowFlakeXue.github.io/2019/05/05/%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E8%AF%AD%E5%8F%A5/"/>
-    <id>snowFlakeXue.github.io/2019/05/05/运算符和语句/</id>
-    <published>2019-05-05T02:08:41.000Z</published>
-    <updated>2019-05-16T10:35:43.775Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;js语句的格式&quot;&gt;&lt;a href=&quot;#js语句的格式&quot; class=&quot;headerlink&quot; title=&quot;js语句的格式&quot;&gt;&lt;/a&gt;&lt;font color=&quot;red&quot;&gt;js语句的格式&lt;/font&gt;&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;要养成每条语句后都写分号的习惯&lt;/li&gt;
-&lt;li&gt;在js代码中，空白没意义，为了让代码更直观更易于维护，可尝试养成在等号前后，加号等前后写空格的习惯&lt;h2 id=&quot;赋值语句&quot;&gt;&lt;a href=&quot;#赋值语句&quot; class=&quot;headerlink&quot; title=&quot;赋值语句&quot;&gt;&lt;/a&gt;&lt;font color=&quot;red&quot;&gt;赋值语句&lt;/font&gt;&lt;/h2&gt;&lt;/li&gt;
-&lt;li&gt;由左边变量，赋值变量和右边被赋给的值组成&lt;/li&gt;
-&lt;li&gt;右边的表达式可以是直接量值&lt;br&gt;&lt;code&gt;var vm = 35;&lt;/code&gt;&lt;br&gt;一个变量和直接量再加上运算符的组合&lt;br&gt;&lt;code&gt;var value = vm + 27;&lt;/code&gt;&lt;br&gt;函数的调用&lt;br&gt;&lt;code&gt;var nvalue = escape();&lt;/code&gt;&lt;br&gt;一行可以包含多个赋值语句&lt;br&gt;&lt;code&gt;var a = b = c = 23;&lt;/code&gt;&lt;/li&gt;&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="javascript学习" scheme="snowFlakeXue.github.io/categories/javascript%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>day1</title>
-    <link href="snowFlakeXue.github.io/2019/05/04/day1/"/>
-    <id>snowFlakeXue.github.io/2019/05/04/day1/</id>
-    <published>2019-05-04T14:50:12.000Z</published>
-    <updated>2019-05-04T15:12:40.070Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;CPU和内存是由很多的晶体管组成，他俩合称IC（集成电路）&lt;/li&gt;
-&lt;li&gt;CPU由寄存器，运算器，控制器和时钟组成&lt;/li&gt;
-&lt;li&gt;程序运行过程：首先由程序员用高级语言写出程序，然后把程序编译成机器语言（即exe文件），然后将这个exe文件在内存上存一个副本，然后再在CPU上解析运行&lt;/li&gt;
-&lt;li&gt;将CPU的解析和运行过程放大来讲，是时钟先发出时钟信号，cpu开始工作啦，他先让寄存器去抓内存上的数据，然后运算器进行运算，然后控制器通过运算结果来控制整个计算机，其实也就是控制输入输出什么的&lt;/li&gt;&lt;/ol&gt;
     
     </summary>
     
