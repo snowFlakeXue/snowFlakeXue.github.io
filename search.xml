@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[初识组件]]></title>
+    <url>%2F2019%2F05%2F20%2F%E5%88%9D%E8%AF%86%E7%BB%84%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[组件实际上就是创建html不存在的标签，非常常用 注册全局组件123456789101112131415161718192021222324&lt;body&gt; &lt;div id="app"&gt; &lt;are&gt;&lt;/are&gt;&lt;!--只能在vue实例化里用--&gt; &lt;/div&gt; &lt;div id="pp"&gt; &lt;are&gt;&lt;/are&gt; &lt;/div&gt; &lt;script&gt; Vue.component('are',&#123; template:`&lt;h2&gt;我们&lt;/h2&gt;` &#125;) //不论构造器里有没有数据都要写这样才算实例化成功 var app = new Vue(&#123; el:'#app', data:&#123; &#125; &#125;) var pp = new Vue(&#123; el:'#pp', data:&#123; &#125; &#125;) &lt;/script&gt;&lt;/body&gt; 结果：都能用组件 注册局部组件1234567891011121314151617181920212223242526&lt;body&gt; &lt;div id="app"&gt; &lt;are&gt;&lt;/are&gt; &lt;/div&gt; &lt;div id="pp"&gt; &lt;are&gt;&lt;/are&gt; &lt;/div&gt; &lt;script&gt; var app = new Vue(&#123; el:'#app', data:&#123; &#125;, components:&#123; //注意引号 'are':&#123; template:`&lt;h2&gt;hello&lt;/h2&gt;` &#125; &#125; &#125;) var pp = new Vue(&#123; el:'#pp', data:&#123; &#125; &#125;) &lt;/script&gt;&lt;/body&gt; 结果：只有第一个才能用组件]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2019%2F05%2F20%2F1%2F</url>
+    <content type="text"><![CDATA[Document var app = new Vue({ el:'#app', data:{ }, components:{ //注意引号 'are':{ template:`hello` } } }) var pp = new Vue({ el:'#pp', data:{ } })]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[制作模板]]></title>
+    <url>%2F2019%2F05%2F20%2F%E5%88%B6%E4%BD%9C%E6%A8%A1%E6%9D%BF%2F</url>
+    <content type="text"><![CDATA[Vue的模板(template)有三种创建方式 在Vue构造器内，这种情况只在template中语句少的时候适用，注意模板将会代替message1234567891011121314151617181920212223242526272829303132333435363738394041&lt;body&gt; &lt;div id="app"&gt; &#123;&#123;message&#125;&#125; &lt;/div&gt; &lt;script&gt; var app = new Vue(&#123; el:'#app', data:&#123; message: 'hello world' &#125;, template:`&lt;h2&gt;我是一个标签模板&lt;/h2&gt;` //注意是Tab键上面那个，为了避免和单引双引冲突 &#125;) &lt;/script&gt;&lt;/body&gt;``` ---### 在html里```html&lt;body&gt; &lt;div id="app"&gt; &#123;&#123;message&#125;&#125; &lt;/div&gt; &lt;!-- 注意不是放在实例化里 --&gt; &lt;template id="app2"&gt; &lt;h2&gt;我是一个模板&lt;/h2&gt; &lt;/template&gt; &lt;script&gt; var app = new Vue(&#123; el:'#app', data:&#123; message: 'hello world' &#125;, template:`#app2`//设置响应 &#125;) &lt;/script&gt;&lt;/body&gt; 在js里,可从外部引用，在script标签后加一个src即可1234567891011121314151617&lt;body&gt; &lt;div id="app"&gt; &#123;&#123;message&#125;&#125; &lt;/div&gt; &lt;script type="x-template" id="app3"&gt; &lt;h2&gt;我是模板&lt;/h2&gt; &lt;/script&gt; &lt;script&gt; var app = new Vue(&#123; el:'#app', data:&#123; message: 'hello world' &#125;, template:`#app3` &#125;) &lt;/script&gt;&lt;/body&gt;]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[生命周期]]></title>
     <url>%2F2019%2F05%2F19%2F%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%2F</url>
     <content type="text"><![CDATA[生命周期又叫钩子函数，就是在某个节点进行某个操作，这里讲的是构造器里的生命周期，总共有十个，有两个需结合组件学习(activated,deactivated)，所以先学八个 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647&lt;body&gt; &lt;div id="app"&gt; &lt;p&gt;&#123;&#123;count&#125;&#125;&lt;/p&gt; &lt;button @click="add"&gt;增加&lt;/button&gt; &lt;/div&gt; &lt;!-- 注意是onclick不是@click --&gt; &lt;button onclick="app.$destroy()"&gt;销毁&lt;/button&gt; &lt;script&gt; var app=new Vue(&#123; el:'#app', data:&#123; count:1 &#125;, methods:&#123; add:function()&#123; this.count++; &#125; &#125;, //注意要写在构造器里 beforeCreate:function()&#123; console.log('1-beforeCreat') &#125;, created:function()&#123; console.log('2- created') &#125;, beforeMount:function()&#123; console.log('3-beforeMount') &#125;, mounted:function()&#123; console.log('4-mounted') &#125;, beforeUpdate:function()&#123; console.log('5-beforeUpdate') &#125;, updated:function()&#123; console.log('6-updated') &#125;, beforeDestroy:function()&#123; console.log('7-beforeDestroy') &#125;, destroyed:function()&#123; console.log('8-destroyed') &#125; &#125;) &lt;/script&gt;&lt;/body&gt; 结果：]]></content>
