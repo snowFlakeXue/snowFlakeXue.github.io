@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-05-20T13:18:13.916Z</updated>
+  <updated>2019-05-21T13:05:37.289Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -15,6 +15,70 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>组件标签</title>
+    <link href="snowFlakeXue.github.io/2019/05/21/%E7%BB%84%E4%BB%B6%E6%A0%87%E7%AD%BE/"/>
+    <id>snowFlakeXue.github.io/2019/05/21/组件标签/</id>
+    <published>2019-05-21T12:50:21.000Z</published>
+    <updated>2019-05-21T13:05:37.289Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;组件标签就是&lt;code&gt;&amp;lt;component&amp;gt;&amp;lt;/component&amp;gt;&lt;/code&gt;,是vue自己定义的，可以用这个实现动态选择组件，详情看下面的小栗子&lt;/p&gt;
+&lt;hr&gt;
+&lt;figure class=&quot;highlight
+        
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>父子组件关系</title>
+    <link href="snowFlakeXue.github.io/2019/05/21/%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E5%85%B3%E7%B3%BB/"/>
+    <id>snowFlakeXue.github.io/2019/05/21/父子组件关系/</id>
+    <published>2019-05-21T12:05:01.000Z</published>
+    <updated>2019-05-21T12:36:02.029Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;下面我将举个小栗子来说明父子组件关系&lt;br&gt;&lt;img src=&quot;/2019/05/21/父子组件关系/1.jpg&quot; alt=&quot;avatar&quot;&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>组件属性设置</title>
+    <link href="snowFlakeXue.github.io/2019/05/21/%E7%BB%84%E4%BB%B6%E5%B1%9E%E6%80%A7%E8%AE%BE%E7%BD%AE/"/>
+    <id>snowFlakeXue.github.io/2019/05/21/组件属性设置/</id>
+    <published>2019-05-21T11:33:43.000Z</published>
+    <updated>2019-05-21T12:15:20.273Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;组件属性(props)的设置有两个坑，第一个坑是组件属性命名一定不能有-只能化成驼峰式，第二个坑是props是数组，不能写成对象形式而且他是写在template底下的；&lt;/p&gt;
+&lt;p&gt;组件属性设置有两种，一种是直接属性，一种是绑定data&lt;/p&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>初识组件</title>
@@ -31,32 +95,6 @@
     </summary>
     
       <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="snowFlakeXue.github.io/2019/05/20/1/"/>
-    <id>snowFlakeXue.github.io/2019/05/20/1/</id>
-    <published>2019-05-20T12:13:07.362Z</published>
-    <updated>2019-05-20T13:15:57.353Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;&lt;meta name=&quot;generator&quot; content=&quot;Hexo 3.8.0&quot;&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot;
-        
-      
-    
-    </summary>
     
     
   </entry>
@@ -103,18 +141,11 @@
     <link href="snowFlakeXue.github.io/2019/05/18/Vue-set/"/>
     <id>snowFlakeXue.github.io/2019/05/18/Vue-set/</id>
     <published>2019-05-18T00:10:58.000Z</published>
-    <updated>2019-05-18T01:34:48.335Z</updated>
+    <updated>2019-05-21T12:16:22.300Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;先举个调用构造器外数据的小栗子&lt;/p&gt;
-&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
+      &lt;p&gt;先举个调用构造器外数据的小栗子&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -180,17 +211,12 @@
     <link href="snowFlakeXue.github.io/2019/05/16/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/"/>
     <id>snowFlakeXue.github.io/2019/05/16/自定义指令/</id>
     <published>2019-05-16T12:00:49.000Z</published>
-    <updated>2019-05-16T15:16:27.253Z</updated>
+    <updated>2019-05-21T12:16:45.358Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;先举个小栗子&quot;&gt;&lt;a href=&quot;#先举个小栗子&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h3 id=&quot;先举个小栗子&quot;&gt;&lt;a href=&quot;#先举个小栗子&quot; class=&quot;headerlink&quot; title=&quot;先举个小栗子&quot;&gt;&lt;/a&gt;先举个小栗子&lt;/h3&gt;&lt;p&gt;要注意的是，vue提供的Vue-directive来自定义值令方法时要把这段代码写在vue实例化之前否则会报错，同时指令命名不能用驼峰法否则也会报错，V大写！&lt;/p&gt;
+&lt;p&gt;代码里一些不熟悉的将在下面详细的讲讲&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -395,55 +421,6 @@
     </summary>
     
       <category term="javascript学习" scheme="snowFlakeXue.github.io/categories/javascript%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>函数</title>
-    <link href="snowFlakeXue.github.io/2019/05/07/%E5%87%BD%E6%95%B0/"/>
-    <id>snowFlakeXue.github.io/2019/05/07/函数/</id>
-    <published>2019-05-07T05:52:38.000Z</published>
-    <updated>2019-05-16T10:36:49.694Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;在js中函数也是对象，因此可以把它赋给一个变量，一个数组元素，甚至作为参数传给另一个函数调用&quot;&gt;&lt;a href=&quot;#在js中函数也是对象，因此可以把它赋给一个变量，一个数组元素，甚至作为参数传给另一个函数调用&quot; class=&quot;headerlink&quot; title=&quot;在js中函数也是对象，因此可以把它赋给一个变量，一个数组元素，甚至作为参数传给另一个函数调用&quot;&gt;&lt;/a&gt;在js中函数也是对象，因此可以把它赋给一个变量，一个数组元素，甚至作为参数传给另一个函数调用&lt;/h2&gt;&lt;h2 id=&quot;函数的定义&quot;&gt;&lt;a href=&quot;#函数的定义&quot; class=&quot;headerlink&quot; title=&quot;函数的定义&quot;&gt;&lt;/a&gt;&lt;font color=&quot;red&quot;&gt;函数的定义&lt;/font&gt;&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;声明式的静态方式(所有浏览器都支持）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;code&gt;function 函数名(形参列表){函数体}//注意没有var否则报错,且function必须小写&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;①这种方式最常用，他只需定义一次，在程序的完整过程中，他一直被存在内存中，只在页面打开时解析一次，不论是什么调用它，返回的都是函数体处理完的结果&lt;/p&gt;
-&lt;p&gt;②要设定返回值，他可以有0个到多个return,一般多个return 都用在需要判断条件时，即满足这个条件就不往下执行函数体内容&lt;/p&gt;
-&lt;p&gt;③参数方面注意传参形式，一种是传值，一种是传地址，简单点说就是传值不改变实参，传地址改变实参&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="javascript学习" scheme="snowFlakeXue.github.io/categories/javascript%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>day3</title>
-    <link href="snowFlakeXue.github.io/2019/05/06/day3/"/>
-    <id>snowFlakeXue.github.io/2019/05/06/day3/</id>
-    <published>2019-05-06T15:12:39.000Z</published>
-    <updated>2019-05-06T15:20:26.915Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;1.为什么程序底层要用二进制数：因为cpu和内存其实是IC的一种,而IC它两端有引角，引角只能输入5或0伏电压，这与二进制只有0和1对应，因此，每个引脚对应二进制的一位&lt;/p&gt;
-&lt;ol
-        
-      
-    
-    </summary>
-    
-      <category term="睡前小读" scheme="snowFlakeXue.github.io/categories/%E7%9D%A1%E5%89%8D%E5%B0%8F%E8%AF%BB/"/>
     
     
   </entry>

@@ -15,7 +15,7 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-CN">
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -100,27 +100,27 @@
 
 
 
-  <meta name="description" content="Document                                                                  var app = new Vue({             el:&apos;#app&apos;,             data:{                },             compone">
+  <meta name="description" content="组件属性(props)的设置有两个坑，第一个坑是组件属性命名一定不能有-只能化成驼峰式，第二个坑是props是数组，不能写成对象形式而且他是写在template底下的； 组件属性设置有两种，一种是直接属性，一种是绑定data">
 <meta property="og:type" content="article">
-<meta property="og:title" content="snowFlakeXue">
-<meta property="og:url" content="snowFlakeXue.github.io/2019/05/20/1/index.html">
+<meta property="og:title" content="组件属性设置">
+<meta property="og:url" content="snowFlakeXue.github.io/2019/05/21/组件属性设置/index.html">
 <meta property="og:site_name" content="snowFlakeXue">
-<meta property="og:description" content="Document                                                                  var app = new Vue({             el:&apos;#app&apos;,             data:{                },             compone">
+<meta property="og:description" content="组件属性(props)的设置有两个坑，第一个坑是组件属性命名一定不能有-只能化成驼峰式，第二个坑是props是数组，不能写成对象形式而且他是写在template底下的； 组件属性设置有两种，一种是直接属性，一种是绑定data">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-20T13:15:57.353Z">
+<meta property="og:updated_time" content="2019-05-21T12:15:20.273Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="snowFlakeXue">
-<meta name="twitter:description" content="Document                                                                  var app = new Vue({             el:&apos;#app&apos;,             data:{                },             compone">
+<meta name="twitter:title" content="组件属性设置">
+<meta name="twitter:description" content="组件属性(props)的设置有两个坑，第一个坑是组件属性命名一定不能有-只能化成驼峰式，第二个坑是props是数组，不能写成对象形式而且他是写在template底下的； 组件属性设置有两种，一种是直接属性，一种是绑定data">
 
 
 
-  <link rel="alternate" href="/atom.xml" title="snowFlakeXue" type="application/atom+xml"/>
+  <link rel="alternate" href="/atom.xml" title="snowFlakeXue" type="application/atom+xml">
 
 
 
   
   
-  <link rel="canonical" href="snowFlakeXue.github.io/2019/05/20/1/"/>
+  <link rel="canonical" href="snowFlakeXue.github.io/2019/05/21/组件属性设置/">
 
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title> | snowFlakeXue</title>
+  <title>组件属性设置 | snowFlakeXue</title>
   
 
 
@@ -230,7 +230,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
   </li>
         
@@ -247,7 +247,7 @@
 
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
 
   </li>
         
@@ -264,7 +264,7 @@
 
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
 
   </li>
         
@@ -281,7 +281,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
 
@@ -292,7 +292,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
@@ -312,9 +312,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -366,16 +364,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/20/1/"/>
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/21/组件属性设置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue"/>
+      <meta itemprop="name" content="snowFlakeXue">
     </span>
 
     
@@ -383,7 +381,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">组件属性设置
 
               
             
@@ -409,7 +407,7 @@
                 
               
 
-              <time title="创建时间：2019-05-20 20:13:07 / 修改时间：21:15:57" itemprop="dateCreated datePublished" datetime="2019-05-20T20:13:07+08:00">2019-05-20</time>
+              <time title="创建时间：2019-05-21 19:33:43 / 修改时间：20:15:20" itemprop="dateCreated datePublished" datetime="2019-05-21T19:33:43+08:00">2019-05-21</time>
             
 
             
@@ -419,6 +417,24 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -432,8 +448,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/05/20/1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/20/1/" itemprop="commentCount"></span>
+                <a href="/2019/05/21/组件属性设置/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/21/组件属性设置/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -462,43 +478,15 @@
       
 
       
-        <!DOCTYPE html>
-<html lang="en">
-<head><meta name="generator" content="Hexo 3.8.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    <div id="app">
-        <are></are>
-    </div>
-    <div id="pp">
-            <are></are>
-    </div>
-    <script>
-       
-        var app = new Vue({
-            el:'#app',
-            data:{
-               },
-            components:{
-               //注意引号
-                'are':{
-                    template:`<h2>hello</h2>`
-                   }
-            }
-        })
-        var pp = new Vue({
-            el:'#pp',
-            data:{
-               }
-            })
-     </script>
-</body>
-</html>
+        <p>组件属性(props)的设置有两个坑，第一个坑是组件属性命名一定不能有-只能化成驼峰式，第二个坑是props是数组，不能写成对象形式而且他是写在template底下的；</p>
+<p>组件属性设置有两种，一种是直接属性，一种是绑定data</p>
+<hr>
+<a id="more"></a>
+<p>直接设置属性</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">panda</span> <span class="attr">here</span>=<span class="string">"China"</span>&gt;</span><span class="tag">&lt;/<span class="name">panda</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">            el: <span class="string">'#app'</span>,</span></span><br><span class="line"><span class="undefined">            components:&#123;</span></span><br><span class="line"><span class="javascript">                <span class="string">'panda'</span>:&#123;</span></span><br><span class="line"><span class="xml">                    template:`<span class="tag">&lt;<span class="name">h2</span>&gt;</span>我来自&#123;&#123;here&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>`,</span></span><br><span class="line"><span class="javascript">                    props:[<span class="string">'here'</span>]</span></span><br><span class="line"><span class="undefined">                &#125;</span></span><br><span class="line"><span class="undefined">            &#125;,</span></span><br><span class="line"><span class="undefined">         &#125;)</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>绑定data</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">panda</span> <span class="attr">:here</span>=<span class="string">"message"</span>&gt;</span><span class="tag">&lt;/<span class="name">panda</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">            el: <span class="string">'#app'</span>,</span></span><br><span class="line"><span class="undefined">            data:&#123;</span></span><br><span class="line"><span class="javascript">                message:<span class="string">'China'</span></span></span><br><span class="line"><span class="undefined">            &#125;,</span></span><br><span class="line"><span class="undefined">            components:&#123;</span></span><br><span class="line"><span class="javascript">                <span class="string">'panda'</span>:&#123;</span></span><br><span class="line"><span class="xml">                    template:`<span class="tag">&lt;<span class="name">h2</span>&gt;</span>我来自&#123;&#123;here&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>`,</span></span><br><span class="line"><span class="javascript">                    props:[<span class="string">'here'</span>]</span></span><br><span class="line"><span class="undefined">                &#125;</span></span><br><span class="line"><span class="undefined">             &#125;,</span></span><br><span class="line"><span class="undefined">         &#125;)</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -538,8 +526,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/20/制作模板/" rel="next" title="制作模板">
-                <i class="fa fa-chevron-left"></i> 制作模板
+              <a href="/2019/05/20/初识组件/" rel="next" title="初识组件">
+                <i class="fa fa-chevron-left"></i> 初识组件
               </a>
             
           </div>
@@ -548,8 +536,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/05/20/初识组件/" rel="prev" title="初识组件">
-                初识组件 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/05/21/父子组件关系/" rel="prev" title="父子组件关系">
+                父子组件关系 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -603,9 +591,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"
-                alt="Liu Xue"/>
+              <img class="site-author-image" itemprop="image" src="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg" alt="Liu Xue">
             
               <p class="site-author-name" itemprop="name">Liu Xue</p>
               <div class="site-description motion-element" itemprop="description"></div>
@@ -618,7 +604,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-count">28</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

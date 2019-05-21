@@ -15,7 +15,7 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-CN">
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -110,13 +110,13 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="snowFlakeXue" type="application/atom+xml"/>
+  <link rel="alternate" href="/atom.xml" title="snowFlakeXue" type="application/atom+xml">
 
 
 
   
   
-  <link rel="canonical" href="snowFlakeXue.github.io/"/>
+  <link rel="canonical" href="snowFlakeXue.github.io/">
 
 
 
@@ -227,7 +227,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
   </li>
         
@@ -244,7 +244,7 @@
 
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
 
   </li>
         
@@ -261,7 +261,7 @@
 
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
 
   </li>
         
@@ -278,7 +278,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
 
@@ -289,7 +289,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
@@ -309,9 +309,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -361,16 +359,527 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/20/初识组件/"/>
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/21/组件标签/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue"/>
+      <meta itemprop="name" content="snowFlakeXue">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/21/组件标签/" class="post-title-link" itemprop="url">组件标签</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-21 20:50:21 / 修改时间：21:05:37" itemprop="dateCreated datePublished" datetime="2019-05-21T20:50:21+08:00">2019-05-21</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+    
+      
+      
+
+      
+        
+          
+            <p>组件标签就是<code>&lt;component&gt;&lt;/component&gt;</code>,是vue自己定义的，可以用这个实现动态选择组件，详情看下面的小栗子</p>
+<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">"ok"</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- vue中用v-bind:is实现动态组件 --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"changeComponent"</span>&gt;</span>changeComponent<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">      <span class="keyword">var</span> componentA = &#123;</span></span><br><span class="line"><span class="xml">          template:`<span class="tag">&lt;<span class="name">h2</span> <span class="attr">style</span>=<span class="string">"color:red"</span>&gt;</span>A<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>`</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">var</span> componentB = &#123;</span></span><br><span class="line"><span class="xml">          template:`<span class="tag">&lt;<span class="name">h2</span> <span class="attr">style</span>=<span class="string">"color:green"</span>&gt;</span>B<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>`</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">var</span> componentC= &#123;</span></span><br><span class="line"><span class="xml">          template:`<span class="tag">&lt;<span class="name">h2</span> <span class="attr">style</span>=<span class="string">"color:pink"</span>&gt;</span>C<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>`</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">          el:<span class="string">'#app'</span>,</span></span><br><span class="line"><span class="undefined">          data:&#123;</span></span><br><span class="line"><span class="javascript">              ok:<span class="string">'componentA'</span></span></span><br><span class="line"><span class="undefined">          &#125;,</span></span><br><span class="line"><span class="undefined">          components:&#123;</span></span><br><span class="line"><span class="javascript">              <span class="string">'componentA'</span>:componentA,</span></span><br><span class="line"><span class="javascript">              <span class="string">'componentB'</span>:componentB,</span></span><br><span class="line"><span class="javascript">              <span class="string">'componentC'</span>:componentC</span></span><br><span class="line"><span class="undefined">          &#125;,</span></span><br><span class="line"><span class="undefined">          methods:&#123;</span></span><br><span class="line"><span class="javascript">            changeComponent:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">if</span>(<span class="keyword">this</span>.ok==componentA)&#123;</span></span><br><span class="line"><span class="javascript">                    <span class="keyword">this</span>.ok=componentB</span></span><br><span class="line"><span class="undefined">                &#125;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">else</span> <span class="keyword">if</span>(<span class="keyword">this</span>.ok==componentB)&#123;</span></span><br><span class="line"><span class="javascript">                    <span class="keyword">this</span>.ok=componentC</span></span><br><span class="line"><span class="undefined">                &#125;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">else</span> <span class="keyword">this</span>.ok = componentA</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">          &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">      &#125;)</span></span><br><span class="line"><span class="undefined">   </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+    <div>
+           
+</div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/21/父子组件关系/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="snowFlakeXue">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/21/父子组件关系/" class="post-title-link" itemprop="url">父子组件关系</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-21 20:05:01 / 修改时间：20:36:02" itemprop="dateCreated datePublished" datetime="2019-05-21T20:05:01+08:00">2019-05-21</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+    
+      
+      
+
+      
+        
+          <p>下面我将举个小栗子来说明父子组件关系<br><img src="/2019/05/21/父子组件关系/1.jpg" alt="avatar"><br></p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/21/父子组件关系/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    <div>
+           
+</div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/21/组件属性设置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="snowFlakeXue">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/21/组件属性设置/" class="post-title-link" itemprop="url">组件属性设置</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-21 19:33:43 / 修改时间：20:15:20" itemprop="dateCreated datePublished" datetime="2019-05-21T19:33:43+08:00">2019-05-21</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+    
+      
+      
+
+      
+        
+          <p>组件属性(props)的设置有两个坑，第一个坑是组件属性命名一定不能有-只能化成驼峰式，第二个坑是props是数组，不能写成对象形式而且他是写在template底下的；</p>
+<p>组件属性设置有两种，一种是直接属性，一种是绑定data</p>
+<hr>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/21/组件属性设置/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    <div>
+           
+</div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/20/初识组件/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="snowFlakeXue">
     </span>
 
     
@@ -533,198 +1042,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/20/1/"/>
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/20/制作模板/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue"/>
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/20/1/" class="post-title-link" itemprop="url">未命名</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-20 20:13:07 / 修改时间：21:15:57" itemprop="dateCreated datePublished" datetime="2019-05-20T20:13:07+08:00">2019-05-20</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-    
-      
-      
-
-      
-        
-          
-            <!DOCTYPE html>
-<html lang="en">
-<head><meta name="generator" content="Hexo 3.8.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <title>Document</title>
-</head>
-<body>
-    <div id="app">
-        <are></are>
-    </div>
-    <div id="pp">
-            <are></are>
-    </div>
-    <script>
-       
-        var app = new Vue({
-            el:'#app',
-            data:{
-               },
-            components:{
-               //注意引号
-                'are':{
-                    template:`<h2>hello</h2>`
-                   }
-            }
-        })
-        var pp = new Vue({
-            el:'#pp',
-            data:{
-               }
-            })
-     </script>
-</body>
-</html>
-          
-        
-      
-    </div>
-
-    
-    <div>
-           
-</div>
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/20/制作模板/"/>
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue"/>
+      <meta itemprop="name" content="snowFlakeXue">
     </span>
 
     
@@ -887,16 +1214,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/19/生命周期/"/>
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/19/生命周期/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue"/>
+      <meta itemprop="name" content="snowFlakeXue">
     </span>
 
     
@@ -1058,16 +1385,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/18/Vue-set/"/>
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/18/Vue-set/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue"/>
+      <meta itemprop="name" content="snowFlakeXue">
     </span>
 
     
@@ -1103,12 +1430,24 @@
                 
               
 
-              <time title="创建时间：2019-05-18 08:10:58 / 修改时间：09:34:48" itemprop="dateCreated datePublished" datetime="2019-05-18T08:10:58+08:00">2019-05-18</time>
+              <time title="创建时间：2019-05-18 08:10:58" itemprop="dateCreated datePublished" datetime="2019-05-18T08:10:58+08:00">2019-05-18</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-21 20:16:22" itemprop="dateModified" datetime="2019-05-21T20:16:22+08:00">2019-05-21</time>
               
             
           </span>
@@ -1162,14 +1501,16 @@
 
       
         
+          <p>先举个调用构造器外数据的小栗子<br></p>
+          <!--noindex-->
           
-            <p>先举个调用构造器外数据的小栗子</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span>&#123;&#123;count&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"add()"</span>&gt;</span>add<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 因为按钮在vue实例外，所以采用原声js方法onclick --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">        var outData = &#123;</span></span><br><span class="line"><span class="undefined">            count: 1,</span></span><br><span class="line"><span class="undefined">            goods: 'car'</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">        //注意这个数据放在vue构造器外</span></span><br><span class="line"><span class="undefined">        function add()&#123;</span></span><br><span class="line"><span class="undefined">           // Vue.set(outData,'count',2) 且该方法只能让他变成2</span></span><br><span class="line"><span class="undefined">           //app.count++</span></span><br><span class="line"><span class="undefined">            outData.count++</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">        var app = new Vue(&#123;</span></span><br><span class="line"><span class="undefined">            el: '#app',</span></span><br><span class="line"><span class="undefined">            data:outData//构造器外数据</span></span><br><span class="line"><span class="undefined">             &#125;)</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>由上述代码可见，想要调用构造器外数据由三种方法可行，那么为什么vue.set还有他存在的意义而且在开发中还很常用呢？看下面栗子</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span> &gt;</span></span><br><span class="line">        &#123;&#123;count&#125;&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"item in arr"</span>&gt;</span>&#123;&#123;item&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"add()"</span>&gt;</span>add<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">        var outData = &#123;</span></span><br><span class="line"><span class="undefined">            count: 1,</span></span><br><span class="line"><span class="undefined">            arr: ["aaa","bbb","ccc"]</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">       function add()&#123;</span></span><br><span class="line"><span class="undefined">           // outData.count++,</span></span><br><span class="line"><span class="undefined">           //outData.arr[1]="b"</span></span><br><span class="line"><span class="undefined">           Vue.set(outData.arr,1,'b')//注意中间1的写法</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">        var app = new Vue(&#123;</span></span><br><span class="line"><span class="undefined">            el: '#app',</span></span><br><span class="line"><span class="undefined">            data:outData</span></span><br><span class="line"><span class="undefined">            &#125;)</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>解析：当不用Vue.set时，如果不设置改变count值，因为js本身限制，vue也就检测不到数组的改变包括数组长度或数组内元素变化，这个时候vue.set的存在就显得很必要，不用设置count变化,vue也能检测到数组变化，因此在上面代码的注释都取消，不用vue.set也行，但显然当我们不想引入count时，vue.set是最好的选择</p>
-
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/18/Vue-set/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           
+          <!--/noindex-->
         
       
     </div>
@@ -1227,16 +1568,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/17/day4/"/>
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/17/day4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue"/>
+      <meta itemprop="name" content="snowFlakeXue">
     </span>
 
     
@@ -1401,16 +1742,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/17/Vue-extend/"/>
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/17/Vue-extend/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue"/>
+      <meta itemprop="name" content="snowFlakeXue">
     </span>
 
     
@@ -1566,16 +1907,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/16/自定义指令/"/>
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/16/自定义指令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue"/>
+      <meta itemprop="name" content="snowFlakeXue">
     </span>
 
     
@@ -1611,12 +1952,24 @@
                 
               
 
-              <time title="创建时间：2019-05-16 20:00:49 / 修改时间：23:16:27" itemprop="dateCreated datePublished" datetime="2019-05-16T20:00:49+08:00">2019-05-16</time>
+              <time title="创建时间：2019-05-16 20:00:49" itemprop="dateCreated datePublished" datetime="2019-05-16T20:00:49+08:00">2019-05-16</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-21 20:16:45" itemprop="dateModified" datetime="2019-05-21T20:16:45+08:00">2019-05-21</time>
               
             
           </span>
@@ -1670,372 +2023,12 @@
 
       
         
-          
-            <h3 id="先举个小栗子"><a href="#先举个小栗子" class="headerlink" title="先举个小栗子"></a>先举个小栗子</h3><p>要注意的是，vue提供的Vue-directive来自定义值令方法时要把这段代码写在vue实例化之前否则会报错，同时指令命名不能用驼峰法否则也会报错，V大写！</p>
-<p>代码里一些不熟悉的将在下面详细的讲讲</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-change_color</span>=<span class="string">"color"</span>&gt;</span>&#123;&#123;num&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"add"</span>&gt;</span>add<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    Vue.directive(<span class="string">'change_color'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">el,binding,vnode</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">        el.style=<span class="string">'color:'</span>+binding.value;</span></span><br><span class="line"><span class="undefined">     &#125;);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">       el:<span class="string">'#app'</span>,</span></span><br><span class="line"><span class="undefined">       data: &#123;</span></span><br><span class="line"><span class="undefined">           num: 1,</span></span><br><span class="line"><span class="javascript">           color:<span class="string">'red'</span></span></span><br><span class="line"><span class="undefined">           &#125;,</span></span><br><span class="line"><span class="undefined">       methods:&#123;</span></span><br><span class="line"><span class="javascript">        add:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">               <span class="keyword">this</span>.num++;</span></span><br><span class="line"><span class="undefined">           &#125;</span></span><br><span class="line"><span class="undefined">       &#125;</span></span><br><span class="line"><span class="undefined">    &#125;);</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h3 id="钩子函数（也叫生命周期）"><a href="#钩子函数（也叫生命周期）" class="headerlink" title="钩子函数（也叫生命周期）"></a>钩子函数（也叫生命周期）</h3><ol>
-<li><p>bind:只调用一次，指令第一次绑定到元素时调用。在这里可以进行一次性的初始化设置。</p>
-</li>
-<li><p>inserted:被绑定元素插入父节点时调用 (仅保证父节点存在，但不一定已被插入文档中)。</p>
-</li>
-<li><p>update:被绑定于元素所在的模板更新时调用，而无论绑定值是否变化。通过比较更新前后的绑定值，可以忽略不必要的模板更新</p>
-</li>
-<li><p>conponentUpdated:被绑定元素所在模板完成一次更新周期时调用。</p>
-</li>
-<li><p>unbind:只调用一次，指令与元素解绑时调用</p>
-</li>
-</ol>
-<h3 id="钩子函数的参数"><a href="#钩子函数的参数" class="headerlink" title="钩子函数的参数"></a>钩子函数的参数</h3><p>el: 指令所绑定的元素，可以用来直接操作DOM。</p>
-<p>binding: 一个对象，包含指令的很多信息。</p>
-<p>binding的属性：(只包括了常用的，剩下的去官网找)</p>
-<p>name：指令名，不包括 v- 前缀。</p>
-<p>expression：字符串形式的指令表达式</p>
-<p>value：指令的绑定值</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//注意引号</span></span><br><span class="line">    Vue.directive(<span class="string">'change_color'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">el,binding,vnode</span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(binding.value);</span><br><span class="line">        <span class="built_in">console</span>.log(binding.name);</span><br><span class="line">        <span class="built_in">console</span>.log(binding.expression);</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
-<p><img src="/2019/05/16/自定义指令/1.jpg" alt="avatar"></p>
-<p>vnode: Vue编译生成的虚拟节点。</p>
-<h3 id="上面小栗子的改写"><a href="#上面小栗子的改写" class="headerlink" title="上面小栗子的改写"></a>上面小栗子的改写</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-change_color</span>=<span class="string">"color"</span>&gt;</span>&#123;&#123;num&#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"add"</span>&gt;</span>add<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    /*注意这个销毁应在app外，点销毁之后app就不运行了点add也不加一了</span><br><span class="line"></span><br><span class="line">    注意下面这个app是js中vue的app*/</span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"app.$destroy()"</span>&gt;</span>销毁<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    Vue.directive(<span class="string">'change_color'</span>,&#123;</span></span><br><span class="line"><span class="javascript">        bind:<span class="function"><span class="keyword">function</span>(<span class="params">el,binding,vnode</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="string">'1-bind'</span>);</span></span><br><span class="line"><span class="javascript">            el.style=<span class="string">'color:'</span>+binding.value;</span></span><br><span class="line"><span class="undefined">        &#125;,</span></span><br><span class="line"><span class="javascript">        inserted:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="string">'2-inserted'</span>);</span></span><br><span class="line"><span class="undefined">        &#125;,</span></span><br><span class="line"><span class="javascript">        update:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="string">'3-update'</span>);</span></span><br><span class="line"><span class="undefined">        &#125;,</span></span><br><span class="line"><span class="javascript">        componentUpdated:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="string">'4-componentUpdated'</span>);</span></span><br><span class="line"><span class="undefined">        &#125;,</span></span><br><span class="line"><span class="javascript">        unbind:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="string">'5-unbind'</span>);</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">      &#125;</span></span><br><span class="line"><span class="undefined">    );</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">       el:<span class="string">'#app'</span>,</span></span><br><span class="line"><span class="undefined">       data: &#123;</span></span><br><span class="line"><span class="undefined">           num: 1,</span></span><br><span class="line"><span class="javascript">           color:<span class="string">'red'</span></span></span><br><span class="line"><span class="undefined">           &#125;,</span></span><br><span class="line"><span class="undefined">       methods:&#123;</span></span><br><span class="line"><span class="javascript">       add:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">               <span class="keyword">this</span>.num++;</span></span><br><span class="line"><span class="undefined">           &#125;</span></span><br><span class="line"><span class="undefined">       &#125;</span></span><br><span class="line"><span class="undefined">    &#125;);</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><img src="/2019/05/16/自定义指令/2.jpg" alt="avatar"></p>
-
-          
-        
-      
-    </div>
-
-    
-    <div>
-           
-</div>
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/16/其他指令/"/>
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue"/>
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/16/其他指令/" class="post-title-link" itemprop="url">其他指令</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-16 16:26:07 / 修改时间：18:34:41" itemprop="dateCreated datePublished" datetime="2019-05-16T16:26:07+08:00">2019-05-16</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-    
-      
-      
-
-      
-        
-          <p>v-pre v-cloak v-once<br></p>
+          <h3 id="先举个小栗子"><a href="#先举个小栗子" class="headerlink" title="先举个小栗子"></a>先举个小栗子</h3><p>要注意的是，vue提供的Vue-directive来自定义值令方法时要把这段代码写在vue实例化之前否则会报错，同时指令命名不能用驼峰法否则也会报错，V大写！</p>
+<p>代码里一些不熟悉的将在下面详细的讲讲<br></p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/05/16/其他指令/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    <div>
-           
-</div>
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/16/vbind/"/>
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue"/>
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/16/vbind/" class="post-title-link" itemprop="url">vbind</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-16 15:44:39 / 修改时间：18:32:37" itemprop="dateCreated datePublished" datetime="2019-05-16T15:44:39+08:00">2019-05-16</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-    
-      
-      
-
-      
-        
-          <p>v-bind用于绑定属性，样式，很重要<br></p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/05/16/vbind/#more" rel="contents">
+              <a class="btn" href="/2019/05/16/自定义指令/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2118,9 +2111,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"
-                alt="Liu Xue"/>
+              <img class="site-author-image" itemprop="image" src="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg" alt="Liu Xue">
             
               <p class="site-author-name" itemprop="name">Liu Xue</p>
               <div class="site-description motion-element" itemprop="description"></div>
@@ -2133,7 +2124,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-count">28</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

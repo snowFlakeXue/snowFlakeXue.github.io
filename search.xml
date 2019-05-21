@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[组件标签]]></title>
+    <url>%2F2019%2F05%2F21%2F%E7%BB%84%E4%BB%B6%E6%A0%87%E7%AD%BE%2F</url>
+    <content type="text"><![CDATA[组件标签就是&lt;component&gt;&lt;/component&gt;,是vue自己定义的，可以用这个实现动态选择组件，详情看下面的小栗子 1234567891011121314151617181920212223242526272829303132333435363738394041&lt;body&gt; &lt;div id="app"&gt; &lt;component :is="ok"&gt;&lt;/component&gt; &lt;!-- vue中用v-bind:is实现动态组件 --&gt; &lt;button @click="changeComponent"&gt;changeComponent&lt;/button&gt; &lt;/div&gt; &lt;script&gt; var componentA = &#123; template:`&lt;h2 style="color:red"&gt;A&lt;/h2&gt;` &#125; var componentB = &#123; template:`&lt;h2 style="color:green"&gt;B&lt;/h2&gt;` &#125; var componentC= &#123; template:`&lt;h2 style="color:pink"&gt;C&lt;/h2&gt;` &#125; var app = new Vue(&#123; el:'#app', data:&#123; ok:'componentA' &#125;, components:&#123; 'componentA':componentA, 'componentB':componentB, 'componentC':componentC &#125;, methods:&#123; changeComponent:function()&#123; if(this.ok==componentA)&#123; this.ok=componentB &#125; else if(this.ok==componentB)&#123; this.ok=componentC &#125; else this.ok = componentA &#125; &#125; &#125;) &lt;/script&gt;&lt;/body&gt;]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[父子组件关系]]></title>
+    <url>%2F2019%2F05%2F21%2F%E7%88%B6%E5%AD%90%E7%BB%84%E4%BB%B6%E5%85%B3%E7%B3%BB%2F</url>
+    <content type="text"><![CDATA[下面我将举个小栗子来说明父子组件关系123456789101112131415161718192021222324252627282930&lt;body&gt; &lt;div id="app"&gt; &lt;panda&gt;&lt;/panda&gt; &lt;/div&gt; &lt;script&gt; //子组件对象，必须写在父组件对象上面否则说他没定义 //在构造器外定义局部注册组件 var city = &#123; template: `&lt;h2&gt;四川是中国的城市&lt;/h2&gt;` &#125; //父组件对象 var panda = &#123; template: ` &lt;div&gt; &lt;h2&gt;熊猫来自四川&lt;/h2&gt; &lt;city&gt;&lt;/city&gt; &lt;/div&gt; `, components:&#123; 'city':city //注意写法 &#125; &#125; var app = new Vue(&#123; el:'#app', components:&#123; 'panda':panda//注意写法 &#125; &#125;) &lt;/script&gt;&lt;/body&gt;]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[组件属性设置]]></title>
+    <url>%2F2019%2F05%2F21%2F%E7%BB%84%E4%BB%B6%E5%B1%9E%E6%80%A7%E8%AE%BE%E7%BD%AE%2F</url>
+    <content type="text"><![CDATA[组件属性(props)的设置有两个坑，第一个坑是组件属性命名一定不能有-只能化成驼峰式，第二个坑是props是数组，不能写成对象形式而且他是写在template底下的； 组件属性设置有两种，一种是直接属性，一种是绑定data 直接设置属性 12345678910111213141516&lt;body&gt; &lt;div id="app"&gt; &lt;panda here="China"&gt;&lt;/panda&gt; &lt;/div&gt; &lt;script&gt; var app = new Vue(&#123; el: '#app', components:&#123; 'panda':&#123; template:`&lt;h2&gt;我来自&#123;&#123;here&#125;&#125;&lt;/h2&gt;`, props:['here'] &#125; &#125;, &#125;) &lt;/script&gt;&lt;/body&gt; 绑定data 12345678910111213141516171819&lt;body&gt; &lt;div id="app"&gt; &lt;panda :here="message"&gt;&lt;/panda&gt; &lt;/div&gt; &lt;script&gt; var app = new Vue(&#123; el: '#app', data:&#123; message:'China' &#125;, components:&#123; 'panda':&#123; template:`&lt;h2&gt;我来自&#123;&#123;here&#125;&#125;&lt;/h2&gt;`, props:['here'] &#125; &#125;, &#125;) &lt;/script&gt;&lt;/body&gt;]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[初识组件]]></title>
     <url>%2F2019%2F05%2F20%2F%E5%88%9D%E8%AF%86%E7%BB%84%E4%BB%B6%2F</url>
     <content type="text"><![CDATA[组件实际上就是创建html不存在的标签，非常常用 注册全局组件123456789101112131415161718192021222324&lt;body&gt; &lt;div id="app"&gt; &lt;are&gt;&lt;/are&gt;&lt;!--只能在vue实例化里用--&gt; &lt;/div&gt; &lt;div id="pp"&gt; &lt;are&gt;&lt;/are&gt; &lt;/div&gt; &lt;script&gt; Vue.component('are',&#123; template:`&lt;h2&gt;我们&lt;/h2&gt;` &#125;) //不论构造器里有没有数据都要写这样才算实例化成功 var app = new Vue(&#123; el:'#app', data:&#123; &#125; &#125;) var pp = new Vue(&#123; el:'#pp', data:&#123; &#125; &#125;) &lt;/script&gt;&lt;/body&gt; 结果：都能用组件 注册局部组件1234567891011121314151617181920212223242526&lt;body&gt; &lt;div id="app"&gt; &lt;are&gt;&lt;/are&gt; &lt;/div&gt; &lt;div id="pp"&gt; &lt;are&gt;&lt;/are&gt; &lt;/div&gt; &lt;script&gt; var app = new Vue(&#123; el:'#app', data:&#123; &#125;, components:&#123; //注意引号 'are':&#123; template:`&lt;h2&gt;hello&lt;/h2&gt;` &#125; &#125; &#125;) var pp = new Vue(&#123; el:'#pp', data:&#123; &#125; &#125;) &lt;/script&gt;&lt;/body&gt; 结果：只有第一个才能用组件]]></content>
       <categories>
         <category>Vue</category>
       </categories>
-  </entry>
-  <entry>
-    <title></title>
-    <url>%2F2019%2F05%2F20%2F1%2F</url>
-    <content type="text"><![CDATA[Document var app = new Vue({ el:'#app', data:{ }, components:{ //注意引号 'are':{ template:`hello` } } }) var pp = new Vue({ el:'#pp', data:{ } })]]></content>
   </entry>
   <entry>
     <title><![CDATA[制作模板]]></title>
