@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[computed选项]]></title>
+    <url>%2F2019%2F05%2F24%2Fcomputed%E9%80%89%E9%A1%B9%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[propsData]]></title>
     <url>%2F2019%2F05%2F24%2FpropsData%2F</url>
     <content type="text"><![CDATA[实际上propsData他不是挂载个属性，它是一个选项，甚至说这很不常用，完全可以用组件实现，但是要认识他，他是个传递数据的选项 1234567891011121314&lt;div id="summer"&gt;&lt;/div&gt; &lt;script&gt; var summer = Vue.extend(&#123; template:`&lt;h2&gt;&#123;&#123;message&#125;&#125;-&#123;&#123;food&#125;&#125;&lt;/h2&gt;`, data:function()&#123; return&#123; message:'summer' &#125; &#125;, props:['food'] &#125;) new summer(&#123;propsData:&#123;food:'iceCream'&#125;&#125;).$mount('#summer') //注意写法sss &lt;/script&gt;]]></content>
