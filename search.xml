@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[propData]]></title>
+    <url>%2F2019%2F05%2F24%2FpropsData%2F</url>
+    <content type="text"><![CDATA[实际上propsData他不是挂载个属性，它是一个选项，甚至说这很不常用，完全可以用组件实现，但是要认识他，他是个传递数据的选项 123456789101112131415&lt;div id="summer"&gt;&lt;/div&gt; &lt;script&gt; var summer = Vue.extend(&#123; template:`&lt;h2&gt;&#123;&#123;message&#125;&#125;-&#123;&#123;food&#125;&#125;&lt;/h2&gt;`, data:function()&#123; return&#123; message:'summer' &#125; &#125;, props:['food'] &#125;) new summer(&#123;propsData:&#123;food:'iceCream'&#125;&#125;).$mount //注意写法 ('#summer') &lt;/script&gt;]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[keyframes]]></title>
+    <url>%2F2019%2F05%2F23%2Fkeyframes%2F</url>
+    <content type="text"><![CDATA[与transition不同，这个可以在一开始就进行动画演示，无需操作，这在CSS动画中是很重要的部分，他可以让你任意调动，说白了，这个关键帧动画实际上就是多个补间动画,另外还有一种逐帧动画，它是一种特殊的关键帧动画，只不过他没有补间动画是一帧一帧的，但是他资源使用大，因此除了另两个动画搞不定的情况下尽量不要使用，因为他包含于keyframes里，因此说CSS设置动画实质上就两种transition和keyframes 12345678910111213141516171819202122232425&lt;style&gt; .container&#123; width:50px; height:50px; background-color: red; animation: run 1s ; &#125; @keyframes run&#123; 0%&#123; width:100px; &#125; 10%&#123; width: 20px; &#125; 50%&#123; width: 200px; &#125; 100%&#123; width:300px; &#125; &#125;&lt;/style&gt;&lt;body&gt; &lt;div class="container"&gt;&lt;/div&gt;&lt;/body&gt; 栗子中的run是动画名要与下面的@keyframes后的对应好了 当然transition里可以用的这里也可以用，比如说可以加上像linear这样的 1animation: run 1s linear ; 当只有前后两个节点时一般会写成from to来代替0% 100% 12345678@keyframes run&#123; from&#123; width:100px; &#125; to&#123; width:300px; &#125; &#125; 还有一些有意思的animation属性 设置动画倒着开始 1animation-direction: reverse; 设置动画不要回来了 1animation-fill-mode: forwards; 设置动画循环次数，这里的infinite是无数次 1animation-iteration-count: infinite; 设置动画停止 1animation-play-state: paused; 逐帧动画 123456789101112131415161718192021222324&lt;style&gt; .container&#123; width:100px; height:100px; border: 1px solid red; background:url("http://images2015.cnblogs.com/blog/733006/201611/733006-20161103171828065-1874183143.png") no-repeat; animation: run 1s ; animation-timing-function: steps(1); &#125; @keyframes run&#123; 0%&#123; background-position:0px 0px; &#125; 50%&#123; background-position:0px -80px; &#125; 100%&#123; background-position:0px 0px; &#125; &#125;&lt;/style&gt;&lt;body&gt; &lt;div class="container"&gt;&lt;/div&gt;&lt;/body&gt; 其实就是加个 12animation-timing-function: steps(1);/* 只能是1 */]]></content>
+      <categories>
+        <category>CSS动画</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[transition]]></title>
+    <url>%2F2019%2F05%2F23%2Ftransition%2F</url>
+    <content type="text"><![CDATA[transition(过渡)是用来设置补间动画的即自动填补两个画面中间的部分，但必须有前后变化，比如下面的栗子中，就得有个hover 123456789101112131415161718&lt;style&gt; .container&#123; width:50px; height:50px; background-color: red; transition: width 1s,background-color 1s; transition-delay: 2s; transition-timing-function: ease-in-out; &#125; .container:hover&#123; width:300px; height:50px; background-color: green; &#125;&lt;/style&gt;&lt;body&gt; &lt;div class="container"&gt;&lt;/div&gt;&lt;/body&gt; transition-property和transition-duration一般一起用，第一个表示做动画的属性，第二个表示动画进行时间，当多个属性同时使用动画时就用逗号隔开,也可以写成all 1s 1transition: width 1s,background-color 1s; transition-delay 只有一个时间参数使用来设置延迟的 transition-timing-function是用来定义动画进行方式，就是先快后慢啊还是匀速啊啥的，常见方式如下 具体实例如下 ease-in-out: linear: ease-in ease-out 一个需要翻墙的工具，用来自制动画方式]]></content>
+      <categories>
+        <category>CSS动画</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[组件标签]]></title>
     <url>%2F2019%2F05%2F21%2F%E7%BB%84%E4%BB%B6%E6%A0%87%E7%AD%BE%2F</url>
     <content type="text"><![CDATA[组件标签就是&lt;component&gt;&lt;/component&gt;,是vue自己定义的，可以用这个实现动态选择组件，详情看下面的小栗子 1234567891011121314151617181920212223242526272829303132333435363738394041&lt;body&gt; &lt;div id="app"&gt; &lt;component :is="ok"&gt;&lt;/component&gt; &lt;!-- vue中用v-bind:is实现动态组件 --&gt; &lt;button @click="changeComponent"&gt;changeComponent&lt;/button&gt; &lt;/div&gt; &lt;script&gt; var componentA = &#123; template:`&lt;h2 style="color:red"&gt;A&lt;/h2&gt;` &#125; var componentB = &#123; template:`&lt;h2 style="color:green"&gt;B&lt;/h2&gt;` &#125; var componentC= &#123; template:`&lt;h2 style="color:pink"&gt;C&lt;/h2&gt;` &#125; var app = new Vue(&#123; el:'#app', data:&#123; ok:'componentA' &#125;, components:&#123; 'componentA':componentA, 'componentB':componentB, 'componentC':componentC &#125;, methods:&#123; changeComponent:function()&#123; if(this.ok==componentA)&#123; this.ok=componentB &#125; else if(this.ok==componentB)&#123; this.ok=componentC &#125; else this.ok = componentA &#125; &#125; &#125;) &lt;/script&gt;&lt;/body&gt;]]></content>

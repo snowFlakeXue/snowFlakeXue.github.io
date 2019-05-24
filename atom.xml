@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-05-21T13:05:37.289Z</updated>
+  <updated>2019-05-24T05:36:34.652Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -15,6 +15,80 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>propData</title>
+    <link href="snowFlakeXue.github.io/2019/05/24/propsData/"/>
+    <id>snowFlakeXue.github.io/2019/05/24/propsData/</id>
+    <published>2019-05-24T05:22:46.000Z</published>
+    <updated>2019-05-24T05:36:34.652Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;实际上propsData他不是挂载个属性，它是一个选项，甚至说这很不常用，完全可以用组件实现，但是要认识他，他是个传递数据的选项&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>keyframes</title>
+    <link href="snowFlakeXue.github.io/2019/05/23/keyframes/"/>
+    <id>snowFlakeXue.github.io/2019/05/23/keyframes/</id>
+    <published>2019-05-23T12:38:55.000Z</published>
+    <updated>2019-05-23T13:34:44.544Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;与transition不同，这个可以在一开始就进行动画演示，无需操作，这在CSS动画中是很重要的部分，他可以让你任意调动，说白了，这个关键帧动画实际上就是多个补间动画,另外还有一种逐帧动画，它是一种特殊的关键帧动画，只不过他没有补间动画是一帧一帧的，但是他资源使用大，因此除
+        
+      
+    
+    </summary>
+    
+      <category term="CSS动画" scheme="snowFlakeXue.github.io/categories/CSS%E5%8A%A8%E7%94%BB/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>transition</title>
+    <link href="snowFlakeXue.github.io/2019/05/23/transition/"/>
+    <id>snowFlakeXue.github.io/2019/05/23/transition/</id>
+    <published>2019-05-23T11:33:05.000Z</published>
+    <updated>2019-05-23T12:38:29.138Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;transition(过渡)是用来设置补间动画的即自动填补两个画面中间的部分，但必须有前后变化，比如下面的栗子中，就得有个hover&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+      <category term="CSS动画" scheme="snowFlakeXue.github.io/categories/CSS%E5%8A%A8%E7%94%BB/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>组件标签</title>
@@ -352,75 +426,6 @@
     </summary>
     
       <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>指针</title>
-    <link href="snowFlakeXue.github.io/2019/05/12/%E6%8C%87%E9%92%88/"/>
-    <id>snowFlakeXue.github.io/2019/05/12/指针/</id>
-    <published>2019-05-11T23:07:08.000Z</published>
-    <updated>2019-05-16T10:37:30.349Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ol&gt;
-&lt;li&gt;什么是指针：指针是储存地址的变量，他也有自己的地址，他通过自己储存的地址指向内存单元&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/05/12/指针/1.jpg&quot; alt=&quot;avatar&quot;&gt;&lt;/p&gt;
-&lt;ol
-        
-      
-    
-    </summary>
-    
-      <category term="C++" scheme="snowFlakeXue.github.io/categories/C/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>BOM</title>
-    <link href="snowFlakeXue.github.io/2019/05/09/BOM/"/>
-    <id>snowFlakeXue.github.io/2019/05/09/BOM/</id>
-    <published>2019-05-09T05:39:31.000Z</published>
-    <updated>2019-05-11T00:45:38.602Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;BOM-浏览器对象模型，是实现与浏览器交流的&quot;&gt;&lt;a href=&quot;#BOM-浏览器对象模型，是实现与浏览器交流的&quot; class=&quot;headerlink&quot; title=&quot;BOM:浏览器对象模型，是实现与浏览器交流的&quot;&gt;&lt;/a&gt;BOM:浏览器对象模型，是实现与浏览器交流的&lt;/h2&gt;&lt;h2 id=&quot;window&quot;&gt;&lt;a href=&quot;#window&quot; class=&quot;headerlink&quot; title=&quot;window&quot;&gt;&lt;/a&gt;&lt;font color=&quot;red&quot;&gt;window&lt;/font&gt;&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;window.document（可省略window）(document就是表示这个文档，我理解成跟this差不多)&lt;/li&gt;
-&lt;li&gt;window.innerHeight（浏览器内部高度，除去菜单栏，工具栏啥的）window.innerWidth（浏览器内部宽度）(Internet Explorer、Chrome、Firefox、Opera 以及 Safari支持)&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;document.body.clientHeight/document.body.clientWidth(Internet Explorer 8、7、6、5支持)&lt;/p&gt;
-&lt;p&gt;window.outerHeight（浏览器完整高度)window.outerWidth(浏览器完整宽度)&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="javascript学习" scheme="snowFlakeXue.github.io/categories/javascript%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>HTML_DOM</title>
-    <link href="snowFlakeXue.github.io/2019/05/08/HTML-DOM/"/>
-    <id>snowFlakeXue.github.io/2019/05/08/HTML-DOM/</id>
-    <published>2019-05-08T02:51:59.000Z</published>
-    <updated>2019-05-11T00:48:19.290Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;什么是DOM：DOM是文档对象模型，他分xhtml-html-核心dom三种，所以html-dom就是可以对html文本中任何元素进行修改删除等操作&quot;&gt;&lt;a href=&quot;#什么是DOM：DOM是文档对象模型，他分xhtml-html-核心dom三种，所以html-dom就是可以对html文本中任何元素进行修改删除等操作&quot; class=&quot;headerlink&quot; title=&quot;什么是DOM：DOM是文档对象模型，他分xhtml,html,核心dom三种，所以html dom就是可以对html文本中任何元素进行修改删除等操作&quot;&gt;&lt;/a&gt;什么是DOM：DOM是文档对象模型，他分xhtml,html,核心dom三种，所以html dom就是可以对html文本中任何元素进行修改删除等操作&lt;/h2&gt;&lt;hr&gt;
-    
-    </summary>
-    
-      <category term="javascript学习" scheme="snowFlakeXue.github.io/categories/javascript%E5%AD%A6%E4%B9%A0/"/>
     
     
   </entry>
