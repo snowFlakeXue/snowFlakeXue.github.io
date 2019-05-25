@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-05-24T08:48:15.248Z</updated>
+  <updated>2019-05-25T11:24:36.025Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -17,15 +17,243 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>自定义组件</title>
+    <link href="snowFlakeXue.github.io/2019/05/25/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/"/>
+    <id>snowFlakeXue.github.io/2019/05/25/自定义组件/</id>
+    <published>2019-05-25T11:21:59.000Z</published>
+    <updated>2019-05-25T11:24:36.025Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>实例事件</title>
+    <link href="snowFlakeXue.github.io/2019/05/25/%E5%AE%9E%E4%BE%8B%E4%BA%8B%E4%BB%B6/"/>
+    <id>snowFlakeXue.github.io/2019/05/25/实例事件/</id>
+    <published>2019-05-25T09:36:58.000Z</published>
+    <updated>2019-05-25T09:55:50.163Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在构造器外添加事件$on&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>实例方法</title>
+    <link href="snowFlakeXue.github.io/2019/05/25/%E5%AE%9E%E4%BE%8B%E6%96%B9%E6%B3%95/"/>
+    <id>snowFlakeXue.github.io/2019/05/25/实例方法/</id>
+    <published>2019-05-25T07:42:48.000Z</published>
+    <updated>2019-05-25T08:06:18.763Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>实例入门</title>
+    <link href="snowFlakeXue.github.io/2019/05/25/%E5%AE%9E%E4%BE%8B%E5%85%A5%E9%97%A8/"/>
+    <id>snowFlakeXue.github.io/2019/05/25/实例入门/</id>
+    <published>2019-05-25T06:35:18.000Z</published>
+    <updated>2019-05-25T06:50:13.822Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;实例就是在构造器外部操作构造器内部的属性和方法，他让Vue可以和其他框架一起使用&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>delimiters选项</title>
+    <link href="snowFlakeXue.github.io/2019/05/25/delimiters%E9%80%89%E9%A1%B9/"/>
+    <id>snowFlakeXue.github.io/2019/05/25/delimiters选项/</id>
+    <published>2019-05-25T05:51:42.000Z</published>
+    <updated>2019-05-25T05:55:19.108Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;delimiters是用在当我们想修改一些东西比如我不想用花括号来绑定值时使用,他一般在数组里有两个元素，第一个是改变后的前面的，另一个是改变后后面的部分&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>extends选项</title>
+    <link href="snowFlakeXue.github.io/2019/05/25/extends%E9%80%89%E9%A1%B9/"/>
+    <id>snowFlakeXue.github.io/2019/05/25/extends选项/</id>
+    <published>2019-05-25T05:46:09.000Z</published>
+    <updated>2019-05-25T05:50:51.098Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;extends方法和mixins差不多，是个扩展选项，只是在构造器里写的时候他是个对象（只能有一个对象），而mixins可以写一个数组&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>mixins选项</title>
+    <link href="snowFlakeXue.github.io/2019/05/25/mixins%E9%80%89%E9%A1%B9/"/>
+    <id>snowFlakeXue.github.io/2019/05/25/mixins选项/</id>
+    <published>2019-05-25T03:50:50.000Z</published>
+    <updated>2019-05-25T05:26:51.971Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;mixins是混入选项操作，一般用于在你写完构造器后想加些东西却不想污染构造器时使用，一种是当很多地方需要用时作为全局的使用，随时可以调用，同时下面的栗子中构造器原生的updated和构造器内的和全局的还有顺序规则，需要注意的是如果构造器内的mixin的名和构造器内方法的名
+        
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>watch选项</title>
+    <link href="snowFlakeXue.github.io/2019/05/25/watch%E9%80%89%E9%A1%B9/"/>
+    <id>snowFlakeXue.github.io/2019/05/25/watch选项/</id>
+    <published>2019-05-25T03:03:55.000Z</published>
+    <updated>2019-05-25T03:13:06.277Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;watch选项用于监控数据变化，一种是直接在构造器内用watch选项，一种是为了避免耦合度在构造器外使用&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="snowFlakeXue.github.io/2019/05/24/1/"/>
+    <id>snowFlakeXue.github.io/2019/05/24/1/</id>
+    <published>2019-05-24T10:42:26.412Z</published>
+    <updated>2019-05-25T10:20:58.374Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;&lt;meta name=&quot;generator&quot; content=&quot;Hexo 3.8.0&quot;&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>methods选项</title>
+    <link href="snowFlakeXue.github.io/2019/05/24/methods%E9%80%89%E9%A1%B9/"/>
+    <id>snowFlakeXue.github.io/2019/05/24/methods选项/</id>
+    <published>2019-05-24T09:49:00.000Z</published>
+    <updated>2019-05-25T02:37:33.013Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;methods方法一般跟@click这样的绑定，下面有三个栗子，分别是简单的传值绑定，组件绑定，实例外绑定&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>computed选项</title>
     <link href="snowFlakeXue.github.io/2019/05/24/computed%E9%80%89%E9%A1%B9/"/>
     <id>snowFlakeXue.github.io/2019/05/24/computed选项/</id>
     <published>2019-05-24T08:48:15.000Z</published>
-    <updated>2019-05-24T08:48:15.248Z</updated>
+    <updated>2019-05-24T10:40:17.872Z</updated>
     
     <summary type="html">
     
+      
+      
+        
+        
+          &lt;p&gt;computed选项一般用来改变原来的值得形式，使data选项里的值尽量的整洁简单，因此我们一般用computed选项来给绑定的值进行改变大小写啊，添加修饰啊。下面就举一个将新闻日期倒过来的小栗子，因为数据输入时是旧时间到新时间，而我们想要的是先看到新时间的新闻，所以在co
+        
+      
+    
     </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
     
     
   </entry>
@@ -216,207 +444,6 @@
     <summary type="html">
     
       &lt;h3 id=&quot;生命周期又叫钩子函数，就是在某个节点进行某个操作，这里讲的是构造器里的生命周期，总共有十个，有两个需结合组件学习-activated-deactivated-，所以先学八个&quot;&gt;&lt;a href=&quot;#生命周期又叫钩子函数，就是在某个节点进行某个操作，这里讲的是构造器里的生命周期，总共有十个，有两个需结合组件学习-activated-deactivated-，所以先学八个&quot; class=&quot;headerlink&quot; title=&quot;生命周期又叫钩子函数，就是在某个节点进行某个操作，这里讲的是构造器里的生命周期，总共有十个，有两个需结合组件学习(activated,deactivated)，所以先学八个&quot;&gt;&lt;/a&gt;生命周期又叫钩子函数，就是在某个节点进行某个操作，这里讲的是构造器里的生命周期，总共有十个，有两个需结合组件学习(activated,deactivated)，所以先学八个&lt;/h3&gt;
-    
-    </summary>
-    
-      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Vue.set</title>
-    <link href="snowFlakeXue.github.io/2019/05/18/Vue-set/"/>
-    <id>snowFlakeXue.github.io/2019/05/18/Vue-set/</id>
-    <published>2019-05-18T00:10:58.000Z</published>
-    <updated>2019-05-21T12:16:22.300Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;先举个调用构造器外数据的小栗子&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>day4</title>
-    <link href="snowFlakeXue.github.io/2019/05/17/day4/"/>
-    <id>snowFlakeXue.github.io/2019/05/17/day4/</id>
-    <published>2019-05-17T14:38:44.000Z</published>
-    <updated>2019-05-17T14:53:39.835Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;ol&gt;
-&lt;li&gt;将二进制转换为小数，同样是各位乘以位权&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;/2019/05/17/day4/1.jpg&quot; alt=&quot;avatar&quot;&gt;&lt;/p&gt;
-&lt;ol
-        
-      
-    
-    </summary>
-    
-      <category term="睡前小读" scheme="snowFlakeXue.github.io/categories/%E7%9D%A1%E5%89%8D%E5%B0%8F%E8%AF%BB/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Vue.extend</title>
-    <link href="snowFlakeXue.github.io/2019/05/17/Vue-extend/"/>
-    <id>snowFlakeXue.github.io/2019/05/17/Vue-extend/</id>
-    <published>2019-05-17T02:49:20.000Z</published>
-    <updated>2019-05-17T03:05:29.746Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;因为还没学组件所以下面的将是一个简单的扩展实例构造器的小栗子，一般情况下扩展实例构造器是要和组件一起使用的&quot;&gt;&lt;a href=&quot;#因为还没学组件所以下面的将是一个简单的扩展实例构造器的小栗子，一般情况下扩展实例构造器是要和组件一起使用的&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>自定义指令</title>
-    <link href="snowFlakeXue.github.io/2019/05/16/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/"/>
-    <id>snowFlakeXue.github.io/2019/05/16/自定义指令/</id>
-    <published>2019-05-16T12:00:49.000Z</published>
-    <updated>2019-05-21T12:16:45.358Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;先举个小栗子&quot;&gt;&lt;a href=&quot;#先举个小栗子&quot; class=&quot;headerlink&quot; title=&quot;先举个小栗子&quot;&gt;&lt;/a&gt;先举个小栗子&lt;/h3&gt;&lt;p&gt;要注意的是，vue提供的Vue-directive来自定义值令方法时要把这段代码写在vue实例化之前否则会报错，同时指令命名不能用驼峰法否则也会报错，V大写！&lt;/p&gt;
-&lt;p&gt;代码里一些不熟悉的将在下面详细的讲讲&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>其他指令</title>
-    <link href="snowFlakeXue.github.io/2019/05/16/%E5%85%B6%E4%BB%96%E6%8C%87%E4%BB%A4/"/>
-    <id>snowFlakeXue.github.io/2019/05/16/其他指令/</id>
-    <published>2019-05-16T08:26:07.000Z</published>
-    <updated>2019-05-16T10:34:41.356Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;v-pre v-cloak v-once&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>vbind</title>
-    <link href="snowFlakeXue.github.io/2019/05/16/vbind/"/>
-    <id>snowFlakeXue.github.io/2019/05/16/vbind/</id>
-    <published>2019-05-16T07:44:39.000Z</published>
-    <updated>2019-05-16T10:32:37.665Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;v-bind用于绑定属性，样式，很重要&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>vmodel</title>
-    <link href="snowFlakeXue.github.io/2019/05/16/vmodel/"/>
-    <id>snowFlakeXue.github.io/2019/05/16/vmodel/</id>
-    <published>2019-05-16T03:07:15.000Z</published>
-    <updated>2019-05-16T10:33:32.944Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;v-model是实现双向绑定的方法，是vue的核心&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>von</title>
-    <link href="snowFlakeXue.github.io/2019/05/16/von/"/>
-    <id>snowFlakeXue.github.io/2019/05/16/von/</id>
-    <published>2019-05-16T03:07:05.000Z</published>
-    <updated>2019-05-16T10:34:05.089Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;v-on是事件绑定，他的缩写是&lt;code&gt;@&lt;/code&gt;&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>vhtml</title>
-    <link href="snowFlakeXue.github.io/2019/05/16/vhtml/"/>
-    <id>snowFlakeXue.github.io/2019/05/16/vhtml/</id>
-    <published>2019-05-16T02:44:37.000Z</published>
-    <updated>2019-05-16T10:33:17.152Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;注意这种方法在你无法保证绝对安全时不要使用，否则会造成SSR攻击&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>vtext</title>
-    <link href="snowFlakeXue.github.io/2019/05/16/vtext/"/>
-    <id>snowFlakeXue.github.io/2019/05/16/vtext/</id>
-    <published>2019-05-16T02:38:46.000Z</published>
-    <updated>2019-05-16T11:17:32.681Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;这种写法的作用和花括号法一样，但在网速慢加载不出来时不会输出花括号降低用户体验&lt;br&gt;&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
-        
-      
     
     </summary>
     

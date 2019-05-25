@@ -100,14 +100,17 @@
 
 
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="computed选项一般用来改变原来的值得形式，使data选项里的值尽量的整洁简单，因此我们一般用computed选项来给绑定的值进行改变大小写啊，添加修饰啊。下面就举一个将新闻日期倒过来的小栗子，因为数据输入时是旧时间到新时间，而我们想要的是先看到新时间的新闻，所以在computed中使用computed就很有必要 1234567891011121314151617181920212223242">
+<meta property="og:type" content="article">
 <meta property="og:title" content="computed选项">
 <meta property="og:url" content="snowFlakeXue.github.io/2019/05/24/computed选项/index.html">
 <meta property="og:site_name" content="snowFlakeXue">
+<meta property="og:description" content="computed选项一般用来改变原来的值得形式，使data选项里的值尽量的整洁简单，因此我们一般用computed选项来给绑定的值进行改变大小写啊，添加修饰啊。下面就举一个将新闻日期倒过来的小栗子，因为数据输入时是旧时间到新时间，而我们想要的是先看到新时间的新闻，所以在computed中使用computed就很有必要 1234567891011121314151617181920212223242">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-24T08:48:15.248Z">
+<meta property="og:updated_time" content="2019-05-24T10:40:17.872Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="computed选项">
+<meta name="twitter:description" content="computed选项一般用来改变原来的值得形式，使data选项里的值尽量的整洁简单，因此我们一般用computed选项来给绑定的值进行改变大小写啊，添加修饰啊。下面就举一个将新闻日期倒过来的小栗子，因为数据输入时是旧时间到新时间，而我们想要的是先看到新时间的新闻，所以在computed中使用computed就很有必要 1234567891011121314151617181920212223242">
 
 
 
@@ -404,12 +407,34 @@
                 
               
 
-              <time title="创建时间：2019-05-24 16:48:15" itemprop="dateCreated datePublished" datetime="2019-05-24T16:48:15+08:00">2019-05-24</time>
+              <time title="创建时间：2019-05-24 16:48:15 / 修改时间：18:40:17" itemprop="dateCreated datePublished" datetime="2019-05-24T16:48:15+08:00">2019-05-24</time>
             
 
+            
+              
+
+              
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -453,7 +478,9 @@
       
 
       
-        
+        <p>computed选项一般用来改变原来的值得形式，使data选项里的值尽量的整洁简单，因此我们一般用computed选项来给绑定的值进行改变大小写啊，添加修饰啊。下面就举一个将新闻日期倒过来的小栗子，因为数据输入时是旧时间到新时间，而我们想要的是先看到新时间的新闻，所以在computed中使用computed就很有必要</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;newMessage&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"item in reverseNews"</span>&gt;</span>&#123;&#123;item.title&#125;&#125;-&#123;&#123;item.date&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">       var app = new Vue(&#123;</span></span><br><span class="line"><span class="undefined">           el:'#app',</span></span><br><span class="line"><span class="undefined">           data:&#123;</span></span><br><span class="line"><span class="undefined">               message:100,</span></span><br><span class="line"><span class="undefined">               news:[&#123;title:'新闻1', date:'2019/01/24'&#125;,</span></span><br><span class="line"><span class="undefined">                     &#123;title:'新闻2', date:'2019/01/25'&#125;,</span></span><br><span class="line"><span class="undefined">                     &#123;title:'新闻3', date:'2019/01/26'&#125;,</span></span><br><span class="line"><span class="undefined">                     &#123;title:'新闻4', date:'2019/01/27'&#125;]</span></span><br><span class="line"><span class="undefined">               &#125;,</span></span><br><span class="line"><span class="undefined">           computed:&#123;</span></span><br><span class="line"><span class="undefined">               newMessage:function()&#123;</span></span><br><span class="line"><span class="undefined">                   return this.message='￥'+this.message+'元';</span></span><br><span class="line"><span class="undefined">               &#125;,</span></span><br><span class="line"><span class="undefined">               reverseNews:function()&#123;</span></span><br><span class="line"><span class="undefined">                   return this.news.reverse();</span></span><br><span class="line"><span class="undefined">               &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">           &#125;</span></span><br><span class="line"><span class="undefined">       &#125;) ;</span></span><br><span class="line"><span class="undefined">   </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -502,6 +529,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/24/methods选项/" rel="prev" title="methods选项">
+                methods选项 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -567,7 +598,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">32</span>
+                    <span class="site-state-item-count">42</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>

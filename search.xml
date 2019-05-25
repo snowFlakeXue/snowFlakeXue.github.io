@@ -1,9 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[自定义组件]]></title>
+    <url>%2F2019%2F05%2F25%2F%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[1234567891011121314151617181920212223242526272829303132333435&lt;div id="app"&gt; &lt;liuxue&gt; &lt;!-- 用 key value形式传递数据 --&gt; &lt;p slot="url"&gt;&#123;&#123;liuxueData.url&#125;&#125;&lt;/p&gt; &lt;p slot="name"&gt;&#123;&#123;liuxueData.name&#125;&#125;&lt;/p&gt; &lt;p slot="skill"&gt;&#123;&#123;liuxueData.skill&#125;&#125;&lt;/p&gt; &lt;/liuxue&gt; &lt;/div&gt; &lt;template id="liu"&gt; &lt;!-- Vue2.0规定必须用大的包个小的 --&gt; &lt;div&gt; &lt;!-- 接收数据 --&gt; &lt;p&gt;博客地址：&lt;slot name="url"&gt;&lt;/slot&gt;&lt;/p&gt; &lt;p&gt;姓名：&lt;slot name="name"&gt;&lt;/slot&gt;&lt;/p&gt; &lt;p&gt;技能：&lt;slot name="skill"&gt;&lt;/slot&gt;&lt;/p&gt; &lt;/div&gt; &lt;/template&gt; &lt;script&gt; var liuxue = &#123; template:'#liu' &#125; var app = new Vue(&#123; el:'#app', data:&#123; liuxueData:&#123; url:'snowFlakeXue.github.io', name:'liuxue', skill:'前端' &#125; &#125;, components:&#123; 'liuxue':liuxue &#125; &#125;) &lt;/script&gt;]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[实例事件]]></title>
+    <url>%2F2019%2F05%2F25%2F%E5%AE%9E%E4%BE%8B%E4%BA%8B%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[在构造器外添加事件$on 12345678910111213141516171819202122232425&lt;div id="app"&gt; &lt;p&gt;&#123;&#123;count&#125;&#125;&lt;/p&gt; &lt;p&gt;&lt;button @click="add"&gt;add&lt;/button&gt;&lt;/p&gt; &lt;/div&gt; &lt;p&gt;&lt;button onclick="reduce()"&gt;reduce&lt;/button&gt;&lt;/p&gt; &lt;script&gt; var app = new Vue(&#123; el:'#app', data:&#123; count:1 &#125;, methods:&#123; add:function()&#123; this.count++ &#125; &#125; &#125;) app.$on('reduce',function()&#123; this.count--; console.log('构造器外方法被调用') &#125;) function reduce()&#123; app.$emit('reduce') &#125; //当按钮在作用域外用$emit调用 once事件$once 1&lt;p&gt;&lt;button onclick="reduceOnce()"&gt;reduceOnce&lt;/button&gt;&lt;/p&gt; 1234567app.$once('reduceOnce',function()&#123; this.count--; console.log('只执行一次的方法被调用') &#125;) function reduceOnce()&#123; app.$emit('reduceOnce') &#125; off事件$off 1&lt;p&gt;&lt;button onclick="off()"&gt;off&lt;/button&gt;&lt;/p&gt; 123function off()&#123; app.$off('reduceOnce') &#125;]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[实例方法]]></title>
+    <url>%2F2019%2F05%2F25%2F%E5%AE%9E%E4%BE%8B%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[12345678910111213141516171819202122232425262728293031323334353637383940414243&lt;div id="app"&gt; &lt;p&gt;&#123;&#123;message&#125;&#125;&lt;/p&gt; &lt;/div&gt; &lt;button onclick="destroy()"&gt;销毁&lt;/button&gt; &lt;button onclick="reload()"&gt;更新&lt;/button&gt; &lt;button onclick="tick()"&gt;修改&lt;/button&gt; &lt;script&gt; var app = Vue.extend(&#123; template:`&lt;p&gt;&#123;&#123;message&#125;&#125;&lt;/p&gt;`, data: function()&#123; return &#123; message:'hello world' &#125; &#125;, mounted:function()&#123; console.log('我被挂载了') &#125;, destroyed:function()&#123; console.log('我被销毁了') &#125;, updated:function()&#123; console.log('我被更新了') &#125; &#125;) //挂载方法 var vm = new app().$mount('#app'); //销毁方法 function destroy()&#123; vm.$destroy(); &#125; //更新方法 function reload()&#123; vm.$forceUpdate(); &#125; //修改方法 function tick()&#123; vm.message = 'hello Vue', vm.$nextTick(function()&#123; console.log('我被修改了') &#125;) &#125; &lt;/script&gt;]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[实例入门]]></title>
+    <url>%2F2019%2F05%2F25%2F%E5%AE%9E%E4%BE%8B%E5%85%A5%E9%97%A8%2F</url>
+    <content type="text"><![CDATA[实例就是在构造器外部操作构造器内部的属性和方法，他让Vue可以和其他框架一起使用和jQuary一起使用 12345678910111213141516&lt;body&gt; &lt;div id="app"&gt; &lt;p&gt;&#123;&#123;message&#125;&#125;&lt;/p&gt; &lt;/div&gt; &lt;script&gt; var app = new Vue(&#123; el:'#app', data:&#123; message:'hello world' &#125;, mounted:function()&#123; $('#app').html('hello Vue') &#125; &#125;) &lt;/script&gt;&lt;/body&gt; 实例调用自定义方法 1app.add();]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[delimiters选项]]></title>
+    <url>%2F2019%2F05%2F25%2Fdelimiters%E9%80%89%E9%A1%B9%2F</url>
+    <content type="text"><![CDATA[delimiters是用在当我们想修改一些东西比如我不想用花括号来绑定值时使用,他一般在数组里有两个元素，第一个是改变后的前面的，另一个是改变后后面的部分 123456789101112131415161718&lt;div id="app"&gt; &lt;p&gt;$&#123;count&#125;&lt;/p&gt; &lt;button @click="add"&gt;增加&lt;/button&gt; &lt;/div&gt; &lt;script&gt; var app = new Vue(&#123; el:'#app', data:&#123; count:1 &#125;, methods:&#123; add:function()&#123; this.count++; &#125; &#125;, delimiters:['$&#123;','&#125;'] &#125;) &lt;/script&gt;]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[extends选项]]></title>
+    <url>%2F2019%2F05%2F25%2Fextends%E9%80%89%E9%A1%B9%2F</url>
+    <content type="text"><![CDATA[extends方法和mixins差不多，是个扩展选项，只是在构造器里写的时候他是个对象（只能有一个对象），而mixins可以写一个数组 123456789101112131415161718192021222324252627282930313233&lt;div id="app"&gt; &lt;p&gt;&#123;&#123;count&#125;&#125;&lt;/p&gt; &lt;button @click="add"&gt;增加&lt;/button&gt; &lt;/div&gt; &lt;script&gt; var addLog = &#123; updated:function()&#123; console.log('我是扩展出来的') &#125;, methods:&#123; add:function()&#123; this.count++; console.log('我是扩展出来的方法') &#125; &#125; &#125; var app = new Vue(&#123; el:'#app', data:&#123; count:1 &#125;, methods:&#123; add:function()&#123; this.count++; &#125; &#125;, updated:function()&#123; console.log('原生') &#125;, extends:addLog &#125;) &lt;/script&gt; 需要注意的是，扩展出来的方法并没有执行，这个是与mixins一样，因为他与构造器内的方法重名了因而不能执行]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[mixins选项]]></title>
+    <url>%2F2019%2F05%2F25%2Fmixins%E9%80%89%E9%A1%B9%2F</url>
+    <content type="text"><![CDATA[mixins是混入选项操作，一般用于在你写完构造器后想加些东西却不想污染构造器时使用，一种是当很多地方需要用时作为全局的使用，随时可以调用，同时下面的栗子中构造器原生的updated和构造器内的和全局的还有顺序规则，需要注意的是如果构造器内的mixin的名和构造器内方法的名字重了，就不存mixin了 12345678910111213141516171819202122232425262728293031323334&lt;div id="app"&gt; &lt;p&gt;&#123;&#123;count&#125;&#125;&lt;/p&gt; &lt;button @click="add"&gt;增加&lt;/button&gt; &lt;/div&gt; &lt;script&gt; //全局的 Vue.mixin(&#123; updated:function()&#123; console.log('全局mixin') &#125; &#125;) var addLog = &#123; updated:function()&#123; console.log('mixin') &#125; &#125; var app = new Vue(&#123; el:'#app', data:&#123; count:1 &#125;, methods:&#123; add:function()&#123; this.count++; &#125; &#125;, //原生 updated:function()&#123; console.log('原生') &#125;, //构造器内 mixins:[addLog] &#125;) &lt;/script&gt; 顺序：全局 构造器内 原生]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[watch选项]]></title>
+    <url>%2F2019%2F05%2F25%2Fwatch%E9%80%89%E9%A1%B9%2F</url>
+    <content type="text"><![CDATA[watch选项用于监控数据变化，一种是直接在构造器内用watch选项，一种是为了避免耦合度在构造器外使用 12345678910111213141516171819202122232425262728293031323334353637&lt;div id="app"&gt; &lt;p&gt;今日温度是：&#123;&#123;temperature&#125;&#125;℃&lt;/p&gt; &lt;p&gt;今日穿衣建议是：&#123;&#123;clothingAdvice&#125;&#125;&lt;/p&gt; &lt;button @click="raiseTemperature"&gt;升高温度&lt;/button&gt; &lt;button @click="reduceTemperature"&gt;降低温度&lt;/button&gt; &lt;/div&gt; &lt;script&gt; var clothingAdvice=['T恤','夹克','棉服'] //在实际开发中一般是采用这种数组写法直接从数据库调 var app = new Vue(&#123; el:'#app', data:&#123; temperature:14, clothingAdvice:'夹克' &#125;, methods:&#123; raiseTemperature:function()&#123; this.temperature+=5; &#125;, reduceTemperature:function()&#123; this.temperature-=5; &#125; &#125;, watch:&#123; //注意watch这里需要两个参数，一个是新的值(newVal),一个是旧的值(oldVal) temperature:function(newVal,oldVal)&#123; if(this.temperature&gt;=20)&#123; this.clothingAdvice=clothingAdvice[0]; &#125; else if(this.temperature&gt;=0&amp;&amp;this.temperature&lt;20)&#123; this.clothingAdvice=clothingAdvice[1]; &#125; else this.clothingAdvice=clothingAdvice[2]; &#125; &#125; &#125;) &lt;/script&gt; 12345678910//要写在构造器下面，因为用到实例化appapp.$watch('temperature',function(newVal,oldVal)&#123; if(this.temperature&gt;=20)&#123; this.clothingAdvice=clothingAdvice[0]; &#125; else if(this.temperature&gt;=0&amp;&amp;this.temperature&lt;20)&#123; this.clothingAdvice=clothingAdvice[1]; &#125; else this.clothingAdvice=clothingAdvice[2]; &#125;)]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2F2019%2F05%2F24%2F1%2F</url>
+    <content type="text"><![CDATA[Document 博客地址： 姓名： 技能： var liuxue = { template:'#liu' } var app = new Vue({ el:'#app', data:{ liuxueData:{ url:'snowFlakeXue.github.io', name:'liuxue', skill:'前端' } }, components:{ 'liuxue':liuxue } })]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[methods选项]]></title>
+    <url>%2F2019%2F05%2F24%2Fmethods%E9%80%89%E9%A1%B9%2F</url>
+    <content type="text"><![CDATA[methods方法一般跟@click这样的绑定，下面有三个栗子，分别是简单的传值绑定，组件绑定，实例外绑定 1234567891011121314151617181920212223242526272829&lt;div id="app"&gt; &lt;p&gt;&#123;&#123;count&#125;&#125;&lt;/p&gt; &lt;button @click="add(2)"&gt;add&lt;/button&gt; &lt;!-- .native的意思实质上就是调用原生的js方法，这个技巧很常用 --&gt; &lt;btn @click.native="add(3)"&gt;&lt;/btn&gt; &lt;/div&gt; &lt;button onclick="app.add(4)"&gt;实例化外&lt;/button&gt; &lt;script&gt; var btn=&#123; template:`&lt;button&gt;add组件&lt;/button&gt;` &#125; var app = new Vue(&#123; el:'#app', data:&#123; count:1 &#125;, components:&#123; 'btn':btn &#125;, methods:&#123; add:function(num)&#123; if(num !='')&#123; this.count+=num &#125; else this.num++ &#125; &#125; &#125;) &lt;/script&gt;]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[computed选项]]></title>
     <url>%2F2019%2F05%2F24%2Fcomputed%E9%80%89%E9%A1%B9%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[computed选项一般用来改变原来的值得形式，使data选项里的值尽量的整洁简单，因此我们一般用computed选项来给绑定的值进行改变大小写啊，添加修饰啊。下面就举一个将新闻日期倒过来的小栗子，因为数据输入时是旧时间到新时间，而我们想要的是先看到新时间的新闻，所以在computed中使用computed就很有必要 123456789101112131415161718192021222324252627&lt;div id="app"&gt; &lt;p&gt;&#123;&#123;newMessage&#125;&#125;&lt;/p&gt; &lt;ul&gt; &lt;li v-for="item in reverseNews"&gt;&#123;&#123;item.title&#125;&#125;-&#123;&#123;item.date&#125;&#125;&lt;/li&gt; &lt;/ul&gt; &lt;/div&gt; &lt;script&gt; var app = new Vue(&#123; el:'#app', data:&#123; message:100, news:[&#123;title:'新闻1', date:'2019/01/24'&#125;, &#123;title:'新闻2', date:'2019/01/25'&#125;, &#123;title:'新闻3', date:'2019/01/26'&#125;, &#123;title:'新闻4', date:'2019/01/27'&#125;] &#125;, computed:&#123; newMessage:function()&#123; return this.message='￥'+this.message+'元'; &#125;, reverseNews:function()&#123; return this.news.reverse(); &#125; &#125; &#125;) ; &lt;/script&gt;]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
   </entry>
   <entry>
     <title><![CDATA[propsData]]></title>
