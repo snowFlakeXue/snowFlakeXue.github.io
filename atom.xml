@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-05-25T11:24:36.025Z</updated>
+  <updated>2019-05-26T03:11:46.424Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>子路由</title>
+    <link href="snowFlakeXue.github.io/2019/05/26/%E5%AD%90%E8%B7%AF%E7%94%B1/"/>
+    <id>snowFlakeXue.github.io/2019/05/26/子路由/</id>
+    <published>2019-05-26T02:32:28.000Z</published>
+    <updated>2019-05-26T03:11:46.424Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;子路由的应用可以说还是很广的，也就是说当我给某个组件设置了子路由，那么每当我点击这个子路由，这个组件都会显示，就好像淘宝里的推荐，当我选中一类时他会给你推荐相似的，而我这一类会一直留在界面上，只是在下面展示我的各个子路由，下面就来操作一下子路由的配置方法&lt;/p&gt;
+&lt;h3
+        
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>vue-router</title>
+    <link href="snowFlakeXue.github.io/2019/05/26/vue-router/"/>
+    <id>snowFlakeXue.github.io/2019/05/26/vue-router/</id>
+    <published>2019-05-26T01:40:34.000Z</published>
+    <updated>2019-05-26T02:32:07.327Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;vue-router是vue的很重要的一部分，他不是物理的那种路由器啊啥的，可以把他理解为像a标签，但是因为vue-cli开发出来的实际上是单页面应用，所以用a标签是不够用的，因此vue帮我们配置了这么一个功能，首先就先了解一下要用到的几个重要文件&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>自定义组件</title>
@@ -179,32 +222,6 @@
     </summary>
     
       <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="snowFlakeXue.github.io/2019/05/24/1/"/>
-    <id>snowFlakeXue.github.io/2019/05/24/1/</id>
-    <published>2019-05-24T10:42:26.412Z</published>
-    <updated>2019-05-25T10:20:58.374Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;&lt;meta name=&quot;generator&quot; content=&quot;Hexo 3.8.0&quot;&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot;
-        
-      
-    
-    </summary>
     
     
   </entry>
@@ -426,24 +443,6 @@
     
       &lt;p&gt;Vue的模板(template)有三种创建方式&lt;/p&gt;
 &lt;hr&gt;
-    
-    </summary>
-    
-      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>生命周期</title>
-    <link href="snowFlakeXue.github.io/2019/05/19/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
-    <id>snowFlakeXue.github.io/2019/05/19/生命周期/</id>
-    <published>2019-05-19T12:43:24.000Z</published>
-    <updated>2019-05-19T13:13:55.025Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;生命周期又叫钩子函数，就是在某个节点进行某个操作，这里讲的是构造器里的生命周期，总共有十个，有两个需结合组件学习-activated-deactivated-，所以先学八个&quot;&gt;&lt;a href=&quot;#生命周期又叫钩子函数，就是在某个节点进行某个操作，这里讲的是构造器里的生命周期，总共有十个，有两个需结合组件学习-activated-deactivated-，所以先学八个&quot; class=&quot;headerlink&quot; title=&quot;生命周期又叫钩子函数，就是在某个节点进行某个操作，这里讲的是构造器里的生命周期，总共有十个，有两个需结合组件学习(activated,deactivated)，所以先学八个&quot;&gt;&lt;/a&gt;生命周期又叫钩子函数，就是在某个节点进行某个操作，这里讲的是构造器里的生命周期，总共有十个，有两个需结合组件学习(activated,deactivated)，所以先学八个&lt;/h3&gt;
     
     </summary>
     

@@ -15,7 +15,7 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-CN">
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -100,27 +100,29 @@
 
 
 
-  <meta name="description" content="Document                                                                                                                               博客地址：               姓名：">
+  <meta name="description" content="vue-router是vue的很重要的一部分，他不是物理的那种路由器啊啥的，可以把他理解为像a标签，但是因为vue-cli开发出来的实际上是单页面应用，所以用a标签是不够用的，因此vue帮我们配置了这么一个功能，首先就先了解一下要用到的几个重要文件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="snowFlakeXue">
-<meta property="og:url" content="snowFlakeXue.github.io/2019/05/24/1/index.html">
+<meta property="og:title" content="vue-router">
+<meta property="og:url" content="snowFlakeXue.github.io/2019/05/26/vue-router/index.html">
 <meta property="og:site_name" content="snowFlakeXue">
-<meta property="og:description" content="Document                                                                                                                               博客地址：               姓名：">
+<meta property="og:description" content="vue-router是vue的很重要的一部分，他不是物理的那种路由器啊啥的，可以把他理解为像a标签，但是因为vue-cli开发出来的实际上是单页面应用，所以用a标签是不够用的，因此vue帮我们配置了这么一个功能，首先就先了解一下要用到的几个重要文件">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-25T10:20:58.374Z">
+<meta property="og:image" content="/2019/05/26/vue-router/1.jpg">
+<meta property="og:updated_time" content="2019-05-26T02:32:07.327Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="snowFlakeXue">
-<meta name="twitter:description" content="Document                                                                                                                               博客地址：               姓名：">
+<meta name="twitter:title" content="vue-router">
+<meta name="twitter:description" content="vue-router是vue的很重要的一部分，他不是物理的那种路由器啊啥的，可以把他理解为像a标签，但是因为vue-cli开发出来的实际上是单页面应用，所以用a标签是不够用的，因此vue帮我们配置了这么一个功能，首先就先了解一下要用到的几个重要文件">
+<meta name="twitter:image" content="/2019/05/26/vue-router/1.jpg">
 
 
 
-  <link rel="alternate" href="/atom.xml" title="snowFlakeXue" type="application/atom+xml"/>
+  <link rel="alternate" href="/atom.xml" title="snowFlakeXue" type="application/atom+xml">
 
 
 
   
   
-  <link rel="canonical" href="snowFlakeXue.github.io/2019/05/24/1/"/>
+  <link rel="canonical" href="snowFlakeXue.github.io/2019/05/26/vue-router/">
 
 
 
@@ -130,7 +132,7 @@
   };
 </script>
 
-  <title> | snowFlakeXue</title>
+  <title>vue-router | snowFlakeXue</title>
   
 
 
@@ -230,7 +232,7 @@
 
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br/>首页</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
   </li>
         
@@ -247,7 +249,7 @@
 
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br/>关于</a>
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
 
   </li>
         
@@ -264,7 +266,7 @@
 
     
 
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br/>分类</a>
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
 
   </li>
         
@@ -281,7 +283,7 @@
 
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br/>归档</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
 
@@ -292,7 +294,7 @@
             <a href="javascript:;" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br/>搜索</a>
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
         </li>
       
     </ul>
@@ -312,9 +314,7 @@
       <i class="fa fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
-             type="text" id="local-search-input">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
     </div>
   </div>
   <div id="local-search-result"></div>
@@ -366,16 +366,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/24/1/"/>
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/26/vue-router/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue"/>
-      <meta itemprop="description" content=""/>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"/>
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue"/>
+      <meta itemprop="name" content="snowFlakeXue">
     </span>
 
     
@@ -383,7 +383,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">vue-router
 
               
             
@@ -409,28 +409,34 @@
                 
               
 
-              <time title="创建时间：2019-05-24 18:42:26" itemprop="dateCreated datePublished" datetime="2019-05-24T18:42:26+08:00">2019-05-24</time>
+              <time title="创建时间：2019-05-26 09:40:34 / 修改时间：10:32:07" itemprop="dateCreated datePublished" datetime="2019-05-26T09:40:34+08:00">2019-05-26</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-05-25 18:20:58" itemprop="dateModified" datetime="2019-05-25T18:20:58+08:00">2019-05-25</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -444,8 +450,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/05/24/1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/24/1/" itemprop="commentCount"></span>
+                <a href="/2019/05/26/vue-router/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/26/vue-router/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -474,53 +480,22 @@
       
 
       
-        <!DOCTYPE html>
-<html lang="en">
-<head><meta name="generator" content="Hexo 3.8.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <title>Document</title>
-</head>
-<body>
-      <div id="app">
-          <liuxue>
-              <p slot="url"></p>
-              <p slot="name"></p>
-              <p slot="skill"></p>
-          </liuxue>
-      </div>
-      <template id="liu">
-          <!-- Vue2.0规定必须用大的包个小的 -->
-          <div>
-              <p>博客地址：<slot name="url"></slot></p>
-              <p>姓名：<slot name="name"></slot></p>
-              <p>技能：<slot name="skill"></slot></p>
-          </div>
-      </template>
-      <script>
-          var liuxue = {
-              template:'#liu'
-          }
-          
-          var app =  new Vue({
-              el:'#app',
-              data:{
-                  liuxueData:{
-                      url:'snowFlakeXue.github.io',
-                      name:'liuxue',
-                      skill:'前端'
-                    }
-              },
-              components:{
-                  'liuxue':liuxue
-                }
-          })
-      
-      </script>
-</body>
-</html>
+        <p>vue-router是vue的很重要的一部分，他不是物理的那种路由器啊啥的，可以把他理解为像a标签，但是因为vue-cli开发出来的实际上是单页面应用，所以用a标签是不够用的，因此vue帮我们配置了这么一个功能，首先就先了解一下要用到的几个重要文件<br><a id="more"></a></p>
+<p><strong>配置文件讲解</strong></p>
+<p><img src="/2019/05/26/vue-router/1.jpg" alt="src"></p>
+<p><em>components</em><br>这是vue的公共组件他的格式是:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">  name: <span class="string">''</span>,</span></span><br><span class="line"><span class="undefined">  data () &#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="comment">/*scoped代表只给这个页面设的css样式,否则将应用到所有页面*/</span></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><em>App.vue</em>这是页面的入口文件，也就是主页面，你引入东西都得放进去才能显示，也就是前面提到的单页面应用的那个单页面</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./assets/logo.png"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">router-view</span>/&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 说明引入路由机制，在印后的配置子路由时会用到也就是说把它加在哪个页面，哪个页面就可以使用路由机制 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">  name: <span class="string">'App'</span></span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css"><span class="selector-id">#app</span> &#123;</span></span><br><span class="line"><span class="undefined">  font-family: 'Avenir', Helvetica, Arial, sans-serif;</span></span><br><span class="line"><span class="undefined">  -webkit-font-smoothing: antialiased;</span></span><br><span class="line"><span class="undefined">  -moz-osx-font-smoothing: grayscale;</span></span><br><span class="line"><span class="undefined">  text-align: center;</span></span><br><span class="line"><span class="css">  <span class="selector-tag">color</span>: <span class="selector-id">#2c3e50</span>;</span></span><br><span class="line"><span class="undefined">  margin-top: 60px;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><em>index.js</em>是router下的文件也就是配置路由的文件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span> <span class="comment">//引入Vue</span></span><br><span class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">'vue-router'</span><span class="comment">//引入bue-router</span></span><br><span class="line"><span class="keyword">import</span> HelloWorld <span class="keyword">from</span> <span class="string">'@/components/HelloWorld'</span><span class="comment">//引入根目录下的HelloWorld.vue组件</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Vue.use(Router)<span class="comment">//Vue全局使用Router</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Router(&#123;</span><br><span class="line">  routes: [<span class="comment">//配置路由，这里是数组，每个链接都是一个对象</span></span><br><span class="line">    &#123;</span><br><span class="line">      path: <span class="string">'/'</span>,<span class="comment">//链接路径</span></span><br><span class="line">      name: <span class="string">'HelloWorld'</span>,<span class="comment">//路由名称</span></span><br><span class="line">      component: HelloWorld<span class="comment">//对应组件模板</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>下面进入正题，我们自己来写路由，也就可以写个导航啦，下面一起来看看三步走</p>
+<h3 id="第一步：新建新的组件"><a href="#第一步：新建新的组件" class="headerlink" title="第一步：新建新的组件"></a>第一步：新建新的组件</h3><p>在components下新建个Hi.vue，里面内容直接复制稍微改下，因为我们就是想学学这个，所以就把msg改改，class，name改改就好了。至此，第一步就走完了</p>
+<h3 id="第二步：配置index-js路由"><a href="#第二步：配置index-js路由" class="headerlink" title="第二步：配置index.js路由"></a>第二步：配置index.js路由</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">'vue-router'</span></span><br><span class="line"><span class="keyword">import</span> HelloWorld <span class="keyword">from</span> <span class="string">'@/components/HelloWorld'</span></span><br><span class="line"><span class="keyword">import</span> Hi <span class="keyword">from</span> <span class="string">'@/components/Hi'</span></span><br><span class="line"><span class="comment">// 直接复制上面的改改就行了</span></span><br><span class="line"></span><br><span class="line">Vue.use(Router)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Router(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    &#123;</span><br><span class="line">      path: <span class="string">'/'</span>,</span><br><span class="line">      name: <span class="string">'HelloWorld'</span>,</span><br><span class="line">      component: HelloWorld</span><br><span class="line">    &#125;,&#123;</span><br><span class="line">        <span class="comment">// 说白了就是新建个对象，剩下的改改就行了</span></span><br><span class="line">      path:<span class="string">'/Hi'</span>,</span><br><span class="line">      name:<span class="string">'Hi'</span>,</span><br><span class="line">      component:Hi</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="第三步：在App-vue引入我们新写的组件"><a href="#第三步：在App-vue引入我们新写的组件" class="headerlink" title="第三步：在App.vue引入我们新写的组件"></a>第三步：在App.vue引入我们新写的组件</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"./assets/logo.png"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">"/"</span>&gt;</span>首页<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">"/Hi"</span>&gt;</span>Hi页面<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">router-view</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>注意两个点，第一个：应该用div包着这两个，因为这样既起了换行作用，又符合vue的大的包小的原则；第二个：这里面有陌生的标签，这个标签可以把他理解成a标签，这就是vue给我们准备好的，尤其注意to里面的路径必须和index.js中写的path一样</p>
+
       
     </div>
 
@@ -560,8 +535,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/24/methods选项/" rel="next" title="methods选项">
-                <i class="fa fa-chevron-left"></i> methods选项
+              <a href="/2019/05/25/自定义组件/" rel="next" title="自定义组件">
+                <i class="fa fa-chevron-left"></i> 自定义组件
               </a>
             
           </div>
@@ -570,8 +545,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/05/25/watch选项/" rel="prev" title="watch选项">
-                watch选项 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/05/26/子路由/" rel="prev" title="子路由">
+                子路由 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -620,14 +595,21 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg"
-                alt="Liu Xue"/>
+              <img class="site-author-image" itemprop="image" src="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg" alt="Liu Xue">
             
               <p class="site-author-name" itemprop="name">Liu Xue</p>
               <div class="site-description motion-element" itemprop="description"></div>
@@ -640,7 +622,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">42</span>
+                    <span class="site-state-item-count">43</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -731,6 +713,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一步：新建新的组件"><span class="nav-number">1.</span> <span class="nav-text">第一步：新建新的组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二步：配置index-js路由"><span class="nav-number">2.</span> <span class="nav-text">第二步：配置index.js路由</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三步：在App-vue引入我们新写的组件"><span class="nav-number">3.</span> <span class="nav-text">第三步：在App.vue引入我们新写的组件</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

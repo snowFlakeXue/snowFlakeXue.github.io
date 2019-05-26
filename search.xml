@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[子路由]]></title>
+    <url>%2F2019%2F05%2F26%2F%E5%AD%90%E8%B7%AF%E7%94%B1%2F</url>
+    <content type="text"><![CDATA[子路由的应用可以说还是很广的，也就是说当我给某个组件设置了子路由，那么每当我点击这个子路由，这个组件都会显示，就好像淘宝里的推荐，当我选中一类时他会给你推荐相似的，而我这一类会一直留在界面上，只是在下面展示我的各个子路由，下面就来操作一下子路由的配置方法 第一步： 还是新建新的组件，就不多说了第二步：去到要配置子路由的组件123456&lt;template&gt; &lt;div class="Hi"&gt; &lt;p&gt;&#123;&#123;msg&#125;&#125;&lt;/p&gt; &lt;router-view/&gt; &lt;/div&gt;&lt;/template&gt; 一定一定要注意我们引入路由机制的这个标签位置很重要，他必须写在一个有内容的的大标签里（这里是div），不然你一写这个标签就会疯狂报错 第三步：去index.js配置123456789101112131415161718192021222324252627import Vue from 'vue'import Router from 'vue-router'import HelloWorld from '@/components/HelloWorld'import Hi from '@/components/Hi'import Hi1 from '@/components/Hi1'import Hi2 from '@/components/Hi2'Vue.use(Router)export default new Router(&#123; routes: [ &#123; path: '/', name: 'HelloWorld', component: HelloWorld &#125;,&#123; path:'/Hi', name:'Hi', component:Hi, children:[ &#123;path:'/',component:Hi&#125;, &#123;path:'Hi1',component:Hi1&#125;, &#123;path:'Hi2',component:Hi2&#125; ] &#125; ]&#125;) 首先：一定要import 然后就去写子路由器配置了，他是写在指定的那个component底下，他也是个数组，根据每个路由都是一个对象相应的去写，因为现在还用不上name，所以这里先省略了name，特别要注意的是，path的写法，后两个是没有/的 第四步：去入口文件App.vue改写模板123456&lt;div&gt; &lt;router-link to=&quot;/&quot;&gt;首页&lt;/router-link&gt; &lt;router-link to=&quot;/Hi&quot;&gt;Hi页面&lt;/router-link&gt; &lt;router-link to=&quot;/Hi/Hi1&quot;&gt;Hi1页面&lt;/router-link&gt; &lt;router-link to=&quot;/Hi/Hi2&quot;&gt;Hi2页面&lt;/router-link&gt; &lt;/div&gt; 实际上就是加了后两行]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[vue-router]]></title>
+    <url>%2F2019%2F05%2F26%2Fvue-router%2F</url>
+    <content type="text"><![CDATA[vue-router是vue的很重要的一部分，他不是物理的那种路由器啊啥的，可以把他理解为像a标签，但是因为vue-cli开发出来的实际上是单页面应用，所以用a标签是不够用的，因此vue帮我们配置了这么一个功能，首先就先了解一下要用到的几个重要文件 配置文件讲解 components这是vue的公共组件他的格式是: 123456789101112131415&lt;template&gt;&lt;/template&gt;&lt;script&gt;export default &#123; name: '', data () &#123; return &#123; &#125; &#125;&#125;&lt;/script&gt;&lt;style scoped&gt;/*scoped代表只给这个页面设的css样式,否则将应用到所有页面*/&lt;/style&gt; App.vue这是页面的入口文件，也就是主页面，你引入东西都得放进去才能显示，也就是前面提到的单页面应用的那个单页面 123456789101112131415161718192021222324&lt;template&gt; &lt;div id="app"&gt; &lt;img src="./assets/logo.png"&gt; &lt;router-view/&gt; &lt;!-- 说明引入路由机制，在印后的配置子路由时会用到也就是说把它加在哪个页面，哪个页面就可以使用路由机制 --&gt; &lt;/div&gt;&lt;/template&gt;&lt;script&gt;export default &#123; name: 'App'&#125;&lt;/script&gt;&lt;style&gt;#app &#123; font-family: 'Avenir', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-align: center; color: #2c3e50; margin-top: 60px;&#125;&lt;/style&gt; index.js是router下的文件也就是配置路由的文件 12345678910111213141516import Vue from 'vue' //引入Vueimport Router from 'vue-router'//引入bue-routerimport HelloWorld from '@/components/HelloWorld'//引入根目录下的HelloWorld.vue组件Vue.use(Router)//Vue全局使用Routerexport default new Router(&#123; routes: [//配置路由，这里是数组，每个链接都是一个对象 &#123; path: '/',//链接路径 name: 'HelloWorld',//路由名称 component: HelloWorld//对应组件模板 &#125; ]&#125;) 下面进入正题，我们自己来写路由，也就可以写个导航啦，下面一起来看看三步走 第一步：新建新的组件在components下新建个Hi.vue，里面内容直接复制稍微改下，因为我们就是想学学这个，所以就把msg改改，class，name改改就好了。至此，第一步就走完了 第二步：配置index.js路由12345678910111213141516171819202122import Vue from 'vue'import Router from 'vue-router'import HelloWorld from '@/components/HelloWorld'import Hi from '@/components/Hi'// 直接复制上面的改改就行了Vue.use(Router)export default new Router(&#123; routes: [ &#123; path: '/', name: 'HelloWorld', component: HelloWorld &#125;,&#123; // 说白了就是新建个对象，剩下的改改就行了 path:'/Hi', name:'Hi', component:Hi &#125; ]&#125;) 第三步：在App.vue引入我们新写的组件12345678910&lt;template&gt; &lt;div id="app"&gt; &lt;img src="./assets/logo.png"&gt; &lt;div&gt; &lt;router-link to="/"&gt;首页&lt;/router-link&gt; &lt;router-link to="/Hi"&gt;Hi页面&lt;/router-link&gt; &lt;/div&gt; &lt;router-view/&gt; &lt;/div&gt;&lt;/template&gt; 注意两个点，第一个：应该用div包着这两个，因为这样既起了换行作用，又符合vue的大的包小的原则；第二个：这里面有陌生的标签，这个标签可以把他理解成a标签，这就是vue给我们准备好的，尤其注意to里面的路径必须和index.js中写的path一样]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[自定义组件]]></title>
     <url>%2F2019%2F05%2F25%2F%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6%2F</url>
     <content type="text"><![CDATA[1234567891011121314151617181920212223242526272829303132333435&lt;div id="app"&gt; &lt;liuxue&gt; &lt;!-- 用 key value形式传递数据 --&gt; &lt;p slot="url"&gt;&#123;&#123;liuxueData.url&#125;&#125;&lt;/p&gt; &lt;p slot="name"&gt;&#123;&#123;liuxueData.name&#125;&#125;&lt;/p&gt; &lt;p slot="skill"&gt;&#123;&#123;liuxueData.skill&#125;&#125;&lt;/p&gt; &lt;/liuxue&gt; &lt;/div&gt; &lt;template id="liu"&gt; &lt;!-- Vue2.0规定必须用大的包个小的 --&gt; &lt;div&gt; &lt;!-- 接收数据 --&gt; &lt;p&gt;博客地址：&lt;slot name="url"&gt;&lt;/slot&gt;&lt;/p&gt; &lt;p&gt;姓名：&lt;slot name="name"&gt;&lt;/slot&gt;&lt;/p&gt; &lt;p&gt;技能：&lt;slot name="skill"&gt;&lt;/slot&gt;&lt;/p&gt; &lt;/div&gt; &lt;/template&gt; &lt;script&gt; var liuxue = &#123; template:'#liu' &#125; var app = new Vue(&#123; el:'#app', data:&#123; liuxueData:&#123; url:'snowFlakeXue.github.io', name:'liuxue', skill:'前端' &#125; &#125;, components:&#123; 'liuxue':liuxue &#125; &#125;) &lt;/script&gt;]]></content>
@@ -60,11 +76,6 @@
       <categories>
         <category>Vue</category>
       </categories>
-  </entry>
-  <entry>
-    <title></title>
-    <url>%2F2019%2F05%2F24%2F1%2F</url>
-    <content type="text"><![CDATA[Document 博客地址： 姓名： 技能： var liuxue = { template:'#liu' } var app = new Vue({ el:'#app', data:{ liuxueData:{ url:'snowFlakeXue.github.io', name:'liuxue', skill:'前端' } }, components:{ 'liuxue':liuxue } })]]></content>
   </entry>
   <entry>
     <title><![CDATA[methods选项]]></title>
