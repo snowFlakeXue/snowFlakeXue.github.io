@@ -100,17 +100,17 @@
 
 
 
-  <meta name="description" content="子路由的应用可以说还是很广的，也就是说当我给某个组件设置了子路由，那么每当我点击这个子路由，这个组件都会显示，就好像淘宝里的推荐，当我选中一类时他会给你推荐相似的，而我这一类会一直留在界面上，只是在下面展示我的各个子路由，下面就来操作一下子路由的配置方法 第一步： 还是新建新的组件，就不多说了第二步：去到要配置子路由的组件123456&amp;lt;template&amp;gt;  &amp;lt;div class=">
+  <meta name="description" content="vuex是专门为vue服务的管理状态的一个东西，也可以说是管理data中需要共用的属性，下面这个小栗子就是个入门，里面的很多东西具体的意思会在后面补充，也许这个栗子做完之后会觉得比以前做的麻烦，但是我们主要是想用一个公共的思想他可以被任意一个component调用  怎么安装vuex就不说了，首先在src下建一个vuex文件夹，在它下面建一个store.js来做仓库，以后我们主要就在这个下面引入v">
 <meta property="og:type" content="article">
-<meta property="og:title" content="子路由">
-<meta property="og:url" content="snowFlakeXue.github.io/2019/05/26/子路由/index.html">
+<meta property="og:title" content="vuex入门">
+<meta property="og:url" content="snowFlakeXue.github.io/2019/06/02/vuex入门/index.html">
 <meta property="og:site_name" content="snowFlakeXue">
-<meta property="og:description" content="子路由的应用可以说还是很广的，也就是说当我给某个组件设置了子路由，那么每当我点击这个子路由，这个组件都会显示，就好像淘宝里的推荐，当我选中一类时他会给你推荐相似的，而我这一类会一直留在界面上，只是在下面展示我的各个子路由，下面就来操作一下子路由的配置方法 第一步： 还是新建新的组件，就不多说了第二步：去到要配置子路由的组件123456&amp;lt;template&amp;gt;  &amp;lt;div class=">
+<meta property="og:description" content="vuex是专门为vue服务的管理状态的一个东西，也可以说是管理data中需要共用的属性，下面这个小栗子就是个入门，里面的很多东西具体的意思会在后面补充，也许这个栗子做完之后会觉得比以前做的麻烦，但是我们主要是想用一个公共的思想他可以被任意一个component调用  怎么安装vuex就不说了，首先在src下建一个vuex文件夹，在它下面建一个store.js来做仓库，以后我们主要就在这个下面引入v">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-27T02:25:34.934Z">
+<meta property="og:updated_time" content="2019-06-02T11:05:45.480Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="子路由">
-<meta name="twitter:description" content="子路由的应用可以说还是很广的，也就是说当我给某个组件设置了子路由，那么每当我点击这个子路由，这个组件都会显示，就好像淘宝里的推荐，当我选中一类时他会给你推荐相似的，而我这一类会一直留在界面上，只是在下面展示我的各个子路由，下面就来操作一下子路由的配置方法 第一步： 还是新建新的组件，就不多说了第二步：去到要配置子路由的组件123456&amp;lt;template&amp;gt;  &amp;lt;div class=">
+<meta name="twitter:title" content="vuex入门">
+<meta name="twitter:description" content="vuex是专门为vue服务的管理状态的一个东西，也可以说是管理data中需要共用的属性，下面这个小栗子就是个入门，里面的很多东西具体的意思会在后面补充，也许这个栗子做完之后会觉得比以前做的麻烦，但是我们主要是想用一个公共的思想他可以被任意一个component调用  怎么安装vuex就不说了，首先在src下建一个vuex文件夹，在它下面建一个store.js来做仓库，以后我们主要就在这个下面引入v">
 
 
 
@@ -120,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="snowFlakeXue.github.io/2019/05/26/子路由/">
+  <link rel="canonical" href="snowFlakeXue.github.io/2019/06/02/vuex入门/">
 
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>子路由 | snowFlakeXue</title>
+  <title>vuex入门 | snowFlakeXue</title>
   
 
 
@@ -364,7 +364,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/26/子路由/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/06/02/vuex入门/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Xue">
@@ -381,7 +381,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">子路由
+          <h1 class="post-title" itemprop="name headline">vuex入门
 
               
             
@@ -407,24 +407,12 @@
                 
               
 
-              <time title="创建时间：2019-05-26 10:32:28" itemprop="dateCreated datePublished" datetime="2019-05-26T10:32:28+08:00">2019-05-26</time>
+              <time title="创建时间：2019-06-02 18:46:28 / 修改时间：19:05:45" itemprop="dateCreated datePublished" datetime="2019-06-02T18:46:28+08:00">2019-06-02</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-05-27 10:25:34" itemprop="dateModified" datetime="2019-05-27T10:25:34+08:00">2019-05-27</time>
               
             
           </span>
@@ -441,7 +429,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vue-router/" itemprop="url" rel="index"><span itemprop="name">vue-router</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vuex/" itemprop="url" rel="index"><span itemprop="name">vuex</span></a></span>
 
                 
                 
@@ -460,8 +448,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/05/26/子路由/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/26/子路由/" itemprop="commentCount"></span>
+                <a href="/2019/06/02/vuex入门/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/02/vuex入门/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -490,14 +478,23 @@
       
 
       
-        <p>子路由的应用可以说还是很广的，也就是说当我给某个组件设置了子路由，那么每当我点击这个子路由，这个组件都会显示，就好像淘宝里的推荐，当我选中一类时他会给你推荐相似的，而我这一类会一直留在界面上，只是在下面展示我的各个子路由，下面就来操作一下子路由的配置方法</p>
-<h3 id="第一步：-还是新建新的组件，就不多说了"><a href="#第一步：-还是新建新的组件，就不多说了" class="headerlink" title="第一步： 还是新建新的组件，就不多说了"></a>第一步： 还是新建新的组件，就不多说了</h3><h3 id="第二步：去到要配置子路由的组件"><a href="#第二步：去到要配置子路由的组件" class="headerlink" title="第二步：去到要配置子路由的组件"></a>第二步：去到要配置子路由的组件</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"Hi"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;msg&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">router-view</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>一定一定要注意我们引入路由机制的这个标签位置很重要，他必须写在一个有内容的的大标签里（这里是div），不然你一写这个标签就会疯狂报错</p>
-<h3 id="第三步：去index-js配置"><a href="#第三步：去index-js配置" class="headerlink" title="第三步：去index.js配置"></a>第三步：去index.js配置</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">'vue-router'</span></span><br><span class="line"><span class="keyword">import</span> HelloWorld <span class="keyword">from</span> <span class="string">'@/components/HelloWorld'</span></span><br><span class="line"><span class="keyword">import</span> Hi <span class="keyword">from</span> <span class="string">'@/components/Hi'</span></span><br><span class="line"><span class="keyword">import</span> Hi1 <span class="keyword">from</span> <span class="string">'@/components/Hi1'</span></span><br><span class="line"><span class="keyword">import</span> Hi2 <span class="keyword">from</span> <span class="string">'@/components/Hi2'</span></span><br><span class="line"></span><br><span class="line">Vue.use(Router)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Router(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    &#123;</span><br><span class="line">      path: <span class="string">'/'</span>,</span><br><span class="line">      name: <span class="string">'HelloWorld'</span>,</span><br><span class="line">      component: HelloWorld</span><br><span class="line">    &#125;,&#123;</span><br><span class="line">      path:<span class="string">'/Hi'</span>,</span><br><span class="line">      name:<span class="string">'Hi'</span>,</span><br><span class="line">      component:Hi,</span><br><span class="line">      children:[</span><br><span class="line">        &#123;<span class="attr">path</span>:<span class="string">'/'</span>,<span class="attr">component</span>:Hi&#125;,</span><br><span class="line">        &#123;<span class="attr">path</span>:<span class="string">'Hi1'</span>,<span class="attr">component</span>:Hi1&#125;,</span><br><span class="line">        &#123;<span class="attr">path</span>:<span class="string">'Hi2'</span>,<span class="attr">component</span>:Hi2&#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>首先：一定要import</p>
-<p>然后就去写子路由器配置了，他是写在指定的那个component底下，他也是个数组，根据每个路由都是一个对象相应的去写，因为现在还用不上name，所以这里先省略了name，特别要注意的是，path的写法，后两个是没有/的</p>
-<h3 id="第四步：去入口文件App-vue改写模板"><a href="#第四步：去入口文件App-vue改写模板" class="headerlink" title="第四步：去入口文件App.vue改写模板"></a>第四步：去入口文件App.vue改写模板</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">   &lt;router-link to=&quot;/&quot;&gt;首页&lt;/router-link&gt;</span><br><span class="line">   &lt;router-link to=&quot;/Hi&quot;&gt;Hi页面&lt;/router-link&gt;</span><br><span class="line">   &lt;router-link to=&quot;/Hi/Hi1&quot;&gt;Hi1页面&lt;/router-link&gt;</span><br><span class="line">   &lt;router-link to=&quot;/Hi/Hi2&quot;&gt;Hi2页面&lt;/router-link&gt;</span><br><span class="line">   &lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p>实际上就是加了后两行</p>
+        <p>vuex是专门为vue服务的管理状态的一个东西，也可以说是管理data中需要共用的属性，下面这个小栗子就是个入门，里面的很多东西具体的意思会在后面补充，也许这个栗子做完之后会觉得比以前做的麻烦，但是我们主要是想用一个公共的思想他可以被任意一个component调用</p>
+<hr>
+<p>怎么安装vuex就不说了，首先在src下建一个vuex文件夹，在它下面建一个store.js来做仓库，以后我们主要就在这个下面引入vuex的操作，剑豪之后首先引入vue和vuex</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</span><br><span class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span>;</span><br></pre></td></tr></table></figure>
+<p>再加一行代码就可以使用vuex了</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.use(Vuex);</span><br></pre></td></tr></table></figure>
+<p>在仓库中放共用的数据，state也可以说是状态</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> state = &#123;</span><br><span class="line">    count:<span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>加两个方法，这里就放在可修改的mutations里</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mutations = &#123;</span><br><span class="line">    add(state)&#123;</span><br><span class="line">       state.count++</span><br><span class="line">    &#125;,</span><br><span class="line">    reduce(state)&#123;</span><br><span class="line">       state.count--</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>暴露出去</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">    state,</span><br><span class="line">    mutations</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>要注意mutations是固定写法</p>
+<p>下面就要在想应用vuex的组件里动手了</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hr</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;$store.state.count&#125;&#125;<span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"$store.commit('add')"</span>&gt;</span>+<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"$store.commit</span></span></span><br><span class="line"><span class="tag"><span class="string">    //注意必须写单引号才行</span></span></span><br><span class="line"><span class="tag"><span class="string">    ('reduce')"</span>&gt;</span>-<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>注意调用的写法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">   <span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'@/vuex/store'</span></span><br><span class="line">   <span class="comment">//注意是写在暴露前面的</span></span><br><span class="line">   <span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">       name:<span class="string">'Hi1'</span>,</span><br><span class="line">       data()&#123;</span><br><span class="line">           <span class="keyword">return</span>&#123;</span><br><span class="line">               message:<span class="string">'Hello Vuex!'</span></span><br><span class="line">           &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        store</span><br><span class="line">        <span class="comment">//在data后</span></span><br><span class="line">   &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -538,8 +535,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/26/vue-router/" rel="next" title="vue-router">
-                <i class="fa fa-chevron-left"></i> vue-router
+              <a href="/2019/05/28/编程式导航/" rel="next" title="编程式导航">
+                <i class="fa fa-chevron-left"></i> 编程式导航
               </a>
             
           </div>
@@ -547,10 +544,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/26/参数传递/" rel="prev" title="参数传递">
-                参数传递 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -598,17 +591,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -720,23 +704,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一步：-还是新建新的组件，就不多说了"><span class="nav-number">1.</span> <span class="nav-text">第一步： 还是新建新的组件，就不多说了</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二步：去到要配置子路由的组件"><span class="nav-number">2.</span> <span class="nav-text">第二步：去到要配置子路由的组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三步：去index-js配置"><span class="nav-number">3.</span> <span class="nav-text">第三步：去index.js配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第四步：去入口文件App-vue改写模板"><span class="nav-number">4.</span> <span class="nav-text">第四步：去入口文件App.vue改写模板</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
