@@ -100,17 +100,17 @@
 
 
 
-  <meta name="description" content="vuex是专门为vue服务的管理状态的一个东西，也可以说是管理data中需要共用的属性，下面这个小栗子就是个入门，里面的很多东西具体的意思会在后面补充，也许这个栗子做完之后会觉得比以前做的麻烦，但是我们主要是想用一个公共的思想他可以被任意一个component调用  怎么安装vuex就不说了，首先在src下建一个vuex文件夹，在它下面建一个store.js来做仓库，以后我们主要就在这个下面引入v">
+  <meta name="description" content="在之前的小栗子里虽然已经可以实现功能，但是在接受数据时，那么一大长串很烦，下面就用三种方法可以直接写花括号就能访问，其中第三种是最常用的  第一种 123456computed:&amp;#123;    //这是es6语法，就是个函数             count()&amp;#123;                 return this.$store.state.count">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vuex入门">
-<meta property="og:url" content="snowFlakeXue.github.io/2019/06/02/vuex入门/index.html">
+<meta property="og:title" content="state访问状态对象">
+<meta property="og:url" content="snowFlakeXue.github.io/2019/06/02/state访问状态对象/index.html">
 <meta property="og:site_name" content="snowFlakeXue">
-<meta property="og:description" content="vuex是专门为vue服务的管理状态的一个东西，也可以说是管理data中需要共用的属性，下面这个小栗子就是个入门，里面的很多东西具体的意思会在后面补充，也许这个栗子做完之后会觉得比以前做的麻烦，但是我们主要是想用一个公共的思想他可以被任意一个component调用  怎么安装vuex就不说了，首先在src下建一个vuex文件夹，在它下面建一个store.js来做仓库，以后我们主要就在这个下面引入v">
+<meta property="og:description" content="在之前的小栗子里虽然已经可以实现功能，但是在接受数据时，那么一大长串很烦，下面就用三种方法可以直接写花括号就能访问，其中第三种是最常用的  第一种 123456computed:&amp;#123;    //这是es6语法，就是个函数             count()&amp;#123;                 return this.$store.state.count">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-02T11:05:45.480Z">
+<meta property="og:updated_time" content="2019-06-02T11:37:52.124Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vuex入门">
-<meta name="twitter:description" content="vuex是专门为vue服务的管理状态的一个东西，也可以说是管理data中需要共用的属性，下面这个小栗子就是个入门，里面的很多东西具体的意思会在后面补充，也许这个栗子做完之后会觉得比以前做的麻烦，但是我们主要是想用一个公共的思想他可以被任意一个component调用  怎么安装vuex就不说了，首先在src下建一个vuex文件夹，在它下面建一个store.js来做仓库，以后我们主要就在这个下面引入v">
+<meta name="twitter:title" content="state访问状态对象">
+<meta name="twitter:description" content="在之前的小栗子里虽然已经可以实现功能，但是在接受数据时，那么一大长串很烦，下面就用三种方法可以直接写花括号就能访问，其中第三种是最常用的  第一种 123456computed:&amp;#123;    //这是es6语法，就是个函数             count()&amp;#123;                 return this.$store.state.count">
 
 
 
@@ -120,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="snowFlakeXue.github.io/2019/06/02/vuex入门/">
+  <link rel="canonical" href="snowFlakeXue.github.io/2019/06/02/state访问状态对象/">
 
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>vuex入门 | snowFlakeXue</title>
+  <title>state访问状态对象 | snowFlakeXue</title>
   
 
 
@@ -364,7 +364,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/06/02/vuex入门/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/06/02/state访问状态对象/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Xue">
@@ -381,7 +381,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">vuex入门
+          <h1 class="post-title" itemprop="name headline">state访问状态对象
 
               
             
@@ -407,7 +407,7 @@
                 
               
 
-              <time title="创建时间：2019-06-02 18:46:28 / 修改时间：19:05:45" itemprop="dateCreated datePublished" datetime="2019-06-02T18:46:28+08:00">2019-06-02</time>
+              <time title="创建时间：2019-06-02 19:21:02 / 修改时间：19:37:52" itemprop="dateCreated datePublished" datetime="2019-06-02T19:21:02+08:00">2019-06-02</time>
             
 
             
@@ -448,8 +448,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/06/02/vuex入门/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/02/vuex入门/" itemprop="commentCount"></span>
+                <a href="/2019/06/02/state访问状态对象/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/02/state访问状态对象/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -478,23 +478,16 @@
       
 
       
-        <p>vuex是专门为vue服务的管理状态的一个东西，也可以说是管理data中需要共用的属性，下面这个小栗子就是个入门，里面的很多东西具体的意思会在后面补充，也许这个栗子做完之后会觉得比以前做的麻烦，但是我们主要是想用一个公共的思想他可以被任意一个component调用</p>
+        <p>在之前的小栗子里虽然已经可以实现功能，但是在接受数据时，那么一大长串很烦，下面就用三种方法可以直接写花括号就能访问，其中第三种是最常用的</p>
 <hr>
-<p>怎么安装vuex就不说了，首先在src下建一个vuex文件夹，在它下面建一个store.js来做仓库，以后我们主要就在这个下面引入vuex的操作，剑豪之后首先引入vue和vuex</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</span><br><span class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span>;</span><br></pre></td></tr></table></figure>
-<p>再加一行代码就可以使用vuex了</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.use(Vuex);</span><br></pre></td></tr></table></figure>
-<p>在仓库中放共用的数据，state也可以说是状态</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> state = &#123;</span><br><span class="line">    count:<span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>加两个方法，这里就放在可修改的mutations里</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mutations = &#123;</span><br><span class="line">    add(state)&#123;</span><br><span class="line">       state.count++</span><br><span class="line">    &#125;,</span><br><span class="line">    reduce(state)&#123;</span><br><span class="line">       state.count--</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>暴露出去</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">    state,</span><br><span class="line">    mutations</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>要注意mutations是固定写法</p>
-<p>下面就要在想应用vuex的组件里动手了</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hr</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;$store.state.count&#125;&#125;<span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"$store.commit('add')"</span>&gt;</span>+<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"$store.commit</span></span></span><br><span class="line"><span class="tag"><span class="string">    //注意必须写单引号才行</span></span></span><br><span class="line"><span class="tag"><span class="string">    ('reduce')"</span>&gt;</span>-<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>注意调用的写法</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">   <span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'@/vuex/store'</span></span><br><span class="line">   <span class="comment">//注意是写在暴露前面的</span></span><br><span class="line">   <span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">       name:<span class="string">'Hi1'</span>,</span><br><span class="line">       data()&#123;</span><br><span class="line">           <span class="keyword">return</span>&#123;</span><br><span class="line">               message:<span class="string">'Hello Vuex!'</span></span><br><span class="line">           &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        store</span><br><span class="line">        <span class="comment">//在data后</span></span><br><span class="line">   &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>第一种</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">computed:&#123;</span><br><span class="line">    <span class="comment">//这是es6语法，就是个函数</span></span><br><span class="line">             count()&#123;</span><br><span class="line">                 <span class="keyword">return</span> <span class="keyword">this</span>.$store.state.count</span><br><span class="line">             &#125;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+<p>第二种</p>
+<p>先引入mapState</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;mapState&#125; <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line"><span class="comment">//注意一定不能忘了花括号</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//对象&#123;&#125;</span></span><br><span class="line">computed:mapState(&#123;</span><br><span class="line">    <span class="comment">//es6中的箭头函数</span></span><br><span class="line">            count:<span class="function"><span class="params">state</span>=&gt;</span>state.count</span><br><span class="line">         &#125;)</span><br></pre></td></tr></table></figure>
+<p>第三种,采用数组形式[]，同样也要先引入mapState</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">computed:mapState([<span class="string">'count'</span>])</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -535,8 +528,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/28/编程式导航/" rel="next" title="编程式导航">
-                <i class="fa fa-chevron-left"></i> 编程式导航
+              <a href="/2019/06/02/vuex入门/" rel="next" title="vuex入门">
+                <i class="fa fa-chevron-left"></i> vuex入门
               </a>
             
           </div>
@@ -544,10 +537,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/06/02/state访问状态对象/" rel="prev" title="state访问状态对象">
-                state访问状态对象 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

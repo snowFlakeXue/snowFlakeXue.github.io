@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-06-02T11:05:45.480Z</updated>
+  <updated>2019-06-02T11:37:52.124Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>state访问状态对象</title>
+    <link href="snowFlakeXue.github.io/2019/06/02/state%E8%AE%BF%E9%97%AE%E7%8A%B6%E6%80%81%E5%AF%B9%E8%B1%A1/"/>
+    <id>snowFlakeXue.github.io/2019/06/02/state访问状态对象/</id>
+    <published>2019-06-02T11:21:02.000Z</published>
+    <updated>2019-06-02T11:37:52.124Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在之前的小栗子里虽然已经可以实现功能，但是在接受数据时，那么一大长串很烦，下面就用三种方法可以直接写花括号就能访问，其中第三种是最常用的&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;第一种&lt;/p&gt;
+&lt;figure class=&quot;highlight
+        
+      
+    
+    </summary>
+    
+      <category term="vuex" scheme="snowFlakeXue.github.io/categories/vuex/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>vuex入门</title>
@@ -405,24 +432,6 @@
           &lt;p&gt;mixins是混入选项操作，一般用于在你写完构造器后想加些东西却不想污染构造器时使用，一种是当很多地方需要用时作为全局的使用，随时可以调用，同时下面的栗子中构造器原生的updated和构造器内的和全局的还有顺序规则，需要注意的是如果构造器内的mixin的名和构造器内方法的名
         
       
-    
-    </summary>
-    
-      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>watch选项</title>
-    <link href="snowFlakeXue.github.io/2019/05/25/watch%E9%80%89%E9%A1%B9/"/>
-    <id>snowFlakeXue.github.io/2019/05/25/watch选项/</id>
-    <published>2019-05-25T03:03:55.000Z</published>
-    <updated>2019-05-25T03:13:06.277Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;watch选项用于监控数据变化，一种是直接在构造器内用watch选项，一种是为了避免耦合度在构造器外使用&lt;br&gt;&lt;/p&gt;
     
     </summary>
     

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[state访问状态对象]]></title>
+    <url>%2F2019%2F06%2F02%2Fstate%E8%AE%BF%E9%97%AE%E7%8A%B6%E6%80%81%E5%AF%B9%E8%B1%A1%2F</url>
+    <content type="text"><![CDATA[在之前的小栗子里虽然已经可以实现功能，但是在接受数据时，那么一大长串很烦，下面就用三种方法可以直接写花括号就能访问，其中第三种是最常用的 第一种 123456computed:&#123; //这是es6语法，就是个函数 count()&#123; return this.$store.state.count &#125; &#125; 第二种 先引入mapState 12import &#123;mapState&#125; from 'vuex'//注意一定不能忘了花括号 12345//对象&#123;&#125;computed:mapState(&#123; //es6中的箭头函数 count:state=&gt;state.count &#125;) 第三种,采用数组形式[]，同样也要先引入mapState 1computed:mapState(['count'])]]></content>
+      <categories>
+        <category>vuex</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[vuex入门]]></title>
     <url>%2F2019%2F06%2F02%2Fvuex%E5%85%A5%E9%97%A8%2F</url>
     <content type="text"><![CDATA[vuex是专门为vue服务的管理状态的一个东西，也可以说是管理data中需要共用的属性，下面这个小栗子就是个入门，里面的很多东西具体的意思会在后面补充，也许这个栗子做完之后会觉得比以前做的麻烦，但是我们主要是想用一个公共的思想他可以被任意一个component调用 怎么安装vuex就不说了，首先在src下建一个vuex文件夹，在它下面建一个store.js来做仓库，以后我们主要就在这个下面引入vuex的操作，剑豪之后首先引入vue和vuex 12import Vue from 'vue';import Vuex from 'vuex'; 再加一行代码就可以使用vuex了 1Vue.use(Vuex); 在仓库中放共用的数据，state也可以说是状态 123const state = &#123; count:1&#125; 加两个方法，这里就放在可修改的mutations里 12345678const mutations = &#123; add(state)&#123; state.count++ &#125;, reduce(state)&#123; state.count-- &#125;&#125; 暴露出去 1234export default new Vuex.Store(&#123; state, mutations&#125;) 要注意mutations是固定写法 下面就要在想应用vuex的组件里动手了 123456789&lt;div&gt; &lt;h2&gt;&#123;&#123;message&#125;&#125;&lt;/h2&gt; &lt;hr /&gt; &lt;p&gt;&#123;&#123;$store.state.count&#125;&#125;&lt;/P&gt; &lt;button @click="$store.commit('add')"&gt;+&lt;/button&gt; &lt;button @click="$store.commit //注意必须写单引号才行 ('reduce')"&gt;-&lt;/button&gt;&lt;/div&gt; 注意调用的写法 1234567891011121314&lt;script&gt; import store from '@/vuex/store' //注意是写在暴露前面的 export default&#123; name:'Hi1', data()&#123; return&#123; message:'Hello Vuex!' &#125; &#125;, store //在data后 &#125;&lt;/script&gt;]]></content>
