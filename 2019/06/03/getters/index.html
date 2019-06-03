@@ -100,17 +100,17 @@
 
 
 
-  <meta name="description" content="组件属性(props)的设置有两个坑，第一个坑是组件属性命名一定不能有-只能化成驼峰式，第二个坑是props是数组，不能写成对象形式而且他是写在template底下的； 组件属性设置有两种，一种是直接属性，一种是绑定data">
+  <meta name="description" content="getters实际上就是对数据进行的一种提前处理加工过滤，就像之前那加减按钮那个例子，我就可以用getters让她每次进行加减之前先加12 12345678910const getters = &amp;#123;    count:function(state)&amp;#123;        return state.count+=12;    &amp;#125;&amp;#125;export default new">
 <meta property="og:type" content="article">
-<meta property="og:title" content="组件属性设置">
-<meta property="og:url" content="snowFlakeXue.github.io/2019/05/21/组件属性设置/index.html">
+<meta property="og:title" content="getters">
+<meta property="og:url" content="snowFlakeXue.github.io/2019/06/03/getters/index.html">
 <meta property="og:site_name" content="snowFlakeXue">
-<meta property="og:description" content="组件属性(props)的设置有两个坑，第一个坑是组件属性命名一定不能有-只能化成驼峰式，第二个坑是props是数组，不能写成对象形式而且他是写在template底下的； 组件属性设置有两种，一种是直接属性，一种是绑定data">
+<meta property="og:description" content="getters实际上就是对数据进行的一种提前处理加工过滤，就像之前那加减按钮那个例子，我就可以用getters让她每次进行加减之前先加12 12345678910const getters = &amp;#123;    count:function(state)&amp;#123;        return state.count+=12;    &amp;#125;&amp;#125;export default new">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-21T12:15:20.273Z">
+<meta property="og:updated_time" content="2019-06-03T12:31:59.212Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="组件属性设置">
-<meta name="twitter:description" content="组件属性(props)的设置有两个坑，第一个坑是组件属性命名一定不能有-只能化成驼峰式，第二个坑是props是数组，不能写成对象形式而且他是写在template底下的； 组件属性设置有两种，一种是直接属性，一种是绑定data">
+<meta name="twitter:title" content="getters">
+<meta name="twitter:description" content="getters实际上就是对数据进行的一种提前处理加工过滤，就像之前那加减按钮那个例子，我就可以用getters让她每次进行加减之前先加12 12345678910const getters = &amp;#123;    count:function(state)&amp;#123;        return state.count+=12;    &amp;#125;&amp;#125;export default new">
 
 
 
@@ -120,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="snowFlakeXue.github.io/2019/05/21/组件属性设置/">
+  <link rel="canonical" href="snowFlakeXue.github.io/2019/06/03/getters/">
 
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>组件属性设置 | snowFlakeXue</title>
+  <title>getters | snowFlakeXue</title>
   
 
 
@@ -364,7 +364,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/21/组件属性设置/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/06/03/getters/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Xue">
@@ -381,7 +381,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">组件属性设置
+          <h1 class="post-title" itemprop="name headline">getters
 
               
             
@@ -407,7 +407,7 @@
                 
               
 
-              <time title="创建时间：2019-05-21 19:33:43 / 修改时间：20:15:20" itemprop="dateCreated datePublished" datetime="2019-05-21T19:33:43+08:00">2019-05-21</time>
+              <time title="创建时间：2019-06-03 19:59:34 / 修改时间：20:31:59" itemprop="dateCreated datePublished" datetime="2019-06-03T19:59:34+08:00">2019-06-03</time>
             
 
             
@@ -429,7 +429,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vuex/" itemprop="url" rel="index"><span itemprop="name">vuex</span></a></span>
 
                 
                 
@@ -448,8 +448,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/05/21/组件属性设置/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/21/组件属性设置/" itemprop="commentCount"></span>
+                <a href="/2019/06/03/getters/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/03/getters/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -478,14 +478,11 @@
       
 
       
-        <p>组件属性(props)的设置有两个坑，第一个坑是组件属性命名一定不能有-只能化成驼峰式，第二个坑是props是数组，不能写成对象形式而且他是写在template底下的；</p>
-<p>组件属性设置有两种，一种是直接属性，一种是绑定data</p>
-<hr>
-<a id="more"></a>
-<p>直接设置属性</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">panda</span> <span class="attr">here</span>=<span class="string">"China"</span>&gt;</span><span class="tag">&lt;/<span class="name">panda</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">            el: <span class="string">'#app'</span>,</span></span><br><span class="line"><span class="undefined">            components:&#123;</span></span><br><span class="line"><span class="javascript">                <span class="string">'panda'</span>:&#123;</span></span><br><span class="line"><span class="xml">                    template:`<span class="tag">&lt;<span class="name">h2</span>&gt;</span>我来自&#123;&#123;here&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>`,</span></span><br><span class="line"><span class="javascript">                    props:[<span class="string">'here'</span>]</span></span><br><span class="line"><span class="undefined">                &#125;</span></span><br><span class="line"><span class="undefined">            &#125;,</span></span><br><span class="line"><span class="undefined">         &#125;)</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>绑定data</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">panda</span> <span class="attr">:here</span>=<span class="string">"message"</span>&gt;</span><span class="tag">&lt;/<span class="name">panda</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">            el: <span class="string">'#app'</span>,</span></span><br><span class="line"><span class="undefined">            data:&#123;</span></span><br><span class="line"><span class="javascript">                message:<span class="string">'China'</span></span></span><br><span class="line"><span class="undefined">            &#125;,</span></span><br><span class="line"><span class="undefined">            components:&#123;</span></span><br><span class="line"><span class="javascript">                <span class="string">'panda'</span>:&#123;</span></span><br><span class="line"><span class="xml">                    template:`<span class="tag">&lt;<span class="name">h2</span>&gt;</span>我来自&#123;&#123;here&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>`,</span></span><br><span class="line"><span class="javascript">                    props:[<span class="string">'here'</span>]</span></span><br><span class="line"><span class="undefined">                &#125;</span></span><br><span class="line"><span class="undefined">             &#125;,</span></span><br><span class="line"><span class="undefined">         &#125;)</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        <p>getters实际上就是对数据进行的一种提前处理加工过滤，就像之前那加减按钮那个例子，我就可以用getters让她每次进行加减之前先加12</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> getters = &#123;</span><br><span class="line">    count:<span class="function"><span class="keyword">function</span>(<span class="params">state</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> state.count+=<span class="number">12</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">    state,</span><br><span class="line">    mutations,</span><br><span class="line">    getters</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;mapState, mapMutations, mapGetters&#125; <span class="keyword">from</span> <span class="string">'vuex'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">            ...mapState([<span class="string">'count'</span>]),</span><br><span class="line">            ...mapGetters([<span class="string">'count'</span>])</span><br><span class="line"></span><br><span class="line">        &#125;,</span><br></pre></td></tr></table></figure>
+<p>注意这里用到的…是es6语法，为了避免前面的被后面的覆盖掉,而且我直接用的mapGetters这个简写方法了</p>
 
       
     </div>
@@ -526,8 +523,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/20/初识组件/" rel="next" title="初识组件">
-                <i class="fa fa-chevron-left"></i> 初识组件
+              <a href="/2019/06/03/mutations修改状态/" rel="next" title="mutations修改状态">
+                <i class="fa fa-chevron-left"></i> mutations修改状态
               </a>
             
           </div>
@@ -536,8 +533,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/05/21/父子组件关系/" rel="prev" title="父子组件关系">
-                父子组件关系 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/06/03/actions/" rel="prev" title="actions">
+                actions <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

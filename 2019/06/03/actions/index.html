@@ -100,17 +100,17 @@
 
 
 
-  <meta name="description" content="组件属性(props)的设置有两个坑，第一个坑是组件属性命名一定不能有-只能化成驼峰式，第二个坑是props是数组，不能写成对象形式而且他是写在template底下的； 组件属性设置有两种，一种是直接属性，一种是绑定data">
+  <meta name="description" content="actions虽然功能上和mutations一样都是修改状态的，但mutations是同步的，actions是异步修改状态，那什么是异步，就好像你在网上购物付完款了你就什么不用管了，想做什么做什么，而你买的东西则会被卖家按部就班的操作最后运输到你面前，而同步就好像是你在商场买电器，必须等店员去仓库取货然后跟着你回家，你才能做其他事。在编程中，同步就是你必须执行完我这个步骤你才能往下走，就像muta">
 <meta property="og:type" content="article">
-<meta property="og:title" content="组件属性设置">
-<meta property="og:url" content="snowFlakeXue.github.io/2019/05/21/组件属性设置/index.html">
+<meta property="og:title" content="actions">
+<meta property="og:url" content="snowFlakeXue.github.io/2019/06/03/actions/index.html">
 <meta property="og:site_name" content="snowFlakeXue">
-<meta property="og:description" content="组件属性(props)的设置有两个坑，第一个坑是组件属性命名一定不能有-只能化成驼峰式，第二个坑是props是数组，不能写成对象形式而且他是写在template底下的； 组件属性设置有两种，一种是直接属性，一种是绑定data">
+<meta property="og:description" content="actions虽然功能上和mutations一样都是修改状态的，但mutations是同步的，actions是异步修改状态，那什么是异步，就好像你在网上购物付完款了你就什么不用管了，想做什么做什么，而你买的东西则会被卖家按部就班的操作最后运输到你面前，而同步就好像是你在商场买电器，必须等店员去仓库取货然后跟着你回家，你才能做其他事。在编程中，同步就是你必须执行完我这个步骤你才能往下走，就像muta">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-21T12:15:20.273Z">
+<meta property="og:updated_time" content="2019-06-03T13:00:33.199Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="组件属性设置">
-<meta name="twitter:description" content="组件属性(props)的设置有两个坑，第一个坑是组件属性命名一定不能有-只能化成驼峰式，第二个坑是props是数组，不能写成对象形式而且他是写在template底下的； 组件属性设置有两种，一种是直接属性，一种是绑定data">
+<meta name="twitter:title" content="actions">
+<meta name="twitter:description" content="actions虽然功能上和mutations一样都是修改状态的，但mutations是同步的，actions是异步修改状态，那什么是异步，就好像你在网上购物付完款了你就什么不用管了，想做什么做什么，而你买的东西则会被卖家按部就班的操作最后运输到你面前，而同步就好像是你在商场买电器，必须等店员去仓库取货然后跟着你回家，你才能做其他事。在编程中，同步就是你必须执行完我这个步骤你才能往下走，就像muta">
 
 
 
@@ -120,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="snowFlakeXue.github.io/2019/05/21/组件属性设置/">
+  <link rel="canonical" href="snowFlakeXue.github.io/2019/06/03/actions/">
 
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>组件属性设置 | snowFlakeXue</title>
+  <title>actions | snowFlakeXue</title>
   
 
 
@@ -364,7 +364,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/21/组件属性设置/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/06/03/actions/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Xue">
@@ -381,7 +381,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">组件属性设置
+          <h1 class="post-title" itemprop="name headline">actions
 
               
             
@@ -407,7 +407,7 @@
                 
               
 
-              <time title="创建时间：2019-05-21 19:33:43 / 修改时间：20:15:20" itemprop="dateCreated datePublished" datetime="2019-05-21T19:33:43+08:00">2019-05-21</time>
+              <time title="创建时间：2019-06-03 20:32:32 / 修改时间：21:00:33" itemprop="dateCreated datePublished" datetime="2019-06-03T20:32:32+08:00">2019-06-03</time>
             
 
             
@@ -429,7 +429,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vuex/" itemprop="url" rel="index"><span itemprop="name">vuex</span></a></span>
 
                 
                 
@@ -448,8 +448,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/05/21/组件属性设置/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/21/组件属性设置/" itemprop="commentCount"></span>
+                <a href="/2019/06/03/actions/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/06/03/actions/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -478,14 +478,13 @@
       
 
       
-        <p>组件属性(props)的设置有两个坑，第一个坑是组件属性命名一定不能有-只能化成驼峰式，第二个坑是props是数组，不能写成对象形式而且他是写在template底下的；</p>
-<p>组件属性设置有两种，一种是直接属性，一种是绑定data</p>
+        <p>actions虽然功能上和mutations一样都是修改状态的，但mutations是同步的，actions是异步修改状态，那什么是异步，就好像你在网上购物付完款了你就什么不用管了，想做什么做什么，而你买的东西则会被卖家按部就班的操作最后运输到你面前，而同步就好像是你在商场买电器，必须等店员去仓库取货然后跟着你回家，你才能做其他事。在编程中，同步就是你必须执行完我这个步骤你才能往下走，就像mutations的操作，而actions是我调了之后会像是在另一个支路去完成我要的这个任务，而我本来的这个支路就可以接着往下走</p>
 <hr>
-<a id="more"></a>
-<p>直接设置属性</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">panda</span> <span class="attr">here</span>=<span class="string">"China"</span>&gt;</span><span class="tag">&lt;/<span class="name">panda</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">            el: <span class="string">'#app'</span>,</span></span><br><span class="line"><span class="undefined">            components:&#123;</span></span><br><span class="line"><span class="javascript">                <span class="string">'panda'</span>:&#123;</span></span><br><span class="line"><span class="xml">                    template:`<span class="tag">&lt;<span class="name">h2</span>&gt;</span>我来自&#123;&#123;here&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>`,</span></span><br><span class="line"><span class="javascript">                    props:[<span class="string">'here'</span>]</span></span><br><span class="line"><span class="undefined">                &#125;</span></span><br><span class="line"><span class="undefined">            &#125;,</span></span><br><span class="line"><span class="undefined">         &#125;)</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>绑定data</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">panda</span> <span class="attr">:here</span>=<span class="string">"message"</span>&gt;</span><span class="tag">&lt;/<span class="name">panda</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">            el: <span class="string">'#app'</span>,</span></span><br><span class="line"><span class="undefined">            data:&#123;</span></span><br><span class="line"><span class="javascript">                message:<span class="string">'China'</span></span></span><br><span class="line"><span class="undefined">            &#125;,</span></span><br><span class="line"><span class="undefined">            components:&#123;</span></span><br><span class="line"><span class="javascript">                <span class="string">'panda'</span>:&#123;</span></span><br><span class="line"><span class="xml">                    template:`<span class="tag">&lt;<span class="name">h2</span>&gt;</span>我来自&#123;&#123;here&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>`,</span></span><br><span class="line"><span class="javascript">                    props:[<span class="string">'here'</span>]</span></span><br><span class="line"><span class="undefined">                &#125;</span></span><br><span class="line"><span class="undefined">             &#125;,</span></span><br><span class="line"><span class="undefined">         &#125;)</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;mapState, mapMutations,mapActions&#125; <span class="keyword">from</span> <span class="string">'vuex'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">methods: &#123;</span><br><span class="line">           ...mapMutations([<span class="string">'add'</span>, <span class="string">'reduce'</span>]),</span><br><span class="line">           ...mapActions([<span class="string">'addAction'</span>,<span class="string">'reduceAction'</span>])</span><br><span class="line">       &#125;,</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"addAction"</span>&gt;</span>+<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"reduceAction"</span>&gt;</span>-<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> actions = &#123;</span><br><span class="line">    addAction(context)&#123;</span><br><span class="line">        context.commit(<span class="string">'add'</span>,<span class="number">10</span>);</span><br><span class="line">        setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;context.commit(<span class="string">'reduce'</span>,<span class="number">1</span>)&#125;,<span class="number">3000</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"我比reduce先执行"</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">    reduceAction(&#123;commit&#125;)&#123;</span><br><span class="line">       commit(<span class="string">'reduce'</span>,<span class="number">1</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//context：上下文对象，这里你可以理解称store本身。</span></span><br><span class="line"><span class="comment">//&#123;commit&#125;：直接把commit对象传递过来，可以让方法体逻辑和代码更清晰明了。</span></span><br></pre></td></tr></table></figure>
+<p>需要注意的是这里我们加了个验证异步，你可以看到就算没执行setTimeout，控制台还是马上输出了</p>
 
       
     </div>
@@ -526,8 +525,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/20/初识组件/" rel="next" title="初识组件">
-                <i class="fa fa-chevron-left"></i> 初识组件
+              <a href="/2019/06/03/getters/" rel="next" title="getters">
+                <i class="fa fa-chevron-left"></i> getters
               </a>
             
           </div>
@@ -535,10 +534,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/21/父子组件关系/" rel="prev" title="父子组件关系">
-                父子组件关系 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
