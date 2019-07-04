@@ -113,7 +113,7 @@
 <meta property="og:image" content="/2019/05/06/js对象/5.jpg">
 <meta property="og:image" content="/2019/05/06/js对象/4.jpg">
 <meta property="og:image" content="/2019/05/06/js对象/6.jpg">
-<meta property="og:updated_time" content="2019-05-16T10:39:46.640Z">
+<meta property="og:updated_time" content="2019-07-04T09:04:58.883Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js对象">
 <meta name="twitter:description" content="四种对象 javascript内置对象 浏览器对象模型中的对象(BOM) 文档对象模型中的对象 用户自定义的对象">
@@ -431,7 +431,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-16 18:39:46" itemprop="dateModified" datetime="2019-05-16T18:39:46+08:00">2019-05-16</time>
+                <time title="修改时间：2019-07-04 17:04:58" itemprop="dateModified" datetime="2019-07-04T17:04:58+08:00">2019-07-04</time>
               
             
           </span>
@@ -605,7 +605,7 @@
 <p>结果：<code>banana,pear,pen</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//替换元素</span><br><span class="line">var arr = new Array(&quot;apple&quot;,&quot;banana&quot;,&quot;pear&quot;,&quot;pen&quot;);</span><br><span class="line">arr.splice(0,1,&quot;people&quot;)</span><br><span class="line">document.write(arr);</span><br></pre></td></tr></table></figure></p>
 <p>结果：<code>people,banana,pear,pen</code></p>
 <ol start="5">
-<li>slice()[不改变原来数组]，即documentarr返回的是原来的数组，documentarr.slice返回的是修改后的数组，作用是返回截取的元素，两个参数，第一个参数是其实的索引(包括)，第二个参数是结束的索引(不包括)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr = new Array(&quot;apple&quot;,&quot;banana&quot;,&quot;pear&quot;,&quot;pen&quot;);</span><br><span class="line">document.write(arr.splice(0,3));</span><br></pre></td></tr></table></figure>
+<li>slice()[不改变原来数组]，即documentarr返回的是原来的数组，documentarr.slice返回的是修改后的数组，作用是返回截取的元素，两个参数，第一个参数是其实的索引(包括)，第二个参数是结束的索引(不包括)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr = new Array(&quot;apple&quot;,&quot;banana&quot;,&quot;pear&quot;,&quot;pen&quot;);</span><br><span class="line">document.write(arr.slice(0,3));</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>结果：<code>apple,banana,pear</code></p>
@@ -635,10 +635,45 @@
 </ol>
 <p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">6</span><br><span class="line">people,girl,apple,banana,pear,pen</span><br><span class="line">people</span><br><span class="line">girl,apple,banana,pear,pen</span><br></pre></td></tr></table></figure></p>
 <ol start="10">
-<li>遍历数组<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = new Array(&quot;apple&quot;,&quot;banana&quot;,&quot;pear&quot;,&quot;pen&quot;);</span><br><span class="line">for(var x in arr1)&#123;</span><br><span class="line">    document.write(arr1[x]);</span><br><span class="line">    document.write(&quot;&lt;br /&gt;&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li>遍历数组</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = new Array(&quot;apple&quot;,&quot;banana&quot;,&quot;pear&quot;,&quot;pen&quot;);</span><br><span class="line">for(var x in arr1)&#123;</span><br><span class="line">    document.write(arr1[x]);</span><br><span class="line">    document.write(&quot;&lt;br /&gt;&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">apple</span><br><span class="line">banana</span><br><span class="line">pear</span><br><span class="line">pen</span><br></pre></td></tr></table></figure></p>
+<ol start="11">
+<li>数组的深复制</li>
+</ol>
+<p>先举个浅复制的例子</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num1=[];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">    num1[i]=i+<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> num2=[];</span><br><span class="line">num2=num1;</span><br><span class="line">num1[<span class="number">0</span>]=<span class="number">400</span>;</span><br><span class="line"><span class="built_in">document</span>.write(num2[<span class="number">0</span>]);</span><br></pre></td></tr></table></figure>
+<p>输出结果是400</p>
+<p>这种就是浅复制，是按引用传值，新数组还是指向旧数组，旧数组变他就变，要解决这个问题就要用到深复制这个概念</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num1=[];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">    num1[i]=i+<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">copy</span>(<span class="params">arr1,arr2</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr1.length;i++)&#123;</span><br><span class="line">        arr2[i]=arr1[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> num2=[];</span><br><span class="line">copy(num1,num2);</span><br><span class="line">num1[<span class="number">0</span>]=<span class="number">400</span>;</span><br><span class="line"><span class="built_in">document</span>.write(num2[<span class="number">0</span>]);</span><br></pre></td></tr></table></figure>
+<p>输出结果是1</p>
+<p>因此深复制就是讲新数组与旧数组一个个复制得到</p>
+<ol start="12">
+<li><p>更推荐使用[]操作符来创建数组，而不是new Array()</p>
+</li>
+<li><p>在js中，是数组长度可伸长，可超过定义好的长度</p>
+</li>
+<li><p>数组排序：</p>
 </li>
 </ol>
-<p>结果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">apple</span><br><span class="line">banana</span><br><span class="line">pear</span><br><span class="line">pen</span><br></pre></td></tr></table></figure></p>
+<p>若数组元素是字符串，直接用sort()方法</p>
+<p>若数组元素是数字需要另外加一个compare函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num=[<span class="number">1</span>,<span class="number">233</span>,<span class="number">21</span>,<span class="number">34</span>,<span class="number">32</span>];</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">num1,num2</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> num1-num2;</span><br><span class="line">&#125;</span><br><span class="line">num.sort(compare);</span><br><span class="line"><span class="built_in">document</span>.write(num);</span><br></pre></td></tr></table></figure>
+<ol start="15">
+<li>不返回新数组的迭代器方法</li>
+</ol>
+<p>迭代器方法就是让数组里每一个元素应用一个函数</p>
+<p>forEach()  接受一个函数作为参数，让数组每个元素执行一遍函数</p>
+<p>every()  接受一个返回值为布尔值的函数作为参数，如果数组中每一个元素执行完函数返回的都是true则这个返回true</p>
+<p>some()  同样是接受一个返回值为布尔值的函数作为参数，但这个是只要数组中有元素返回的是true,这个就是true</p>
+<p>reduce()  接受一个函数为参数，返回一个数，这个一般用与数组累加求和，或者将数组中元素拼接为字符串。执行顺序为一个个累加值，直到最后一个值</p>
+<p>reduceRight()  和reduce()类似，只不过这个是从右向左拼接字符串</p>
+<ol start="16">
+<li>返回数组的迭代器方法</li>
+</ol>
+<p>map()  与forEach()类似，只不过这个返回每个元素执行完函数返回的值组成的数组</p>
+<p>filter() 与every()类似，但这个返回的是执行完函数返回true的元素组成的数组</p>
 
       
     </div>
