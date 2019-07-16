@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[环境搭建]]></title>
+    <url>%2F2019%2F07%2F16%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%2F</url>
+    <content type="text"><![CDATA[ES6有很多新特性简化了一些东西，但是因为还是有浏览器不兼容他，因此环境搭建就包括了将ES6转换成ES5以及简化转换命令 首先看看初始的文件目录 src下的index.js使我们写ES6代码的地方 dist是用来存放转换好的es5代码的地方 index.html是入口文件，要引入的是src目录下的js文件 1&lt;script src="dist/index.js/"&gt;&lt;/script&gt; 初始化项目 1npm init -y -y是直接生成项目的操作，就不用你一步步确认来修改项目，在执行完该命令后会生成一个package.json，可以自行改一下author,discription这两项 基本配置 全局安装babel-cli 1npm install -g babel-cli 本地安装babel-preset-es2015 和 babel-cli 1npm install --save-dev babel-preset-es2015 babel-cli 在根目录下新建.babelrc 123456&#123; "presets":[ "es2015" ], "plugins":[]&#125; 这时就可以用命令来讲我们写好的ES6转换成ES5 1babel src/index.js -o dist/index.js 到目前为止，我们的目的已经达到了，但是我想不要每次都输那么长的命令来转换，我们可以讲package.json中的&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;修改为&quot;build&quot;:&quot;babel src/index.js -o dist/index.js&quot; 以后就可以直接用npm run build来转换]]></content>
+      <categories>
+        <category>ES6</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[actions]]></title>
     <url>%2F2019%2F06%2F03%2Factions%2F</url>
     <content type="text"><![CDATA[actions虽然功能上和mutations一样都是修改状态的，但mutations是同步的，actions是异步修改状态，那什么是异步，就好像你在网上购物付完款了你就什么不用管了，想做什么做什么，而你买的东西则会被卖家按部就班的操作最后运输到你面前，而同步就好像是你在商场买电器，必须等店员去仓库取货然后跟着你回家，你才能做其他事。在编程中，同步就是你必须执行完我这个步骤你才能往下走，就像mutations的操作，而actions是我调了之后会像是在另一个支路去完成我要的这个任务，而我本来的这个支路就可以接着往下走 1import &#123;mapState, mapMutations,mapActions&#125; from 'vuex' 1234methods: &#123; ...mapMutations(['add', 'reduce']), ...mapActions(['addAction','reduceAction']) &#125;, 12&lt;button @click="addAction"&gt;+&lt;/button&gt; &lt;button @click="reduceAction"&gt;-&lt;/button&gt; 123456789101112const actions = &#123; addAction(context)&#123; context.commit('add',10); setTimeout(()=&gt;&#123;context.commit('reduce',1)&#125;,3000); console.log("我比reduce先执行"); &#125;, reduceAction(&#123;commit&#125;)&#123; commit('reduce',1) &#125;&#125;//context：上下文对象，这里你可以理解称store本身。//&#123;commit&#125;：直接把commit对象传递过来，可以让方法体逻辑和代码更清晰明了。 需要注意的是这里我们加了个验证异步，你可以看到就算没执行setTimeout，控制台还是马上输出了]]></content>

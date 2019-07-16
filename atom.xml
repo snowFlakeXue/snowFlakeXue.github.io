@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-06-03T13:00:33.199Z</updated>
+  <updated>2019-07-16T12:31:40.586Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>环境搭建</title>
+    <link href="snowFlakeXue.github.io/2019/07/16/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    <id>snowFlakeXue.github.io/2019/07/16/环境搭建/</id>
+    <published>2019-07-16T11:53:33.000Z</published>
+    <updated>2019-07-16T12:31:40.586Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;ES6有很多新特性简化了一些东西，但是因为还是有浏览器不兼容他，因此环境搭建就包括了将ES6转换成ES5以及简化转换命令&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>actions</title>
@@ -432,24 +456,6 @@
       
     
     </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>实例入门</title>
-    <link href="snowFlakeXue.github.io/2019/05/25/%E5%AE%9E%E4%BE%8B%E5%85%A5%E9%97%A8/"/>
-    <id>snowFlakeXue.github.io/2019/05/25/实例入门/</id>
-    <published>2019-05-25T06:35:18.000Z</published>
-    <updated>2019-05-25T06:50:13.822Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;实例就是在构造器外部操作构造器内部的属性和方法，他让Vue可以和其他框架一起使用&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
     
     
   </entry>
