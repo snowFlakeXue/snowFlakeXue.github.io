@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[环境搭建]]></title>
-    <url>%2F2019%2F07%2F16%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%2F</url>
+    <url>%2F2019%2F07%2F17%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%2F</url>
     <content type="text"><![CDATA[ES6有很多新特性简化了一些东西，但是因为还是有浏览器不兼容他，因此环境搭建就包括了将ES6转换成ES5以及简化转换命令 首先看看初始的文件目录 src下的index.js使我们写ES6代码的地方 dist是用来存放转换好的es5代码的地方 index.html是入口文件，要引入的是src目录下的js文件 1&lt;script src="dist/index.js/"&gt;&lt;/script&gt; 初始化项目 1npm init -y -y是直接生成项目的操作，就不用你一步步确认来修改项目，在执行完该命令后会生成一个package.json，可以自行改一下author,discription这两项 基本配置 全局安装babel-cli 1npm install -g babel-cli 本地安装babel-preset-es2015 和 babel-cli 1npm install --save-dev babel-preset-es2015 babel-cli 在根目录下新建.babelrc 123456&#123; "presets":[ "es2015" ], "plugins":[]&#125; 这时就可以用命令来讲我们写好的ES6转换成ES5 1babel src/index.js -o dist/index.js 到目前为止，我们的目的已经达到了，但是我想不要每次都输那么长的命令来转换，我们可以讲package.json中的&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;修改为&quot;build&quot;:&quot;babel src/index.js -o dist/index.js&quot; 以后就可以直接用npm run build来转换]]></content>
       <categories>
         <category>ES6</category>
