@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-07-17T05:21:15.228Z</updated>
+  <updated>2019-07-18T08:54:04.853Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -17,21 +17,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>声明方式</title>
+    <link href="snowFlakeXue.github.io/2019/07/18/%E5%A3%B0%E6%98%8E%E6%96%B9%E5%BC%8F/"/>
+    <id>snowFlakeXue.github.io/2019/07/18/声明方式/</id>
+    <published>2019-07-18T08:21:28.000Z</published>
+    <updated>2019-07-18T08:54:04.853Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在ES5中声明变量只有var一种形式，是局部啊还是全局啊很麻烦去区别。ES6就将声明方式升级了那么一下子，全局用var，局部用let,常量用const&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>环境搭建</title>
     <link href="snowFlakeXue.github.io/2019/07/17/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
     <id>snowFlakeXue.github.io/2019/07/17/环境搭建/</id>
     <published>2019-07-17T05:20:25.000Z</published>
-    <updated>2019-07-17T05:21:15.228Z</updated>
+    <updated>2019-07-18T08:53:49.791Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h3 id=&quot;ES6有很多新特性简化了一些东西，但是因为还是有浏览器不兼容他，因此环境搭建就包括了将ES6转换成ES5以及简化转换命令&quot;&gt;&lt;a
-        
-      
+      &lt;h3 id=&quot;ES6有很多新特性简化了一些东西，但是因为还是有浏览器不兼容他，因此环境搭建就包括了将ES6转换成ES5以及简化转换命令&quot;&gt;&lt;a href=&quot;#ES6有很多新特性简化了一些东西，但是因为还是有浏览器不兼容他，因此环境搭建就包括了将ES6转换成ES5以及简化转换命令&quot; class=&quot;headerlink&quot; title=&quot;ES6有很多新特性简化了一些东西，但是因为还是有浏览器不兼容他，因此环境搭建就包括了将ES6转换成ES5以及简化转换命令&quot;&gt;&lt;/a&gt;ES6有很多新特性简化了一些东西，但是因为还是有浏览器不兼容他，因此环境搭建就包括了将ES6转换成ES5以及简化转换命令&lt;/h3&gt;
     
     </summary>
     
@@ -434,28 +446,6 @@
     </summary>
     
       <category term="Vue" scheme="snowFlakeXue.github.io/categories/Vue/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>实例方法</title>
-    <link href="snowFlakeXue.github.io/2019/05/25/%E5%AE%9E%E4%BE%8B%E6%96%B9%E6%B3%95/"/>
-    <id>snowFlakeXue.github.io/2019/05/25/实例方法/</id>
-    <published>2019-05-25T07:42:48.000Z</published>
-    <updated>2019-05-25T08:06:18.763Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
-    
-    </summary>
     
     
   </entry>

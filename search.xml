@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[声明方式]]></title>
+    <url>%2F2019%2F07%2F18%2F%E5%A3%B0%E6%98%8E%E6%96%B9%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[在ES5中声明变量只有var一种形式，是局部啊还是全局啊很麻烦去区别。ES6就将声明方式升级了那么一下子，全局用var，局部用let,常量用const 一· const先来说说这个const,因为我想把let和var放在一起来讲。const嘛，C++里也有，大家都知道这是声明常量的，就是有一个量你不想动他，但是可能时间长了你忘了我之前想的是不能动他，这个时候如果当初你早早的就把他用const方式声明他就不怕犯错啦。一动就报错，下面举个栗子看看 123const a = 1;var a = 2;console.log(a); 我们可以看到我先把a给用const形式声明了，接下来我用全局var方式要把a给改了，这个时候我打印a，人家我npm run build都不给我转换成功了，报错如下 这样就规避了很多麻烦，报错比不报错好多了。 二· let与var接下来就是let和var这两个方式了，这两种方式各有各的好处，但是推荐去尝试多用用let，因为这样在一些函数体里呀，循环里呀，你用了局部的形式不至于找不到错误找好久，因为你用局部的了，后面你做错事了他会给你报错。有报错信息，找错误就方便很多。在这里我就不证明var是全局的,let是局部的了。我写一个栗子。像在C++里我再循环里声明了一个i，他是局部的，我拿出来就不能用了，这个循环之后我还可以声明一个i，但是不影响我之前那个循环里的i，我不污染数据。想想在js里，我要是用var，好多循环，我都用i，然后循环外部我有把i改来改去是不是就乱套了。 1234for(let i=0;i&lt;10;i++)&#123;console.log(i);&#125;console.log(i); 我们看到找不到i,这就是用let的好处,局部就是局部，谁也动不了。下面再看看npm run build后也给我们人性化的区分了一下。 1234for (var _i = 0; _i &lt; 10; _i++) &#123; console.log(_i);&#125;console.log(i);]]></content>
+      <categories>
+        <category>ES6</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[环境搭建]]></title>
     <url>%2F2019%2F07%2F17%2F%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%2F</url>
     <content type="text"><![CDATA[ES6有很多新特性简化了一些东西，但是因为还是有浏览器不兼容他，因此环境搭建就包括了将ES6转换成ES5以及简化转换命令 首先看看初始的文件目录 src下的index.js使我们写ES6代码的地方 dist是用来存放转换好的es5代码的地方 index.html是入口文件，要引入的是src目录下的js文件 1&lt;script src="dist/index.js/"&gt;&lt;/script&gt; 初始化项目 1npm init -y -y是直接生成项目的操作，就不用你一步步确认来修改项目，在执行完该命令后会生成一个package.json，可以自行改一下author,discription这两项 基本配置 全局安装babel-cli 1npm install -g babel-cli 本地安装babel-preset-es2015 和 babel-cli 1npm install --save-dev babel-preset-es2015 babel-cli 在根目录下新建.babelrc 123456&#123; "presets":[ "es2015" ], "plugins":[]&#125; 这时就可以用命令来讲我们写好的ES6转换成ES5 1babel src/index.js -o dist/index.js 到目前为止，我们的目的已经达到了，但是我想不要每次都输那么长的命令来转换，我们可以讲package.json中的&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;修改为&quot;build&quot;:&quot;babel src/index.js -o dist/index.js&quot; 以后就可以直接用npm run build来转换]]></content>

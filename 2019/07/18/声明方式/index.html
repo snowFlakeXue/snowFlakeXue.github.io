@@ -100,17 +100,20 @@
 
 
 
-  <meta name="description" content="js语句的格式 要养成每条语句后都写分号的习惯 在js代码中，空白没意义，为了让代码更直观更易于维护，可尝试养成在等号前后，加号等前后写空格的习惯赋值语句 由左边变量，赋值变量和右边被赋给的值组成 右边的表达式可以是直接量值var vm = 35;一个变量和直接量再加上运算符的组合var value = vm + 27;函数的调用var nvalue = escape();一行可以包含多个赋值语句">
+  <meta name="description" content="在ES5中声明变量只有var一种形式，是局部啊还是全局啊很麻烦去区别。ES6就将声明方式升级了那么一下子，全局用var，局部用let,常量用const">
 <meta property="og:type" content="article">
-<meta property="og:title" content="运算符和语句">
-<meta property="og:url" content="snowFlakeXue.github.io/2019/05/05/运算符和语句/index.html">
+<meta property="og:title" content="声明方式">
+<meta property="og:url" content="snowFlakeXue.github.io/2019/07/18/声明方式/index.html">
 <meta property="og:site_name" content="snowFlakeXue">
-<meta property="og:description" content="js语句的格式 要养成每条语句后都写分号的习惯 在js代码中，空白没意义，为了让代码更直观更易于维护，可尝试养成在等号前后，加号等前后写空格的习惯赋值语句 由左边变量，赋值变量和右边被赋给的值组成 右边的表达式可以是直接量值var vm = 35;一个变量和直接量再加上运算符的组合var value = vm + 27;函数的调用var nvalue = escape();一行可以包含多个赋值语句">
+<meta property="og:description" content="在ES5中声明变量只有var一种形式，是局部啊还是全局啊很麻烦去区别。ES6就将声明方式升级了那么一下子，全局用var，局部用let,常量用const">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-16T10:35:43.775Z">
+<meta property="og:image" content="/2019/07/18/声明方式/1.jpg">
+<meta property="og:image" content="/2019/07/18/声明方式/2.jpg">
+<meta property="og:updated_time" content="2019-07-18T08:54:04.853Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="运算符和语句">
-<meta name="twitter:description" content="js语句的格式 要养成每条语句后都写分号的习惯 在js代码中，空白没意义，为了让代码更直观更易于维护，可尝试养成在等号前后，加号等前后写空格的习惯赋值语句 由左边变量，赋值变量和右边被赋给的值组成 右边的表达式可以是直接量值var vm = 35;一个变量和直接量再加上运算符的组合var value = vm + 27;函数的调用var nvalue = escape();一行可以包含多个赋值语句">
+<meta name="twitter:title" content="声明方式">
+<meta name="twitter:description" content="在ES5中声明变量只有var一种形式，是局部啊还是全局啊很麻烦去区别。ES6就将声明方式升级了那么一下子，全局用var，局部用let,常量用const">
+<meta name="twitter:image" content="/2019/07/18/声明方式/1.jpg">
 
 
 
@@ -120,7 +123,7 @@
 
   
   
-  <link rel="canonical" href="snowFlakeXue.github.io/2019/05/05/运算符和语句/">
+  <link rel="canonical" href="snowFlakeXue.github.io/2019/07/18/声明方式/">
 
 
 
@@ -130,7 +133,7 @@
   };
 </script>
 
-  <title>运算符和语句 | snowFlakeXue</title>
+  <title>声明方式 | snowFlakeXue</title>
   
 
 
@@ -364,7 +367,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/05/运算符和语句/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/07/18/声明方式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Xue">
@@ -381,7 +384,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">运算符和语句
+          <h1 class="post-title" itemprop="name headline">声明方式
 
               
             
@@ -407,24 +410,12 @@
                 
               
 
-              <time title="创建时间：2019-05-05 10:08:41" itemprop="dateCreated datePublished" datetime="2019-05-05T10:08:41+08:00">2019-05-05</time>
+              <time title="创建时间：2019-07-18 16:21:28 / 修改时间：16:54:04" itemprop="dateCreated datePublished" datetime="2019-07-18T16:21:28+08:00">2019-07-18</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-05-16 18:35:43" itemprop="dateModified" datetime="2019-05-16T18:35:43+08:00">2019-05-16</time>
               
             
           </span>
@@ -441,7 +432,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/javascript学习/" itemprop="url" rel="index"><span itemprop="name">javascript学习</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ES6/" itemprop="url" rel="index"><span itemprop="name">ES6</span></a></span>
 
                 
                 
@@ -460,8 +451,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/05/05/运算符和语句/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/05/运算符和语句/" itemprop="commentCount"></span>
+                <a href="/2019/07/18/声明方式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/07/18/声明方式/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -490,40 +481,18 @@
       
 
       
-        <h2 id="js语句的格式"><a href="#js语句的格式" class="headerlink" title="js语句的格式"></a><font color="red">js语句的格式</font></h2><ol>
-<li>要养成每条语句后都写分号的习惯</li>
-<li>在js代码中，空白没意义，为了让代码更直观更易于维护，可尝试养成在等号前后，加号等前后写空格的习惯<h2 id="赋值语句"><a href="#赋值语句" class="headerlink" title="赋值语句"></a><font color="red">赋值语句</font></h2></li>
-<li>由左边变量，赋值变量和右边被赋给的值组成</li>
-<li>右边的表达式可以是直接量值<br><code>var vm = 35;</code><br>一个变量和直接量再加上运算符的组合<br><code>var value = vm + 27;</code><br>函数的调用<br><code>var nvalue = escape();</code><br>一行可以包含多个赋值语句<br><code>var a = b = c = 23;</code><a id="more"></a>
-<h2 id="二元运算符"><a href="#二元运算符" class="headerlink" title="二元运算符"></a><font color="red">二元运算符</font></h2></li>
-<li>二元运算符有加(+)减(-)乘(*)除(/)取余(%)<font color="red">注意在js中除法保存的是浮点数而不是截取的整数</font></li>
-<li>这里重点说一下加法运算符，在字符串那里要特别注意，当两个运算数中有字符串时会优先将+解析为连接运算符<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="string">"3.99"</span> + <span class="number">2.7</span>;</span><br><span class="line"><span class="built_in">document</span>.write(vm);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>结果：<code>3.992.7</code></p>
-<p>而对于其他的二元运算符，只要两个操作数中的字符串内只有数字就可以计算<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="string">"3"</span> * <span class="number">2</span>;</span><br><span class="line"><span class="built_in">document</span>.write(vm);</span><br></pre></td></tr></table></figure></p>
-<p>结果：<code>6</code></p>
-<p>为了在用加号时规避这种错误，最好采用parseInt或者parseFloat函数显式地转化一下字符串<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="built_in">parseInt</span>(<span class="string">'3'</span>) + <span class="number">3</span>;</span><br><span class="line"><span class="built_in">document</span>.write(vm);</span><br></pre></td></tr></table></figure></p>
-<p>结果：<code>6</code></p>
-<h2 id="一元运算符"><a href="#一元运算符" class="headerlink" title="一元运算符"></a><font color="red">一元运算符</font></h2><ol>
-<li>一元运算符有负值运算符，自增运算符，自减运算符<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> vm = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">var</span> value = -vm;</span><br><span class="line"><span class="built_in">document</span>.write(value);</span><br><span class="line"><span class="keyword">var</span> nvalue = ++value;</span><br><span class="line"><span class="built_in">document</span>.write(nvalue);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>结果：<code>-2-1</code></p>
-<ol start="2">
-<li>注意自增自减都有前置后置之分，前置是先自己变值在赋值，后置是先赋值在自己变值<h2 id="逻辑运算符，三元运算符，各种语句需要注意的"><a href="#逻辑运算符，三元运算符，各种语句需要注意的" class="headerlink" title="逻辑运算符，三元运算符，各种语句需要注意的"></a><font color="red">逻辑运算符，三元运算符，各种语句需要注意的</font></h2>因为有了c++基础就不多说什么事if循环啊啥的，记一点容易犯错的</li>
-<li>注意短值运算，就是与的话当第一个表达式返回0，就不往下看了，这个直接就是假；是或的话当第一个表达式返回1，直接就是真，考虑到cpu等内存占用，应该把重要的依据放在前面</li>
-<li>注意===和==区别，前面的是等同，现在已经广泛应用，因为当时字符串和数值比较，会先隐式地把字符串转化为数值型，用等同则返回false,用等于则返回true</li>
-<li><p>switch语句，注意写break,default;当多种情况是同一入口时，最好用如下形式：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span> a:</span><br><span class="line"><span class="keyword">case</span> b:</span><br><span class="line"><span class="keyword">case</span> c:</span><br><span class="line"><span class="built_in">document</span>.write(<span class="string">"hhhhh"</span>);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>注意if语句的条件里千万不能写等于号，最次也得写个==</p>
-</li>
-<li>当想至少进行一次循环时，选do···while而不用while</li>
-<li>注意一下for循环中的for in型，在后面会用到比如遍历数组啥的，以后再说，先简单举个栗子<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">object(<span class="string">"a"</span>:b,<span class="string">"c"</span>:d)</span><br><span class="line"><span class="keyword">for</span>(x <span class="keyword">in</span> object)&#123;</span><br><span class="line">    txt += object[x] ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>结果：<code>cd</code></p>
+        <p>在ES5中声明变量只有var一种形式，是局部啊还是全局啊很麻烦去区别。ES6就将声明方式升级了那么一下子，全局用var，局部用let,常量用const</p>
+<a id="more"></a>
+<hr>
+<h3 id="一·-const"><a href="#一·-const" class="headerlink" title="一· const"></a>一· const</h3><p>先来说说这个const,因为我想把let和var放在一起来讲。const嘛，C++里也有，大家都知道这是声明常量的，就是有一个量你不想动他，但是可能时间长了你忘了我之前想的是不能动他，这个时候如果当初你早早的就把他用const方式声明他就不怕犯错啦。一动就报错，下面举个栗子看看</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> a = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br></pre></td></tr></table></figure>
+<p>我们可以看到我先把a给用const形式声明了，接下来我用全局var方式要把a给改了，这个时候我打印a，人家我npm run build都不给我转换成功了，报错如下 <img src="/2019/07/18/声明方式/1.jpg" alt="const"></p>
+<p>这样就规避了很多麻烦，报错比不报错好多了。</p>
+<h3 id="二·-let与var"><a href="#二·-let与var" class="headerlink" title="二· let与var"></a>二· let与var</h3><p>接下来就是let和var这两个方式了，这两种方式各有各的好处，但是推荐去尝试多用用let，因为这样在一些函数体里呀，循环里呀，你用了局部的形式不至于找不到错误找好久，因为你用局部的了，后面你做错事了他会给你报错。有报错信息，找错误就方便很多。在这里我就不证明var是全局的,let是局部的了。我写一个栗子。像在C++里我再循环里声明了一个i，他是局部的，我拿出来就不能用了，这个循环之后我还可以声明一个i，但是不影响我之前那个循环里的i，我不污染数据。想想在js里，我要是用var，好多循环，我都用i，然后循环外部我有把i改来改去是不是就乱套了。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line"><span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(i);</span><br></pre></td></tr></table></figure>
+<p><img src="/2019/07/18/声明方式/2.jpg" alt="let"></p>
+<p>我们看到找不到i,这就是用let的好处,局部就是局部，谁也动不了。下面再看看npm run build后也给我们人性化的区分了一下。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> _i = <span class="number">0</span>; _i &lt; <span class="number">10</span>; _i++) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(_i);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(i);</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -564,8 +533,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/04/day1/" rel="next" title="day1">
-                <i class="fa fa-chevron-left"></i> day1
+              <a href="/2019/07/17/环境搭建/" rel="next" title="环境搭建">
+                <i class="fa fa-chevron-left"></i> 环境搭建
               </a>
             
           </div>
@@ -573,10 +542,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/05/day2/" rel="prev" title="day2">
-                day2 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -759,7 +724,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#js语句的格式"><span class="nav-number">1.</span> <span class="nav-text">js语句的格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#赋值语句"><span class="nav-number">2.</span> <span class="nav-text">赋值语句</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二元运算符"><span class="nav-number">3.</span> <span class="nav-text">二元运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一元运算符"><span class="nav-number">4.</span> <span class="nav-text">一元运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑运算符，三元运算符，各种语句需要注意的"><span class="nav-number">5.</span> <span class="nav-text">逻辑运算符，三元运算符，各种语句需要注意的</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一·-const"><span class="nav-number">1.</span> <span class="nav-text">一· const</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二·-let与var"><span class="nav-number">2.</span> <span class="nav-text">二· let与var</span></a></li></ol></div>
             
 
           </div>
