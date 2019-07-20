@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[数字的操作]]></title>
+    <url>%2F2019%2F07%2F20%2F%E6%95%B0%E5%AD%97%E7%9A%84%E6%93%8D%E4%BD%9C%2F</url>
+    <content type="text"><![CDATA[ES6中将数字的方法都用Number.来开始，因为这样随着以后的完善可以扩展出很多但是又都归结于Number.下面先回顾下二进制，八进制，再介绍些可以直接用的很方便的方法 二进制(binary)的声明，在js中二进制都是以0B(0b)开头的. 12let binary = 0B010101;console.log(binary); //21 八进制(Octal)的声明，在js中八进制都是以0o(0O)开头的 12let octal = 0o666;console.log(octal); //438 判断是否为数字类型 12let vm = 23;console.log(Number.isFinite(vm)); //true 判断是否为整数 12let vm = 23;console.log(Number.isIneger(vm)); //true 转化为整型 12let vm = 23;console.log(Number.parseInt(vm)); //true 转化为浮点型 12let vm = 23;console.log(Number.parseFloat(vm)); //false 最大安全整数 1console.log(Number.MAX_SAFE_INTEGER); //9007199254740991 最小安全整数 1console.log(Number.MINI_SAFE_INTEGER); //-9007199254740991 判断是否超过安全范围 12let vm = Math.pow(2,53)-1; //最大安全整数console.log(Number.isSafeInteger(vm)); //true]]></content>
+      <categories>
+        <category>ES6</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[字符串操作]]></title>
     <url>%2F2019%2F07%2F20%2F%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C%2F</url>
     <content type="text"><![CDATA[字符串的操作是很重要的，但ES5的方法容易出错还比较麻烦，ES6的字符串模板，字符串查找，字符串复制就很好的解决了这些问题。 字符串模板 简单的拼接，在ES5中我们想将几个字符串拼接起来就要用到+运算符和单引号，很容易因为哪块漏写单引号，加好位置不对出错，ES6中就引进了 1`$&#123;&#125;` 来简化拼接过程，中间不再需要单引号进来搅和，只需要把要被拼接的内容放在花括号里即可，具体看下面的栗子 123let vm1 = 'ES6';let vm2 = `发现$&#123;vm1&#125;很好学`;console.log(vm2); 支持数字计算,如下面的栗子，因为我没有把1,2用单引号包起来，ES6就会把他们当数字处理，就不会输出12，而是3。而在ES5中就要注意了，不能简单地用加号连接两个变量来得到和。 1234let vm1 =1;let vm2 = 2;let vm3 = `$&#123;vm1+vm2&#125;`console.log(vm3); 字符串查找在ES5中我们想判断字符串里有没有我们想要的东西要先用indexOf找一下再用大于零或者小于零才能得到true还是false，很麻烦，而ES6中很简单的就能得到,而且支持中文 123let v = '大连'let vm = "welcome to 大连";console.log(vm.includes(v)); 这里说一下，要先定义一个要查找的变量，而不是想当然的直接就能vm.includes(大连) 字符串复制当需要重复写很多东西时应用ES6就可以简简单单的代码完成这个任务,栗子如下 1document.write('大连|'.repeat(5));]]></content>

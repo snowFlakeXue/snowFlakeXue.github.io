@@ -100,17 +100,17 @@
 
 
 
-  <meta name="description" content="CPU和内存是由很多的晶体管组成，他俩合称IC（集成电路） CPU由寄存器，运算器，控制器和时钟组成 程序运行过程：首先由程序员用高级语言写出程序，然后把程序编译成机器语言（即exe文件），然后将这个exe文件在内存上存一个副本，然后再在CPU上解析运行 将CPU的解析和运行过程放大来讲，是时钟先发出时钟信号，cpu开始工作啦，他先让寄存器去抓内存上的数据，然后运算器进行运算，然后控制器通过运算">
+  <meta name="description" content="ES6中将数字的方法都用Number.来开始，因为这样随着以后的完善可以扩展出很多但是又都归结于Number.下面先回顾下二进制，八进制，再介绍些可以直接用的很方便的方法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="day1">
-<meta property="og:url" content="snowFlakeXue.github.io/2019/05/04/day1/index.html">
+<meta property="og:title" content="数字的操作">
+<meta property="og:url" content="snowFlakeXue.github.io/2019/07/20/数字的操作/index.html">
 <meta property="og:site_name" content="snowFlakeXue">
-<meta property="og:description" content="CPU和内存是由很多的晶体管组成，他俩合称IC（集成电路） CPU由寄存器，运算器，控制器和时钟组成 程序运行过程：首先由程序员用高级语言写出程序，然后把程序编译成机器语言（即exe文件），然后将这个exe文件在内存上存一个副本，然后再在CPU上解析运行 将CPU的解析和运行过程放大来讲，是时钟先发出时钟信号，cpu开始工作啦，他先让寄存器去抓内存上的数据，然后运算器进行运算，然后控制器通过运算">
+<meta property="og:description" content="ES6中将数字的方法都用Number.来开始，因为这样随着以后的完善可以扩展出很多但是又都归结于Number.下面先回顾下二进制，八进制，再介绍些可以直接用的很方便的方法">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-04T15:12:40.070Z">
+<meta property="og:updated_time" content="2019-07-20T13:18:08.993Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="day1">
-<meta name="twitter:description" content="CPU和内存是由很多的晶体管组成，他俩合称IC（集成电路） CPU由寄存器，运算器，控制器和时钟组成 程序运行过程：首先由程序员用高级语言写出程序，然后把程序编译成机器语言（即exe文件），然后将这个exe文件在内存上存一个副本，然后再在CPU上解析运行 将CPU的解析和运行过程放大来讲，是时钟先发出时钟信号，cpu开始工作啦，他先让寄存器去抓内存上的数据，然后运算器进行运算，然后控制器通过运算">
+<meta name="twitter:title" content="数字的操作">
+<meta name="twitter:description" content="ES6中将数字的方法都用Number.来开始，因为这样随着以后的完善可以扩展出很多但是又都归结于Number.下面先回顾下二进制，八进制，再介绍些可以直接用的很方便的方法">
 
 
 
@@ -120,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="snowFlakeXue.github.io/2019/05/04/day1/">
+  <link rel="canonical" href="snowFlakeXue.github.io/2019/07/20/数字的操作/">
 
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>day1 | snowFlakeXue</title>
+  <title>数字的操作 | snowFlakeXue</title>
   
 
 
@@ -364,7 +364,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/04/day1/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/07/20/数字的操作/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Xue">
@@ -381,7 +381,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">day1
+          <h1 class="post-title" itemprop="name headline">数字的操作
 
               
             
@@ -407,7 +407,7 @@
                 
               
 
-              <time title="创建时间：2019-05-04 22:50:12 / 修改时间：23:12:40" itemprop="dateCreated datePublished" datetime="2019-05-04T22:50:12+08:00">2019-05-04</time>
+              <time title="创建时间：2019-07-20 20:50:38 / 修改时间：21:18:08" itemprop="dateCreated datePublished" datetime="2019-07-20T20:50:38+08:00">2019-07-20</time>
             
 
             
@@ -429,7 +429,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/睡前小读/" itemprop="url" rel="index"><span itemprop="name">睡前小读</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ES6/" itemprop="url" rel="index"><span itemprop="name">ES6</span></a></span>
 
                 
                 
@@ -448,8 +448,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/05/04/day1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/04/day1/" itemprop="commentCount"></span>
+                <a href="/2019/07/20/数字的操作/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/07/20/数字的操作/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -478,18 +478,44 @@
       
 
       
-        <ol>
-<li>CPU和内存是由很多的晶体管组成，他俩合称IC（集成电路）</li>
-<li>CPU由寄存器，运算器，控制器和时钟组成</li>
-<li>程序运行过程：首先由程序员用高级语言写出程序，然后把程序编译成机器语言（即exe文件），然后将这个exe文件在内存上存一个副本，然后再在CPU上解析运行</li>
-<li>将CPU的解析和运行过程放大来讲，是时钟先发出时钟信号，cpu开始工作啦，他先让寄存器去抓内存上的数据，然后运算器进行运算，然后控制器通过运算结果来控制整个计算机，其实也就是控制输入输出什么的<a id="more"></a></li>
-<li>实际上，对于程序员来说可以把CPU简单的理解为是很多很多寄存器的集合体，寄存器有很多种，不仅是他们存储的类型上，比如有的是存数值这种数据的，有的他是存地址这样的数据</li>
-<li>汇编语言是由助记符组成的（比如将addition写成add），他和机器语言实际上是一一对应的，每一个机器语言实际上都有对应的汇编语言。因而，我们把将汇编语言转换成机器语言成为汇编过程，把机器语言转换为汇编语言称为反汇编过程</li>
-<li>其实，编译器汇编器这种的并不是我们所想的一种组件什么的，他其实就是一个程序</li>
-<li>我们可以简单地把程序运行的过程就当成是各种寄存器之间的处理，因此我们只要知道CPU是寄存器的集合体就好</li>
-<li>内存，我们叫主储存器，现在一般都是DRAM（动态随机存储器），就是储存数据啊啥的，1个字节是8位，每个都有地址</li>
+        <p>ES6中将数字的方法都用Number.来开始，因为这样随着以后的完善可以扩展出很多但是又都归结于Number.下面先回顾下二进制，八进制，再介绍些可以直接用的很方便的方法<br><a id="more"></a></p>
+<hr>
+<ol>
+<li>二进制(binary)的声明，在js中二进制都是以0B(0b)开头的.</li>
 </ol>
-
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> binary = <span class="number">0B010101</span>;</span><br><span class="line"><span class="built_in">console</span>.log(binary); <span class="comment">//21</span></span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>八进制(Octal)的声明，在js中八进制都是以0o(0O)开头的</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> octal = <span class="number">0o666</span>;</span><br><span class="line"><span class="built_in">console</span>.log(octal); <span class="comment">//438</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>判断是否为数字类型</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> vm = <span class="number">23</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>.isFinite(vm)); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>判断是否为整数</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> vm = <span class="number">23</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>.isIneger(vm)); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>转化为整型</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> vm = <span class="number">23</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>.parseInt(vm)); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>转化为浮点型</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> vm = <span class="number">23</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>.parseFloat(vm)); <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+<ol start="7">
+<li>最大安全整数</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>.MAX_SAFE_INTEGER); <span class="comment">//9007199254740991</span></span><br></pre></td></tr></table></figure>
+<ol start="8">
+<li>最小安全整数</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>.MINI_SAFE_INTEGER); <span class="comment">//-9007199254740991</span></span><br></pre></td></tr></table></figure>
+<ol start="9">
+<li>判断是否超过安全范围</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> vm = <span class="built_in">Math</span>.pow(<span class="number">2</span>,<span class="number">53</span>)<span class="number">-1</span>; <span class="comment">//最大安全整数</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>.isSafeInteger(vm)); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -529,8 +555,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/05/04/js数据类型与变量/" rel="next" title="js数据类型与变量">
-                <i class="fa fa-chevron-left"></i> js数据类型与变量
+              <a href="/2019/07/20/字符串操作/" rel="next" title="字符串操作">
+                <i class="fa fa-chevron-left"></i> 字符串操作
               </a>
             
           </div>
@@ -538,10 +564,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/05/05/运算符和语句/" rel="prev" title="运算符和语句">
-                运算符和语句 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
