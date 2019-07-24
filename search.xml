@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[函数和数组补漏]]></title>
+    <url>%2F2019%2F07%2F24%2F%E5%87%BD%E6%95%B0%E5%92%8C%E6%95%B0%E7%BB%84%E8%A1%A5%E6%BC%8F%2F</url>
+    <content type="text"><![CDATA[对象的函数解构当后端传来的数据时json对象格式，当我们想要让他作为函数的参数来调用时就可以用到，具体如下所示 123456let json = &#123; a:1, b:2&#125;let func = (&#123;a,b=3&#125;)=&gt;a+b;console.log(func(json));//3 数组的函数解构123let arr =[1,2,3];let func = (a,b,c)=&gt;console.log(a,b,c);func(...arr); //1 2 3 inin的用处主要在于判断对象或数组里是否有元素，先来看看对象 12345let json = &#123; a:1, a:2&#125;console.log('a' in json);//true 关于数组，并不能确定有没有某个元素，但能确定某索引位置是否有元素，而在ES5我们知道，当我们用.length来查看是否有元素时，如果是空就会返回0，这显然是错误的，下面我们来看看ES6 12let arr = ['','',''];console.log(0 in arr);//true 数组循环方法 forEach 这种方法会自动忽略掉空的情况，因此有的时候会出错 12let arr = ['1','2','3'];arr.forEach((val,index)=&gt;console.log(index,val)); //注意顺序不能颠倒了 filter 12let arr = [&apos;1&apos;,&apos;2&apos;,&apos;3&apos;];arr.filter(x=&gt;console.log(x));//1 2 3 some 12let arr = [&apos;1&apos;,&apos;2&apos;,&apos;3&apos;];arr.some(x=&gt;console.log(x));//1 2 3 map map是一种转换方法，详细的以后再说 12let arr = ['1','2','3'];console.log(arr.map(x=&gt;'4')); //4 4 4 将数组转换成字符串首先是toString(),他只能将数组各个元素用逗号隔开 12let arr = ['1','2','3'];console.log(arr.toString()); //1,2,3 如果我们想用其他字符隔开各个元素，就可以使用join() 12let arr = ['1','2','3'];console.log(arr.join('|'));//1|2|3]]></content>
+      <categories>
+        <category>ES6</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[箭头函数和扩展]]></title>
+    <url>%2F2019%2F07%2F23%2F%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E5%92%8C%E6%89%A9%E5%B1%95%2F</url>
+    <content type="text"><![CDATA[默认值在ES6中给我们提供了可以在函数参数中使用默认值的操作，在学习箭头函数之前就先用ES5方法写函数 1234function func(a,b=0)&#123; return a+b;&#125;console.log(func(1)); //1 主动抛出错误只需要一行代码 throw new Error(‘’) 1234567function func(a,b=0)&#123; if(a==0)&#123; throw new Error('This is a error') &#125; return a+b;&#125;console.log(func(0)); //报错提示 This is a error 严谨模式与ES5不同，ES6中严谨模式的代码不需要必须写在最前面，而是可以写在函数体内，但是需要注意的是当函数参数有默认值时是会报错的，下面我就来举个错误实例，然后给出报错信息，我们可以很清楚的看出是因为默认值 12345function func(a,b=0)&#123; 'use strict' return a+b;&#125;console.log(func(1)); ; 获得参数个数当我们需要知道参数个数是，很简单，直接用length就可以知道，但是需要注意的是得到的只是必须传递的参数个数，带默认值的不包括在内 1234function func(a,b=0)&#123; return a+b;&#125;console.log(func.length); //1 箭头函数箭头函数需要注意的就是如果你只想返回(return)一个值，就不需要用花括号，直接用箭头指向那个值即可，但是当代码不止一行时就需要用花括号来包住函数体，下面举个只返回个值得来看看箭头函数长什么样.还有就是箭头函数不能有new ,也就是说不能用在构造函数上 12let func = (a,b)=&gt;a+b;console.log(func(1,1)); //2]]></content>
+      <categories>
+        <category>ES6</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[数组知识]]></title>
     <url>%2F2019%2F07%2F21%2F%E6%95%B0%E7%BB%84%E7%9F%A5%E8%AF%86%2F</url>
     <content type="text"><![CDATA[在ES6中新增了一些数组方法来简化代码量。ES6把所有对数组的操作都归结与Array. json数组格式转换首先来看看json格式，要注意与普通的json不一样的是必须后面要跟一个length 123456let json = &#123; '0' : 'aaa', '1' : 'bbb', '2' : 'ccc', length: 3&#125; 下面我们只需一步就可以把它打印成数组形式，那就是调用from方法 12let arr = Array.from(json);console.log(arr); // ["aaa", "bbb", "ccc"] Array.of()of方法可以用于将一堆变量或字符串转化成数组的情况下。 12let arr = Array.of('1','2','3');console.log(arr); //["1", "2", "3"] find 实例方法find(function(value,index,arr){})三个参数缺一不可，用于寻找元素，比如 1234let arr = [1,2,3,4,5,6,7];console.log(arr.find(function(value,index,arr)&#123; return value&gt;4; //5&#125;)) 函数里的函数体根据需要写,当然不仅是数字，也可用来查找字符串。 fill实例方法fill方法是用来替换数组中元素的，他有三个参数，分别是替换值，起始位置(包括)，末位置(不包括)，栗子如下(实例方法由实例调用而不是Array.) 12let arr = [1,2,3,4,5,6,7];console.log(arr.fill(0,0,4)); //0000567 数组遍历在ES5中遍历数组我们采用的形式低效，ES6给我提供了高效的方式，如下所示 1234let arr = [1,2,3,4,5,6];for(let value of arr)&#123; console.log(value);&#125; 当我们想得到索引时可以这样 1234let arr = [1,2,3,4,5,6];for(let index of arr.keys())&#123; console.log(index);&#125; 当我们需要索引和元素一起打印时可以这样 1234let arr = [1,2,3,4,5,6];for(let [index,value] of arr.entries())&#123; console.log(index+':'+value);&#125; entries()实例方法当我们想要数组里的元素不按常规形式输出，而是想要像输出一个元素就来个一行样式 123let arr = [1,2,3,4,5,6];let list = arr.entries();console.log(list); //Iterator &#123;&#125; 这样我们就得到了Iterator {}，然后就可以用next手动循环 123456console.log(list.next().value);console.log('----------------');console.log(list.next().value);console.log('################');console.log(list.next().value);console.log('----------------');]]></content>

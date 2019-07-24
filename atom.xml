@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-07-21T10:46:52.963Z</updated>
+  <updated>2019-07-24T02:41:24.826Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>函数和数组补漏</title>
+    <link href="snowFlakeXue.github.io/2019/07/24/%E5%87%BD%E6%95%B0%E5%92%8C%E6%95%B0%E7%BB%84%E8%A1%A5%E6%BC%8F/"/>
+    <id>snowFlakeXue.github.io/2019/07/24/函数和数组补漏/</id>
+    <published>2019-07-24T01:39:01.000Z</published>
+    <updated>2019-07-24T02:41:24.826Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;对象的函数解构&quot;&gt;&lt;a href=&quot;#对象的函数解构&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>箭头函数和扩展</title>
+    <link href="snowFlakeXue.github.io/2019/07/23/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E5%92%8C%E6%89%A9%E5%B1%95/"/>
+    <id>snowFlakeXue.github.io/2019/07/23/箭头函数和扩展/</id>
+    <published>2019-07-23T04:01:45.000Z</published>
+    <updated>2019-07-23T04:52:51.299Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;默认值&quot;&gt;&lt;a href=&quot;#默认值&quot; class=&quot;headerlink&quot; title=&quot;默认值&quot;&gt;&lt;/a&gt;默认值&lt;/h2&gt;&lt;p&gt;在ES6中给我们提供了可以在函数参数中使用默认值的操作，在学习箭头函数之前就先用ES5方法写函数&lt;/p&gt;
+&lt;figure
+        
+      
+    
+    </summary>
+    
+      <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>数组知识</title>
@@ -385,51 +435,6 @@
     <summary type="html">
     
       &lt;p&gt;重定向实质上就是在路径不同的情况下我想跳转到同一页面的需求，下面将展示传参数和不穿参数的两种重定向，操作很简单,在index.js中就是把想要定位的路径复制到redirect里&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="vue-router" scheme="snowFlakeXue.github.io/categories/vue-router/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>URL传值</title>
-    <link href="snowFlakeXue.github.io/2019/05/27/URL%E4%BC%A0%E5%80%BC/"/>
-    <id>snowFlakeXue.github.io/2019/05/27/URL传值/</id>
-    <published>2019-05-27T06:15:04.000Z</published>
-    <updated>2019-05-27T06:32:27.972Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;虽然现在前后端分离，之间的数据传递用接口，但是url传值方法还是很常用的&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;第一步：在index.js文件的路径中添加想传的值&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
-        
-      
-    
-    </summary>
-    
-      <category term="vue-router" scheme="snowFlakeXue.github.io/categories/vue-router/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>单页面多路由</title>
-    <link href="snowFlakeXue.github.io/2019/05/27/%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%A4%9A%E8%B7%AF%E7%94%B1/"/>
-    <id>snowFlakeXue.github.io/2019/05/27/单页面多路由/</id>
-    <published>2019-05-27T02:25:59.000Z</published>
-    <updated>2019-05-27T03:22:44.458Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;vue提供的路由非常方便我们把页面分开成几个部分分别操作，下面就动手简单做一个&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
