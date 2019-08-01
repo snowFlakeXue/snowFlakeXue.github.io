@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[map]]></title>
+    <url>%2F2019%2F08%2F01%2Fmap%2F</url>
+    <content type="text"><![CDATA[map也是种数据结构，他与json，set这两种数据结构相比，更灵活，效率更高 set用来设定值，map的好处在这就能体现出来，就是他的key和value是可以一一对应的任何数据类型，比如下面 1234567let json = &#123; a:1, b:2&#125;let vm = new Map();vm.set(json,5);console.log(vm); 说他一一对应，我当然可以把我想要的value拿出来，这就是get出场的时候啦 1console.log(vm.get(json));//5 删除用delete，全删用clear,查找用has,得长度用size就不细说了…]]></content>
+      <categories>
+        <category>ES6</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Set和WeakSet]]></title>
+    <url>%2F2019%2F08%2F01%2FSet%E5%92%8CWeakSet%2F</url>
+    <content type="text"><![CDATA[Set和WeakSet都是数据结构而不是数据类型，他俩很相似，前者要放数组在他的数据结构里，后者要放对象在他的数据结构里。而放的方式，两者又有细微的差距。 Set首先看看声明,注意要new一个，只要是new，我们typeof一下就可以知道这是个object,也就说明了set是个数据结构不是数据类型 1let vm = new Set([1,2,3]); 下面看看打印出来的 12console.log(vm);//Set(3) &#123;1, 2, 3&#125; 下面就是关于Set的增删查，这里说一下，Set有一个特性，那就是他去重，当他所包含的数组里有重复的元素，他会自动删掉最后一个重复的，当你查长度时，显示的就是没有重复的长度 先来看看增，回忆一下，在数组操作里，我们增加元素用push，而这里我们用add 12vm.add(4);console.log(vm);//Set(4) &#123;1, 2, 3, 4&#125; 同样如果我们加了一个重复的。根据去重性，最终也不会有两个一样的元素 12vm.add(3);console.log(vm);//Set(3) &#123;1, 2, 3&#125; 下面是删，当我们想删一个时就用delete,全都想删就用clear 1234vm.delete(3);console.log(vm);//Set(2) &#123;1, 2&#125;vm.clear();console.log(vm);//Set(0) &#123;&#125; 接着是查，我们用has,有就返回true，没有就返回false 1console.log(vm.has(3));//true 再就是讲讲遍历 一种用的是for of 123for(let value of vm)&#123; console.log(value);&#125; 另一种是forEach 1vm.forEach(value=&gt;console.log(value)); 然后就是访问长度，在数组用的是length，这里我们用size 1console.log(vm.size); WeakSet我们看一下可以把他拆分成，weak和set，也就是说可以把他理解成弱的set，那么之前说了这个数据结构是用来放对象的，那与set比他弱在哪呢，下面我们来看看 假如我们用同样的方法来声明WeakSet 1let vm = new WeakSet(&#123;a:1,b:2&#125;); 我们会看到他会报错，那这就是他弱的地方，他不能直接把对象放进去，而是要add进去 1234567let vm = new WeakSet();let obj = &#123; a:1, b:2&#125;vm.add(obj);console.log(vm); 再就是注意一下去重这里有点问题 123456789101112let vm = new WeakSet();let obj = &#123; a:1, b:2&#125;let obj1 = &#123; a:1, b:2&#125;vm.add(obj);vm.add(obj1);console.log(vm); 在这个时候他还是会把两个一摸一样的都输出，因为这两个对象的内存不一样的 而下面这种赋值，内存一样，才认为是内容一样，才会去重 123456789let vm = new WeakSet();let obj = &#123; a:1, b:2&#125;let obj1 = obj;vm.add(obj);vm.add(obj1);console.log(vm);]]></content>
+      <categories>
+        <category>ES6</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Symbol在对象中作用]]></title>
+    <url>%2F2019%2F08%2F01%2F%E5%9C%A8%E5%AF%B9%E8%B1%A1%E4%B8%AD%E4%BD%9C%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[symbol是ES6中新添加的一种数据类型，他属于原始数据类型，也就是存放在栈中，是按值传递。 首先来看看他的声明方式 1let vm = Symbol(); 我们来看看他的打印，与将他转换成字符串相比，我们可以看到symbol类型的输出的是红体字 123let vm = Symbol('lalala');console.log(vm);console.log(vm.toString); 我们来看看在对象中他用于key值构建的地方,以及在对象中的打印方法 123456let vm = Symbol();let obj = &#123; [vm] ：'liu'&#125;console.log(obj[vm]);//注意这里改变了之前用点方式调用的方式obj[vm] = 'lin';//改变值同样也用中括号 symbol还有一个用处就是他有对数据进行保护的作用 比如，我们用常规的方法来打印对象，我们可以看到对象中每一个元素都被打印出来了 1234let obj = &#123;a:1,b:2&#125;;for(let item in obj)&#123; console.log(obj[item]);&#125; 而如果我们不希望b被打印出来，这个时候就是symbol上场的时候了 1234567891011let obj = &#123;a:1&#125;;let b = Symbol();obj[b] = 2;for(let item in obj)&#123; console.log(obj[item]);&#125;//这个时候b就不被打印出来了//如果我们想打印出来bconsole.log(obj[b]);]]></content>
+      <categories>
+        <category>ES6</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[对象]]></title>
+    <url>%2F2019%2F07%2F25%2F%E5%AF%B9%E8%B1%A1%2F</url>
+    <content type="text"><![CDATA[对象赋值在ES5，如果我们在对象外声明变量，想让他作为对象里的值，我们需要些xx:xx,但在ES6中我们可以直接放进去 1234let a = 1;let b = 2;let ob = &#123;a,b&#125;;console.log(ob); 对象key值构建当key是后台定义的，而不是前台确定的，那当我们使用时只需要一个中括号就可以解决 12345let key = 'a';let ob = &#123; [key]:1&#125;console.log(ob.a); //1 自定义对象方法1234567let ob = &#123; //匿名函数 add:function(a,b)&#123; return a+b; &#125;&#125;console.log(ob.add(1,2)); is比较方法之前比较对象的元素是否相等我们用===，ES6引进了is方法，两者是有区别的，前者是同值相等后者是完全相等 12345678let ob1 = &#123;a:NaN&#125;;let ob2 = &#123;b:NaN&#125;;let ob3 = &#123;c:0&#125;;let ob4 = &#123;d:-0&#125;;console.log(ob1.a===ob2.b);//falseconsole.log(ob3.c===ob4.d);//trueconsole.log(Object.is(ob1.a,ob2.b));//trueconsole.log(Object.is(ob3.c,ob4.d));//true 对象的连接123456let ob1 = &#123;a:NaN&#125;;let ob2 = &#123;b:NaN&#125;;let ob3 = &#123;c:0&#125;;let ob4 = &#123;d:-0&#125;;let ob5 = Object.assign(ob1,ob2,ob3,ob4);console.log(ob5);//&#123;a: NaN, b: NaN, c: 0, d: -0&#125;]]></content>
+      <categories>
+        <category>ES6</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[函数和数组补漏]]></title>
     <url>%2F2019%2F07%2F24%2F%E5%87%BD%E6%95%B0%E5%92%8C%E6%95%B0%E7%BB%84%E8%A1%A5%E6%BC%8F%2F</url>
     <content type="text"><![CDATA[对象的函数解构当后端传来的数据时json对象格式，当我们想要让他作为函数的参数来调用时就可以用到，具体如下所示 123456let json = &#123; a:1, b:2&#125;let func = (&#123;a,b=3&#125;)=&gt;a+b;console.log(func(json));//3 数组的函数解构123let arr =[1,2,3];let func = (a,b,c)=&gt;console.log(a,b,c);func(...arr); //1 2 3 inin的用处主要在于判断对象或数组里是否有元素，先来看看对象 12345let json = &#123; a:1, a:2&#125;console.log('a' in json);//true 关于数组，并不能确定有没有某个元素，但能确定某索引位置是否有元素，而在ES5我们知道，当我们用.length来查看是否有元素时，如果是空就会返回0，这显然是错误的，下面我们来看看ES6 12let arr = ['','',''];console.log(0 in arr);//true 数组循环方法 forEach 这种方法会自动忽略掉空的情况，因此有的时候会出错 12let arr = ['1','2','3'];arr.forEach((val,index)=&gt;console.log(index,val)); //注意顺序不能颠倒了 filter 12let arr = [&apos;1&apos;,&apos;2&apos;,&apos;3&apos;];arr.filter(x=&gt;console.log(x));//1 2 3 some 12let arr = [&apos;1&apos;,&apos;2&apos;,&apos;3&apos;];arr.some(x=&gt;console.log(x));//1 2 3 map map是一种转换方法，详细的以后再说 12let arr = ['1','2','3'];console.log(arr.map(x=&gt;'4')); //4 4 4 将数组转换成字符串首先是toString(),他只能将数组各个元素用逗号隔开 12let arr = ['1','2','3'];console.log(arr.toString()); //1,2,3 如果我们想用其他字符隔开各个元素，就可以使用join() 12let arr = ['1','2','3'];console.log(arr.join('|'));//1|2|3]]></content>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-07-24T02:41:24.826Z</updated>
+  <updated>2019-08-01T09:02:34.715Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -15,6 +15,85 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>map</title>
+    <link href="snowFlakeXue.github.io/2019/08/01/map/"/>
+    <id>snowFlakeXue.github.io/2019/08/01/map/</id>
+    <published>2019-08-01T08:46:35.000Z</published>
+    <updated>2019-08-01T09:02:34.715Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;map也是种数据结构，他与json，set这两种数据结构相比，更灵活，效率更高&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Set和WeakSet</title>
+    <link href="snowFlakeXue.github.io/2019/08/01/Set%E5%92%8CWeakSet/"/>
+    <id>snowFlakeXue.github.io/2019/08/01/Set和WeakSet/</id>
+    <published>2019-08-01T03:02:01.000Z</published>
+    <updated>2019-08-01T05:57:47.963Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Set和WeakSet都是数据结构而不是数据类型，他俩很相似，前者要放数组在他的数据结构里，后者要放对象在他的数据结构里。而放的方式，两者又有细微的差距。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Symbol在对象中作用</title>
+    <link href="snowFlakeXue.github.io/2019/08/01/%E5%9C%A8%E5%AF%B9%E8%B1%A1%E4%B8%AD%E4%BD%9C%E7%94%A8/"/>
+    <id>snowFlakeXue.github.io/2019/08/01/在对象中作用/</id>
+    <published>2019-08-01T01:52:17.000Z</published>
+    <updated>2019-08-01T02:27:53.055Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;symbol是ES6中新添加的一种数据类型，他属于原始数据类型，也就是存放在栈中，是按值传递。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>对象</title>
+    <link href="snowFlakeXue.github.io/2019/07/25/%E5%AF%B9%E8%B1%A1/"/>
+    <id>snowFlakeXue.github.io/2019/07/25/对象/</id>
+    <published>2019-07-25T02:21:58.000Z</published>
+    <updated>2019-08-01T02:27:44.151Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;h2 id=&quot;对象赋值&quot;&gt;&lt;a href=&quot;#对象赋值&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>函数和数组补漏</title>
@@ -71,7 +150,7 @@
     <link href="snowFlakeXue.github.io/2019/07/21/%E6%95%B0%E7%BB%84%E7%9F%A5%E8%AF%86/"/>
     <id>snowFlakeXue.github.io/2019/07/21/数组知识/</id>
     <published>2019-07-21T02:47:56.000Z</published>
-    <updated>2019-07-21T10:46:52.963Z</updated>
+    <updated>2019-08-01T02:27:46.445Z</updated>
     
     <summary type="html">
     
@@ -362,79 +441,6 @@
     <summary type="html">
     
       &lt;p&gt;路由中的钩子函数我们一般只用两种，他们可以写在index.js中，也可写在模板，但是写在index.js中只能写beforeEnter不能写离开的钩子函数，而且在模板里能写两个都要在中间加一个Route,无论哪种书写方式，都要注意是使用三个参数的箭头函数，一定要写next(),它相当于一个开关，有了他才能接着跳转&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="vue-router" scheme="snowFlakeXue.github.io/categories/vue-router/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>mode设置和404处理</title>
-    <link href="snowFlakeXue.github.io/2019/05/28/mode%E8%AE%BE%E7%BD%AE%E5%92%8C404%E5%A4%84%E7%90%86/"/>
-    <id>snowFlakeXue.github.io/2019/05/28/mode设置和404处理/</id>
-    <published>2019-05-28T04:59:02.000Z</published>
-    <updated>2019-05-28T05:23:06.898Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;首先此mode非彼mode，这里的mode 是指在用户浏览器你上url形式的,如果喜欢简洁的就用history,如果要有井号的就用hash全品个人喜好，那就在index.js下引入mode&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mode:&lt;span class=&quot;string&quot;&gt;&#39;history&#39;&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;//或hash&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="vue-router" scheme="snowFlakeXue.github.io/categories/vue-router/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>路由过渡动画</title>
-    <link href="snowFlakeXue.github.io/2019/05/27/%E8%B7%AF%E7%94%B1%E8%BF%87%E6%B8%A1%E5%8A%A8%E7%94%BB/"/>
-    <id>snowFlakeXue.github.io/2019/05/27/路由过渡动画/</id>
-    <published>2019-05-27T07:58:40.000Z</published>
-    <updated>2019-05-28T04:49:14.529Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;路由过渡动画就是在切换路由的时候加点动画效果，这里就是把router-view用transition包起来，然后给他个name叫fade， 然后fade有四个类名，就通过这四个类名给路由加动画即可，更酷炫的效果需要有css和js功底，当然也可以用插件，然后还有个mode属性,他只有两个值，一个是in-out一个是out-in顾名思义就知道什么意思了，这里我们用out-in更好看一点&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="vue-router" scheme="snowFlakeXue.github.io/categories/vue-router/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>alias别名</title>
-    <link href="snowFlakeXue.github.io/2019/05/27/alias%E5%88%AB%E5%90%8D/"/>
-    <id>snowFlakeXue.github.io/2019/05/27/alias别名/</id>
-    <published>2019-05-27T07:42:26.000Z</published>
-    <updated>2019-05-27T07:55:12.102Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;alias别名的作用与redirect的重定向差不多，只不过alias更友好一点，他不会在用户那边地址栏上把url改了&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="vue-router" scheme="snowFlakeXue.github.io/categories/vue-router/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>重定向</title>
-    <link href="snowFlakeXue.github.io/2019/05/27/%E9%87%8D%E5%AE%9A%E5%90%91/"/>
-    <id>snowFlakeXue.github.io/2019/05/27/重定向/</id>
-    <published>2019-05-27T06:45:24.000Z</published>
-    <updated>2019-05-27T07:32:15.388Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;重定向实质上就是在路径不同的情况下我想跳转到同一页面的需求，下面将展示传参数和不穿参数的两种重定向，操作很简单,在index.js中就是把想要定位的路径复制到redirect里&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
