@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-08-01T09:02:34.715Z</updated>
+  <updated>2019-08-27T14:57:30.431Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>day1</title>
+    <link href="snowFlakeXue.github.io/2019/08/27/day1-1/"/>
+    <id>snowFlakeXue.github.io/2019/08/27/day1-1/</id>
+    <published>2019-08-27T14:08:35.000Z</published>
+    <updated>2019-08-27T14:57:30.431Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一·编译原理&quot;&gt;&lt;a href=&quot;#一·编译原理&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="我不知道的javascript" scheme="snowFlakeXue.github.io/categories/%E6%88%91%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84javascript/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>map</title>
@@ -423,24 +447,6 @@
 &lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
         
       
-    
-    </summary>
-    
-      <category term="vue-router" scheme="snowFlakeXue.github.io/categories/vue-router/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>路由中的钩子函数</title>
-    <link href="snowFlakeXue.github.io/2019/05/28/%E8%B7%AF%E7%94%B1%E4%B8%AD%E7%9A%84%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0/"/>
-    <id>snowFlakeXue.github.io/2019/05/28/路由中的钩子函数/</id>
-    <published>2019-05-28T06:21:44.000Z</published>
-    <updated>2019-05-28T06:28:17.169Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;路由中的钩子函数我们一般只用两种，他们可以写在index.js中，也可写在模板，但是写在index.js中只能写beforeEnter不能写离开的钩子函数，而且在模板里能写两个都要在中间加一个Route,无论哪种书写方式，都要注意是使用三个参数的箭头函数，一定要写next(),它相当于一个开关，有了他才能接着跳转&lt;/p&gt;
     
     </summary>
     
