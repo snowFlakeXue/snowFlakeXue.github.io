@@ -359,7 +359,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/08/27/day1-1/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/08/30/词法作用域/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Xue">
@@ -379,7 +379,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/08/27/day1-1/" class="post-title-link" itemprop="url">day1</a>
+                <a href="/2019/08/30/词法作用域/" class="post-title-link" itemprop="url">词法作用域</a>
               
             
           </h1>
@@ -404,12 +404,24 @@
                 
               
 
-              <time title="创建时间：2019-08-27 22:08:35 / 修改时间：22:57:30" itemprop="dateCreated datePublished" datetime="2019-08-27T22:08:35+08:00">2019-08-27</time>
+              <time title="创建时间：2019-08-30 10:06:54" itemprop="dateCreated datePublished" datetime="2019-08-30T10:06:54+08:00">2019-08-30</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-31 08:02:30" itemprop="dateModified" datetime="2019-08-31T08:02:30+08:00">2019-08-31</time>
               
             
           </span>
@@ -463,33 +475,199 @@
 
       
         
+          <p>作用域有两种模型，一种是词法作用域，一种是动态作用域，而js用的就是词法作用域。词法作用域就是在词法化时的作用域，变量及代码块写在哪就是在哪，当词法分析器处理代码时不会改变作用域。<br></p>
+          <!--noindex-->
           
-            <h2 id="一·编译原理"><a href="#一·编译原理" class="headerlink" title="一·编译原理"></a>一·编译原理</h2><p>javascript是一种“解释执行”语言。它跟传统的编译语言编译时间不一样但编译的步骤基本相似且javascript的要更为复杂。因为与其他编译语言不同，他不需要提前进行编译，就导致了他没有太多时间进行优化，他只是在代码执行前进行几毫秒的编译。所以，他就想各种方法来进行性能优化，比如JIT（延迟编译）甚至实施重编译。</p>
-<h2 id="二·3个处理代码的重要角色"><a href="#二·3个处理代码的重要角色" class="headerlink" title="二·3个处理代码的重要角色"></a>二·3个处理代码的重要角色</h2><ol>
-<li>引擎：负责编译和执行全过程的</li>
-<li>编译器：进行语法分析及代码生成等累活</li>
-<li>作用域：收集并维护由所有已声明的标识符组成的一系列查询，并实施一套严格的规则，确定当前代码对标识符的访问权限</li>
-</ol>
-<p>有什么角色知道了，现在就来讲讲他们三个是怎样来编译和执行的，就拿一个简单的代码来说</p>
-<p><code>var a = 2</code></p>
-<p>首先，编译器会看所在作用域是否有a,如果没有它就会生成一个a,接下来他就会生成代码提交给引擎</p>
-<p>然后引擎拿到代码运行时它会去问作用域是否有这个a，如果有它就会把2赋值给a，如果作用域说没有，他就会接着去找，至于怎么找，下面再详细说。如果引擎怎么找也找不到a，他就会抛出一个异常。</p>
-<h2 id="三·LHS与RHS"><a href="#三·LHS与RHS" class="headerlink" title="三·LHS与RHS"></a>三·LHS与RHS</h2><p>要讲的这两个东西是引擎查找是的两种方式，L就是left,R就是right。下面就拿一段代码来具体理解</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> b = a;</span><br><span class="line">    <span class="built_in">console</span>.log(a);</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> c = foo(<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
-<p>LHS是赋值操作的目标是谁（查找的目的是对变量进行赋值），RHS是赋值操作的源头是谁（查找目的是获取变量的值）</p>
-<p>首先c=是赋值操作，所以进行一个LHS，再看调用foo(2)时，因为2是数值而不是变量所以我们不需要去查找他是谁，也就是不需要进行RHS，</p>
-<p>再往下走，这个时候就要来到函数体，a我们不知道，所以要获取，就要对foo()进行RHS，然后传参使2赋值给了a(隐式赋值)，那么a就进行了LHS。</p>
-<p>再往下走,b=a,这是一个赋值操作所以b就是用了LHS，这个时候还是要查找a，那么就又进行了RHS</p>
-<p>接下来需要注意的是，console是个对象，而log是console调用的一个函数,这个时候console是什么我们不知道，所以console要进行RHS，然后还要查找a,所以a也要进行一下RHS</p>
-<p>再往下走，a+b中还是要查找a,b,所以要进行两次RHS</p>
-<h2 id="四·异常"><a href="#四·异常" class="headerlink" title="四·异常"></a>四·异常</h2><p>我们为什么要知道LHS和RHS，就是因为引擎用这两种不同的方式会导致不同的处理方式</p>
-<p>如果RHS查找怎么也找不到，那么它就会抛出一个ReferenceError的异常</p>
-<p>而LHS如果查找不到但是他是在非严格模式下（禁止自动或隐性创建全局变量），那么他就会隐式地创建一个全局变量，如果他在严格模式下，他就会抛出一个TypeError</p>
-<h2 id="五·作用域嵌套"><a href="#五·作用域嵌套" class="headerlink" title="五·作用域嵌套"></a>五·作用域嵌套</h2><p>作用域嵌套其实就是关乎着引擎的查找方式。首先如果引擎在当前作用域没有找到想要的变量，他就会去上一级作用域去找，以此类推，可以把作用域们想象成一栋楼，当前作用域就在一楼，他嵌套的作用域（上级作用域）就以此升高，最高层就是全局变量，引擎也就找到全局变量为止了。</p>
-<p><code>`</code>javascript<br>function foo(a){<br>    console.log(a+b);<br>}<br>var b = 2;<br>foo(2);<br>}</p>
-<p>就拿上面的代码来说，我想用b，但是作用域里没有，他就会去外层去找，这里也就是全局变量b了，结果也就可以正常的执行出来</p>
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/30/词法作用域/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    <div>
+           
+</div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/08/27/什么是作用域/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="snowFlakeXue">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/08/27/什么是作用域/" class="post-title-link" itemprop="url">什么是作用域</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-27 22:08:35" itemprop="dateCreated datePublished" datetime="2019-08-27T22:08:35+08:00">2019-08-27</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-08-30 10:10:53" itemprop="dateModified" datetime="2019-08-30T10:10:53+08:00">2019-08-30</time>
+              
+            
+          </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/我不知道的javascript/" itemprop="url" rel="index"><span itemprop="name">我不知道的javascript</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+    
+      
+      
+
+      
+        
+          <h2 id="一·编译原理"><a href="#一·编译原理" class="headerlink" title="一·编译原理"></a>一·编译原理</h2><p>javascript是一种“解释执行”语言。它跟传统的编译语言编译时间不一样但编译的步骤基本相似且javascript的要更为复杂。因为与其他编译语言不同，他不需要提前进行编译，就导致了他没有太多时间进行优化，他只是在代码执行前进行几毫秒的编译。所以，他就想各种方法来进行性能优化，比如JIT（延迟编译）甚至实施重编译。</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/27/什么是作用域/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1967,177 +2145,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/07/20/字符串操作/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/20/字符串操作/" class="post-title-link" itemprop="url">字符串操作</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-20 17:41:54 / 修改时间：18:22:23" itemprop="dateCreated datePublished" datetime="2019-07-20T17:41:54+08:00">2019-07-20</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ES6/" itemprop="url" rel="index"><span itemprop="name">ES6</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-    
-      
-      
-
-      
-        
-          <p>字符串的操作是很重要的，但ES5的方法容易出错还比较麻烦，ES6的字符串模板，字符串查找，字符串复制就很好的解决了这些问题。</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/07/20/字符串操作/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    <div>
-           
-</div>
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2186,7 +2193,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">71</span>
+                    <span class="site-state-item-count">72</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
