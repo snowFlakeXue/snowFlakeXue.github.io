@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-08-31T00:02:30.657Z</updated>
+  <updated>2019-10-18T07:56:16.290Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -15,6 +15,133 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>进程同步与互斥</title>
+    <link href="snowFlakeXue.github.io/2019/10/18/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E4%B8%8E%E4%BA%92%E6%96%A5/"/>
+    <id>snowFlakeXue.github.io/2019/10/18/进程同步与互斥/</id>
+    <published>2019-10-18T07:22:13.000Z</published>
+    <updated>2019-10-18T07:56:16.290Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;进程同步&quot;&gt;&lt;a href=&quot;#进程同步&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>线程</title>
+    <link href="snowFlakeXue.github.io/2019/10/17/%E7%BA%BF%E7%A8%8B/"/>
+    <id>snowFlakeXue.github.io/2019/10/17/线程/</id>
+    <published>2019-10-17T11:38:32.000Z</published>
+    <updated>2019-10-18T06:49:10.112Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;什么是线程&quot;&gt;&lt;a href=&quot;#什么是线程&quot; class=&quot;headerlink&quot; title=&quot;什么是线程&quot;&gt;&lt;/a&gt;什么是线程&lt;/h2&gt;&lt;p&gt;什么是线程？我们首先得说说为什么要引进线程-&amp;gt;从程序到进程，我们实现了进程并发让我的qq和网易云可以同时运行，但是我想用QQ一边视频，一边打字聊天，一边看QQ空间怎么办呢。QQ这个进程里的代码是顺序执行的，我是不是也得让这些小操作也可以并发执行才行，这个时候就得引出我们的线程了。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>进程</title>
+    <link href="snowFlakeXue.github.io/2019/10/15/%E8%BF%9B%E7%A8%8B/"/>
+    <id>snowFlakeXue.github.io/2019/10/15/进程/</id>
+    <published>2019-10-15T14:30:23.000Z</published>
+    <updated>2019-10-18T06:49:28.954Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;进程的定义-强调动态性&quot;&gt;&lt;a href=&quot;#进程的定义-强调动态性&quot; class=&quot;headerlink&quot; title=&quot;进程的定义(强调动态性)&quot;&gt;&lt;/a&gt;进程的定义(强调动态性)&lt;/h2&gt;&lt;p&gt;进程是能和其他程序并行执行的&lt;font color=&quot;red&quot;&gt;程序段&lt;/font&gt;在某数据集合上的一次运行过程，它是系统资源分配和调度的基本单位。&lt;/p&gt;
+&lt;p&gt;话说为什么要引入进程呢？&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>系统调用</title>
+    <link href="snowFlakeXue.github.io/2019/10/15/%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8/"/>
+    <id>snowFlakeXue.github.io/2019/10/15/系统调用/</id>
+    <published>2019-10-15T13:14:53.000Z</published>
+    <updated>2019-10-15T13:55:46.701Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;什么是系统调用&quot;&gt;&lt;a href=&quot;#什么是系统调用&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>中断和异常</title>
+    <link href="snowFlakeXue.github.io/2019/10/14/%E4%B8%AD%E6%96%AD%E5%92%8C%E5%BC%82%E5%B8%B8/"/>
+    <id>snowFlakeXue.github.io/2019/10/14/中断和异常/</id>
+    <published>2019-10-14T13:37:34.000Z</published>
+    <updated>2019-10-15T13:16:11.958Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;中断机制的诞生&quot;&gt;&lt;a href=&quot;#中断机制的诞生&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>操作系统概述</title>
+    <link href="snowFlakeXue.github.io/2019/10/12/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/"/>
+    <id>snowFlakeXue.github.io/2019/10/12/操作系统概述/</id>
+    <published>2019-10-12T12:24:12.000Z</published>
+    <updated>2019-10-18T06:50:15.851Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;什么是操作系统&quot;&gt;&lt;a href=&quot;#什么是操作系统&quot; class=&quot;headerlink&quot; title=&quot;什么是操作系统&quot;&gt;&lt;/a&gt;什么是操作系统&lt;/h2&gt;&lt;p&gt;  操作系统是指控制和管理整个计算机系统的硬件和软件资源，并合理地组织调度计算机的工作和资源的分配，以提供给用户和其他软件方便的接口和环境，它是计算机系统中最基本的系统软件。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>词法作用域</title>
@@ -293,150 +420,6 @@
     </summary>
     
       <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>环境搭建</title>
-    <link href="snowFlakeXue.github.io/2019/07/17/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
-    <id>snowFlakeXue.github.io/2019/07/17/环境搭建/</id>
-    <published>2019-07-17T05:20:25.000Z</published>
-    <updated>2019-07-18T08:53:49.791Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;ES6有很多新特性简化了一些东西，但是因为还是有浏览器不兼容他，因此环境搭建就包括了将ES6转换成ES5以及简化转换命令&quot;&gt;&lt;a href=&quot;#ES6有很多新特性简化了一些东西，但是因为还是有浏览器不兼容他，因此环境搭建就包括了将ES6转换成ES5以及简化转换命令&quot; class=&quot;headerlink&quot; title=&quot;ES6有很多新特性简化了一些东西，但是因为还是有浏览器不兼容他，因此环境搭建就包括了将ES6转换成ES5以及简化转换命令&quot;&gt;&lt;/a&gt;ES6有很多新特性简化了一些东西，但是因为还是有浏览器不兼容他，因此环境搭建就包括了将ES6转换成ES5以及简化转换命令&lt;/h3&gt;
-    
-    </summary>
-    
-      <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>actions</title>
-    <link href="snowFlakeXue.github.io/2019/06/03/actions/"/>
-    <id>snowFlakeXue.github.io/2019/06/03/actions/</id>
-    <published>2019-06-03T12:32:32.000Z</published>
-    <updated>2019-06-03T13:00:33.199Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;actions虽然功能上和mutations一样都是修改状态的，但mutations是同步的，actions是异步修改状态，那什么是异步，就好像你在网上购物付完款了你就什么不用管了，想做什么做什么，而你买的东西则会被卖家按部就班的操作最后运输到你面前，而同步就好像是你在商场
-        
-      
-    
-    </summary>
-    
-      <category term="vuex" scheme="snowFlakeXue.github.io/categories/vuex/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>getters</title>
-    <link href="snowFlakeXue.github.io/2019/06/03/getters/"/>
-    <id>snowFlakeXue.github.io/2019/06/03/getters/</id>
-    <published>2019-06-03T11:59:34.000Z</published>
-    <updated>2019-06-03T12:31:59.212Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;getters实际上就是对数据进行的一种提前处理加工过滤，就像之前那加减按钮那个例子，我就可以用getters让她每次进行加减之前先加12&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
-        
-      
-    
-    </summary>
-    
-      <category term="vuex" scheme="snowFlakeXue.github.io/categories/vuex/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>mutations修改状态</title>
-    <link href="snowFlakeXue.github.io/2019/06/03/mutations%E4%BF%AE%E6%94%B9%E7%8A%B6%E6%80%81/"/>
-    <id>snowFlakeXue.github.io/2019/06/03/mutations修改状态/</id>
-    <published>2019-06-03T11:10:58.000Z</published>
-    <updated>2019-06-03T11:24:38.287Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;首先说一下传值&lt;/p&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-      <category term="vuex" scheme="snowFlakeXue.github.io/categories/vuex/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>state访问状态对象</title>
-    <link href="snowFlakeXue.github.io/2019/06/02/state%E8%AE%BF%E9%97%AE%E7%8A%B6%E6%80%81%E5%AF%B9%E8%B1%A1/"/>
-    <id>snowFlakeXue.github.io/2019/06/02/state访问状态对象/</id>
-    <published>2019-06-02T11:21:02.000Z</published>
-    <updated>2019-06-02T11:37:52.124Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;在之前的小栗子里虽然已经可以实现功能，但是在接受数据时，那么一大长串很烦，下面就用三种方法可以直接写花括号就能访问，其中第三种是最常用的&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;第一种&lt;/p&gt;
-&lt;figure class=&quot;highlight
-        
-      
-    
-    </summary>
-    
-      <category term="vuex" scheme="snowFlakeXue.github.io/categories/vuex/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>vuex入门</title>
-    <link href="snowFlakeXue.github.io/2019/06/02/vuex%E5%85%A5%E9%97%A8/"/>
-    <id>snowFlakeXue.github.io/2019/06/02/vuex入门/</id>
-    <published>2019-06-02T10:46:28.000Z</published>
-    <updated>2019-06-02T11:05:45.480Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;vuex是专门为vue服务的管理状态的一个东西，也可以说是管理data中需要共用的属性，下面这个小栗子就是个入门，里面的很多东西具体的意思会在后面补充，也许这个栗子做完之后会觉得比以前做的麻烦，但是我们主要是想用一个公共的思想他可以被任意一个component调用&lt;/p&gt;
-
-        
-      
-    
-    </summary>
-    
-      <category term="vuex" scheme="snowFlakeXue.github.io/categories/vuex/"/>
     
     
   </entry>
