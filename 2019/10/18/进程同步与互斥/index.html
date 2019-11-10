@@ -100,18 +100,20 @@
 
 
 
-  <meta name="description" content="进程同步我们知道为了实现并发，进程就有了异步性这个概念，异步性就是以不可预知的速度和方向进行的，但是有的时候我希望各个进程是可以共同合作的，就是有一定顺序的进行，就比方说管道通信，我就想先写再读而不是不知道是先读还是先写，这个时候就要引入进程同步来解决这个问题。 进程同步：有的进程之间需要相互配合地完成工作，各进程的工作推进需要遵循一定的顺序 进程互斥进程互斥就是当一个进程使用某一资源时，其他进程">
+  <meta name="description" content="进程同步我们知道为了实现并发，进程就有了异步性这个概念，异步性就是以不可预知的速度和方向进行的，但是有的时候我希望各个进程是可以共同合作的，就是有一定顺序的进行，就比方说管道通信，我就想先写再读而不是不知道是先读还是先写，这个时候就要引入进程同步来解决这个问题。 进程同步：有的进程之间需要相互配合地完成工作，各进程的工作推进需要遵循一定的顺序">
 <meta property="og:type" content="article">
 <meta property="og:title" content="进程同步与互斥">
 <meta property="og:url" content="snowFlakeXue.github.io/2019/10/18/进程同步与互斥/index.html">
 <meta property="og:site_name" content="snowFlakeXue">
-<meta property="og:description" content="进程同步我们知道为了实现并发，进程就有了异步性这个概念，异步性就是以不可预知的速度和方向进行的，但是有的时候我希望各个进程是可以共同合作的，就是有一定顺序的进行，就比方说管道通信，我就想先写再读而不是不知道是先读还是先写，这个时候就要引入进程同步来解决这个问题。 进程同步：有的进程之间需要相互配合地完成工作，各进程的工作推进需要遵循一定的顺序 进程互斥进程互斥就是当一个进程使用某一资源时，其他进程">
+<meta property="og:description" content="进程同步我们知道为了实现并发，进程就有了异步性这个概念，异步性就是以不可预知的速度和方向进行的，但是有的时候我希望各个进程是可以共同合作的，就是有一定顺序的进行，就比方说管道通信，我就想先写再读而不是不知道是先读还是先写，这个时候就要引入进程同步来解决这个问题。 进程同步：有的进程之间需要相互配合地完成工作，各进程的工作推进需要遵循一定的顺序">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="/2019/10/18/进程同步与互斥/1.jpg">
-<meta property="og:updated_time" content="2019-10-18T07:56:16.290Z">
+<meta property="og:image" content="/2019/10/18/进程同步与互斥/2.jpg">
+<meta property="og:image" content="/2019/10/18/进程同步与互斥/3.jpg">
+<meta property="og:updated_time" content="2019-10-28T05:01:19.209Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="进程同步与互斥">
-<meta name="twitter:description" content="进程同步我们知道为了实现并发，进程就有了异步性这个概念，异步性就是以不可预知的速度和方向进行的，但是有的时候我希望各个进程是可以共同合作的，就是有一定顺序的进行，就比方说管道通信，我就想先写再读而不是不知道是先读还是先写，这个时候就要引入进程同步来解决这个问题。 进程同步：有的进程之间需要相互配合地完成工作，各进程的工作推进需要遵循一定的顺序 进程互斥进程互斥就是当一个进程使用某一资源时，其他进程">
+<meta name="twitter:description" content="进程同步我们知道为了实现并发，进程就有了异步性这个概念，异步性就是以不可预知的速度和方向进行的，但是有的时候我希望各个进程是可以共同合作的，就是有一定顺序的进行，就比方说管道通信，我就想先写再读而不是不知道是先读还是先写，这个时候就要引入进程同步来解决这个问题。 进程同步：有的进程之间需要相互配合地完成工作，各进程的工作推进需要遵循一定的顺序">
 <meta name="twitter:image" content="/2019/10/18/进程同步与互斥/1.jpg">
 
 
@@ -409,12 +411,24 @@
                 
               
 
-              <time title="创建时间：2019-10-18 15:22:13 / 修改时间：15:56:16" itemprop="dateCreated datePublished" datetime="2019-10-18T15:22:13+08:00">2019-10-18</time>
+              <time title="创建时间：2019-10-18 15:22:13" itemprop="dateCreated datePublished" datetime="2019-10-18T15:22:13+08:00">2019-10-18</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-10-28 13:01:19" itemprop="dateModified" datetime="2019-10-28T13:01:19+08:00">2019-10-28</time>
               
             
           </span>
@@ -481,12 +495,12 @@
 
       
         <h2 id="进程同步"><a href="#进程同步" class="headerlink" title="进程同步"></a>进程同步</h2><p>我们知道为了实现并发，进程就有了异步性这个概念，异步性就是以不可预知的速度和方向进行的，但是有的时候我希望各个进程是可以共同合作的，就是有一定顺序的进行，就比方说管道通信，我就想先写再读而不是不知道是先读还是先写，这个时候就要引入进程同步来解决这个问题。</p>
-<p>进程同步：有的进程之间需要相互配合地完成工作，各进程的工作推进需要遵循一定的顺序</p>
+<p>进程同步：有的进程之间需要相互配合地完成工作，各进程的工作推进需要遵循一定的顺序<br><a id="more"></a></p>
 <h2 id="进程互斥"><a href="#进程互斥" class="headerlink" title="进程互斥"></a>进程互斥</h2><p>进程互斥就是当一个进程使用某一资源时，其他进程只能等待，只有当这一进程用完了，将资源释放了，下一进程才能使用，也就是互斥。那某一资源是啥？这就是下面要讲的一个概念——临界资源</p>
 <p>临界资源：一个时间段内只允许一个进程使用的资源，如很多物理设备——打印机，摄像头，此外还有很多变量，数据，内存缓冲区都属于临界资源</p>
 <p>对临界资源的互斥访问，可以在逻辑上分为如下四个部分</p>
 <p><img src="/2019/10/18/进程同步与互斥/1.jpg" alt="互斥"></p>
-<p>进入区：负责检查是否可以进去临界区，若可以进入，则应该设置正在访问链接资源的标志(可以理解为上锁)</p>
+<p>进入区：负责检查是否可以进去临界区，若可以进入，则应该设置正在访问临界资源的标志(可以理解为上锁)</p>
 <p>临界区：访问临界资源的那段代码</p>
 <p>退出区：负责接触正在访问临界资源的标志(可理解为解锁)</p>
 <p>剩余区：做其他处理</p>
@@ -495,6 +509,47 @@
 <p>忙则等待：当已有进程进入临界区时，其他试图进入临界区的进程必须等待</p>
 <p>有限等待：对请求访问的进程，应保证能在有限的时间内进入临界区(不会饥饿)</p>
 <p>让权等待：当进程不能进入临界区时，应立即释放处理机，防止进程忙等待(占用着处理机却不能进临界区而忙碌地等待)</p>
+<h2 id="进程互斥的软件实现方法"><a href="#进程互斥的软件实现方法" class="headerlink" title="进程互斥的软件实现方法"></a>进程互斥的软件实现方法</h2><p>先给出框图，再详细讲</p>
+<p><img src="/2019/10/18/进程同步与互斥/2.jpg" alt="软件实现方法"></p>
+<font color="red">单标志法:</font>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> turn = <span class="number">0</span>;</span><br><span class="line">P0进程：                               P1进程：</span><br><span class="line"><span class="keyword">while</span>(turn!=<span class="number">0</span>);   (<span class="number">1</span>)                 <span class="keyword">while</span>(turn!=<span class="number">1</span>);   (<span class="number">5</span>)  <span class="comment">//进入区</span></span><br><span class="line">critical section; (<span class="number">2</span>)                 critical section; (<span class="number">6</span>)  <span class="comment">//临界区</span></span><br><span class="line">turn = <span class="number">1</span>;         (<span class="number">3</span>)                 turn = <span class="number">0</span>;         (<span class="number">7</span>)  <span class="comment">//退出区</span></span><br><span class="line">remainder section;(<span class="number">4</span>)                 remainder section;(<span class="number">8</span>)  <span class="comment">//剩余区</span></span><br></pre></td></tr></table></figure>
+<p>首先我们来推一下这个方法是怎么实现互斥的，我们定义了turn为0，这个turn就是单标志，即刚开始只允许P0先进入临界区。若P1先上处理器运行，他会一直循环5，直到时间片用完，发生调度，回到P0，P0可以进入临界区，在P0运行过程中，若切换回P1，仍会继续循环在5，只有P0在退出区将turn转为1时，P1才能进临界区，因此可以实现互斥。</p>
+<p>但是我们可以很容易就发现我把TURN 定义成0后，对于临界区的访问，只能是P0-&gt;P1-&gt;P0-&gt;P1…,这样的轮流进入临界区带来的问题就是，当只允许P0进，但P0一直不进，P1想进却进不了，就不满足空闲让进的原则。</p>
+<font color="red">双标志先检查法:</font>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">bool</span> flag[<span class="number">2</span>];  <span class="comment">//表示进入临界区的意愿的数组</span></span><br><span class="line">flag[<span class="number">0</span>]=<span class="literal">false</span>;</span><br><span class="line">flag[<span class="number">1</span>]=<span class="literal">false</span>;</span><br><span class="line">P0进程：                               P1进程：</span><br><span class="line"><span class="keyword">while</span>(flag[<span class="number">1</span>]);   (<span class="number">1</span>)                 <span class="keyword">while</span>(flag[<span class="number">0</span>]);    (<span class="number">5</span>) <span class="comment">//进入区</span></span><br><span class="line">flag[<span class="number">0</span>]=<span class="literal">true</span>;     (<span class="number">2</span>)                 flag[<span class="number">1</span>]=<span class="literal">true</span>;      (<span class="number">6</span>)</span><br><span class="line">critical section; (<span class="number">3</span>)                 critical section;  (<span class="number">7</span>) <span class="comment">//临界区</span></span><br><span class="line">flag[<span class="number">0</span>]=<span class="literal">false</span>;    (<span class="number">4</span>)                 flag[<span class="number">1</span>]=<span class="literal">false</span>;     (<span class="number">8</span>) <span class="comment">//退出区</span></span><br><span class="line">remainder section;                    remainder section;     <span class="comment">//剩余区</span></span><br></pre></td></tr></table></figure>
+<p>flag[0],flag[1]为双标志，谁要是想进先检查对方想不想进，对方想，那他就一直卡在那，直到时间片用完，对方不想，那他就把自己的标志设为true(上锁)，直到他来到退出区将他的标志设为false，别的进程才能用临界区。对比单标志法，这里因为在进入临界区前上了锁就是只有他想进入临界区时才会设置成true,这样就避免了违反空闲让进原则</p>
+<p>但想想要是按照152637这样的顺序进行，产生这种方式的原因是异步性，这样的话就是说P0，P1可以同时进入临界区，违反了忙则等待的原则，导致这种情况的原因就死检查和上锁没有一气呵成，有可能因为进程切换导致这样的结果</p>
+<font color="red">双标志后检查法:</font>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">bool</span> flag[<span class="number">2</span>];  <span class="comment">//表示进入临界区的意愿的数组</span></span><br><span class="line">flag[<span class="number">0</span>]=<span class="literal">false</span>;</span><br><span class="line">flag[<span class="number">1</span>]=<span class="literal">false</span>;</span><br><span class="line">P0进程：                               P1进程：</span><br><span class="line">flag[<span class="number">0</span>]=<span class="literal">true</span>;     (<span class="number">1</span>)                 flag[<span class="number">1</span>]=<span class="literal">true</span>;      (<span class="number">5</span>) <span class="comment">//进入区</span></span><br><span class="line"><span class="keyword">while</span>(flag[<span class="number">1</span>]);   (<span class="number">2</span>)                 <span class="keyword">while</span>(flag[<span class="number">0</span>]);    (<span class="number">6</span>)</span><br><span class="line">critical section; (<span class="number">3</span>)                 critical section;  (<span class="number">7</span>) <span class="comment">//临界区</span></span><br><span class="line">flag[<span class="number">0</span>]=<span class="literal">false</span>;    (<span class="number">4</span>)                 flag[<span class="number">1</span>]=<span class="literal">false</span>;     (<span class="number">8</span>) <span class="comment">//退出区</span></span><br><span class="line">remainder section;                    remainder section;     <span class="comment">//剩余区</span></span><br></pre></td></tr></table></figure>
+<p>对比双标志先检查法可以发现，这个无非就是颠倒了一下顺序，先上锁后检查，这样的话我先上了锁表明我想进，然后另一个要是想进，那我就等待因此的确是避免了同时进入的可能，但是如果我还是因为异步，按照1526的顺序，就会导致谁也进不去，这就违背了空闲让进，和有限等待原则，会因各进程都长期无法访问临界资源而产生饥饿现象。</p>
+<font color="red">Peterson算法:</font>
+
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">bool</span> flag[<span class="number">2</span>];  <span class="comment">//表示进入临界区的意愿的数组</span></span><br><span class="line"><span class="keyword">int</span> turn=<span class="number">0</span>;</span><br><span class="line">flag[<span class="number">0</span>]=<span class="literal">false</span>;</span><br><span class="line">flag[<span class="number">1</span>]=<span class="literal">false</span>;</span><br><span class="line">P0进程：                               P1进程：</span><br><span class="line">flag[<span class="number">0</span>]=<span class="literal">true</span>;     (<span class="number">1</span>)                 flag[<span class="number">1</span>]=<span class="literal">true</span>;     (<span class="number">6</span>)  </span><br><span class="line">turn=<span class="number">1</span>;           (<span class="number">2</span>)                 turn=<span class="number">0</span>;           (<span class="number">7</span>)</span><br><span class="line"><span class="keyword">while</span>(flag[<span class="number">1</span>]&amp;&amp;turn==<span class="number">1</span>);  (<span class="number">3</span>)         <span class="keyword">while</span>(flag[<span class="number">0</span>]&amp;&amp;ruen==<span class="number">0</span>);  (<span class="number">8</span>)</span><br><span class="line">critical section;     (<span class="number">4</span>)             critical section;  (<span class="number">9</span>)</span><br><span class="line">flag[<span class="number">0</span>]=<span class="literal">false</span>;     (<span class="number">5</span>)               flag[<span class="number">1</span>]=<span class="literal">false</span>;      (<span class="number">10</span>)</span><br><span class="line">remainder section;                    remainder section;</span><br></pre></td></tr></table></figure>
+<p>这个算法可以理解成一种孔融让梨的思路，比如说1,6是表明自己想要进临界区，2,7却是我愿意让出临界区，123456或者1623都能满足互斥。</p>
+<p>最后说一下这四个算法都有的一个毛病，就是在他们进行死循环进不了临界区的shihou9，他们都占着处理机，就造成了忙等，也就是违背了让权等待</p>
+<h2 id="进程互斥的硬件实现方法"><a href="#进程互斥的硬件实现方法" class="headerlink" title="进程互斥的硬件实现方法"></a>进程互斥的硬件实现方法</h2><p><img src="/2019/10/18/进程同步与互斥/3.jpg" alt="硬件实现方法"></p>
+<font color="red">中断屏蔽方法:</font>
+
+<p>利用开/关中断指令实现，与原语实现思想相同，即在进程从开始访问临界区到结束访问这中间不允许发生进程切换，因此不能发生两个同时访问临界区的情况</p>
+<p>···</p>
+<p>关中断</p>
+<p>临界区</p>
+<p>开中断</p>
+<p>···</p>
+<p>优点：简单高效</p>
+<p>缺点：不适合多处理机，假如说我处理机1弄了关中断，那处理机1当然不会有问题，别的进程进不了临界区，但是如果我其他的处理机想进入临界区，那因为中断是相对于某个处理机，那么也就是说处理机2上的进程也可以进入处理机1的这个临界区，就没有实现互斥了</p>
+<p>再者，因为开/关中断指令只能运行在核心态，如果让用户态可以随意调用很危险，所以只适用于操作系统内核进程，不适用于用户进程</p>
+<font color="red">TextAndSet指令:</font>
+
+<p>TSL指令是用硬件实现的，执行过程中不允许被中断，将检查和上锁操作一气呵成</p>
+<p>优点：适用于多处理机，实现简单，不用想软件实现方法那样严格检查是否会有逻辑漏洞</p>
+<p>缺点：和软件实现方法一样，可能会出现占用处理机进行死循环的状态，形成忙等待，即不满足让权等待的原则</p>
+<font color="red">Swap指令:</font>
+
+<p>逻辑上与TSL指令类似，优缺点也一样，只不过步骤不太一样。</p>
 
       
     </div>
@@ -544,6 +599,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/28/信号量机制/" rel="prev" title="信号量机制">
+                信号量机制 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -618,7 +677,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">78</span>
+                    <span class="site-state-item-count">94</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -730,7 +789,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#进程同步"><span class="nav-number">1.</span> <span class="nav-text">进程同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程互斥"><span class="nav-number">2.</span> <span class="nav-text">进程互斥</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#进程同步"><span class="nav-number">1.</span> <span class="nav-text">进程同步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程互斥"><span class="nav-number">2.</span> <span class="nav-text">进程互斥</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程互斥的软件实现方法"><span class="nav-number">3.</span> <span class="nav-text">进程互斥的软件实现方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进程互斥的硬件实现方法"><span class="nav-number">4.</span> <span class="nav-text">进程互斥的硬件实现方法</span></a></li></ol></div>
             
 
           </div>

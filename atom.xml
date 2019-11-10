@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-10-18T07:56:16.290Z</updated>
+  <updated>2019-11-10T01:46:39.222Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>进程同步与互斥</title>
-    <link href="snowFlakeXue.github.io/2019/10/18/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E4%B8%8E%E4%BA%92%E6%96%A5/"/>
-    <id>snowFlakeXue.github.io/2019/10/18/进程同步与互斥/</id>
-    <published>2019-10-18T07:22:13.000Z</published>
-    <updated>2019-10-18T07:56:16.290Z</updated>
+    <title>两级页表</title>
+    <link href="snowFlakeXue.github.io/2019/11/06/%E4%B8%A4%E7%BA%A7%E9%A1%B5%E8%A1%A8/"/>
+    <id>snowFlakeXue.github.io/2019/11/06/两级页表/</id>
+    <published>2019-11-06T05:53:30.000Z</published>
+    <updated>2019-11-10T01:46:39.222Z</updated>
     
     <summary type="html">
     
@@ -29,9 +29,332 @@
       
         
         
-          &lt;h2 id=&quot;进程同步&quot;&gt;&lt;a href=&quot;#进程同步&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;分页存储中的页表是单级页表，它有两个很严重的问题&lt;/p&gt;
+&lt;p&gt;1.页表必须连续存放，因此当页表很大时，需要占用很多个连续的页框&lt;/p&gt;
+&lt;p&gt;2.没有必要让整个页表常驻内存，因为进程在一段时间内可能只需要访问某几个特定的页面&lt;br&gt;第二个问题需要用到虚拟技术，以后再说&lt;/
         
       
+    
+    </summary>
+    
+      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>变址机构</title>
+    <link href="snowFlakeXue.github.io/2019/11/06/%E5%8F%98%E5%9D%80%E6%9C%BA%E6%9E%84/"/>
+    <id>snowFlakeXue.github.io/2019/11/06/变址机构/</id>
+    <published>2019-11-06T01:50:02.000Z</published>
+    <updated>2019-11-10T01:46:39.230Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;基本变址机构&quot;&gt;&lt;a href=&quot;#基本变址机构&quot; class=&quot;headerlink&quot; title=&quot;基本变址机构&quot;&gt;&lt;/a&gt;基本变址机构&lt;/h2&gt;&lt;p&gt;基本变址机构(两次访存)解决分页存储地址转换问题的，通常会在系统中放置一个页表寄存器来存放页表在内存中的起始地址F和页表长度M,进程未执行时，页表的始址和页表长度会放在进程控制快中，当进程调度时，操作系统内核会把他们放在页表寄存器里，具体流程看下图&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>动态分区分配算法</title>
+    <link href="snowFlakeXue.github.io/2019/11/05/%E5%8A%A8%E6%80%81%E5%88%86%E5%8C%BA%E5%88%86%E9%85%8D%E7%AE%97%E6%B3%95/"/>
+    <id>snowFlakeXue.github.io/2019/11/05/动态分区分配算法/</id>
+    <published>2019-11-05T07:25:58.000Z</published>
+    <updated>2019-11-06T01:56:27.279Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;动态分区分配算法：在动态分区分配方式中，当很多个空闲分区都能满足要求时，应选择哪个分区&lt;/p&gt;
+&lt;h2 id=&quot;首次适应算法-First-Fit&quot;&gt;&lt;a href=&quot;#首次适应算法-First-Fit&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>内存空间的分配与回收</title>
+    <link href="snowFlakeXue.github.io/2019/11/04/%E5%86%85%E5%AD%98%E7%A9%BA%E9%97%B4%E7%9A%84%E5%88%86%E9%85%8D%E4%B8%8E%E5%9B%9E%E6%94%B6/"/>
+    <id>snowFlakeXue.github.io/2019/11/04/内存空间的分配与回收/</id>
+    <published>2019-11-04T14:30:07.000Z</published>
+    <updated>2019-11-10T01:46:39.223Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;连续分配管理方式&quot;&gt;&lt;a href=&quot;#连续分配管理方式&quot; class=&quot;headerlink&quot; title=&quot;连续分配管理方式&quot;&gt;&lt;/a&gt;连续分配管理方式&lt;/h2&gt;&lt;p&gt;连续分配：指为用户进程分配的必须是一个连续的内存空间&lt;/p&gt;
+&lt;font
+        
+      
+    
+    </summary>
+    
+      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>内存扩充</title>
+    <link href="snowFlakeXue.github.io/2019/11/04/%E5%86%85%E5%AD%98%E6%89%A9%E5%85%85/"/>
+    <id>snowFlakeXue.github.io/2019/11/04/内存扩充/</id>
+    <published>2019-11-04T11:41:35.000Z</published>
+    <updated>2019-11-06T01:56:23.617Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;覆盖与交换是内存扩充的两种方法&lt;/p&gt;
+&lt;h2 id=&quot;覆盖技术&quot;&gt;&lt;a href=&quot;#覆盖技术&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>内存的基础知识</title>
+    <link href="snowFlakeXue.github.io/2019/11/04/%E5%86%85%E5%AD%98%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    <id>snowFlakeXue.github.io/2019/11/04/内存的基础知识/</id>
+    <published>2019-11-04T05:58:50.000Z</published>
+    <updated>2019-11-10T01:46:39.234Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;什么是内存？有何作用&quot;&gt;&lt;a href=&quot;#什么是内存？有何作用&quot; class=&quot;headerlink&quot; title=&quot;什么是内存？有何作用&quot;&gt;&lt;/a&gt;什么是内存？有何作用&lt;/h2&gt;&lt;p&gt;内存是用于存放数据的硬件，程序执行前需先放到内存中才能被CPU处理&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>调度算法</title>
+    <link href="snowFlakeXue.github.io/2019/11/03/%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95/"/>
+    <id>snowFlakeXue.github.io/2019/11/03/调度算法/</id>
+    <published>2019-11-03T13:29:44.000Z</published>
+    <updated>2019-11-04T06:58:04.074Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;先来先服务算法-FCFS-First-Come-First-Serve-考虑等待时间&quot;&gt;&lt;a href=&quot;#先来先服务算法-FCFS-First-Come-First-Serve-考虑等待时间&quot; class=&quot;headerlink&quot; title=&quot;先来先服务算法(FCFS,First Come First Serve)(考虑等待时间)&quot;&gt;&lt;/a&gt;先来先服务算法(FCFS,First Come First Serve)(考虑等待时间)&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/2019/11/03/调度算法/1.jpg&quot; alt=&quot;FCFS&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>调度算法的评价指标</title>
+    <link href="snowFlakeXue.github.io/2019/10/31/%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95%E7%9A%84%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/"/>
+    <id>snowFlakeXue.github.io/2019/10/31/调度算法的评价指标/</id>
+    <published>2019-10-31T05:35:20.000Z</published>
+    <updated>2019-11-04T06:58:04.053Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;相对于操作系统则看重平均，就是除以作业数&lt;/p&gt;
+&lt;h2 id=&quot;CPU利用率-CPU贵，希望他利用率高一点&quot;&gt;&lt;a href=&quot;#CPU利用率-CPU贵，希望他利用率高一点&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>进程调度</title>
+    <link href="snowFlakeXue.github.io/2019/10/31/%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6/"/>
+    <id>snowFlakeXue.github.io/2019/10/31/进程调度/</id>
+    <published>2019-10-31T03:06:32.000Z</published>
+    <updated>2019-10-31T05:34:31.843Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;进程调度的时机&quot;&gt;&lt;a href=&quot;#进程调度的时机&quot; class=&quot;headerlink&quot; title=&quot;进程调度的时机&quot;&gt;&lt;/a&gt;进程调度的时机&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/2019/10/31/进程调度/1.jpg&quot; alt=&quot;时机&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>处理机调度的概念和层次</title>
+    <link href="snowFlakeXue.github.io/2019/10/31/%E5%A4%84%E7%90%86%E6%9C%BA%E8%B0%83%E5%BA%A6%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E5%B1%82%E6%AC%A1/"/>
+    <id>snowFlakeXue.github.io/2019/10/31/处理机调度的概念和层次/</id>
+    <published>2019-10-31T01:14:23.000Z</published>
+    <updated>2019-10-31T03:04:09.907Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;调度的基本概念&quot;&gt;&lt;a href=&quot;#调度的基本概念&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>哲学家进餐问题</title>
+    <link href="snowFlakeXue.github.io/2019/10/31/%E5%93%B2%E5%AD%A6%E5%AE%B6%E8%BF%9B%E9%A4%90%E9%97%AE%E9%A2%98/"/>
+    <id>snowFlakeXue.github.io/2019/10/31/哲学家进餐问题/</id>
+    <published>2019-10-31T00:24:20.000Z</published>
+    <updated>2019-10-31T01:05:13.398Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;问题描述：在一张圆桌上坐着5位哲学家，在每两位哲学家中间放一只筷子，桌子中间是一碗米饭，哲学家只要两个动作，要么思考，要么吃饭，但哲学家只有拿起两只筷子才能正常吃饭，如果筷子在别人手里，这位哲学家就被阻塞，当进餐完毕之后，放下筷子继续思考&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>吸烟者问题</title>
+    <link href="snowFlakeXue.github.io/2019/10/30/%E5%90%B8%E7%83%9F%E8%80%85%E9%97%AE%E9%A2%98/"/>
+    <id>snowFlakeXue.github.io/2019/10/30/吸烟者问题/</id>
+    <published>2019-10-30T04:08:41.000Z</published>
+    <updated>2019-10-30T05:23:01.080Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;问题描述：假设系统中有三个抽烟者进程和一个供应者进程。每个抽烟者不停地卷烟并抽掉它，但是要卷起一支烟，抽烟者需要三种材料：烟草，纸和胶水，三个抽烟者中，第一个拥有烟草，第二个拥有纸，第三个拥有胶水，供应者无限地提供三种材料，供应者每次将两种材料放桌子上，拥有剩下那种材料的抽烟者卷一根烟并抽掉它，并给供应者进程一个信号告诉他完成了，供应者就会放另外两种材料到桌子上，这个过程一直重复(让三个抽烟者轮流抽烟)&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>读者写者问题</title>
+    <link href="snowFlakeXue.github.io/2019/10/30/%E8%AF%BB%E8%80%85%E5%86%99%E8%80%85%E9%97%AE%E9%A2%98/"/>
+    <id>snowFlakeXue.github.io/2019/10/30/读者写者问题/</id>
+    <published>2019-10-30T03:18:08.000Z</published>
+    <updated>2019-10-31T00:29:41.488Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;问题描述：有读者和写者两组并发进程，共享一个文件。&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>多消费者-多生产者问题</title>
+    <link href="snowFlakeXue.github.io/2019/10/30/%E5%A4%9A%E6%B6%88%E8%B4%B9%E8%80%85-%E5%A4%9A%E7%94%9F%E4%BA%A7%E8%80%85%E9%97%AE%E9%A2%98/"/>
+    <id>snowFlakeXue.github.io/2019/10/30/多消费者-多生产者问题/</id>
+    <published>2019-10-29T22:15:11.000Z</published>
+    <updated>2019-10-30T03:14:18.470Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;先给出问题背景：桌子上有一个盘子，每次只能向其中放入一个水果，爸爸专向盘子里放苹果，妈妈专向盘子里放橘子，儿子专等着吃盘子里的橘子，女儿专等着吃盘子里的苹果。只有字盘子是空的时候，爸爸或妈妈才能向盘子里放水果；只有在盘子里有自己想要的水果时，儿子或女儿才能取出盘子里的水果吃掉。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>生产者-消费者问题</title>
+    <link href="snowFlakeXue.github.io/2019/10/29/%E7%94%9F%E4%BA%A7%E8%80%85-%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98/"/>
+    <id>snowFlakeXue.github.io/2019/10/29/生产者-消费者问题/</id>
+    <published>2019-10-28T22:40:07.000Z</published>
+    <updated>2019-10-29T06:43:12.463Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;所谓生产者-消费者问题实际上就是有一个缓冲区，生产者生产好了放进去，消费者可以从缓冲区中取出来产品用，但是需要注意的是肯定是要保证各进程都是互斥的，生产者和消费者要互斥不用多说，假设现在有两个生产者想要把产品放进缓冲区，如果都想放在同一个地方怎么办，因此一定要保证互斥性，那互斥的初始信号量是1，因此我们要设置一个互斥信号量 &lt;code&gt;semaphore mutex = 1;&lt;/code&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>信号量机制</title>
+    <link href="snowFlakeXue.github.io/2019/10/28/%E4%BF%A1%E5%8F%B7%E9%87%8F%E6%9C%BA%E5%88%B6/"/>
+    <id>snowFlakeXue.github.io/2019/10/28/信号量机制/</id>
+    <published>2019-10-28T05:02:13.000Z</published>
+    <updated>2019-10-28T11:55:11.134Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;为啥要引入信号量机制，关于实现进程互斥我们有四种软件实现方法，三种硬件实现方法，但是要么就是不能让上锁和检查一气呵成出现问题，要么就是上述所有方法都有的一个通病：不能实现让权等待。那么，就是信号量机制诞生的意义啦。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>进程同步与互斥</title>
+    <link href="snowFlakeXue.github.io/2019/10/18/%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E4%B8%8E%E4%BA%92%E6%96%A5/"/>
+    <id>snowFlakeXue.github.io/2019/10/18/进程同步与互斥/</id>
+    <published>2019-10-18T07:22:13.000Z</published>
+    <updated>2019-10-28T05:01:19.209Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;进程同步&quot;&gt;&lt;a href=&quot;#进程同步&quot; class=&quot;headerlink&quot; title=&quot;进程同步&quot;&gt;&lt;/a&gt;进程同步&lt;/h2&gt;&lt;p&gt;我们知道为了实现并发，进程就有了异步性这个概念，异步性就是以不可预知的速度和方向进行的，但是有的时候我希望各个进程是可以共同合作的，就是有一定顺序的进行，就比方说管道通信，我就想先写再读而不是不知道是先读还是先写，这个时候就要引入进程同步来解决这个问题。&lt;/p&gt;
+&lt;p&gt;进程同步：有的进程之间需要相互配合地完成工作，各进程的工作推进需要遵循一定的顺序&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -97,329 +420,6 @@
     </summary>
     
       <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>中断和异常</title>
-    <link href="snowFlakeXue.github.io/2019/10/14/%E4%B8%AD%E6%96%AD%E5%92%8C%E5%BC%82%E5%B8%B8/"/>
-    <id>snowFlakeXue.github.io/2019/10/14/中断和异常/</id>
-    <published>2019-10-14T13:37:34.000Z</published>
-    <updated>2019-10-15T13:16:11.958Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;中断机制的诞生&quot;&gt;&lt;a href=&quot;#中断机制的诞生&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>操作系统概述</title>
-    <link href="snowFlakeXue.github.io/2019/10/12/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/"/>
-    <id>snowFlakeXue.github.io/2019/10/12/操作系统概述/</id>
-    <published>2019-10-12T12:24:12.000Z</published>
-    <updated>2019-10-18T06:50:15.851Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;什么是操作系统&quot;&gt;&lt;a href=&quot;#什么是操作系统&quot; class=&quot;headerlink&quot; title=&quot;什么是操作系统&quot;&gt;&lt;/a&gt;什么是操作系统&lt;/h2&gt;&lt;p&gt;  操作系统是指控制和管理整个计算机系统的硬件和软件资源，并合理地组织调度计算机的工作和资源的分配，以提供给用户和其他软件方便的接口和环境，它是计算机系统中最基本的系统软件。&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>词法作用域</title>
-    <link href="snowFlakeXue.github.io/2019/08/30/%E8%AF%8D%E6%B3%95%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
-    <id>snowFlakeXue.github.io/2019/08/30/词法作用域/</id>
-    <published>2019-08-30T02:06:54.000Z</published>
-    <updated>2019-08-31T00:02:30.657Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;作用域有两种模型，一种是词法作用域，一种是动态作用域，而js用的就是词法作用域。词法作用域就是在词法化时的作用域，变量及代码块写在哪就是在哪，当词法分析器处理代码时不会改变作用域。&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="我不知道的javascript" scheme="snowFlakeXue.github.io/categories/%E6%88%91%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84javascript/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>什么是作用域</title>
-    <link href="snowFlakeXue.github.io/2019/08/27/%E4%BB%80%E4%B9%88%E6%98%AF%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
-    <id>snowFlakeXue.github.io/2019/08/27/什么是作用域/</id>
-    <published>2019-08-27T14:08:35.000Z</published>
-    <updated>2019-08-30T02:10:53.840Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;一·编译原理&quot;&gt;&lt;a href=&quot;#一·编译原理&quot; class=&quot;headerlink&quot; title=&quot;一·编译原理&quot;&gt;&lt;/a&gt;一·编译原理&lt;/h2&gt;&lt;p&gt;javascript是一种“解释执行”语言。它跟传统的编译语言编译时间不一样但编译的步骤基本相似且javascript的要更为复杂。因为与其他编译语言不同，他不需要提前进行编译，就导致了他没有太多时间进行优化，他只是在代码执行前进行几毫秒的编译。所以，他就想各种方法来进行性能优化，比如JIT（延迟编译）甚至实施重编译。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="我不知道的javascript" scheme="snowFlakeXue.github.io/categories/%E6%88%91%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84javascript/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>map</title>
-    <link href="snowFlakeXue.github.io/2019/08/01/map/"/>
-    <id>snowFlakeXue.github.io/2019/08/01/map/</id>
-    <published>2019-08-01T08:46:35.000Z</published>
-    <updated>2019-08-01T09:02:34.715Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;map也是种数据结构，他与json，set这两种数据结构相比，更灵活，效率更高&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Set和WeakSet</title>
-    <link href="snowFlakeXue.github.io/2019/08/01/Set%E5%92%8CWeakSet/"/>
-    <id>snowFlakeXue.github.io/2019/08/01/Set和WeakSet/</id>
-    <published>2019-08-01T03:02:01.000Z</published>
-    <updated>2019-08-01T05:57:47.963Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Set和WeakSet都是数据结构而不是数据类型，他俩很相似，前者要放数组在他的数据结构里，后者要放对象在他的数据结构里。而放的方式，两者又有细微的差距。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Symbol在对象中作用</title>
-    <link href="snowFlakeXue.github.io/2019/08/01/%E5%9C%A8%E5%AF%B9%E8%B1%A1%E4%B8%AD%E4%BD%9C%E7%94%A8/"/>
-    <id>snowFlakeXue.github.io/2019/08/01/在对象中作用/</id>
-    <published>2019-08-01T01:52:17.000Z</published>
-    <updated>2019-08-01T02:27:53.055Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;symbol是ES6中新添加的一种数据类型，他属于原始数据类型，也就是存放在栈中，是按值传递。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>对象</title>
-    <link href="snowFlakeXue.github.io/2019/07/25/%E5%AF%B9%E8%B1%A1/"/>
-    <id>snowFlakeXue.github.io/2019/07/25/对象/</id>
-    <published>2019-07-25T02:21:58.000Z</published>
-    <updated>2019-08-01T02:27:44.151Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;对象赋值&quot;&gt;&lt;a href=&quot;#对象赋值&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>函数和数组补漏</title>
-    <link href="snowFlakeXue.github.io/2019/07/24/%E5%87%BD%E6%95%B0%E5%92%8C%E6%95%B0%E7%BB%84%E8%A1%A5%E6%BC%8F/"/>
-    <id>snowFlakeXue.github.io/2019/07/24/函数和数组补漏/</id>
-    <published>2019-07-24T01:39:01.000Z</published>
-    <updated>2019-07-24T02:41:24.826Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;h2 id=&quot;对象的函数解构&quot;&gt;&lt;a href=&quot;#对象的函数解构&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>箭头函数和扩展</title>
-    <link href="snowFlakeXue.github.io/2019/07/23/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E5%92%8C%E6%89%A9%E5%B1%95/"/>
-    <id>snowFlakeXue.github.io/2019/07/23/箭头函数和扩展/</id>
-    <published>2019-07-23T04:01:45.000Z</published>
-    <updated>2019-07-23T04:52:51.299Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;默认值&quot;&gt;&lt;a href=&quot;#默认值&quot; class=&quot;headerlink&quot; title=&quot;默认值&quot;&gt;&lt;/a&gt;默认值&lt;/h2&gt;&lt;p&gt;在ES6中给我们提供了可以在函数参数中使用默认值的操作，在学习箭头函数之前就先用ES5方法写函数&lt;/p&gt;
-&lt;figure
-        
-      
-    
-    </summary>
-    
-      <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数组知识</title>
-    <link href="snowFlakeXue.github.io/2019/07/21/%E6%95%B0%E7%BB%84%E7%9F%A5%E8%AF%86/"/>
-    <id>snowFlakeXue.github.io/2019/07/21/数组知识/</id>
-    <published>2019-07-21T02:47:56.000Z</published>
-    <updated>2019-08-01T02:27:46.445Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;在ES6中新增了一些数组方法来简化代码量。ES6把所有对数组的操作都归结与Array.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&quot;json数组格式转换&quot;&gt;&lt;a href=&quot;#json数组格式转换&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数字的操作</title>
-    <link href="snowFlakeXue.github.io/2019/07/20/%E6%95%B0%E5%AD%97%E7%9A%84%E6%93%8D%E4%BD%9C/"/>
-    <id>snowFlakeXue.github.io/2019/07/20/数字的操作/</id>
-    <published>2019-07-20T12:50:38.000Z</published>
-    <updated>2019-07-20T13:18:08.993Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;ES6中将数字的方法都用Number.来开始，因为这样随着以后的完善可以扩展出很多但是又都归结于Number.下面先回顾下二进制，八进制，再介绍些可以直接用的很方便的方法&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>字符串操作</title>
-    <link href="snowFlakeXue.github.io/2019/07/20/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/"/>
-    <id>snowFlakeXue.github.io/2019/07/20/字符串操作/</id>
-    <published>2019-07-20T09:41:54.000Z</published>
-    <updated>2019-07-20T10:22:23.626Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;字符串的操作是很重要的，但ES5的方法容易出错还比较麻烦，ES6的字符串模板，字符串查找，字符串复制就很好的解决了这些问题。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>扩展运算符和rest运算符</title>
-    <link href="snowFlakeXue.github.io/2019/07/20/%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8Crest%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
-    <id>snowFlakeXue.github.io/2019/07/20/扩展运算符和rest运算符/</id>
-    <published>2019-07-20T02:57:55.000Z</published>
-    <updated>2019-07-20T09:07:41.457Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;扩展运算符和rest运算符都是三个点…,可以当做没什么区别，但各有各的用处。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>变量的解构赋值</title>
-    <link href="snowFlakeXue.github.io/2019/07/19/%E5%8F%98%E9%87%8F%E7%9A%84%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/"/>
-    <id>snowFlakeXue.github.io/2019/07/19/变量的解构赋值/</id>
-    <published>2019-07-19T09:36:47.000Z</published>
-    <updated>2019-07-19T11:14:23.214Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;解构赋值就是把变量（数组，对象，字符串中的元素拿出来）-&amp;gt;解构，再赋值，应用很多，还在初学阶段就只是把它结构出来打印下来还不会应用&lt;br&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>声明方式</title>
-    <link href="snowFlakeXue.github.io/2019/07/18/%E5%A3%B0%E6%98%8E%E6%96%B9%E5%BC%8F/"/>
-    <id>snowFlakeXue.github.io/2019/07/18/声明方式/</id>
-    <published>2019-07-18T08:21:28.000Z</published>
-    <updated>2019-07-18T08:54:04.853Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在ES5中声明变量只有var一种形式，是局部啊还是全局啊很麻烦去区别。ES6就将声明方式升级了那么一下子，全局用var，局部用let,常量用const&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="ES6" scheme="snowFlakeXue.github.io/categories/ES6/"/>
     
     
   </entry>

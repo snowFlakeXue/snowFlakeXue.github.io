@@ -359,7 +359,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/25/实例入门/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/06/02/state访问状态对象/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Xue">
@@ -379,7 +379,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/05/25/实例入门/" class="post-title-link" itemprop="url">实例入门</a>
+                <a href="/2019/06/02/state访问状态对象/" class="post-title-link" itemprop="url">state访问状态对象</a>
               
             
           </h1>
@@ -404,7 +404,7 @@
                 
               
 
-              <time title="创建时间：2019-05-25 14:35:18 / 修改时间：14:50:13" itemprop="dateCreated datePublished" datetime="2019-05-25T14:35:18+08:00">2019-05-25</time>
+              <time title="创建时间：2019-06-02 19:21:02 / 修改时间：19:37:52" itemprop="dateCreated datePublished" datetime="2019-06-02T19:21:02+08:00">2019-06-02</time>
             
 
             
@@ -426,7 +426,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vuex/" itemprop="url" rel="index"><span itemprop="name">vuex</span></a></span>
 
                 
                 
@@ -463,11 +463,534 @@
 
       
         
-          <p>实例就是在构造器外部操作构造器内部的属性和方法，他让Vue可以和其他框架一起使用<br></p>
+          
+            <p>在之前的小栗子里虽然已经可以实现功能，但是在接受数据时，那么一大长串很烦，下面就用三种方法可以直接写花括号就能访问，其中第三种是最常用的</p>
+<hr>
+<p>第一种</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">computed:&#123;</span><br><span class="line">    <span class="comment">//这是es6语法，就是个函数</span></span><br><span class="line">             count()&#123;</span><br><span class="line">                 <span class="keyword">return</span> <span class="keyword">this</span>.$store.state.count</span><br><span class="line">             &#125;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+<p>第二种</p>
+<p>先引入mapState</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;mapState&#125; <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line"><span class="comment">//注意一定不能忘了花括号</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//对象&#123;&#125;</span></span><br><span class="line">computed:mapState(&#123;</span><br><span class="line">    <span class="comment">//es6中的箭头函数</span></span><br><span class="line">            count:<span class="function"><span class="params">state</span>=&gt;</span>state.count</span><br><span class="line">         &#125;)</span><br></pre></td></tr></table></figure>
+<p>第三种,采用数组形式[]，同样也要先引入mapState</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">computed:mapState([<span class="string">'count'</span>])</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+    <div>
+           
+</div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/06/02/vuex入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="snowFlakeXue">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/06/02/vuex入门/" class="post-title-link" itemprop="url">vuex入门</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-02 18:46:28 / 修改时间：19:05:45" itemprop="dateCreated datePublished" datetime="2019-06-02T18:46:28+08:00">2019-06-02</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vuex/" itemprop="url" rel="index"><span itemprop="name">vuex</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+    
+      
+      
+
+      
+        
+          
+            <p>vuex是专门为vue服务的管理状态的一个东西，也可以说是管理data中需要共用的属性，下面这个小栗子就是个入门，里面的很多东西具体的意思会在后面补充，也许这个栗子做完之后会觉得比以前做的麻烦，但是我们主要是想用一个公共的思想他可以被任意一个component调用</p>
+<hr>
+<p>怎么安装vuex就不说了，首先在src下建一个vuex文件夹，在它下面建一个store.js来做仓库，以后我们主要就在这个下面引入vuex的操作，剑豪之后首先引入vue和vuex</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</span><br><span class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span>;</span><br></pre></td></tr></table></figure>
+<p>再加一行代码就可以使用vuex了</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.use(Vuex);</span><br></pre></td></tr></table></figure>
+<p>在仓库中放共用的数据，state也可以说是状态</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> state = &#123;</span><br><span class="line">    count:<span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>加两个方法，这里就放在可修改的mutations里</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> mutations = &#123;</span><br><span class="line">    add(state)&#123;</span><br><span class="line">       state.count++</span><br><span class="line">    &#125;,</span><br><span class="line">    reduce(state)&#123;</span><br><span class="line">       state.count--</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>暴露出去</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">    state,</span><br><span class="line">    mutations</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>要注意mutations是固定写法</p>
+<p>下面就要在想应用vuex的组件里动手了</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123;message&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">hr</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;$store.state.count&#125;&#125;<span class="tag">&lt;/<span class="name">P</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"$store.commit('add')"</span>&gt;</span>+<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"$store.commit</span></span></span><br><span class="line"><span class="tag"><span class="string">    //注意必须写单引号才行</span></span></span><br><span class="line"><span class="tag"><span class="string">    ('reduce')"</span>&gt;</span>-<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>注意调用的写法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">   <span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'@/vuex/store'</span></span><br><span class="line">   <span class="comment">//注意是写在暴露前面的</span></span><br><span class="line">   <span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">       name:<span class="string">'Hi1'</span>,</span><br><span class="line">       data()&#123;</span><br><span class="line">           <span class="keyword">return</span>&#123;</span><br><span class="line">               message:<span class="string">'Hello Vuex!'</span></span><br><span class="line">           &#125;</span><br><span class="line">        &#125;,</span><br><span class="line">        store</span><br><span class="line">        <span class="comment">//在data后</span></span><br><span class="line">   &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+    <div>
+           
+</div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/28/编程式导航/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="snowFlakeXue">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/28/编程式导航/" class="post-title-link" itemprop="url">编程式导航</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-28 14:41:26 / 修改时间：14:50:19" itemprop="dateCreated datePublished" datetime="2019-05-28T14:41:26+08:00">2019-05-28</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vue-router/" itemprop="url" rel="index"><span itemprop="name">vue-router</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+    
+      
+      
+
+      
+        
+          
+            <p>编程式导航就是取代router-link方法来写导航，他是运用javascript逻辑来写，这里常用的就是前进后退到某一页</p>
+<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"goForward"</span>&gt;</span>前进<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"goBack"</span>&gt;</span>后退<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"goHome"</span>&gt;</span>回首页<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">methods:&#123;</span><br><span class="line">   goForward:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">     <span class="keyword">this</span>.$router.go(<span class="number">1</span>);</span><br><span class="line">   &#125;,</span><br><span class="line">    goBack:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">     <span class="keyword">this</span>.$router.go(<span class="number">-1</span>);</span><br><span class="line">   &#125;,</span><br><span class="line">   goHome:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">     <span class="keyword">this</span>.$router.push(<span class="string">'/'</span>);</span><br><span class="line">     <span class="comment">//注意这里是push不是go了，然后里面写什么路径就能跳到哪了</span></span><br><span class="line">   &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+    <div>
+           
+</div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/28/路由中的钩子函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="snowFlakeXue">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/28/路由中的钩子函数/" class="post-title-link" itemprop="url">路由中的钩子函数</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-28 14:21:44 / 修改时间：14:28:17" itemprop="dateCreated datePublished" datetime="2019-05-28T14:21:44+08:00">2019-05-28</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vue-router/" itemprop="url" rel="index"><span itemprop="name">vue-router</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+    
+      
+      
+
+      
+        
+          <p>路由中的钩子函数我们一般只用两种，他们可以写在index.js中，也可写在模板，但是写在index.js中只能写beforeEnter不能写离开的钩子函数，而且在模板里能写两个都要在中间加一个Route,无论哪种书写方式，都要注意是使用三个参数的箭头函数，一定要写next(),它相当于一个开关，有了他才能接着跳转</p>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/05/25/实例入门/#more" rel="contents">
+              <a class="btn" href="/2019/05/28/路由中的钩子函数/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -530,7 +1053,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/25/delimiters选项/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/28/mode设置和404处理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Xue">
@@ -550,7 +1073,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/05/25/delimiters选项/" class="post-title-link" itemprop="url">delimiters选项</a>
+                <a href="/2019/05/28/mode设置和404处理/" class="post-title-link" itemprop="url">mode设置和404处理</a>
               
             
           </h1>
@@ -575,7 +1098,7 @@
                 
               
 
-              <time title="创建时间：2019-05-25 13:51:42 / 修改时间：13:55:19" itemprop="dateCreated datePublished" datetime="2019-05-25T13:51:42+08:00">2019-05-25</time>
+              <time title="创建时间：2019-05-28 12:59:02 / 修改时间：13:23:06" itemprop="dateCreated datePublished" datetime="2019-05-28T12:59:02+08:00">2019-05-28</time>
             
 
             
@@ -597,7 +1120,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vue-router/" itemprop="url" rel="index"><span itemprop="name">vue-router</span></a></span>
 
                 
                 
@@ -634,11 +1157,12 @@
 
       
         
-          <p>delimiters是用在当我们想修改一些东西比如我不想用花括号来绑定值时使用,他一般在数组里有两个元素，第一个是改变后的前面的，另一个是改变后后面的部分<br></p>
+          <p>首先此mode非彼mode，这里的mode 是指在用户浏览器你上url形式的,如果喜欢简洁的就用history,如果要有井号的就用hash全品个人喜好，那就在index.js下引入mode</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mode:<span class="string">'history'</span><span class="comment">//或hash</span></span><br></pre></td></tr></table></figure>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/05/25/delimiters选项/#more" rel="contents">
+              <a class="btn" href="/2019/05/28/mode设置和404处理/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -701,7 +1225,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/25/extends选项/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/27/路由过渡动画/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Xue">
@@ -721,7 +1245,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/05/25/extends选项/" class="post-title-link" itemprop="url">extends选项</a>
+                <a href="/2019/05/27/路由过渡动画/" class="post-title-link" itemprop="url">路由过渡动画</a>
               
             
           </h1>
@@ -746,517 +1270,7 @@
                 
               
 
-              <time title="创建时间：2019-05-25 13:46:09 / 修改时间：13:50:51" itemprop="dateCreated datePublished" datetime="2019-05-25T13:46:09+08:00">2019-05-25</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-    
-      
-      
-
-      
-        
-          <p>extends方法和mixins差不多，是个扩展选项，只是在构造器里写的时候他是个对象（只能有一个对象），而mixins可以写一个数组<br></p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/05/25/extends选项/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    <div>
-           
-</div>
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/25/mixins选项/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/25/mixins选项/" class="post-title-link" itemprop="url">mixins选项</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-25 11:50:50 / 修改时间：13:26:51" itemprop="dateCreated datePublished" datetime="2019-05-25T11:50:50+08:00">2019-05-25</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-    
-      
-      
-
-      
-        
-          
-            <p>mixins是混入选项操作，一般用于在你写完构造器后想加些东西却不想污染构造器时使用，一种是当很多地方需要用时作为全局的使用，随时可以调用，同时下面的栗子中构造器原生的updated和构造器内的和全局的还有顺序规则，需要注意的是如果构造器内的mixin的名和构造器内方法的名字重了，就不存mixin了</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;count&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"add"</span>&gt;</span>增加<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="comment">//全局的</span></span></span><br><span class="line"><span class="undefined">        Vue.mixin(&#123;</span></span><br><span class="line"><span class="javascript">            updated:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(<span class="string">'全局mixin'</span>)</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">        &#125;)</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> addLog = &#123;</span></span><br><span class="line"><span class="javascript">            updated:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">console</span>.log(<span class="string">'mixin'</span>)</span></span><br><span class="line"><span class="undefined">            &#125;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">            el:<span class="string">'#app'</span>,</span></span><br><span class="line"><span class="undefined">            data:&#123;</span></span><br><span class="line"><span class="undefined">                count:1</span></span><br><span class="line"><span class="undefined">           &#125;,</span></span><br><span class="line"><span class="undefined">            methods:&#123;</span></span><br><span class="line"><span class="javascript">               add:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">                   <span class="keyword">this</span>.count++;</span></span><br><span class="line"><span class="undefined">               &#125;</span></span><br><span class="line"><span class="undefined">           &#125;,</span></span><br><span class="line"><span class="javascript">           <span class="comment">//原生</span></span></span><br><span class="line"><span class="javascript">           updated:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">               <span class="built_in">console</span>.log(<span class="string">'原生'</span>)</span></span><br><span class="line"><span class="undefined">           &#125;,</span></span><br><span class="line"><span class="javascript">           <span class="comment">//构造器内</span></span></span><br><span class="line"><span class="undefined">           mixins:[addLog]</span></span><br><span class="line"><span class="undefined">        &#125;)</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>顺序：全局 构造器内 原生</p>
-<p><img src="/2019/05/25/mixins选项/1.jpg" alt="顺序"></p>
-
-          
-        
-      
-    </div>
-
-    
-    <div>
-           
-</div>
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/25/watch选项/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/25/watch选项/" class="post-title-link" itemprop="url">watch选项</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-25 11:03:55 / 修改时间：11:13:06" itemprop="dateCreated datePublished" datetime="2019-05-25T11:03:55+08:00">2019-05-25</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-    
-      
-      
-
-      
-        
-          <p>watch选项用于监控数据变化，一种是直接在构造器内用watch选项，一种是为了避免耦合度在构造器外使用<br></p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/05/25/watch选项/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    <div>
-           
-</div>
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/24/methods选项/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/24/methods选项/" class="post-title-link" itemprop="url">methods选项</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-24 17:49:00" itemprop="dateCreated datePublished" datetime="2019-05-24T17:49:00+08:00">2019-05-24</time>
+              <time title="创建时间：2019-05-27 15:58:40" itemprop="dateCreated datePublished" datetime="2019-05-27T15:58:40+08:00">2019-05-27</time>
             
 
             
@@ -1273,7 +1287,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-25 10:37:33" itemprop="dateModified" datetime="2019-05-25T10:37:33+08:00">2019-05-25</time>
+                <time title="修改时间：2019-05-28 12:49:14" itemprop="dateModified" datetime="2019-05-28T12:49:14+08:00">2019-05-28</time>
               
             
           </span>
@@ -1290,7 +1304,520 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vue-router/" itemprop="url" rel="index"><span itemprop="name">vue-router</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+    
+      
+      
+
+      
+        
+          <p>路由过渡动画就是在切换路由的时候加点动画效果，这里就是把router-view用transition包起来，然后给他个name叫fade， 然后fade有四个类名，就通过这四个类名给路由加动画即可，更酷炫的效果需要有css和js功底，当然也可以用插件，然后还有个mode属性,他只有两个值，一个是in-out一个是out-in顾名思义就知道什么意思了，这里我们用out-in更好看一点</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/27/路由过渡动画/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    <div>
+           
+</div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/27/alias别名/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="snowFlakeXue">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/27/alias别名/" class="post-title-link" itemprop="url">alias别名</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-27 15:42:26 / 修改时间：15:55:12" itemprop="dateCreated datePublished" datetime="2019-05-27T15:42:26+08:00">2019-05-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vue-router/" itemprop="url" rel="index"><span itemprop="name">vue-router</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+    
+      
+      
+
+      
+        
+          <p>alias别名的作用与redirect的重定向差不多，只不过alias更友好一点，他不会在用户那边地址栏上把url改了<br></p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/27/alias别名/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    <div>
+           
+</div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/27/重定向/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="snowFlakeXue">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/27/重定向/" class="post-title-link" itemprop="url">重定向</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-27 14:45:24 / 修改时间：15:32:15" itemprop="dateCreated datePublished" datetime="2019-05-27T14:45:24+08:00">2019-05-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vue-router/" itemprop="url" rel="index"><span itemprop="name">vue-router</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+    
+      
+      
+
+      
+        
+          <p>重定向实质上就是在路径不同的情况下我想跳转到同一页面的需求，下面将展示传参数和不穿参数的两种重定向，操作很简单,在index.js中就是把想要定位的路径复制到redirect里<br></p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/27/重定向/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    <div>
+           
+</div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/27/URL传值/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="snowFlakeXue">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/27/URL传值/" class="post-title-link" itemprop="url">URL传值</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-27 14:15:04 / 修改时间：14:32:27" itemprop="dateCreated datePublished" datetime="2019-05-27T14:15:04+08:00">2019-05-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vue-router/" itemprop="url" rel="index"><span itemprop="name">vue-router</span></a></span>
 
                 
                 
@@ -1328,8 +1855,18 @@
       
         
           
-            <p>methods方法一般跟@click这样的绑定，下面有三个栗子，分别是简单的传值绑定，组件绑定，实例外绑定</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;count&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"add(2)"</span>&gt;</span>add<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">         <span class="comment">&lt;!-- .native的意思实质上就是调用原生的js方法，这个技巧很常用 --&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">btn</span> @<span class="attr">click.native</span>=<span class="string">"add(3)"</span>&gt;</span><span class="tag">&lt;/<span class="name">btn</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"app.add(4)"</span>&gt;</span>实例化外<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">         <span class="keyword">var</span> btn=&#123;</span></span><br><span class="line"><span class="xml">             template:`<span class="tag">&lt;<span class="name">button</span>&gt;</span>add组件<span class="tag">&lt;/<span class="name">button</span>&gt;</span>`</span></span><br><span class="line"><span class="undefined">             &#125;</span></span><br><span class="line"><span class="javascript">         <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">             el:<span class="string">'#app'</span>,</span></span><br><span class="line"><span class="undefined">             data:&#123;</span></span><br><span class="line"><span class="undefined">                 count:1</span></span><br><span class="line"><span class="undefined">             &#125;,</span></span><br><span class="line"><span class="undefined">             components:&#123;</span></span><br><span class="line"><span class="javascript">                 <span class="string">'btn'</span>:btn</span></span><br><span class="line"><span class="undefined">             &#125;,</span></span><br><span class="line"><span class="undefined">             methods:&#123;</span></span><br><span class="line"><span class="javascript">                 add:<span class="function"><span class="keyword">function</span>(<span class="params">num</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">                     <span class="keyword">if</span>(num !=<span class="string">''</span>)&#123;</span></span><br><span class="line"><span class="javascript">                         <span class="keyword">this</span>.count+=num</span></span><br><span class="line"><span class="undefined">                     &#125;</span></span><br><span class="line"><span class="javascript">                     <span class="keyword">else</span>  <span class="keyword">this</span>.num++</span></span><br><span class="line"><span class="undefined">                 &#125;</span></span><br><span class="line"><span class="undefined">             &#125;</span></span><br><span class="line"><span class="undefined">         &#125;)</span></span><br><span class="line"><span class="undefined">     </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+            <p>虽然现在前后端分离，之间的数据传递用接口，但是url传值方法还是很常用的</p>
+<hr>
+<p>第一步：在index.js文件的路径中添加想传的值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">      path: <span class="string">'/Hi/:newsId(\\d+)/:newsTitle'</span>,</span><br><span class="line">      name: <span class="string">'Hi'</span>,</span><br><span class="line">      component:Hi</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以看到我只需要在path后加:/就好，同时还用()方式在里面加了个正则表达式，规定只允许传递过来的是数字，当非数字时就不显示</p>
+<p>第二步：在App.vue中通过router-link传递值</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">"/Hi/12/hhhhhh"</span>&gt;</span>Hi<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>注意到，我的id传的是数字才行</p>
+<p>第三步：在Hi.vue中接收值</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; $route.params.newsId&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; $route.params.newsTitle &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>特别要注意的是，只能是params，别写成Hi了，因为在vue中params就是用来传参数的量</p>
+
           
         
       
@@ -1388,7 +1925,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/24/computed选项/">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/27/单页面多路由/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liu Xue">
@@ -1408,7 +1945,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/05/24/computed选项/" class="post-title-link" itemprop="url">computed选项</a>
+                <a href="/2019/05/27/单页面多路由/" class="post-title-link" itemprop="url">单页面多路由</a>
               
             
           </h1>
@@ -1433,7 +1970,7 @@
                 
               
 
-              <time title="创建时间：2019-05-24 16:48:15 / 修改时间：18:40:17" itemprop="dateCreated datePublished" datetime="2019-05-24T16:48:15+08:00">2019-05-24</time>
+              <time title="创建时间：2019-05-27 10:25:59 / 修改时间：11:22:44" itemprop="dateCreated datePublished" datetime="2019-05-27T10:25:59+08:00">2019-05-27</time>
             
 
             
@@ -1455,7 +1992,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vue-router/" itemprop="url" rel="index"><span itemprop="name">vue-router</span></a></span>
 
                 
                 
@@ -1492,542 +2029,16 @@
 
       
         
+          <p>vue提供的路由非常方便我们把页面分开成几个部分分别操作，下面就动手简单做一个<br></p>
+          <!--noindex-->
           
-            <p>computed选项一般用来改变原来的值得形式，使data选项里的值尽量的整洁简单，因此我们一般用computed选项来给绑定的值进行改变大小写啊，添加修饰啊。下面就举一个将新闻日期倒过来的小栗子，因为数据输入时是旧时间到新时间，而我们想要的是先看到新时间的新闻，所以在computed中使用computed就很有必要</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;newMessage&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">li</span> <span class="attr">v-for</span>=<span class="string">"item in reverseNews"</span>&gt;</span>&#123;&#123;item.title&#125;&#125;-&#123;&#123;item.date&#125;&#125;<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">       <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">           el:<span class="string">'#app'</span>,</span></span><br><span class="line"><span class="undefined">           data:&#123;</span></span><br><span class="line"><span class="undefined">               message:100,</span></span><br><span class="line"><span class="javascript">               news:[&#123;<span class="attr">title</span>:<span class="string">'新闻1'</span>, <span class="attr">date</span>:<span class="string">'2019/01/24'</span>&#125;,</span></span><br><span class="line"><span class="javascript">                     &#123;<span class="attr">title</span>:<span class="string">'新闻2'</span>, <span class="attr">date</span>:<span class="string">'2019/01/25'</span>&#125;,</span></span><br><span class="line"><span class="javascript">                     &#123;<span class="attr">title</span>:<span class="string">'新闻3'</span>, <span class="attr">date</span>:<span class="string">'2019/01/26'</span>&#125;,</span></span><br><span class="line"><span class="javascript">                     &#123;<span class="attr">title</span>:<span class="string">'新闻4'</span>, <span class="attr">date</span>:<span class="string">'2019/01/27'</span>&#125;]</span></span><br><span class="line"><span class="undefined">               &#125;,</span></span><br><span class="line"><span class="undefined">           computed:&#123;</span></span><br><span class="line"><span class="javascript">               newMessage:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">                   <span class="keyword">return</span> <span class="keyword">this</span>.message=<span class="string">'￥'</span>+<span class="keyword">this</span>.message+<span class="string">'元'</span>;</span></span><br><span class="line"><span class="undefined">               &#125;,</span></span><br><span class="line"><span class="javascript">               reverseNews:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">                   <span class="keyword">return</span> <span class="keyword">this</span>.news.reverse();</span></span><br><span class="line"><span class="undefined">               &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">           &#125;</span></span><br><span class="line"><span class="undefined">       &#125;) ;</span></span><br><span class="line"><span class="undefined">   </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/27/单页面多路由/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
           
-        
-      
-    </div>
-
-    
-    <div>
-           
-</div>
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/24/propsData/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/24/propsData/" class="post-title-link" itemprop="url">propsData</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-24 13:22:46 / 修改时间：13:40:03" itemprop="dateCreated datePublished" datetime="2019-05-24T13:22:46+08:00">2019-05-24</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-    
-      
-      
-
-      
-        
-          
-            <p>实际上propsData他不是挂载个属性，它是一个选项，甚至说这很不常用，完全可以用组件实现，但是要认识他，他是个传递数据的选项</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"summer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">       <span class="keyword">var</span> summer = Vue.extend(&#123;</span></span><br><span class="line"><span class="xml">           template:`<span class="tag">&lt;<span class="name">h2</span>&gt;</span>&#123;&#123;message&#125;&#125;-&#123;&#123;food&#125;&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>`,</span></span><br><span class="line"><span class="javascript">           data:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">                 <span class="keyword">return</span>&#123;</span></span><br><span class="line"><span class="javascript">                     message:<span class="string">'summer'</span></span></span><br><span class="line"><span class="undefined">                 &#125;</span></span><br><span class="line"><span class="undefined">           &#125;,</span></span><br><span class="line"><span class="javascript">           props:[<span class="string">'food'</span>]</span></span><br><span class="line"><span class="undefined">       &#125;)</span></span><br><span class="line"><span class="javascript">       <span class="keyword">new</span> summer(&#123;<span class="attr">propsData</span>:&#123;<span class="attr">food</span>:<span class="string">'iceCream'</span>&#125;&#125;).$mount(<span class="string">'#summer'</span>)</span></span><br><span class="line"><span class="javascript">        <span class="comment">//注意写法sss</span></span></span><br><span class="line"><span class="undefined">   </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-    <div>
-           
-</div>
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/23/keyframes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/23/keyframes/" class="post-title-link" itemprop="url">keyframes</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-23 20:38:55 / 修改时间：21:34:44" itemprop="dateCreated datePublished" datetime="2019-05-23T20:38:55+08:00">2019-05-23</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CSS动画/" itemprop="url" rel="index"><span itemprop="name">CSS动画</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-    
-      
-      
-
-      
-        
-          
-            <p>与transition不同，这个可以在一开始就进行动画演示，无需操作，这在CSS动画中是很重要的部分，他可以让你任意调动，说白了，这个关键帧动画实际上就是多个补间动画,另外还有一种逐帧动画，它是一种特殊的关键帧动画，只不过他没有补间动画是一帧一帧的，但是他资源使用大，因此除了另两个动画搞不定的情况下尽量不要使用，因为他包含于keyframes里，因此说CSS设置动画实质上就两种transition和keyframes</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    .container&#123;</span></span><br><span class="line"><span class="undefined">        width:50px;</span></span><br><span class="line"><span class="undefined">        height:50px;</span></span><br><span class="line"><span class="undefined">        background-color: red;</span></span><br><span class="line"><span class="undefined">        animation: run 1s ;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    @keyframes run&#123;</span></span><br><span class="line"><span class="undefined">        0%&#123;</span></span><br><span class="line"><span class="undefined">            width:100px;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">        10%&#123;</span></span><br><span class="line"><span class="undefined">            width: 20px;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">        50%&#123;</span></span><br><span class="line"><span class="undefined">            width: 200px;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">        100%&#123;</span></span><br><span class="line"><span class="undefined">            width:300px;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>栗子中的run是动画名要与下面的@keyframes后的对应好了</p>
-<p>当然transition里可以用的这里也可以用，比如说可以加上像linear这样的</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">animation</span>: <span class="selector-tag">run</span> 1<span class="selector-tag">s</span> <span class="selector-tag">linear</span> ;</span><br></pre></td></tr></table></figure>
-<p> 当只有前后两个节点时一般会写成from to来代替0% 100%</p>
- <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">keyframes</span> run&#123;</span><br><span class="line">       <span class="selector-tag">from</span>&#123;</span><br><span class="line">           <span class="attribute">width</span>:<span class="number">100px</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="selector-tag">to</span>&#123;</span><br><span class="line">           <span class="attribute">width</span>:<span class="number">300px</span>;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-<p>还有一些有意思的animation属性</p>
-<p>设置动画倒着开始</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">animation-direction</span>: <span class="selector-tag">reverse</span>;</span><br></pre></td></tr></table></figure>
-<p>设置动画不要回来了</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">animation-fill-mode</span>: <span class="selector-tag">forwards</span>;</span><br></pre></td></tr></table></figure>
-<p>设置动画循环次数，这里的infinite是无数次</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">animation-iteration-count</span>: <span class="selector-tag">infinite</span>;</span><br></pre></td></tr></table></figure>
-<p>设置动画停止</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">animation-play-state</span>: <span class="selector-tag">paused</span>;</span><br></pre></td></tr></table></figure>
-<p>逐帧动画</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">    <span class="selector-class">.container</span>&#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">width</span><span class="selector-pseudo">:100px</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">height</span><span class="selector-pseudo">:100px</span>;</span></span><br><span class="line"><span class="undefined">        border: 1px solid red;</span></span><br><span class="line"><span class="undefined">        background:url("http://images2015.cnblogs.com/blog/733006/201611/733006-20161103171828065-1874183143.png") no-repeat;</span></span><br><span class="line"><span class="undefined">        animation: run 1s ;</span></span><br><span class="line"><span class="undefined">        animation-timing-function: steps(1);</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="css">    @<span class="keyword">keyframes</span> run&#123;</span></span><br><span class="line"><span class="undefined">        0%&#123;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">background-position</span><span class="selector-pseudo">:0px</span> 0<span class="selector-tag">px</span>;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">        50%&#123;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">background-position</span><span class="selector-pseudo">:0px</span> <span class="selector-tag">-80px</span>;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">        100%&#123;</span></span><br><span class="line"><span class="css">            <span class="selector-tag">background-position</span><span class="selector-pseudo">:0px</span> 0<span class="selector-tag">px</span>;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>其实就是加个</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">animation-timing-function</span>: <span class="selector-tag">steps</span>(1);</span><br><span class="line"><span class="comment">/* 只能是1 */</span></span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-    <div>
-           
-</div>
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/05/23/transition/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/23/transition/" class="post-title-link" itemprop="url">transition</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-23 19:33:05 / 修改时间：20:38:29" itemprop="dateCreated datePublished" datetime="2019-05-23T19:33:05+08:00">2019-05-23</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/CSS动画/" itemprop="url" rel="index"><span itemprop="name">CSS动画</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-    
-      
-      
-
-      
-        
-          
-            <p>transition(过渡)是用来设置补间动画的即自动填补两个画面中间的部分，但必须有前后变化，比如下面的栗子中，就得有个hover</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">    <span class="selector-class">.container</span>&#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">width</span><span class="selector-pseudo">:50px</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">height</span><span class="selector-pseudo">:50px</span>;</span></span><br><span class="line"><span class="undefined">        background-color: red;</span></span><br><span class="line"><span class="undefined">        transition: width 1s,background-color 1s;</span></span><br><span class="line"><span class="undefined">        transition-delay: 2s;</span></span><br><span class="line"><span class="undefined">        transition-timing-function: ease-in-out;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="css">    <span class="selector-class">.container</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">width</span><span class="selector-pseudo">:300px</span>;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">height</span><span class="selector-pseudo">:50px</span>;</span></span><br><span class="line"><span class="undefined">        background-color: green;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>transition-property和transition-duration一般一起用，第一个表示做动画的属性，第二个表示动画进行时间，当多个属性同时使用动画时就用逗号隔开,也可以写成all 1s</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">transition</span>: <span class="selector-tag">width</span> 1<span class="selector-tag">s</span>,<span class="selector-tag">background-color</span> 1<span class="selector-tag">s</span>;</span><br></pre></td></tr></table></figure>
-<p>transition-delay 只有一个时间参数使用来设置延迟的</p>
-<p>transition-timing-function是用来定义动画进行方式，就是先快后慢啊还是匀速啊啥的，常见方式如下</p>
-<p><img src="/2019/05/23/transition/1.jpg" alt="function"></p>
-<p>具体实例如下</p>
-<p> ease-in-out:</p>
-<p> <img src="/2019/05/23/transition/2.jpg" alt="function"></p>
-<p> linear:</p>
-<p> <img src="/2019/05/23/transition/3.jpg" alt="function"></p>
-<p> ease-in</p>
-<p> <img src="/2019/05/23/transition/4.jpg" alt="function"></p>
-<p> ease-out</p>
-<p> <img src="/2019/05/23/transition/5.jpg" alt="function"></p>
-<p> <a href="https://matthewlein.com/" target="_blank" rel="noopener">一个需要翻墙的工具，用来自制动画方式</a></p>
-
-          
+          <!--/noindex-->
         
       
     </div>
@@ -2074,7 +2085,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -2118,7 +2129,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">78</span>
+                    <span class="site-state-item-count">94</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
