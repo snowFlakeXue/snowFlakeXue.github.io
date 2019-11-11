@@ -359,6 +359,178 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/10/15/系统调用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="snowFlakeXue">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/10/15/系统调用/" class="post-title-link" itemprop="url">系统调用</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-15 21:14:53 / 修改时间：21:55:46" itemprop="dateCreated datePublished" datetime="2019-10-15T21:14:53+08:00">2019-10-15</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/操作系统/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+    
+      
+      
+
+      
+        
+          
+            <h2 id="什么是系统调用"><a href="#什么是系统调用" class="headerlink" title="什么是系统调用"></a>什么是系统调用</h2><p>我们知道操作系统要向上提供两种接口，一种是命令接口，一种是程序接口，而程序接口就是由一组系统调用组成，我们可以把系统调用简单的理解为，可供应用程序调用的特殊函数，应用程序可以发出系统调用请求来获得操作系统的服务。</p>
+<h2 id="系统调用功能"><a href="#系统调用功能" class="headerlink" title="系统调用功能"></a>系统调用功能</h2><p><img src="/2019/10/15/系统调用/1.jpg" alt="功能"></p>
+<p>需要注意的是，有的功能是需要特权指令的，因此要在系统调用的相关处理要在核心态下进行</p>
+<h2 id="系统调用与库函数的区别"><a href="#系统调用与库函数的区别" class="headerlink" title="系统调用与库函数的区别"></a>系统调用与库函数的区别</h2><p><img src="/2019/10/15/系统调用/1.jpg" alt="区别"></p>
+<p>图中黑色箭头表示，我们本该用汇编语言调用系统调用，但现在我们一般都通过调用高级语言的库函数来实现调用系统调用，因为库函数封装好了系统调用。</p>
+<p>传递系统调用参数-&gt;执行陷入指令(用户态)-&gt;执行系统调用响应服务程序(核心态)-&gt;返回用户程序</p>
+<p>这里需要注意，<font color="red">陷入指令是唯一一个只能在用户态执行而不能在核心态执行的指令</font></p>
+<font color="red">发出用户系统调用请求是在用户态，对系统调用的处理在核心态</font>
+
+          
+        
+      
+    </div>
+
+    
+    <div>
+           
+</div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/10/14/中断和异常/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1970,181 +2142,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/07/23/箭头函数和扩展/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/23/箭头函数和扩展/" class="post-title-link" itemprop="url">箭头函数和扩展</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-23 12:01:45 / 修改时间：12:52:51" itemprop="dateCreated datePublished" datetime="2019-07-23T12:01:45+08:00">2019-07-23</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ES6/" itemprop="url" rel="index"><span itemprop="name">ES6</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-    
-      
-      
-
-      
-        
-          
-            <h2 id="默认值"><a href="#默认值" class="headerlink" title="默认值"></a>默认值</h2><p>在ES6中给我们提供了可以在函数参数中使用默认值的操作，在学习箭头函数之前就先用ES5方法写函数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">a,b=<span class="number">0</span></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(func(<span class="number">1</span>)); <span class="comment">//1</span></span><br></pre></td></tr></table></figure>
-<h2 id="主动抛出错误"><a href="#主动抛出错误" class="headerlink" title="主动抛出错误"></a>主动抛出错误</h2><p>只需要一行代码 throw new Error(‘’)</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">a,b=<span class="number">0</span></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(a==<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'This is a error'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(func(<span class="number">0</span>)); <span class="comment">//报错提示 This is a error</span></span><br></pre></td></tr></table></figure>
-<h2 id="严谨模式"><a href="#严谨模式" class="headerlink" title="严谨模式"></a>严谨模式</h2><p>与ES5不同，ES6中严谨模式的代码不需要必须写在最前面，而是可以写在函数体内，但是需要注意的是当函数参数有默认值时是会报错的，下面我就来举个错误实例，然后给出报错信息，我们可以很清楚的看出是因为默认值</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">a,b=<span class="number">0</span></span>)</span>&#123;</span><br><span class="line"><span class="meta">    'use strict'</span></span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(func(<span class="number">1</span>));</span><br></pre></td></tr></table></figure>
-<p><img src="/2019/07/23/箭头函数和扩展/1.jpg" alt="error">;</p>
-<h2 id="获得参数个数"><a href="#获得参数个数" class="headerlink" title="获得参数个数"></a>获得参数个数</h2><p>当我们需要知道参数个数是，很简单，直接用length就可以知道，但是需要注意的是得到的只是必须传递的参数个数，带默认值的不包括在内</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">a,b=<span class="number">0</span></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(func.length); <span class="comment">//1</span></span><br></pre></td></tr></table></figure>
-<h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><p>箭头函数需要注意的就是如果你只想返回(return)一个值，就不需要用花括号，直接用箭头指向那个值即可，但是当代码不止一行时就需要用花括号来包住函数体，下面举个只返回个值得来看看箭头函数长什么样.还有就是箭头函数不能有new ,也就是说不能用在构造函数上</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> func = <span class="function">(<span class="params">a,b</span>)=&gt;</span>a+b;</span><br><span class="line"><span class="built_in">console</span>.log(func(<span class="number">1</span>,<span class="number">1</span>)); <span class="comment">//2</span></span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-    <div>
-           
-</div>
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2193,7 +2190,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">94</span>
+                    <span class="site-state-item-count">95</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
