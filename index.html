@@ -404,7 +404,7 @@
                 
               
 
-              <time title="创建时间：2019-11-28 18:33:59 / 修改时间：20:51:47" itemprop="dateCreated datePublished" datetime="2019-11-28T18:33:59+08:00">2019-11-28</time>
+              <time title="创建时间：2019-11-28 18:33:59 / 修改时间：21:09:14" itemprop="dateCreated datePublished" datetime="2019-11-28T18:33:59+08:00">2019-11-28</time>
             
 
             
@@ -464,14 +464,14 @@
       
         
           
-            <p><img src="/2019/11/28/I-O软件层次结构/Git\blog\source\_posts\I-O软件层次结构\1.jpg" style="zoom:25%;"></p>
+            <p><img src="/2019/11/28/I-O软件层次结构/1.jpg" style="zoom:25%;"></p>
 <p>注意每一层都是用下一层提供的服务，向上层提供服务</p>
-<h1 id="用户层软件"><a href="#用户层软件" class="headerlink" title="用户层软件"></a>用户层软件</h1><p><img src="/2019/11/28/I-O软件层次结构/Git\blog\source\_posts\I-O软件层次结构\2.jpg" style="zoom:25%;"></p>
-<h1 id="中断处理程序"><a href="#中断处理程序" class="headerlink" title="中断处理程序"></a>中断处理程序</h1><p><img src="/2019/11/28/I-O软件层次结构/Git\blog\source\_posts\I-O软件层次结构\3.jpg" style="zoom:25%;"></p>
+<h1 id="用户层软件"><a href="#用户层软件" class="headerlink" title="用户层软件"></a>用户层软件</h1><p><img src="/2019/11/28/I-O软件层次结构/2.jpg" style="zoom:25%;"></p>
+<h1 id="中断处理程序"><a href="#中断处理程序" class="headerlink" title="中断处理程序"></a>中断处理程序</h1><p><img src="/2019/11/28/I-O软件层次结构/3.jpg" style="zoom:25%;"></p>
 <p>汇总：</p>
-<p><img src="/2019/11/28/I-O软件层次结构/Git\blog\source\_posts\I-O软件层次结构\4.jpg" style="zoom:25%;"></p>
+<p><img src="/2019/11/28/I-O软件层次结构/4.jpg" style="zoom:25%;"></p>
 <p>其中只有设备驱动程序和中断处理程序需要和硬件打交道</p>
-<h1 id="I-O核心子系统"><a href="#I-O核心子系统" class="headerlink" title="I/O核心子系统"></a>I/O核心子系统</h1><p><img src="/2019/11/28/I-O软件层次结构/Git\blog\source\_posts\I-O软件层次结构\5.jpg" style="zoom:25%;"></p>
+<h1 id="I-O核心子系统"><a href="#I-O核心子系统" class="headerlink" title="I/O核心子系统"></a>I/O核心子系统</h1><p><img src="/2019/11/28/I-O软件层次结构/5.jpg" style="zoom:25%;"></p>
 <p>其中假脱机技术实际上不属于核心子系统，但我们就拿在一起讲</p>
 <p>因为要实现的功能与硬件无关，所以就无须设备驱动程序和中断处理程序</p>
 <font color="red">I/O调度</font>
@@ -479,25 +479,25 @@
 <p>就跟磁盘调度差不多，找个合适的调度算法就行</p>
 <font color="red">设备保护</font>
 
-<p><img src="/2019/11/28/I-O软件层次结构/Git\blog\source\_posts\I-O软件层次结构\6.jpg" style="zoom: 50%;"></p>
+<p><img src="/2019/11/28/I-O软件层次结构/6.jpg" style="zoom: 50%;"></p>
 <font color="red">假脱机技术</font>
 
 
 
-<p><img src="/2019/11/28/I-O软件层次结构/Git\blog\source\_posts\I-O软件层次结构\7.jpg" style="zoom:25%;"></p>
+<p><img src="/2019/11/28/I-O软件层次结构/7.jpg" style="zoom:25%;"></p>
 <p>脱机：脱离主机的控制进行输入输出</p>
-<p><img src="/2019/11/28/I-O软件层次结构/Git\blog\source\_posts\I-O软件层次结构\8.jpg" style="zoom: 33%;"></p>
+<p><img src="/2019/11/28/I-O软件层次结构/8.jpg" style="zoom: 33%;"></p>
 <p>假脱机技术：用软件方式模拟脱机技术</p>
-<p><img src="/2019/11/28/I-O软件层次结构/Git\blog\source\_posts\I-O软件层次结构\9.jpg" style="zoom: 33%;"></p>
+<p><img src="/2019/11/28/I-O软件层次结构/9.jpg" style="zoom: 33%;"></p>
 <p>其中输入井就对应着上面第一个磁带的作用，输出井是第二个；输入进程相当于上图中第一个外围控制机，输出进程相当于第二个；</p>
 <font color="red">共享打印机原理分析</font>
 
-<p><img src="/2019/11/28/I-O软件层次结构/Git\blog\source\_posts\I-O软件层次结构\10.jpg" style="zoom: 33%;"></p>
-<p><img src="/2019/11/28/I-O软件层次结构/Git\blog\source\_posts\I-O软件层次结构\11.jpg" style="zoom: 33%;"></p>
+<p><img src="/2019/11/28/I-O软件层次结构/10.jpg" style="zoom: 33%;"></p>
+<p><img src="/2019/11/28/I-O软件层次结构/11.jpg" style="zoom: 33%;"></p>
 <font color="red">设备的分配与回收</font>
 
-<p><img src="/2019/11/28/I-O软件层次结构/Git\blog\source\_posts\I-O软件层次结构\12.jpg" style="zoom:25%;"></p>
-<p><img src="/2019/11/28/I-O软件层次结构/Git\blog\source\_posts\I-O软件层次结构\13.jpg" style="zoom:25%;"></p>
+<p><img src="/2019/11/28/I-O软件层次结构/12.jpg" style="zoom:25%;"></p>
+<p><img src="/2019/11/28/I-O软件层次结构/13.jpg" style="zoom:25%;"></p>
 
           
         
@@ -602,7 +602,7 @@
                 
               
 
-              <time title="创建时间：2019-11-28 13:47:12 / 修改时间：18:32:14" itemprop="dateCreated datePublished" datetime="2019-11-28T13:47:12+08:00">2019-11-28</time>
+              <time title="创建时间：2019-11-28 13:47:12 / 修改时间：21:11:46" itemprop="dateCreated datePublished" datetime="2019-11-28T13:47:12+08:00">2019-11-28</time>
             
 
             
@@ -665,16 +665,16 @@
             <p><img src="/2019/11/28/I-O控制方式/1.jpg" width="300px"></p>
 <h2 id="程序直接控制方式"><a href="#程序直接控制方式" class="headerlink" title="程序直接控制方式"></a>程序直接控制方式</h2><p><img src="/2019/11/28/I-O控制方式/2.jpg" width="400px"></p>
 <h2 id="中断驱动方式"><a href="#中断驱动方式" class="headerlink" title="中断驱动方式"></a>中断驱动方式</h2><p>有了这种方式，CPU和I/O才能并行</p>
-<p><img src="/2019/11/28/I-O控制方式/Git\blog\source\_posts\I-O控制方式\3.jpg" style="zoom: 25%;"></p>
-<p><img src="/2019/11/28/I-O控制方式/Git\blog\source\_posts\I-O控制方式\4.jpg" style="zoom:25%;"></p>
-<h2 id="DMA方式"><a href="#DMA方式" class="headerlink" title="DMA方式"></a>DMA方式</h2><p><img src="/2019/11/28/I-O控制方式/Git\blog\source\_posts\I-O控制方式\5.jpg" style="zoom:25%;"></p>
-<p><img src="/2019/11/28/I-O控制方式/Git\blog\source\_posts\I-O控制方式\6.jpg" style="zoom:25%;"></p>
+<p><img src="/2019/11/28/I-O控制方式/3.jpg" style="zoom: 25%;"></p>
+<p><img src="/2019/11/28/I-O控制方式/4.jpg" style="zoom:25%;"></p>
+<h2 id="DMA方式"><a href="#DMA方式" class="headerlink" title="DMA方式"></a>DMA方式</h2><p><img src="/2019/11/28/I-O控制方式/5.jpg" style="zoom:25%;"></p>
+<p><img src="/2019/11/28/I-O控制方式/6.jpg" style="zoom:25%;"></p>
 <p>如上图所示，我们可以看出，I/O与内存之间就不需要CPU这个媒介了</p>
-<p><img src="/2019/11/28/I-O控制方式/Git\blog\source\_posts\I-O控制方式\7.jpg" style="zoom:25%;"></p>
-<h1 id="通道控制方式"><a href="#通道控制方式" class="headerlink" title="通道控制方式"></a>通道控制方式</h1><p><img src="/2019/11/28/I-O控制方式/Git\blog\source\_posts\I-O控制方式\8.jpg" style="zoom:25%;"></p>
-<p><img src="/2019/11/28/I-O控制方式/Git\blog\source\_posts\I-O控制方式\9.jpg" style="zoom:25%;"></p>
+<p><img src="/2019/11/28/I-O控制方式/7.jpg" style="zoom:25%;"></p>
+<h1 id="通道控制方式"><a href="#通道控制方式" class="headerlink" title="通道控制方式"></a>通道控制方式</h1><p><img src="/2019/11/28/I-O控制方式/8.jpg" style="zoom:25%;"></p>
+<p><img src="/2019/11/28/I-O控制方式/9.jpg" style="zoom:25%;"></p>
 <p>总结：</p>
-<p><img src="/2019/11/28/I-O控制方式/Git\blog\source\_posts\I-O控制方式\10.jpg" style="zoom:25%;"></p>
+<p><img src="/2019/11/28/I-O控制方式/10.jpg" style="zoom:25%;"></p>
 
           
         
