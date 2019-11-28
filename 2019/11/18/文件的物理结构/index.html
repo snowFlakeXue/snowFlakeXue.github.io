@@ -100,14 +100,31 @@
 
 
 
-  <meta property="og:type" content="article">
+  <meta name="description" content="文件块：  磁盘块：  因为要研究文件的物理结构，实际上就是研究文件的分配方式，文件要存在磁盘上，所以必然要以磁盘为载体来研究">
+<meta property="og:type" content="article">
 <meta property="og:title" content="文件的物理结构">
 <meta property="og:url" content="snowFlakeXue.github.io/2019/11/18/文件的物理结构/index.html">
 <meta property="og:site_name" content="snowFlakeXue">
+<meta property="og:description" content="文件块：  磁盘块：  因为要研究文件的物理结构，实际上就是研究文件的分配方式，文件要存在磁盘上，所以必然要以磁盘为载体来研究">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-18T12:10:18.113Z">
+<meta property="og:image" content="/2019/11/18/文件的物理结构/1.jpg">
+<meta property="og:image" content="/2019/11/18/文件的物理结构/2.jpg">
+<meta property="og:image" content="/2019/11/18/文件的物理结构/3.jpg">
+<meta property="og:image" content="/2019/11/18/文件的物理结构/4.jpg">
+<meta property="og:image" content="/2019/11/18/文件的物理结构/5.jpg">
+<meta property="og:image" content="/2019/11/18/文件的物理结构/6.jpg">
+<meta property="og:image" content="/2019/11/18/文件的物理结构/7.jpg">
+<meta property="og:image" content="/2019/11/18/文件的物理结构/8.jpg">
+<meta property="og:image" content="/2019/11/18/文件的物理结构/9.jpg">
+<meta property="og:image" content="/2019/11/18/文件的物理结构/10.jpg">
+<meta property="og:image" content="/2019/11/18/文件的物理结构/11.jpg">
+<meta property="og:image" content="/2019/11/18/文件的物理结构/12.jpg">
+<meta property="og:image" content="/2019/11/18/文件的物理结构/13.jpg">
+<meta property="og:updated_time" content="2019-11-23T08:45:50.097Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="文件的物理结构">
+<meta name="twitter:description" content="文件块：  磁盘块：  因为要研究文件的物理结构，实际上就是研究文件的分配方式，文件要存在磁盘上，所以必然要以磁盘为载体来研究">
+<meta name="twitter:image" content="/2019/11/18/文件的物理结构/1.jpg">
 
 
 
@@ -408,8 +425,42 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-11-23 16:45:50" itemprop="dateModified" datetime="2019-11-23T16:45:50+08:00">2019-11-23</time>
+              
+            
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/操作系统/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -453,7 +504,86 @@
       
 
       
-        
+        <p>文件块：</p>
+<p><img src="/2019/11/18/文件的物理结构/1.jpg" height="200px" width="450px"></p>
+<p>磁盘块：</p>
+<p><img src="/2019/11/18/文件的物理结构/2.jpg" height="200px" width="450px"></p>
+<p>因为要研究文件的物理结构，实际上就是研究文件的分配方式，文件要存在磁盘上，所以必然要以磁盘为载体来研究</p>
+<p><img src="/2019/11/18/文件的物理结构/3.jpg" height="150px" width="450px"></p>
+<a id="more"></a>
+<h2 id="文件的物理结构-文件分配方式"><a href="#文件的物理结构-文件分配方式" class="headerlink" title="文件的物理结构(文件分配方式)"></a>文件的物理结构(文件分配方式)</h2><font color="red">连续分配</font>
+
+<p>连续分配要求每个文件在磁盘上占有一组连续的块，如下图所示</p>
+<p><img src="/2019/11/18/文件的物理结构/4.jpg" height="200px" width="450px"></p>
+<p>文件块是连在一起的，如果实行连续分配那在磁盘中也得是连续的，用户是按逻辑地址来访问文件的，那操作系统怎么实现从逻辑地址到物理地址的转换呢。实际上这就是(逻辑地址，块内地址)-&gt;(物理地址，块内地址)的转换，块内地址是不变的</p>
+<p>这就需要文件目录中的记录要有在磁盘中的起始块号和长度</p>
+<p><img src="/2019/11/18/文件的物理结构/5.jpg" height="100px" width="400px"></p>
+<p>然后操作系统在找到文件对应的FCB时得到起始块号和长度再根据用户给的逻辑块号，就可以得到物理块号=起始块号+逻辑块号</p>
+<p>因此，连续分配支持顺序访问和直接访问</p>
+<p>当然，要检查逻辑块号，不能大于长度，否则不合法</p>
+<p>同时，磁盘在读取某个磁盘块时需要移动磁头，要访问的磁盘块相隔越远，移动磁头所需时间越长；因此当连续分配时，磁盘移动距离当然是最小的，也就是说，连续分配的文件在顺序读/写时速度最快</p>
+<p>下面来看看连续分配的缺点</p>
+<p>1.不利于扩展</p>
+<p><img src="/2019/11/18/文件的物理结构/6.jpg" height="200px" width="400px"></p>
+<p>如图A占了三个连续的块，橙色的被其他文件占了，绿色空闲，如果我想让A再占一个，他需要连续的四块，这时发现被占了，那就只能把A占的四个格都迁移到绿色那里，这样会有很大的消耗</p>
+<p>2.存储空间利用率低，会产生难以利用的磁盘碎片，虽然可以使用紧凑来处理碎片，但会耗费很大的时间代价</p>
+<p><img src="/2019/11/18/文件的物理结构/7.jpg" height="200px" width="200px"></p>
+<p>如图，橙色是被占用的，绿色是未被占用的，如果来了一个文件需要连续的3个块，显然是无法满足要求的，也就是说只要有大于1的我现在都满足不了，除非用紧凑技术，但这就会增加时间开销</p>
+<font color="red">链接分配</font>
+
+<p>链接分配可以为文件分配离散的磁盘块，分为隐式链接和显式链接两种</p>
+<ul>
+<li>隐式链接</li>
+</ul>
+<p><img src="/2019/11/18/文件的物理结构/8.jpg" height="200px" width="250px"></p>
+<p>那怎么实现逻辑块号到物理块号的转变呢？用户给出逻辑块号i,操作系统找到该文件的FCB，读取到起始块号和终止块号，然后就找到逻辑块号为0的块，并把它读进内存，由此根据指针就知道逻辑块1在哪了，然后把逻辑块1读入内存，如此一步一步向下找，就能找到逻辑块i了，需要i+1次磁盘I/O</p>
+<p>如此看来，这个很像链表，他也是只支持顺序访问，不支持随机访问，查找效率低，且指向下一盘块的指针需要耗费少量的存储空间</p>
+<p>那我们再来看看他是否能解决拓展问题呢；因为我们要再加几个块，因为隐式链接可以离散着存放，那只要有空闲块就ok，再把结束块号改一下就可</p>
+<p>因此，采用隐式链接的链接分配方式，很方便文件扩展，另外，所有空闲的磁盘块都可以被利用，不会有碎片问题，外存利用率高</p>
+<ul>
+<li>显式链接</li>
+</ul>
+<p>把用于链接文件各物理块的指针显式地存放在一张表中，即文件分配表(FAT)</p>
+<p>比如文件aaa依次存放在磁盘块2-&gt;5-&gt;0-&gt;1，这样目录中就只需要记录起始块号，结尾的下一块可以用特殊字符来表示，比如-1</p>
+<p><img src="/2019/11/18/文件的物理结构/9.jpg" height="200px" width="250px"></p>
+<p>因为每个块只能放一个文件块，所以不存在一对多的情况，那一个磁盘仅设置一张FAT，开机时将FAT读入内存，并常驻内存，FAT各表项在物理上连续存储，且每一个表项长度相同，因此物理块号字段可以是隐含的</p>
+<p>那怎么实现从逻辑内存到物理内存的转换呢？比方说用户给了逻辑块号i，操作系统找到该文件的FCB，读取到起始块号，然后再到FAT中查表，一个个往下找就能找到了，因为只是查了表，并没有依次访问之前的0~i号逻辑块，且这个表一直在内存某个位置，就可以说是实现了随机访问，因为块号转换不需要访问磁盘，所以比隐式链接要快得多</p>
+<p>同时，显式链接方式也不会产生外部碎片，也很方便对文件进行拓展</p>
+<p>那显式链接唯一的缺点就是FAT要占一定的存储空间</p>
+<p>一般来说，链接方式默认为隐式链接</p>
+<font color="red">索引分配</font>
+
+<p>索引分配允许文件离散地分配在磁盘里，系统会为每个文件建立一个索引表(注意跟FAT不一样，FAT是整个系统就这一个)，索引表中记录文件各个逻辑块对应的物理块，索引表存放的磁盘块叫索引块，文件数据存放的磁盘块叫做数据块</p>
+<p>如图，嘉禾文件aaa的索引块在7，数据块依次是2-&gt;5-&gt;13-&gt;9</p>
+<p><img src="/2019/11/18/文件的物理结构/10.jpg" height="200px" width="250px"></p>
+<p>同样的，表项长度时一样的，逻辑块号也是可以省略的</p>
+<p>那怎么实现逻辑块号到物理块号的转换？同样的也是查表，把某文件的索引表读到内存就可以找到了，因此也是支持随机访问，文件拓展也很容易，只要给文件分配一个空闲块，索引表加一项即可；但索引表需占用一定的空间</p>
+<p>但如果一个磁盘块装不下一张索引表的时候该怎么办呢？有三种解决方式：链接方案，多层索引，混合索引</p>
+<ul>
+<li>链接方案</li>
+</ul>
+<p>比方说，一个索引块最多能有256项，而某个文件需要大于260个块，那我就需要两个索引块，若采用链接方式只需要在第一个索引块用一点点空间保存指向下一个索引块的指针即可，那目录中只需要保存第一个索引块即可；比方说我要找259号逻辑块，那我必须把第一块全都读一遍，才能找到下一块才能找到259号；那如果我需要256个索引块，我要是想访问最后一个逻辑块，那我就要在磁盘上找到前面255个索引块，也就是说要进行255次磁盘操作，这样很低效</p>
+<p><img src="/2019/11/18/文件的物理结构/11.jpg" height="200px" width="250px"></p>
+<p>为此，就提出了多级索引方案</p>
+<ul>
+<li>多级索引</li>
+</ul>
+<p>有点类似于多级页表</p>
+<p><img src="/2019/11/18/文件的物理结构/12.jpg" height="200px" width="450px"></p>
+<p>注意上面涉及到的计算很重要</p>
+<p>总结：采用k级索引结构，且顶级索引表未调入内存，则访问一个数据块只需要k+1次读磁盘操作</p>
+<p>如果说我想要读取的文件很小他只有1KB却还是要读取顶级索引表再读二级索引表，还是要三次读磁盘操作，有点小题大做，就提出了混合索引的方案</p>
+<ul>
+<li>混合索引</li>
+</ul>
+<p>注意这里块数的计算</p>
+<p><img src="/2019/11/18/文件的物理结构/13.jpg" height="200px" width="450px"></p>
+<p>下面我们来看看想找到某一块需要几次读磁盘操作(顶级索引表未被调入内存)</p>
+<p>0~7：两次</p>
+<p>8~263：三次</p>
+<p>264~65799：四次</p>
+<p>由此看来一些小文件存在像0~7这样的块中，就只需要两次读磁盘操作，而一般计算机中都是小文件多，因此这样比较有效率</p>
+
       
     </div>
 
@@ -503,6 +633,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/11/21/文件存储空间管理/" rel="prev" title="文件存储空间管理">
+                文件存储空间管理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -549,8 +683,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -567,7 +710,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">101</span>
+                    <span class="site-state-item-count">113</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -668,6 +811,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件的物理结构-文件分配方式"><span class="nav-number">1.</span> <span class="nav-text">文件的物理结构(文件分配方式)</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
