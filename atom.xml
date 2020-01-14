@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2020-01-14T08:16:37.142Z</updated>
+  <updated>2020-01-14T13:47:38.113Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>杂七杂八</title>
+    <link href="snowFlakeXue.github.io/2020/01/14/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/"/>
+    <id>snowFlakeXue.github.io/2020/01/14/杂七杂八/</id>
+    <published>2020-01-14T09:32:32.000Z</published>
+    <updated>2020-01-14T13:47:38.113Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;1.首先给一个例子&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/2020/01/14/杂七杂八/1.jpg&quot; alt=&quot;图片&quot; style=&quot;zoom: 67%;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;​    
+        
+      
+    
+    </summary>
+    
+      <category term="javascript学习" scheme="snowFlakeXue.github.io/categories/javascript%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>获取元素</title>
@@ -456,31 +482,6 @@
         
         
           &lt;h2 id=&quot;为什么引入管程&quot;&gt;&lt;a href=&quot;#为什么引入管程&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>页面置换策略</title>
-    <link href="snowFlakeXue.github.io/2019/11/11/%E9%A1%B5%E9%9D%A2%E7%BD%AE%E6%8D%A2%E7%AD%96%E7%95%A5/"/>
-    <id>snowFlakeXue.github.io/2019/11/11/页面置换策略/</id>
-    <published>2019-11-11T05:10:51.000Z</published>
-    <updated>2019-11-11T06:23:42.267Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;img src=&quot;/2019/11/11/页面置换策略/1.jpg&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;驻留集&quot;&gt;&lt;a href=&quot;#驻留集&quot; class=&quot;headerlink&quot;
         
       
     
