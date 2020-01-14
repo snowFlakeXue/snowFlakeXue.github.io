@@ -404,7 +404,7 @@
                 
               
 
-              <time title="创建时间：2020-01-14 11:16:34 / 修改时间：16:03:18" itemprop="dateCreated datePublished" datetime="2020-01-14T11:16:34+08:00">2020-01-14</time>
+              <time title="创建时间：2020-01-14 11:16:34 / 修改时间：16:14:05" itemprop="dateCreated datePublished" datetime="2020-01-14T11:16:34+08:00">2020-01-14</time>
             
 
             
@@ -478,21 +478,20 @@
 <p> 首先回顾一下css引入的三种方法</p>
 <p> 行间样式：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"width:100px;height:100px;background-color:red;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>​                 非行间样式：</p>
+<p> 非行间样式：</p>
 <ul>
-<li><p><style><style></p>
+<li><p><code>&lt;style&gt;&lt;style&gt;</code></p>
 </li>
-<li><link href="" rel="stylesheet" type="text/css" />    
-
+<li><p><code>&lt;link href=&quot;&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;</code>    </p>
 <p>无论是哪一种样式，都用一种方式即可修改对应的样式</p>
-<p><img src="C:\Users\13263\AppData\Roaming\Typora\typora-user-images\image-20200114142847633.png" alt="image-20200114142847633"></p>
-<p><img src="C:\Users\13263\AppData\Roaming\Typora\typora-user-images\image-20200114143020127.png" alt="image-20200114143020127"></p>
+<p><img src="/2020/01/14/获取元素/1.png" alt="image-20200114142847633"></p>
+<p><img src="/2020/01/14/获取元素/2.png" alt="image-20200114143020127"></p>
 <p>其中，需要注意两种获取元素的方法的括号里应该写什么，getElementById是写名就行了，不需要 . #</p>
 <p>queryselector如果匹配到了多个元素，只会采用第0个</p>
 </li>
 </ul>
+</li>
+</ol>
 <p>​              再来看看一些有意思的</p>
 <p>​               如果我想清空样式怎么做最方便呢(只适用于行间样式)</p>
 <p>​               item.style.cssText=” “;</p>
@@ -522,10 +521,10 @@
 <p> 上述三种方法获取到的一组元素不能直接操作，都只能通过数组下标访问，即使只有一个能匹配也得用数组下标，因此一般也都用循环</p>
 </li>
 </ul>
-<p><img src="C:\Users\13263\AppData\Roaming\Typora\typora-user-images\image-20200114150232454.png" alt="image-20200114150232454"></p>
-<p><img src="C:\Users\13263\AppData\Roaming\Typora\typora-user-images\image-20200114150311437.png" alt="image-20200114150311437"></p>
+<p><img src="/2020/01/14/获取元素/3.png" alt="image-20200114150232454"></p>
+<p><img src="/2020/01/14/获取元素/4.png" alt="image-20200114150311437"></p>
 <p>还有！切记是Elements!不是Element!</p>
-</style></p></li></ul>
+
           
         
       
