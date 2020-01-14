@@ -359,6 +359,192 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/10/14/中断和异常/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="snowFlakeXue">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/10/14/中断和异常/" class="post-title-link" itemprop="url">中断和异常</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-10-14 21:37:34" itemprop="dateCreated datePublished" datetime="2019-10-14T21:37:34+08:00">2019-10-14</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-10-15 21:16:11" itemprop="dateModified" datetime="2019-10-15T21:16:11+08:00">2019-10-15</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/操作系统/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+    
+      
+      
+
+      
+        
+          
+            <h2 id="中断机制的诞生"><a href="#中断机制的诞生" class="headerlink" title="中断机制的诞生"></a>中断机制的诞生</h2><p>早期的计算机程序只能串行执行，什么意思呢，就是计算机只能处理一个程序，这个程序处理完了，下一个程序才能拿到计算机里来运行，这样就大大降低了资源利用率。为了解决这个问题，人们就发明了操作系统，从而引入了中断机制，实现了多道程序并发执行。事实上，我们只要知道，<font color="red">发生中断就意味着需要操作系统介入，开展管理工作.</font></p>
+<h2 id="中断的概念及作用"><a href="#中断的概念及作用" class="headerlink" title="中断的概念及作用"></a>中断的概念及作用</h2><p>下面我们大概来看看过程</p>
+<p><img src="/2019/10/14/中断和异常/1.jpg" alt="中断演示"></p>
+<p>如图所示，因为中断的引入，我们可以实现多道程序并发执行。我们来模拟一下中断过程，</p>
+<p>进程1时间片用完了，计时器向CPU发出中断信号，CPU就会切换为核心态，这个时候就是将管理权交到了操作系统的手上，操作系统的内核就会对中断信号做处理，也就是停止进程1，让进程2运行，处理完之后会用指令再转换成用户态，这个时候进程2就开始运行了；当进程2运行一段时间后，他想输出，但I/O这是特权指令，他就得申请，他就发出系统调用(内中断信号)，这是CPU转到核心态，交给操作系统处理，操作系统会根据进程2的请求，让打印机打印，进程2停止运行去等待打印机，换进程3运行，再转回用户态，这时当打印机完成了，他会向CPU发出中断信号，告诉他自己完成了，CPU又转换为核心态交给操作系统，操作系统就让进程2恢复，完成后续工作。再转成用户态，进程2继续执行。</p>
+<p>通过上面的栗子，我们不难看出，只要CPU一收到中断信号，他就要转成核心态，用户程序停止运行，操作系统内核对中断处理完之后，转回用户态，用户程序按操作系统的安排继续运作。</p>
+<font color="red">最最最重要的：用户态转核心态，有且仅有中断这一种方法，核心态转用户态是通过执行一个特权指令，将程序状态字的标志位设置为用户态</font>
+
+<h2 id="中断分类"><a href="#中断分类" class="headerlink" title="中断分类"></a>中断分类</h2><p><img src="/2019/10/14/中断和异常/2.jpg" alt="中断分类1"></p>
+<p>内中断和外中断区别的根本在于中断信号的来源，内中断是来自CPU内部，与当前执行的指令有关，比如说时间片用完了，计时器向CPU发中断信号；外中断来自于CPU外部，与当前执行的指令无关，比如说刚刚的打印机发给CPU它打印结束了。</p>
+
+          
+        
+      
+    </div>
+
+    
+    <div>
+           
+</div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/10/12/操作系统概述/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -421,7 +607,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-10-18 14:50:15" itemprop="dateModified" datetime="2019-10-18T14:50:15+08:00">2019-10-18</time>
+                <time title="修改时间：2019-12-13 10:17:41" itemprop="dateModified" datetime="2019-12-13T10:17:41+08:00">2019-12-13</time>
               
             
           </span>
@@ -1959,204 +2145,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/07/21/数组知识/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/21/数组知识/" class="post-title-link" itemprop="url">数组知识</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-21 10:47:56" itemprop="dateCreated datePublished" datetime="2019-07-21T10:47:56+08:00">2019-07-21</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-08-01 10:27:46" itemprop="dateModified" datetime="2019-08-01T10:27:46+08:00">2019-08-01</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/ES6/" itemprop="url" rel="index"><span itemprop="name">ES6</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-    
-      
-      
-
-      
-        
-          
-            <p>在ES6中新增了一些数组方法来简化代码量。ES6把所有对数组的操作都归结与Array.</p>
-<hr>
-<h2 id="json数组格式转换"><a href="#json数组格式转换" class="headerlink" title="json数组格式转换"></a>json数组格式转换</h2><p>首先来看看json格式，要注意与普通的json不一样的是必须后面要跟一个length</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> json = &#123;</span><br><span class="line">    <span class="string">'0'</span> : <span class="string">'aaa'</span>,</span><br><span class="line">    <span class="string">'1'</span> : <span class="string">'bbb'</span>,</span><br><span class="line">    <span class="string">'2'</span> : <span class="string">'ccc'</span>,</span><br><span class="line">    length: <span class="number">3</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>下面我们只需一步就可以把它打印成数组形式，那就是调用from方法</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = <span class="built_in">Array</span>.from(json);</span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// ["aaa", "bbb", "ccc"]</span></span><br></pre></td></tr></table></figure>
-<h2 id="Array-of"><a href="#Array-of" class="headerlink" title="Array.of()"></a>Array.of()</h2><p>of方法可以用于将一堆变量或字符串转化成数组的情况下。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = <span class="built_in">Array</span>.of(<span class="string">'1'</span>,<span class="string">'2'</span>,<span class="string">'3'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">//["1", "2", "3"]</span></span><br></pre></td></tr></table></figure>
-<h2 id="find-实例方法"><a href="#find-实例方法" class="headerlink" title="find 实例方法"></a>find 实例方法</h2><p>find(function(value,index,arr){})三个参数缺一不可，用于寻找元素，比如</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>];</span><br><span class="line"><span class="built_in">console</span>.log(arr.find(<span class="function"><span class="keyword">function</span>(<span class="params">value,index,arr</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value&gt;<span class="number">4</span>; <span class="comment">//5</span></span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure>
-<p>函数里的函数体根据需要写,当然不仅是数字，也可用来查找字符串。</p>
-<h2 id="fill实例方法"><a href="#fill实例方法" class="headerlink" title="fill实例方法"></a>fill实例方法</h2><p>fill方法是用来替换数组中元素的，他有三个参数，分别是替换值，起始位置(包括)，末位置(不包括)，栗子如下(实例方法由实例调用而不是Array.)</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>];</span><br><span class="line"><span class="built_in">console</span>.log(arr.fill(<span class="number">0</span>,<span class="number">0</span>,<span class="number">4</span>)); <span class="comment">//0000567</span></span><br></pre></td></tr></table></figure>
-<h2 id="数组遍历"><a href="#数组遍历" class="headerlink" title="数组遍历"></a>数组遍历</h2><p>在ES5中遍历数组我们采用的形式低效，ES6给我提供了高效的方式，如下所示</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> value <span class="keyword">of</span> arr)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>当我们想得到索引时可以这样</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let arr = [1,2,3,4,5,6];</span><br><span class="line">for(let index of arr.keys())&#123;</span><br><span class="line">    console.log(index);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>当我们需要索引和元素一起打印时可以这样</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> [index,value] <span class="keyword">of</span> arr.entries())&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(index+<span class="string">':'</span>+value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="entries-实例方法"><a href="#entries-实例方法" class="headerlink" title="entries()实例方法"></a>entries()实例方法</h2><p>当我们想要数组里的元素不按常规形式输出，而是想要像输出一个元素就来个一行样式</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"><span class="keyword">let</span> list = arr.entries();</span><br><span class="line"><span class="built_in">console</span>.log(list); <span class="comment">//Iterator &#123;&#125;</span></span><br></pre></td></tr></table></figure>
-<p>这样我们就得到了Iterator {}，然后就可以用next手动循环</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(list.next().value);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'----------------'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(list.next().value);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'################'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(list.next().value);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'----------------'</span>);</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-    <div>
-           
-</div>
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2205,7 +2193,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">113</span>
+                    <span class="site-state-item-count">114</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2321,7 +2309,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>

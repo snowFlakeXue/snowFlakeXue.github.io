@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="snowFlakeXue.github.io/"/>
-  <updated>2019-11-28T13:09:14.179Z</updated>
+  <updated>2020-01-14T08:00:17.979Z</updated>
   <id>snowFlakeXue.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>获取元素</title>
+    <link href="snowFlakeXue.github.io/2020/01/14/%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0/"/>
+    <id>snowFlakeXue.github.io/2020/01/14/获取元素/</id>
+    <published>2020-01-14T03:16:34.000Z</published>
+    <updated>2020-01-14T08:00:17.979Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;JS有三大功能块：行为交互，数据交互，逻辑处理&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;获取单个元素&quot;&gt;&lt;a href=&quot;#获取单个元素&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="javascript学习" scheme="snowFlakeXue.github.io/categories/javascript%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>I/O软件层次结构</title>
@@ -454,32 +481,6 @@
         
           &lt;p&gt;&lt;img src=&quot;/2019/11/11/页面置换策略/1.jpg&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;驻留集&quot;&gt;&lt;a href=&quot;#驻留集&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="操作系统" scheme="snowFlakeXue.github.io/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>两级页表</title>
-    <link href="snowFlakeXue.github.io/2019/11/06/%E4%B8%A4%E7%BA%A7%E9%A1%B5%E8%A1%A8/"/>
-    <id>snowFlakeXue.github.io/2019/11/06/两级页表/</id>
-    <published>2019-11-06T05:53:30.000Z</published>
-    <updated>2019-11-10T01:46:39.222Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;分页存储中的页表是单级页表，它有两个很严重的问题&lt;/p&gt;
-&lt;p&gt;1.页表必须连续存放，因此当页表很大时，需要占用很多个连续的页框&lt;/p&gt;
-&lt;p&gt;2.没有必要让整个页表常驻内存，因为进程在一段时间内可能只需要访问某几个特定的页面&lt;br&gt;第二个问题需要用到虚拟技术，以后再说&lt;/
         
       
     

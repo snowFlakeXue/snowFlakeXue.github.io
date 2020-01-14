@@ -108,8 +108,8 @@
 <meta property="og:description" content="什么是系统调用我们知道操作系统要向上提供两种接口，一种是命令接口，一种是程序接口，而程序接口就是由一组系统调用组成，我们可以把系统调用简单的理解为，可供应用程序调用的特殊函数，应用程序可以发出系统调用请求来获得操作系统的服务。 系统调用功能 需要注意的是，有的功能是需要特权指令的，因此要在系统调用的相关处理要在核心态下进行 系统调用与库函数的区别 图中黑色箭头表示，我们本该用汇编语言调用系统调用，">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="/2019/10/15/系统调用/1.jpg">
-<meta property="og:image" content="/2019/10/15/系统调用/1.jpg">
-<meta property="og:updated_time" content="2019-10-15T13:55:46.701Z">
+<meta property="og:image" content="/2019/10/15/系统调用/2.jpg">
+<meta property="og:updated_time" content="2019-12-13T11:27:02.173Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="系统调用">
 <meta name="twitter:description" content="什么是系统调用我们知道操作系统要向上提供两种接口，一种是命令接口，一种是程序接口，而程序接口就是由一组系统调用组成，我们可以把系统调用简单的理解为，可供应用程序调用的特殊函数，应用程序可以发出系统调用请求来获得操作系统的服务。 系统调用功能 需要注意的是，有的功能是需要特权指令的，因此要在系统调用的相关处理要在核心态下进行 系统调用与库函数的区别 图中黑色箭头表示，我们本该用汇编语言调用系统调用，">
@@ -410,12 +410,24 @@
                 
               
 
-              <time title="创建时间：2019-10-15 21:14:53 / 修改时间：21:55:46" itemprop="dateCreated datePublished" datetime="2019-10-15T21:14:53+08:00">2019-10-15</time>
+              <time title="创建时间：2019-10-15 21:14:53" itemprop="dateCreated datePublished" datetime="2019-10-15T21:14:53+08:00">2019-10-15</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-12-13 19:27:02" itemprop="dateModified" datetime="2019-12-13T19:27:02+08:00">2019-12-13</time>
               
             
           </span>
@@ -484,7 +496,7 @@
         <h2 id="什么是系统调用"><a href="#什么是系统调用" class="headerlink" title="什么是系统调用"></a>什么是系统调用</h2><p>我们知道操作系统要向上提供两种接口，一种是命令接口，一种是程序接口，而程序接口就是由一组系统调用组成，我们可以把系统调用简单的理解为，可供应用程序调用的特殊函数，应用程序可以发出系统调用请求来获得操作系统的服务。</p>
 <h2 id="系统调用功能"><a href="#系统调用功能" class="headerlink" title="系统调用功能"></a>系统调用功能</h2><p><img src="/2019/10/15/系统调用/1.jpg" alt="功能"></p>
 <p>需要注意的是，有的功能是需要特权指令的，因此要在系统调用的相关处理要在核心态下进行</p>
-<h2 id="系统调用与库函数的区别"><a href="#系统调用与库函数的区别" class="headerlink" title="系统调用与库函数的区别"></a>系统调用与库函数的区别</h2><p><img src="/2019/10/15/系统调用/1.jpg" alt="区别"></p>
+<h2 id="系统调用与库函数的区别"><a href="#系统调用与库函数的区别" class="headerlink" title="系统调用与库函数的区别"></a>系统调用与库函数的区别</h2><p><img src="/2019/10/15/系统调用/2.jpg" alt="区别"></p>
 <p>图中黑色箭头表示，我们本该用汇编语言调用系统调用，但现在我们一般都通过调用高级语言的库函数来实现调用系统调用，因为库函数封装好了系统调用。</p>
 <p>传递系统调用参数-&gt;执行陷入指令(用户态)-&gt;执行系统调用响应服务程序(核心态)-&gt;返回用户程序</p>
 <p>这里需要注意，<font color="red">陷入指令是唯一一个只能在用户态执行而不能在核心态执行的指令</font></p>
@@ -616,7 +628,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">113</span>
+                    <span class="site-state-item-count">114</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -749,7 +761,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>

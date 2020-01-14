@@ -359,6 +359,231 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2020/01/14/获取元素/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="snowFlakeXue">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/01/14/获取元素/" class="post-title-link" itemprop="url">获取元素</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-14 11:16:34 / 修改时间：16:00:17" itemprop="dateCreated datePublished" datetime="2020-01-14T11:16:34+08:00">2020-01-14</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/javascript学习/" itemprop="url" rel="index"><span itemprop="name">javascript学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+    
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>JS有三大功能块：行为交互，数据交互，逻辑处理</p>
+</blockquote>
+<h2 id="获取单个元素"><a href="#获取单个元素" class="headerlink" title="获取单个元素"></a>获取单个元素</h2><ol>
+<li>getElementById</li>
+<li>querySelector</li>
+</ol>
+<p>需要注意的是，以下所有获取元素的方法中的document都可替换为parent</p>
+<p>获取完元素的用处：</p>
+<ol>
+<li><p>修改css样式</p>
+<p> 首先回顾一下css引入的三种方法</p>
+<p> 行间样式：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"width:100px;height:100px;background-color:red;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>​                 非行间样式：</p>
+<ul>
+<li><p><style><style></p>
+</li>
+<li><link href="" rel="stylesheet" type="text/css" />    
+
+<p>无论是哪一种样式，都用一种方式即可修改对应的样式</p>
+<p><img src="C:\Users\13263\AppData\Roaming\Typora\typora-user-images\image-20200114142847633.png" alt="image-20200114142847633"></p>
+<p><img src="C:\Users\13263\AppData\Roaming\Typora\typora-user-images\image-20200114143020127.png" alt="image-20200114143020127"></p>
+<p>其中，需要注意两种获取元素的方法的括号里应该写什么，getElementById是写名就行了，不需要 . #</p>
+<p>queryselector如果匹配到了多个元素，只会采用第0个</p>
+</li>
+</ul>
+<p>​              再来看看一些有意思的</p>
+<p>​               如果我想清空样式怎么做最方便呢(只适用于行间样式)</p>
+<p>​               item.style.cssText=” “;</p>
+<p>​               如果只修改某个样式，比方说我原来的样式是宽高各100px，我现在</p>
+<p>​               item.style.cssText=”width:300px”</p>
+<p>​               我得样式就会变成宽300，高0，也就是说会覆盖，这个时候，就可以用js超级好用的字符串拼接了</p>
+<p>​                item.style.cssText+=”width:300px”</p>
+<p>​                这个时候后面的宽覆盖前面的宽，样式就变成宽300，高100</p>
+<ol start="2">
+<li><p>获取表单用户输入的内容</p>
+<p>item.value</p>
+</li>
+<li><p>获取普通元素(非标单的内容)</p>
+<p>item.innerHtml</p>
+<p>注意当要加的是标签时，要用字符串拼接，否则会覆盖掉原来的标签</p>
+<p>item.innerHtml+=”&lt;&gt;&lt;&gt;”</p>
+</li>
+<li><p>获取元素的class</p>
+<p>item.className</p>
+<p>这种情况可以用于脱离内联样式，通过写多个class及if语句来改变样式</p>
+</li>
+</ol>
+<h2 id="获取多个元素-类数组"><a href="#获取多个元素-类数组" class="headerlink" title="获取多个元素(类数组)"></a>获取多个元素(类数组)</h2><ul>
+<li>document.getElementsByClassName(“类名”)</li>
+<li>document.getElementsByTag(“标签名”)</li>
+<li><p>document.querySelectorAll(“css selector”)</p>
+<p> 上述三种方法获取到的一组元素不能直接操作，都只能通过数组下标访问，即使只有一个能匹配也得用数组下标，因此一般也都用循环</p>
+</li>
+</ul>
+<p><img src="C:\Users\13263\AppData\Roaming\Typora\typora-user-images\image-20200114150232454.png" alt="image-20200114150232454"></p>
+<p><img src="C:\Users\13263\AppData\Roaming\Typora\typora-user-images\image-20200114150311437.png" alt="image-20200114150311437"></p>
+<p>还有！切记是Elements!不是Element!</p>
+</style></p></li></ul>
+          
+        
+      
+    </div>
+
+    
+    <div>
+           
+</div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/11/28/I-O软件层次结构/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1987,186 +2212,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2019/11/24/文件保护/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liu Xue">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="snowFlakeXue">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/11/24/文件保护/" class="post-title-link" itemprop="url">文件保护</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-11-24 18:51:46" itemprop="dateCreated datePublished" datetime="2019-11-24T18:51:46+08:00">2019-11-24</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-11-27 12:26:41" itemprop="dateModified" datetime="2019-11-27T12:26:41+08:00">2019-11-27</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/操作系统/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-    
-      
-      
-
-      
-        
-          
-            <h2 id="口令保护"><a href="#口令保护" class="headerlink" title="口令保护"></a>口令保护</h2><p><img src="/2019/11/24/文件保护/1.jpg" height="150px"></p>
-<h2 id="加密保护"><a href="#加密保护" class="headerlink" title="加密保护"></a>加密保护</h2><p><img src="/2019/11/24/文件保护/2.jpg" height="170px" width="400px"></p>
-<h2 id="访问控制"><a href="#访问控制" class="headerlink" title="访问控制"></a>访问控制</h2><p><img src="/2019/11/24/文件保护/3.jpg" height="170px" width="400px"></p>
-<p><img src="/2019/11/24/文件保护/4.jpg" height="170px" width="400px"></p>
-
-          
-        
-      
-    </div>
-
-    
-    <div>
-           
-</div>
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2215,7 +2260,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">113</span>
+                    <span class="site-state-item-count">114</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2331,7 +2376,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
