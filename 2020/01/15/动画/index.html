@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/Han/dist/han.min.css?v=3.3">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="transition 元素的样式发生改变，给元素添加一个过渡动画  参数：  - transition-delay 延迟时间，动画延迟多长时间执行(s|ms) 默认值0s  可选  - transition-duration 动画时长，动画用多长时间完成(s|ms) 默认值 0s  必要  - transition-property 要动画的样式 (即css属性，如width等)默认值 all，若">
+<meta property="og:type" content="article">
+<meta property="og:title" content="动画">
+<meta property="og:url" content="snowFlakeXue.github.io/2020/01/15/动画/index.html">
+<meta property="og:site_name" content="snowFlakeXue">
+<meta property="og:description" content="transition 元素的样式发生改变，给元素添加一个过渡动画  参数：  - transition-delay 延迟时间，动画延迟多长时间执行(s|ms) 默认值0s  可选  - transition-duration 动画时长，动画用多长时间完成(s|ms) 默认值 0s  必要  - transition-property 要动画的样式 (即css属性，如width等)默认值 all，若">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="/2020/01/15/动画/1.jpg">
+<meta property="og:image" content="/2020/01/15/动画/2.jpg">
+<meta property="og:image" content="/2020/01/15/动画/3.jpg">
+<meta property="og:image" content="/2020/01/15/动画/4.jpg">
+<meta property="og:image" content="/2020/01/15/动画/5.jpg">
+<meta property="og:updated_time" content="2020-02-22T14:16:43.284Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="动画">
+<meta name="twitter:description" content="transition 元素的样式发生改变，给元素添加一个过渡动画  参数：  - transition-delay 延迟时间，动画延迟多长时间执行(s|ms) 默认值0s  可选  - transition-duration 动画时长，动画用多长时间完成(s|ms) 默认值 0s  必要  - transition-property 要动画的样式 (即css属性，如width等)默认值 all，若">
+<meta name="twitter:image" content="/2020/01/15/动画/1.jpg">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="snowFlakeXue" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="snowFlakeXue.github.io/2020/01/15/动画/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>动画 | snowFlakeXue</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">snowFlakeXue</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">Work hard for what you desire.</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+    
+  
+  
+
+  
+
+  <article class="post post-type-normal true" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="snowFlakeXue.github.io/2020/01/15/动画/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liu Xue">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="snowFlakeXue">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">动画
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-15 13:42:08" itemprop="dateCreated datePublished" datetime="2020-01-15T13:42:08+08:00">2020-01-15</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-02-22 22:16:43" itemprop="dateModified" datetime="2020-02-22T22:16:43+08:00">2020-02-22</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/javascript学习/" itemprop="url" rel="index"><span itemprop="name">javascript学习</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2020/01/15/动画/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/01/15/动画/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+    
+      
+      
+
+      
+        <h2 id="transition"><a href="#transition" class="headerlink" title="transition"></a>transition</h2><blockquote>
+<p>元素的样式发生改变，给元素添加一个过渡动画</p>
+</blockquote>
+<p>参数：</p>
+<p> <em>- transition-delay 延迟时间，动画延迟多长时间执行(s|ms) 默认值0s</em>  可选</p>
+<p> <em>- transition-duration 动画时长，动画用多长时间完成(s|ms) 默认值 0s</em>  必要</p>
+<p> <em>- transition-property 要动画的样式 (即css属性，如width等)默认值 all，若分别对不同属性设置不同动画，中间用逗号隔开</em></p>
+<p>eg：<code>transition: 1s width, 1s 2s height;</code></p>
+<p> <em>- transition-timing-function 动画形式</em></p>
+<p>   <em>linear 匀速</em></p>
+<p>   <em>ease 缓冲(默认值)</em></p>
+<p>   <em>ease-in 加速</em></p>
+<p>   <em>ease-out 减速</em></p>
+<p>   <em>ease-in-out 先加速再减速</em></p>
+<p>  <a href="https://cubic-bezier.com/" target="_blank" rel="noopener">贝塞尔曲线运动</a> cubic-bezier()*  </p>
+<p>transition 在使用时需要注意一个小问题，我们首先来看看下面这个代码</p>
+<p><img src="/2020/01/15/动画/1.jpg" alt="transition" style="zoom: 67%;"></p>
+<p>我们给box加了一个两秒的动画，让他的宽从100变为500，但实际上，他只是在点击按钮式显现并变化但没有动画效果，原因是元素在页面上渲染完之前，transition 是不起效果的，也就是当我点击按钮时，浏览器让box显示出来是需要渲染时间的，虽然很短，但仍长于解析速度，也就是我可能几微秒的时间内就已经解析到动画那一步了，但我还没渲染完，而我们又无法监视浏览器什么时候渲染完，因此可以设置一个稍微长一点时间的计时器来解决这个问题，时间最好不要少于20ms</p>
+<p><img src="/2020/01/15/动画/2.jpg" alt></p>
+<p>这下，问题就迎刃而解啦</p>
+<h2 id="transitionend"><a href="#transitionend" class="headerlink" title="transitionend"></a>transitionend</h2><blockquote>
+<p>一个监测动画结束的事件</p>
+</blockquote>
+<p>照理来说，应该可以像鼠标移入啊，我用item.ontransitionend就可以触发事件，但好像不行，应该用下面这种形式</p>
+<p><img src="/2020/01/15/动画/3.jpg" alt></p>
+<p> 其中，注意后面的WebKitTransitionEnd，这是为了兼容一些低版本的，这些大小写很烦，要仔细点。</p>
+<h2 id="监听事件"><a href="#监听事件" class="headerlink" title="监听事件"></a>监听事件</h2><blockquote>
+<p><em>事件监听基本用法</em>  ：<em>item.addEventListener(‘事件名(不加on)’,fn);</em></p>
+<p><em>取消事件监听</em>：item.removeEventListener(‘事件名(不加on)’,fn); 如果要取消不能使用匿名函数*</p>
+</blockquote>
+<p>不用匿名函数什么意思，就是防止后来取消的时候找不到，也就是不能写成</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">item.addEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"><span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> item.removeEventListener(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"> </span><br><span class="line"> &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>addEventListener是很常用的一种手段，相比较于用on事件，这种方式更好，因为他不会覆盖，你可以同时为一个元素添加多个点击事件且都会生效，如果用on事件就会被覆盖只有一个生效</p>
+<p>那给个正确的例子吧</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">box.addEventListener(<span class="string">"click"</span>,fn);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> w = <span class="built_in">parseInt</span>(getComputedStyle(box)[<span class="string">"width"</span>]);</span><br><span class="line">    <span class="keyword">this</span>.style.width = w + <span class="number">100</span> + <span class="string">"px"</span>;</span><br><span class="line">    box.removeEventListener(<span class="string">"click"</span>,fn);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面这个例子就是如果写了取消，那一次点击后，下一次不会再生效；要是不写取消，宽度就会随着你的点击次数逐渐增加100px</p>
+<h2 id="animation"><a href="#animation" class="headerlink" title="animation"></a>animation</h2><blockquote>
+<p>与transition相比，可以精确动画，需要动画帧keyframes</p>
+</blockquote>
+<p>先来看看keyframes的写法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    <span class="comment">/* 动画帧 */</span></span><br><span class="line">    <span class="comment">//move为动画帧名，在后面调用animation时要注明使用哪个动画帧</span></span><br><span class="line">    @keyframes move &#123;</span><br><span class="line">         <span class="comment">/* 0%&#123;</span></span><br><span class="line"><span class="comment">             width: 100px;</span></span><br><span class="line"><span class="comment">             height: 100px;</span></span><br><span class="line"><span class="comment">         &#125; </span></span><br><span class="line"><span class="comment">            动画帧不定义的时候，默认就使用计算后样式(即元素本来的样式)</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="comment">//某些情况下需要将0%写成与计算后样式不一样的，如下</span></span><br><span class="line">         <span class="comment">/* 0% &#123;</span></span><br><span class="line"><span class="comment">             width: 0;</span></span><br><span class="line"><span class="comment">             height: 0;</span></span><br><span class="line"><span class="comment">         &#125; */</span></span><br><span class="line">         <span class="number">25</span>% &#123;</span><br><span class="line">             width: <span class="number">100</span>px;</span><br><span class="line">             height: <span class="number">300</span>px;</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="number">50</span>% &#123;</span><br><span class="line">             width: <span class="number">300</span>px;</span><br><span class="line">             height: <span class="number">300</span>px;</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="number">75</span>% &#123;</span><br><span class="line">            width: <span class="number">300</span>px;</span><br><span class="line">            height: <span class="number">100</span>px;</span><br><span class="line">         &#125;</span><br><span class="line">         <span class="comment">/* 100% &#123;</span></span><br><span class="line"><span class="comment">            width: 100px;</span></span><br><span class="line"><span class="comment">            height: 100px; </span></span><br><span class="line"><span class="comment">         &#125; </span></span><br><span class="line"><span class="comment">            100% 不定义 默认会回到计算后样式，剩下的与0%哪里一样</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">         <span class="number">100</span>% &#123;</span><br><span class="line">             width: <span class="number">0</span>;</span><br><span class="line">             height: <span class="number">0</span>;</span><br><span class="line">         &#125;</span><br><span class="line">    &#125; </span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">        默认动画执行完毕之后，会回到计算后样式</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    #box &#123;</span><br><span class="line">        width:  <span class="number">100</span>px;</span><br><span class="line">        height: <span class="number">100</span>px;</span><br><span class="line">        background: red;</span><br><span class="line">        animation: move <span class="number">2</span>s;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;<span class="regexp">/style&gt;</span></span><br></pre></td></tr></table></figure>
+<p>animation的属性</p>
+<p><em>- animation-name 动画帧名称 必需</em></p>
+<p> <em>- animation-duration 动画持续时间</em>  必需</p>
+<p> <em>- animation-timing-function 动画形式(参考 transition)</em>  </p>
+<p> <em>- animation-delay 动画开始前的延迟时间</em></p>
+<p> <em>- animation-iteration-count 动画执行次数 number(具体的数字) | infinite(无限次)</em></p>
+<p> <em>- animation-direction  alternate(1,3,5奇数次正常，2,4,6偶数次倒序执行倒序执行) normal顺序执行</em></p>
+<p> -animation-fill-mode:</p>
+<p>​      <em>backwards 动画开始前，元素的样式保留在动画帧 0</em> </p>
+<p>​      <em>forwards 动画结束后，元素的样式保留在动画帧 100</em></p>
+<p>​      <em>both: backwards + forwards(开始前在0，结束后在100，即不回到计算后样式)</em></p>
+<p>  -animation-play-state:  paused 暂停, running 播放</p>
+<blockquote>
+<p>低版本兼容需要写成-webkit-animation···</p>
+<p>把很多属性写进animation时可没有顺序，但一定是动画持续时间在动画延迟时间前</p>
+</blockquote>
+<h2 id="animation相关事件"><a href="#animation相关事件" class="headerlink" title="animation相关事件"></a>animation相关事件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">box.addEventListener(<span class="string">"animationstart"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"动画开始"</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">    box.addEventListener(<span class="string">"animationend"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"动画结束"</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">// animationiteration 动画多次执行时，使用，监听动画又开始</span></span><br><span class="line">    box.addEventListener(<span class="string">"animationiteration"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"动画又开始"</span>);</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="transform"><a href="#transform" class="headerlink" title="transform"></a>transform</h2><blockquote>
+<p>变换：旋转，斜切，缩放，位移</p>
+</blockquote>
+<p>旋转：rotate() 单位deg</p>
+<p>斜切：*skew(x,y)</p>
+<p>​              <em>skewX()</em>  +:左上角，右下角   -:右上角，左下角   与y轴夹角</p>
+<p>​             <em>skewY()</em>   +:左上角，右下角   -:右上角，左下角   与x轴夹角</p>
+<p>​             单位：deg</p>
+<p> 缩放：(倍数)</p>
+<p>​             scale(x ,y)  一起缩放</p>
+<p>​             scaleX()</p>
+<p>​             <em>scaleY()</em></p>
+<p>位移：<em>translate(x,y)</em></p>
+<p>​            <em>translateX()</em></p>
+<p>​            <em>translateY()</em></p>
+<p>​            单位：px</p>
+<p>变换原点：</p>
+<p>​            <em>默认 旋转，缩放，斜切 都是围绕着元素的中心点进行变换</em> </p>
+<p>​           <em>transform-origin 变换基点 (旋转，缩放，斜切 围绕着那个点进行)</em></p>
+<p>​         <em>默认值： center center</em></p>
+<p>​         <em>0,0点 在元素的左上角</em></p>
+<p>注意，当写多个函数变换时，后写的先计算样式</p>
+<p><img src="/2020/01/15/动画/4.jpg" alt="图"></p>
+<p> 如上面栗子，第一个是先算好缩放到一半再移200，第二个是先移200，再缩，因此第一个比第二个多走100 </p>
+<p><img src="/2020/01/15/动画/5.jpg" alt="图" style="zoom: 50%;"></p>
+<p>js获取transform</p>
+<p>或许你想这样子获取</p>
+<p><code>getComputedStyle(item)[&quot;transform&quot;]</code></p>
+<p>but你得到的将是这么个玩应儿</p>
+<p><code>matrix(0.707107, 0.707107, -0.707107, 0.707107, 0, 0)</code></p>
+<p>没错，上面所讲的旋转啊，位移啊，其实都是css为了方便我们使用才弄得，事实上，我们做的都是对就九个数操作，emmmm就是矩阵，等3D的时候就是16位啦哈哈哈哈哈哈哈哈，不过我们只用操作12位就可以了</p>
+<p>换句话说，你获取不到transform的哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈</p>
+<p>emmmmmm不过你可以通过js对这9个数进行你想要的旋转缩放位移！了解就好，一般用不上哈，线性代数还可以再等等。</p>
+<p>那先来看看简单的，就位移吧</p>
+<p>首先默认情况下matrix是这样的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// matrix(1, 0, 0, 1, 0, 0);</span></span><br><span class="line">    <span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">var</span> b = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> c = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> d = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">var</span> e = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> f = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+<p>那你要是问我为啥是这样的，我也不知道，记住就好了哈哈哈哈哈，不行就百度一下子</p>
+<p>因而我们就用a~f代替一下子这9个数，到时候字符串拼接好用</p>
+<p>那就来看看位移的实现吧</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// x 位移</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">translateX</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">        e += x; <span class="comment">//对e操作</span></span><br><span class="line">        box.style.transform = <span class="string">'matrix('</span>+a+<span class="string">', '</span>+b+<span class="string">', '</span>+c+<span class="string">', '</span>+d+<span class="string">', '</span>+e+<span class="string">', '</span>+f+<span class="string">')'</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">// y 位移</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">translateY</span>(<span class="params">y</span>)</span>&#123;</span><br><span class="line">        f += y;<span class="comment">//对f操作</span></span><br><span class="line">        box.style.transform = <span class="string">'matrix('</span>+a+<span class="string">', '</span>+b+<span class="string">', '</span>+c+<span class="string">', '</span>+d+<span class="string">', '</span>+e+<span class="string">', '</span>+f+<span class="string">')'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    box.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        translateX(<span class="number">10</span>);<span class="comment">//调用</span></span><br><span class="line">        translateY(<span class="number">10</span>);<span class="comment">//调用</span></span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
+<p>是不是很简单哈哈哈哈哈，那再来看看缩放吧，也差不多的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// x 缩放（a,c,e）</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">scaleX</span>(<span class="params">x</span>)</span>&#123;</span><br><span class="line">        a *= x;</span><br><span class="line">        c *= x;</span><br><span class="line">        e *= x;</span><br><span class="line">        box.style.transform = <span class="string">'matrix('</span>+a+<span class="string">', '</span>+b+<span class="string">', '</span>+c+<span class="string">', '</span>+d+<span class="string">', '</span>+e+<span class="string">', '</span>+f+<span class="string">')'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// y 缩放(b,d,f)</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">scaleY</span>(<span class="params">y</span>)</span>&#123;</span><br><span class="line">        b *= y;</span><br><span class="line">        d *= y;</span><br><span class="line">        f *= y;</span><br><span class="line">        box.style.transform = <span class="string">'matrix('</span>+a+<span class="string">', '</span>+b+<span class="string">', '</span>+c+<span class="string">', '</span>+d+<span class="string">', '</span>+e+<span class="string">', '</span>+f+<span class="string">')'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    box.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        scaleX(<span class="number">1.2</span>);</span><br><span class="line">        scaleY(<span class="number">1.2</span>)</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
+<p>emmmm在说旋转之前先来看看一些基础叭</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.tan(rad) 正切函数</span><br><span class="line"><span class="comment">//你像这个rad就是烦人之处，他不接受角度，因而我们需要把角度转换成弧度一下子</span></span><br><span class="line"><span class="built_in">Math</span>.PI π圆周率</span><br><span class="line">角度转弧度: deg/<span class="number">180</span>*<span class="built_in">Math</span>.PI</span><br></pre></td></tr></table></figure>
+<p>下面来看正题-旋转的实现</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">rotate</span>(<span class="params">deg</span>)</span>&#123;</span><br><span class="line">        a=<span class="built_in">Math</span>.cos(deg/<span class="number">180</span>*<span class="built_in">Math</span>.PI); </span><br><span class="line">        b=<span class="built_in">Math</span>.sin(deg/<span class="number">180</span>*<span class="built_in">Math</span>.PI);</span><br><span class="line">        c=-<span class="built_in">Math</span>.sin(deg/<span class="number">180</span>*<span class="built_in">Math</span>.PI);</span><br><span class="line">		d=<span class="built_in">Math</span>.cos(deg/<span class="number">180</span>*<span class="built_in">Math</span>.PI);</span><br><span class="line">        box.style.transform = <span class="string">'matrix('</span>+a+<span class="string">', '</span>+b+<span class="string">', '</span>+c+<span class="string">', '</span>+d+<span class="string">', '</span>+e+<span class="string">', '</span>+f+<span class="string">')'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    rotate(<span class="number">30</span>);</span><br></pre></td></tr></table></figure>
+<p>再来看看斜切~</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// x轴倾斜</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">skewX</span>(<span class="params">xDeg</span>)</span>&#123;</span><br><span class="line">        c = <span class="built_in">Math</span>.tan(xDeg/<span class="number">180</span>*<span class="built_in">Math</span>.PI);</span><br><span class="line">        box.style.transform = <span class="string">'matrix('</span>+a+<span class="string">', '</span>+b+<span class="string">', '</span>+c+<span class="string">', '</span>+d+<span class="string">', '</span>+e+<span class="string">', '</span>+f+<span class="string">')'</span>;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">// y轴倾斜</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">skewY</span>(<span class="params">yDeg</span>)</span>&#123;</span><br><span class="line">        b = <span class="built_in">Math</span>.tan(yDeg/<span class="number">180</span>*<span class="built_in">Math</span>.PI);</span><br><span class="line">        box.style.transform = <span class="string">'matrix('</span>+a+<span class="string">', '</span>+b+<span class="string">', '</span>+c+<span class="string">', '</span>+d+<span class="string">', '</span>+e+<span class="string">', '</span>+f+<span class="string">')'</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="transform-3D"><a href="#transform-3D" class="headerlink" title="transform 3D"></a>transform 3D</h2><p> 实现3D，必须加上这两个东西</p>
+<blockquote>
+<p>transform-style: preserve-3d;  设置到父元素，使其子元素保留其3D位置</p>
+</blockquote>
+<blockquote>
+<p> perspective    景深，一般设置到父样式的父元素，设置成想加3D效果的元素的一两倍即可</p>
+</blockquote>
+<p>还有一个需要你灵活设置，那就是transform-origin,就是你看的角度，emmm我觉得应该是位置好一点，相对于2D，3D这里需要多设置一个z轴距离，设置在父元素上</p>
+<p>像这样<code>transform-origin: center center -100px;</code></p>
+<p>还有一个属性</p>
+<blockquote>
+<p>​    backface-visibility: hidden;   当元素不面向屏幕时是否可见。 设置在3D变化的元素上即可</p>
+</blockquote>
+<p>以上所总结的是设置在父元素上还是哪上如果忘了，可以去看看3D导航这个demo</p>
+<p>下面再来讲讲3D实现方法</p>
+<p><em>transform3D 变换</em></p>
+<p>​    <em>1. 旋转</em></p>
+<p>​      <em>rorateX() 围绕着 X 轴的旋转 (上下翻转)</em></p>
+<p>​      <em>rorateY() 围绕着 Y 轴的旋转</em></p>
+<p>​      <em>rorateZ() 围绕着 Z 轴的旋转</em></p>
+<p>​    <em>2. 位移</em></p>
+<p>​      <em>translateZ   z轴位移</em></p>
+<h2 id="Tween动画算法"><a href="#Tween动画算法" class="headerlink" title="Tween动画算法"></a>Tween动画算法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Tween = &#123;</span><br><span class="line">	linear: <span class="function"><span class="keyword">function</span> (<span class="params">t, b, c, d</span>)</span>&#123;  <span class="comment">//匀速</span></span><br><span class="line">		<span class="keyword">return</span> c*t/d + b;</span><br><span class="line">	&#125;,</span><br><span class="line">	easeIn: <span class="function"><span class="keyword">function</span>(<span class="params">t, b, c, d</span>)</span>&#123;  <span class="comment">//加速曲线</span></span><br><span class="line">		<span class="keyword">return</span> c*(t/=d)*t + b;</span><br><span class="line">	&#125;,</span><br><span class="line">	easeOut: <span class="function"><span class="keyword">function</span>(<span class="params">t, b, c, d</span>)</span>&#123;  <span class="comment">//减速曲线</span></span><br><span class="line">		<span class="keyword">return</span> -c *(t/=d)*(t<span class="number">-2</span>) + b;</span><br><span class="line">	&#125;,</span><br><span class="line">	easeBoth: <span class="function"><span class="keyword">function</span>(<span class="params">t, b, c, d</span>)</span>&#123;  <span class="comment">//加速减速曲线</span></span><br><span class="line">		<span class="keyword">if</span> ((t/=d/<span class="number">2</span>) &lt; <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> c/<span class="number">2</span>*t*t + b;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> -c/<span class="number">2</span> * ((--t)*(t<span class="number">-2</span>) - <span class="number">1</span>) + b;</span><br><span class="line">	&#125;,</span><br><span class="line">	easeInStrong: <span class="function"><span class="keyword">function</span>(<span class="params">t, b, c, d</span>)</span>&#123;  <span class="comment">//加加速曲线</span></span><br><span class="line">		<span class="keyword">return</span> c*(t/=d)*t*t*t + b;</span><br><span class="line">	&#125;,</span><br><span class="line">	easeOutStrong: <span class="function"><span class="keyword">function</span>(<span class="params">t, b, c, d</span>)</span>&#123;  <span class="comment">//减减速曲线</span></span><br><span class="line">		<span class="keyword">return</span> -c * ((t=t/d<span class="number">-1</span>)*t*t*t - <span class="number">1</span>) + b;</span><br><span class="line">	&#125;,</span><br><span class="line">	easeBothStrong: <span class="function"><span class="keyword">function</span>(<span class="params">t, b, c, d</span>)</span>&#123;  <span class="comment">//加加速减减速曲线</span></span><br><span class="line">		<span class="keyword">if</span> ((t/=d/<span class="number">2</span>) &lt; <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> c/<span class="number">2</span>*t*t*t*t + b;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> -c/<span class="number">2</span> * ((t-=<span class="number">2</span>)*t*t*t - <span class="number">2</span>) + b;</span><br><span class="line">	&#125;,</span><br><span class="line">	elasticIn: <span class="function"><span class="keyword">function</span>(<span class="params">t, b, c, d, a, p</span>)</span>&#123;  <span class="comment">//正弦衰减曲线（弹动渐入）</span></span><br><span class="line">		<span class="keyword">if</span> (t === <span class="number">0</span>) &#123; </span><br><span class="line">			<span class="keyword">return</span> b; </span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> ( (t /= d) == <span class="number">1</span> ) &#123;</span><br><span class="line">			<span class="keyword">return</span> b+c; </span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (!p) &#123;</span><br><span class="line">			p=d*<span class="number">0.3</span>; </span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (!a || a &lt; <span class="built_in">Math</span>.abs(c)) &#123;</span><br><span class="line">			a = c; </span><br><span class="line">			<span class="keyword">var</span> s = p/<span class="number">4</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">var</span> s = p/(<span class="number">2</span>*<span class="built_in">Math</span>.PI) * <span class="built_in">Math</span>.asin (c/a);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> -(a*<span class="built_in">Math</span>.pow(<span class="number">2</span>,<span class="number">10</span>*(t-=<span class="number">1</span>)) * <span class="built_in">Math</span>.sin( (t*d-s)*(<span class="number">2</span>*<span class="built_in">Math</span>.PI)/p )) + b;</span><br><span class="line">	&#125;,</span><br><span class="line">	elasticOut: <span class="function"><span class="keyword">function</span>(<span class="params">t, b, c, d, a, p</span>)</span>&#123;    <span class="comment">//*正弦增强曲线（弹动渐出）</span></span><br><span class="line">		<span class="keyword">if</span> (t === <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> b;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> ( (t /= d) == <span class="number">1</span> ) &#123;</span><br><span class="line">			<span class="keyword">return</span> b+c;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (!p) &#123;</span><br><span class="line">			p=d*<span class="number">0.3</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (!a || a &lt; <span class="built_in">Math</span>.abs(c)) &#123;</span><br><span class="line">			a = c;</span><br><span class="line">			<span class="keyword">var</span> s = p / <span class="number">4</span>;</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">var</span> s = p/(<span class="number">2</span>*<span class="built_in">Math</span>.PI) * <span class="built_in">Math</span>.asin (c/a);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> a*<span class="built_in">Math</span>.pow(<span class="number">2</span>,<span class="number">-10</span>*t) * <span class="built_in">Math</span>.sin( (t*d-s)*(<span class="number">2</span>*<span class="built_in">Math</span>.PI)/p ) + c + b;</span><br><span class="line">	&#125;,    </span><br><span class="line">	elasticBoth: <span class="function"><span class="keyword">function</span>(<span class="params">t, b, c, d, a, p</span>)</span>&#123; </span><br><span class="line">		<span class="keyword">if</span> (t === <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> b;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> ( (t /= d/<span class="number">2</span>) == <span class="number">2</span> ) &#123;</span><br><span class="line">			<span class="keyword">return</span> b+c;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (!p) &#123;</span><br><span class="line">			p = d*(<span class="number">0.3</span>*<span class="number">1.5</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> ( !a || a &lt; <span class="built_in">Math</span>.abs(c) ) &#123;</span><br><span class="line">			a = c; </span><br><span class="line">			<span class="keyword">var</span> s = p/<span class="number">4</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="keyword">var</span> s = p/(<span class="number">2</span>*<span class="built_in">Math</span>.PI) * <span class="built_in">Math</span>.asin (c/a);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (t &lt; <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> - <span class="number">0.5</span>*(a*<span class="built_in">Math</span>.pow(<span class="number">2</span>,<span class="number">10</span>*(t-=<span class="number">1</span>)) * </span><br><span class="line">					<span class="built_in">Math</span>.sin( (t*d-s)*(<span class="number">2</span>*<span class="built_in">Math</span>.PI)/p )) + b;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> a*<span class="built_in">Math</span>.pow(<span class="number">2</span>,<span class="number">-10</span>*(t-=<span class="number">1</span>)) * </span><br><span class="line">				<span class="built_in">Math</span>.sin( (t*d-s)*(<span class="number">2</span>*<span class="built_in">Math</span>.PI)/p )*<span class="number">0.5</span> + c + b;</span><br><span class="line">	&#125;,</span><br><span class="line">	backIn: <span class="function"><span class="keyword">function</span>(<span class="params">t, b, c, d, s</span>)</span>&#123;     <span class="comment">//回退加速（回退渐入）</span></span><br><span class="line">		<span class="keyword">if</span> (<span class="keyword">typeof</span> s == <span class="string">'undefined'</span>) &#123;</span><br><span class="line">		   s = <span class="number">1.70158</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> c*(t/=d)*t*((s+<span class="number">1</span>)*t - s) + b;</span><br><span class="line">	&#125;,</span><br><span class="line">	backOut: <span class="function"><span class="keyword">function</span>(<span class="params">t, b, c, d, s</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="keyword">typeof</span> s == <span class="string">'undefined'</span>) &#123;</span><br><span class="line">			s = <span class="number">1.70158</span>;  <span class="comment">//回缩的距离</span></span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> c*((t=t/d<span class="number">-1</span>)*t*((s+<span class="number">1</span>)*t + s) + <span class="number">1</span>) + b;</span><br><span class="line">	&#125;, </span><br><span class="line">	backBoth: <span class="function"><span class="keyword">function</span>(<span class="params">t, b, c, d, s</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="keyword">typeof</span> s == <span class="string">'undefined'</span>) &#123;</span><br><span class="line">			s = <span class="number">1.70158</span>; </span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> ((t /= d/<span class="number">2</span> ) &lt; <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> c/<span class="number">2</span>*(t*t*(((s*=(<span class="number">1.525</span>))+<span class="number">1</span>)*t - s)) + b;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> c/<span class="number">2</span>*((t-=<span class="number">2</span>)*t*(((s*=(<span class="number">1.525</span>))+<span class="number">1</span>)*t + s) + <span class="number">2</span>) + b;</span><br><span class="line">	&#125;,</span><br><span class="line">	bounceIn: <span class="function"><span class="keyword">function</span>(<span class="params">t, b, c, d</span>)</span>&#123;    <span class="comment">//弹球减振（弹球渐出）</span></span><br><span class="line">		<span class="keyword">return</span> c - Tween[<span class="string">'bounceOut'</span>](d-t, <span class="number">0</span>, c, d) + b;</span><br><span class="line">	&#125;,       </span><br><span class="line">	bounceOut: <span class="function"><span class="keyword">function</span>(<span class="params">t, b, c, d</span>)</span>&#123;<span class="comment">//*</span></span><br><span class="line">		<span class="keyword">if</span> ((t/=d) &lt; (<span class="number">1</span>/<span class="number">2.75</span>)) &#123;</span><br><span class="line">			<span class="keyword">return</span> c*(<span class="number">7.5625</span>*t*t) + b;</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (t &lt; (<span class="number">2</span>/<span class="number">2.75</span>)) &#123;</span><br><span class="line">			<span class="keyword">return</span> c*(<span class="number">7.5625</span>*(t-=(<span class="number">1.5</span>/<span class="number">2.75</span>))*t + <span class="number">0.75</span>) + b;</span><br><span class="line">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (t &lt; (<span class="number">2.5</span>/<span class="number">2.75</span>)) &#123;</span><br><span class="line">			<span class="keyword">return</span> c*(<span class="number">7.5625</span>*(t-=(<span class="number">2.25</span>/<span class="number">2.75</span>))*t + <span class="number">0.9375</span>) + b;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> c*(<span class="number">7.5625</span>*(t-=(<span class="number">2.625</span>/<span class="number">2.75</span>))*t + <span class="number">0.984375</span>) + b;</span><br><span class="line">	&#125;,      </span><br><span class="line">	bounceBoth: <span class="function"><span class="keyword">function</span>(<span class="params">t, b, c, d</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (t &lt; d/<span class="number">2</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> Tween[<span class="string">'bounceIn'</span>](t*<span class="number">2</span>, <span class="number">0</span>, c, d) * <span class="number">0.5</span> + b;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> Tween[<span class="string">'bounceOut'</span>](t*<span class="number">2</span>-d, <span class="number">0</span>, c, d) * <span class="number">0.5</span> + c*<span class="number">0.5</span> + b;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">   Tween四个必要参数:</span></span><br><span class="line"><span class="comment">    - t: current time（当前时间 - 当前运动次数）</span></span><br><span class="line"><span class="comment">    - b: beginning value（初始值）</span></span><br><span class="line"><span class="comment">    - c: change in value（变化量）</span></span><br><span class="line"><span class="comment">    - d: duration（持续时间 - 运动总次数） </span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> run = <span class="built_in">document</span>.querySelector(<span class="string">"#run"</span>);</span><br><span class="line">    <span class="keyword">var</span> stop = <span class="built_in">document</span>.querySelector(<span class="string">"#stop"</span>);</span><br><span class="line">    <span class="keyword">var</span> box = <span class="built_in">document</span>.querySelector(<span class="string">"#box"</span>);</span><br><span class="line">    <span class="keyword">var</span> x = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> speed = <span class="number">5</span>;</span><br><span class="line">    <span class="keyword">var</span> timer = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> t = <span class="number">0</span>; <span class="comment">//动画执行到第几次 (动画已经消耗的时间)</span></span><br><span class="line">    <span class="keyword">var</span> b = <span class="number">100</span>; <span class="comment">// 动画开始前的初始值</span></span><br><span class="line">    <span class="keyword">var</span> c = <span class="number">500</span>; <span class="comment">// 动画初始值 和 目标点之间的差值</span></span><br><span class="line">    <span class="keyword">var</span> d = <span class="number">60</span>; <span class="comment">// 动画执行总次数, 动画执行时间</span></span><br><span class="line">    run.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        cancelAnimationFrame(timer);</span><br><span class="line">        timer = requestAnimationFrame(move);</span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">move</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            t++;</span><br><span class="line">            <span class="keyword">var</span> val = Tween[<span class="string">"elasticOut"</span>](t,b,c,d);<span class="comment">// val 动画执行到第 t 次时，动画应该走到哪个位置</span></span><br><span class="line">            <span class="comment">// console.log(val,t);</span></span><br><span class="line">            <span class="comment">//box.style.transform = 'translateX('+val+'px)';</span></span><br><span class="line">            box.style.width = val + <span class="string">'px'</span>;</span><br><span class="line">            <span class="built_in">console</span>.log(t);</span><br><span class="line">            <span class="keyword">if</span>(t &lt; d)&#123;</span><br><span class="line">                timer = requestAnimationFrame(move);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    stop.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        cancelAnimationFrame(timer);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<h2 id="动画框架的使用"><a href="#动画框架的使用" class="headerlink" title="动画框架的使用"></a>动画框架的使用</h2><p><a href="https://github.com/snowFlakeXue/js-demo/blob/master/mTween.js" target="_blank" rel="noopener">所用框架戳这里</a></p>
+<p>首先我们来看看我们能操作哪些属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&quot;width&quot;,</span><br><span class="line">&quot;height&quot;,</span><br><span class="line">&quot;left&quot;,</span><br><span class="line">&quot;top&quot;,</span><br><span class="line">&quot;right&quot;,</span><br><span class="line">&quot;bottom&quot;,</span><br><span class="line">&quot;marginBottom&quot;,</span><br><span class="line">&quot;marginleft&quot;,</span><br><span class="line">&quot;marginRight&quot;,</span><br><span class="line">&quot;marginTop&quot;,</span><br><span class="line">&quot;paddingLeft&quot;,</span><br><span class="line">&quot;paddingRight&quot;,</span><br><span class="line">&quot;paddingTop&quot;,</span><br><span class="line">&quot;paddingBottom&quot;</span><br><span class="line">&quot;opacity&quot;</span><br><span class="line"></span><br><span class="line">&quot;rotate&quot;,</span><br><span class="line">&quot;rotateX&quot;,</span><br><span class="line">&quot;rotateY&quot;,</span><br><span class="line">&quot;rotateZ&quot;,</span><br><span class="line">&quot;translateX&quot;,</span><br><span class="line">&quot;translateY&quot;,</span><br><span class="line">&quot;translateZ&quot;,</span><br><span class="line">&quot;scale&quot;,</span><br><span class="line">&quot;scaleX&quot;,</span><br><span class="line">&quot;scaleY&quot;,</span><br><span class="line">&quot;skewX&quot;,</span><br><span class="line">&quot;skewY&quot;</span><br></pre></td></tr></table></figure>
+<p>注意这里都是数值样式，如果是非数值样式，比如颜色，可以获取但不能用作动画操作</p>
+<p>那我们就先来看看咋获取吧</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">css(box,<span class="string">"height"</span>);<span class="comment">//获取</span></span><br><span class="line">css(box,<span class="string">"height"</span>,<span class="number">200</span>);<span class="comment">//修改</span></span><br><span class="line">css(box,<span class="string">"background"</span>,<span class="string">"blue"</span>);<span class="comment">//修改</span></span><br></pre></td></tr></table></figure>
+<p>但是有一个特别重要的东西就是有关transform的值，也就是上面给出的可操作的部分的下半部分，是只能先设置再获取的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">css(box,<span class="string">"scale"</span>,<span class="number">.5</span>);</span><br><span class="line">css(box,<span class="string">"scale"</span>);</span><br></pre></td></tr></table></figure>
+<p>如果没有上面代码块的第一行，那么久无法获取</p>
+<p>下面进入正题，看看框架的具体使用参数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// transform 相关的样式，在动画前，一定记得先设置初始值</span></span><br><span class="line">       css(box,<span class="string">"rotate"</span>,<span class="number">0</span>);</span><br><span class="line">       mTween(&#123;</span><br><span class="line">          el: box,</span><br><span class="line">          attr: &#123;<span class="comment">//改变后的样式值</span></span><br><span class="line">              width: <span class="number">300</span>,</span><br><span class="line">              height: <span class="number">300</span>,</span><br><span class="line">              rotate: <span class="number">360</span></span><br><span class="line">          &#125;,</span><br><span class="line">          <span class="comment">//duration: 100 //默认值 400</span></span><br><span class="line">          duration: &#123;</span><br><span class="line">               multiple: <span class="number">.5</span>, <span class="comment">/* 根据要动画的样式中，最大的差值计算一个时间 multiple 差值的倍数 */</span></span><br><span class="line">               min: <span class="number">400</span>, <span class="comment">//完成动画的最少时间 毫秒</span></span><br><span class="line">               max: <span class="number">1000</span> <span class="comment">//完成动画的最大时间 毫秒</span></span><br><span class="line">          &#125;,</span><br><span class="line">          fx : <span class="string">"backOut"</span> <span class="comment">// 动画形式: 参考 Tween</span></span><br><span class="line">          cb: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">              <span class="built_in">console</span>.log(<span class="string">"动画执行完成"</span>);</span><br><span class="line">          &#125;,</span><br><span class="line">          moveing: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="comment">//注意moveing的写法</span></span><br><span class="line">              <span class="built_in">console</span>.log(<span class="string">"动画执行过程中"</span>);</span><br><span class="line">          &#125;</span><br><span class="line"><span class="comment">//停止动画  mTween.stop(box);</span></span><br><span class="line">      &#125;);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    <div>
+           
+           <div>
+
+    <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+
+</div>
+
+           
+</div>
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/01/14/定时器/" rel="next" title="定时器">
+                <i class="fa fa-chevron-left"></i> 定时器
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/02/25/ES6/" rel="prev" title="ES6">
+                ES6 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="http://b-ssl.duitang.com/uploads/item/201805/09/20180509223225_umknp.jpeg" alt="Liu Xue">
+            
+              <p class="site-author-name" itemprop="name">Liu Xue</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">119</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/snowFlakeXue" title="GitHub &rarr; https://github.com/snowFlakeXue" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:liuxue82@outlook.com" title="E-Mail &rarr; mailto:liuxue82@outlook.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#transition"><span class="nav-number">1.</span> <span class="nav-text">transition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#transitionend"><span class="nav-number">2.</span> <span class="nav-text">transitionend</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#监听事件"><span class="nav-number">3.</span> <span class="nav-text">监听事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#animation"><span class="nav-number">4.</span> <span class="nav-text">animation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#animation相关事件"><span class="nav-number">5.</span> <span class="nav-text">animation相关事件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#transform"><span class="nav-number">6.</span> <span class="nav-text">transform</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#transform-3D"><span class="nav-number">7.</span> <span class="nav-text">transform 3D</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tween动画算法"><span class="nav-number">8.</span> <span class="nav-text">Tween动画算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动画框架的使用"><span class="nav-number">9.</span> <span class="nav-text">动画框架的使用</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Liu Xue</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.1.1</div>
+
+<div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style="display:none">
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style="display:none">
+    有<span id="busuanzi_value_site_uv"></span>人看过我的博客啦
+</span>
+</div>
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.1"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.1"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: true,
+    appId: '6qVVBj7JKuRkkOFxcCapSmAk-gzGzoHsz',
+    appKey: 'vE2tsXSexbLWMadwdjaypbzI',
+    placeholder: '留言区',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
